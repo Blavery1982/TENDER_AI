@@ -1,0 +1,6 @@
+playwright==1.55.0
+pymorphy3==2.0.4
+pypdf==6.0.0
+gspread==6.2.1
+google-auth==2.57.1
+PyMuPDF==1.28.2

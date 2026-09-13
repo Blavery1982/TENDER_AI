@@ -1,0 +1,370 @@
+{
+  "source": "/Users/lubov/Documents/TENDER_AI/data/mvp_exact_batch_latest.json",
+  "dataset_role": "regression_only",
+  "network_used": false,
+  "supplier_search_performed": false,
+  "items_total": 17,
+  "counts": {
+    "MODEL_DISCOVERY_REQUIRED": 4,
+    "PRICE_SEARCH_READY": 8,
+    "MODEL_IDENTIFIER_REVIEW_REQUIRED": 5
+  },
+  "old_manual_to_price_search_ready": 8,
+  "items": [
+    {
+      "trade_number": "100032348126100109",
+      "purchase_id": "918a2826-290c-47c2-ad8f-e54df0422149",
+      "item_number": 1,
+      "position_name": "Камера холодильная среднетемпературная",
+      "item_name": "Согласно техническому заданию (Приложение №3)",
+      "found_identifier": null,
+      "customer_required_model": null,
+      "price_justification_model": null,
+      "model_source": "NOT_FOUND",
+      "evidence": [],
+      "old_classification": "MODEL_DISCOVERY_REQUIRED",
+      "new_classification": "MODEL_DISCOVERY_REQUIRED",
+      "reason": "Конкретная модель нигде не указана; есть только характеристики",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "100032348126100110",
+      "purchase_id": "e99cf804-1805-453e-a69f-6e446b41d419",
+      "item_number": 1,
+      "position_name": "Шкаф холодильный низкотемпературный",
+      "item_name": "Согласно техническому заданию (Приложение №3)",
+      "found_identifier": "Abat ШХн-0,5",
+      "customer_required_model": "Abat ШХн-0,5",
+      "price_justification_model": null,
+      "model_source": "CONTRACT_DOCUMENT",
+      "evidence": [
+        {
+          "source_document": "проект ГК.docx",
+          "source_page": null,
+          "evidence": "Шкаф холодильный низкотемпературный\nШкаф холодильный низкотемпературный\nПредмет закупки: Шкаф холодильный низкотемпературный Abat ШХн-0,5 либо эквивалент",
+          "model_source": "CONTRACT_DOCUMENT"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "PRICE_SEARCH_READY",
+      "reason": "Конкретная модель/артикул указаны в документах заказчика",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "100032348126100110",
+      "purchase_id": "e99cf804-1805-453e-a69f-6e446b41d419",
+      "item_number": 2,
+      "position_name": "Шкаф холодильный среднетемпературный",
+      "item_name": "Согласно техническому заданию (Приложение №3)",
+      "found_identifier": null,
+      "customer_required_model": null,
+      "price_justification_model": null,
+      "model_source": "NOT_FOUND",
+      "evidence": [],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "MODEL_DISCOVERY_REQUIRED",
+      "reason": "Конкретная модель нигде не указана; есть только характеристики",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "100099468126100096",
+      "purchase_id": "880c9b6e-e4ff-4e10-a831-ecf86e25aa21",
+      "item_number": 1,
+      "position_name": "Машина швейная промышленная (оверлок)",
+      "item_name": "Количество игл -2\nКоличество нитей -4\nТип стежка- цепной\nТип строчки- стачивающе-обметочная\nРасстояние между иглами – 2 мм\nMax cкорость шитья – не менее 7000 об/мин\nМощность  -не более 550 Вт\nДлина стежка - ≥ 4 и < 6  мм\nВысота подъема лапки -  ≥ 5 и < 10 мм\nПродвижение материала – нижняя рейка\nТип материалов – легкие, средние\nТип подачи смазки - автоматическая \nАвтоматический подъем лапки –Да\nАвтоматическая обрезка нити-Да\nТип привода – встроенный ",
+      "found_identifier": null,
+      "customer_required_model": null,
+      "price_justification_model": null,
+      "model_source": "NOT_FOUND",
+      "evidence": [],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "MODEL_IDENTIFIER_REVIEW_REQUIRED",
+      "reason": "Источники позиции содержат противоречия",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "100110512126100716",
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "item_number": 1,
+      "position_name": "Монитор ExeGate 27” (или аналог)",
+      "item_name": "Блок питания монитора или телевизора - внешний; входит в комплект поставки\nПотребление энергии - 36 Вт\nДиагональ - 27\" (68.6 см)\nРазрешение экрана - 1920 x 1080\nТип LCD-матрицы - VA\nЧастота обновления кадров - 75 Гц\nФормат матрицы - 16: 9\nПоверхность экрана - матовая\nЯркость матрицы - 200 кд/ м2\nКонтрастность LCD-матрицы - 3000: 1 \nВремя отклика - 5 мс\nУгол обзора LCD-матрицы - 178° по горизонтали, 178° по вертикали\nЦвета, использованные в оформлении - черный\nРегулировка положения экрана - только наклон\nУглы наклона монитора - -5° ~ 20°\n\n",
+      "found_identifier": null,
+      "customer_required_model": null,
+      "price_justification_model": null,
+      "model_source": "NOT_FOUND",
+      "evidence": [],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "MODEL_DISCOVERY_REQUIRED",
+      "reason": "Конкретная модель нигде не указана; есть только характеристики",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "100110512126100716",
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "item_number": 2,
+      "position_name": "Батарея BB Battery BP 5-12 (или аналог)",
+      "item_name": "Напряжение, В:12\nЕмкость, Ач:5\nТехнология:AGM\nСрок службы АКБ, лет:10\nТип клеммы:FASTON F2 (зажим) 6,35 мм\nТип аккумулятора: Стационарный\nДлина, мм.:90\nШирина, мм.:70\nВысота, мм.:102\nПолная высота, мм.:106\nВес, кг.:1.8\n",
+      "found_identifier": "BB Battery BP 5-12",
+      "customer_required_model": "BB Battery BP 5-12",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "BB Battery BP 5-12"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "PRICE_SEARCH_READY",
+      "reason": "Конкретная модель/артикул указаны в позиции ЕАТ",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "100110512126100716",
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "item_number": 3,
+      "position_name": "Кабель dp-dp 2.0м",
+      "item_name": "Цвет:\tчерный\nТип оборудования:\tВидеокабели и переходники\nНазначение:\tДля соединения периферийных устройств\nРазъём с одной стороны:\tDisplayPort (male)\nРазъём с другой стороны:\tDisplayPort (male)\nВерсия:\t1.4\nДлина кабеля (м):\t2\nПропускная способность интерфейса:\t21,6 до 80 Гбит/с\n\n",
+      "found_identifier": null,
+      "customer_required_model": null,
+      "price_justification_model": null,
+      "model_source": "NOT_FOUND",
+      "evidence": [],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "MODEL_DISCOVERY_REQUIRED",
+      "reason": "Конкретная модель нигде не указана; есть только характеристики",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "100110512126100716",
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "item_number": 4,
+      "position_name": "Коннектор Cablexpert RJ-45 (8P8C) универсальный кат.5e (или аналог)",
+      "item_name": "Модель коннектор rj-45: 100 шт/уп\nРазъем: RJ-45 (LAN)\nКоличество пар: 4 пары\n",
+      "found_identifier": null,
+      "customer_required_model": null,
+      "price_justification_model": null,
+      "model_source": "CONTRACT_DOCUMENT",
+      "evidence": [],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "MODEL_IDENTIFIER_REVIEW_REQUIRED",
+      "reason": "В позиции упомянут идентификатор, но конкретная модель не выделена однозначно",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "100110512126100716",
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "item_number": 5,
+      "position_name": "Кабель PROconnect витая пара UTP 4PR 24AWG, ССA, САТ5е, РЕ, бухта 305 м (или аналог)",
+      "item_name": "Категория – 5E\nТип кабеля – UTP\nКоличество пар – 4\nВнешний диаметр кабеля, мм-5,5±0,2\nМатериал оболочки кабеля – полиэтилен (LDPE)\nДиаметp токопроводящих жил, мм – 0,48\nМатериал изоляции проводника – полиэтилен высокой плотности (HDPE)\nТолщина изоляции, мм – 0,21\nЧастота сигнала, МГц – 100\nВолновое сопротивление, Ом - 100±15\nТип упаковки: Бухта\nДлина кабеля: 305 м\n",
+      "found_identifier": "UTP 4PR",
+      "customer_required_model": "UTP 4PR",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "evidence": "Кабель PROconnect витая пара UTP 4PR 24AWG, ССA, САТ5е, РЕ, бухта 305 м (или аналог)\nКатегория – 5E\nТип кабеля – UTP\nКоличество пар – 4\nВнешний диаметр кабеля, мм-5,5±0,2\nМатериал оболочки кабеля – полиэтилен (LDPE)\nДиаметp токопроводящих жил, мм – 0,48\nМатериал изоляции проводника – полиэтилен высокой плотности (HDPE)\nТолщина изоляции, мм – 0,21\nЧастота сигнала, МГц – 100\nВолновое сопротивление, Ом - 100±15\nТип упаковки: Бухта\nДлина кабеля: 305 м\n",
+          "model_source": "CUSTOMER_SPECIFICATION"
+        },
+        {
+          "source_document": "Приложения к контракту.doc",
+          "source_page": null,
+          "evidence": "Кабель PROconnect витая пара UTP 4PR 24AWG, ССA, САТ5е, РЕ, бухта 305 м (или аналог)",
+          "model_source": "CONTRACT_DOCUMENT"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "MODEL_IDENTIFIER_REVIEW_REQUIRED",
+      "reason": "Обозначение является типом, стандартом или характеристикой товара",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "200909143126100577",
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "item_number": 1,
+      "position_name": "Абатмент UCLA CCM под литье\nдиаметр 4.0, десна 1,0 мм, с\nшестигранником, для\nстандартной линейки.",
+      "item_name": "Абатмент UCLA CCM под литье\nдиаметр 4.0, десна 1,0 мм, с\nшестигранником, для\nстандартной линейки.",
+      "found_identifier": "UCLA CCM",
+      "customer_required_model": "UCLA CCM",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "UCLA CCM"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "MODEL_IDENTIFIER_REVIEW_REQUIRED",
+      "reason": "Обозначение похоже на тип или серию без конкретного артикула",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "200909143126100577",
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "item_number": 2,
+      "position_name": "Абатмент UCLA CCM под литье\nдиаметр 4.5, десна 1,0 мм, с\nшестигранником, для широкой\nлинейки",
+      "item_name": "Абатмент UCLA CCM под литье\nдиаметр 4.5, десна 1,0 мм, с\nшестигранником, для широкой\nлинейки",
+      "found_identifier": "UCLA CCM",
+      "customer_required_model": "UCLA CCM",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "UCLA CCM"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "MODEL_IDENTIFIER_REVIEW_REQUIRED",
+      "reason": "Обозначение похоже на тип или серию без конкретного артикула",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "200909143126100577",
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "item_number": 3,
+      "position_name": "Гидрогум 5 - Альгинатная\nслепочная масса 453г",
+      "item_name": "Гидрогум 5 - Альгинатная\nслепочная масса 453г",
+      "found_identifier": "Гидрогум 5",
+      "customer_required_model": "Гидрогум 5",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "Гидрогум 5"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "PRICE_SEARCH_READY",
+      "reason": "Конкретная модель/артикул указаны в позиции ЕАТ",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "200909143126100577",
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "item_number": 4,
+      "position_name": "Перфит / PERFIT Putty Асиликон основа 400 г,\nкатализатор 400 г",
+      "item_name": "Перфит / PERFIT Putty Асиликон основа 400 г,\nкатализатор 400 г",
+      "found_identifier": "PERFIT Putty",
+      "customer_required_model": "PERFIT Putty",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "PERFIT Putty"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "PRICE_SEARCH_READY",
+      "reason": "Конкретная модель/артикул указаны в позиции ЕАТ",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "200909143126100577",
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "item_number": 5,
+      "position_name": "Перфит /PERFIT Light Body Асиликон 2х50мл картриджи",
+      "item_name": "Перфит /PERFIT Light Body Асиликон 2х50мл картриджи",
+      "found_identifier": "PERFIT Light Body",
+      "customer_required_model": "PERFIT Light Body",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "PERFIT Light Body"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "PRICE_SEARCH_READY",
+      "reason": "Конкретная модель/артикул указаны в позиции ЕАТ",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "200909143126100577",
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "item_number": 6,
+      "position_name": "Фуджи 1 Fuji 1 -\nстеклоиномерный цемент\nхимического отверждения,\nуп./35г+25г",
+      "item_name": "Фуджи 1 Fuji 1 -\nстеклоиномерный цемент\nхимического отверждения,\nуп./35г+25г",
+      "found_identifier": "Fuji 1",
+      "customer_required_model": "Fuji 1",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "Fuji 1"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "PRICE_SEARCH_READY",
+      "reason": "Конкретная модель/артикул указаны в позиции ЕАТ",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "200909143126100577",
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "item_number": 7,
+      "position_name": "Наконечник прямой НПМ-40 для\nмикромоторов с охлаждением",
+      "item_name": "Наконечник прямой НПМ-40 для\nмикромоторов с охлаждением",
+      "found_identifier": "НПМ-40",
+      "customer_required_model": "НПМ-40",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "НПМ-40"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "PRICE_SEARCH_READY",
+      "reason": "Конкретная модель/артикул указаны в позиции ЕАТ",
+      "compliance_before_price_search": false
+    },
+    {
+      "trade_number": "200909143126100577",
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "item_number": 8,
+      "position_name": "Наконечник турбинный НСТк\n300-01 М4 кнопочный",
+      "item_name": "Наконечник турбинный НСТк\n300-01 М4 кнопочный",
+      "found_identifier": "НСТк 300-01 М4",
+      "customer_required_model": "НСТк 300-01 М4",
+      "price_justification_model": null,
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "evidence": [
+        {
+          "source_document": "Спецификация ЕАТ",
+          "source_page": null,
+          "source_field": "position_text",
+          "fragment": "НСТк 300-01 М4"
+        }
+      ],
+      "old_classification": "MODEL_MODE_REVIEW_REQUIRED",
+      "new_classification": "PRICE_SEARCH_READY",
+      "reason": "Конкретная модель/артикул указаны в позиции ЕАТ",
+      "compliance_before_price_search": false
+    }
+  ]
+}

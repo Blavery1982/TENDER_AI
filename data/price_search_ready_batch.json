@@ -1,0 +1,799 @@
+{
+  "source": "/Users/lubov/Documents/TENDER_AI/data/mvp_exact_reclassification.json",
+  "eat_requested": false,
+  "model_discovery_performed": false,
+  "positions": [
+    {
+      "procurement_id": "e99cf804-1805-453e-a69f-6e446b41d419",
+      "trade_number": "100032348126100110",
+      "item_number": 1,
+      "item_name": "Шкаф холодильный низкотемпературный",
+      "quantity": 3.0,
+      "customer_unit_price": 60000.0,
+      "exact_model": "Abat ШХн-0,5",
+      "model_source": "CONTRACT_DOCUMENT",
+      "offer_1": null,
+      "offer_2": null,
+      "offer_3": null,
+      "best_safe_public_price": null,
+      "preliminary_economics": {
+        "status": "Цена не подтверждена",
+        "calculation_basis": "ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ",
+        "customer_total": 180000.0,
+        "quantity": 3.0,
+        "eat_commission_rate": 0.03,
+        "eat_commission": 5400.0,
+        "public_unit_price": null,
+        "public_total_for_quantity": null,
+        "preliminary_reserve_before_other_costs": null,
+        "purchase_price": null
+      },
+      "status": "EXACT_MODEL_NOT_FOUND",
+      "comments": "НАЙДЕНО МЕНЕЕ 3 пригодных предложений",
+      "candidate_urls_found": 0,
+      "actual_prices_confirmed": 0,
+      "unique_suppliers_with_confirmed_price": 0,
+      "ranked_offers": [],
+      "antifraud_history": [],
+      "source_errors": []
+    },
+    {
+      "procurement_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "trade_number": "100110512126100716",
+      "item_number": 2,
+      "item_name": "Батарея BB Battery BP 5-12 (или аналог)",
+      "quantity": 8.0,
+      "customer_unit_price": 0.0,
+      "exact_model": "BB Battery BP 5-12",
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "offer_1": null,
+      "offer_2": null,
+      "offer_3": null,
+      "best_safe_public_price": null,
+      "preliminary_economics": {
+        "status": "Цена не подтверждена",
+        "calculation_basis": "ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ",
+        "customer_total": 0.0,
+        "quantity": 8.0,
+        "eat_commission_rate": 0.03,
+        "eat_commission": 0.0,
+        "public_unit_price": null,
+        "public_total_for_quantity": null,
+        "preliminary_reserve_before_other_costs": null,
+        "purchase_price": null
+      },
+      "status": "EXACT_MODEL_NOT_FOUND",
+      "comments": "НАЙДЕНО МЕНЕЕ 3 пригодных предложений",
+      "candidate_urls_found": 0,
+      "actual_prices_confirmed": 0,
+      "unique_suppliers_with_confirmed_price": 0,
+      "ranked_offers": [],
+      "antifraud_history": [],
+      "source_errors": []
+    },
+    {
+      "procurement_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "item_number": 3,
+      "item_name": "Гидрогум 5 - Альгинатная\nслепочная масса 453г",
+      "quantity": 50.0,
+      "customer_unit_price": 1040.05,
+      "exact_model": "Гидрогум 5",
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "offer_1": {
+        "supplier": "Мир стоматологов",
+        "price": 835.0,
+        "url": "https://market.yandex.ru/card/gidrogum-5---hydrogum-5/4372810458?cpa=1&cpm-adv=1&hid=71645011&nid=71648510&resale_goods=resale_new&sponsored=1",
+        "availability": "В наличии",
+        "antifraud_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ"
+      },
+      "offer_2": {
+        "supplier": "Art Dentaire",
+        "price": 913.0,
+        "url": "https://market.yandex.ru/card/alginatnaya-massa-hydrogum-5gidrogum-5-zhermack/4636398086?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+        "availability": "В наличии",
+        "antifraud_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ"
+      },
+      "offer_3": {
+        "supplier": "ДенталДепо",
+        "price": 1111.0,
+        "url": "https://market.yandex.ru/card/gidrogum-5-hydrogum-5---alginat-bespylnyy-453g-zhermack/103822647359?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+        "availability": "В наличии",
+        "antifraud_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ"
+      },
+      "best_safe_public_price": 835.0,
+      "preliminary_economics": {
+        "status": "Предварительно рассчитано",
+        "calculation_basis": "ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ",
+        "customer_total": 52002.5,
+        "quantity": 50.0,
+        "eat_commission_rate": 0.03,
+        "eat_commission": 1560.08,
+        "public_unit_price": 835.0,
+        "public_total_for_quantity": 41750.0,
+        "preliminary_reserve_before_other_costs": 8692.42,
+        "purchase_price": null
+      },
+      "status": "GOOD_PRICE_VERIFIED_SUPPLIER",
+      "comments": "",
+      "candidate_urls_found": 3,
+      "actual_prices_confirmed": 3,
+      "unique_suppliers_with_confirmed_price": 3,
+      "ranked_offers": [
+        {
+          "exact_product_name": "Гидрогум 5 - Hydrogum 5",
+          "model": "Гидрогум 5",
+          "exact_model_match": true,
+          "price": 835.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Мир стоматологов",
+          "url": "https://market.yandex.ru/card/gidrogum-5---hydrogum-5/4372810458?cpa=1&cpm-adv=1&hid=71645011&nid=71648510&resale_goods=resale_new&sponsored=1",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:36.005815+00:00",
+          "supplier_name": "Мир стоматологов",
+          "product_url": "https://market.yandex.ru/card/gidrogum-5---hydrogum-5/4372810458?cpa=1&cpm-adv=1&hid=71645011&nid=71648510&resale_goods=resale_new&sponsored=1",
+          "public_price": 835.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true
+        },
+        {
+          "exact_product_name": "Альгинатная масса HYDROGUM 5(Гидрогум 5), Zhermack",
+          "model": "Гидрогум 5",
+          "exact_model_match": true,
+          "price": 913.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Art Dentaire",
+          "url": "https://market.yandex.ru/card/alginatnaya-massa-hydrogum-5gidrogum-5-zhermack/4636398086?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:38.456863+00:00",
+          "supplier_name": "Art Dentaire",
+          "product_url": "https://market.yandex.ru/card/alginatnaya-massa-hydrogum-5gidrogum-5-zhermack/4636398086?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+          "public_price": 913.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true
+        },
+        {
+          "exact_product_name": "Гидрогум 5 (HYDROGUM 5) - Альгинат беспыльный (453г), Zhermack",
+          "model": "Гидрогум 5",
+          "exact_model_match": true,
+          "price": 1111.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "ДенталДепо",
+          "url": "https://market.yandex.ru/card/gidrogum-5-hydrogum-5---alginat-bespylnyy-453g-zhermack/103822647359?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:37.231657+00:00",
+          "supplier_name": "ДенталДепо",
+          "product_url": "https://market.yandex.ru/card/gidrogum-5-hydrogum-5---alginat-bespylnyy-453g-zhermack/103822647359?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+          "public_price": 1111.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true
+        }
+      ],
+      "antifraud_history": [
+        {
+          "exact_product_name": "Гидрогум 5 - Hydrogum 5",
+          "model": "Гидрогум 5",
+          "exact_model_match": true,
+          "price": 835.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Мир стоматологов",
+          "url": "https://market.yandex.ru/card/gidrogum-5---hydrogum-5/4372810458?cpa=1&cpm-adv=1&hid=71645011&nid=71648510&resale_goods=resale_new&sponsored=1",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:36.005815+00:00",
+          "supplier_name": "Мир стоматологов",
+          "product_url": "https://market.yandex.ru/card/gidrogum-5---hydrogum-5/4372810458?cpa=1&cpm-adv=1&hid=71645011&nid=71648510&resale_goods=resale_new&sponsored=1",
+          "public_price": 835.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true,
+          "domain": "market.yandex.ru",
+          "risk_flags": [],
+          "positive_signals": [
+            "Доверенный крупный источник"
+          ],
+          "unavailable_checks": [],
+          "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+          "verification_comment": "Доверенный крупный источник",
+          "arbitration_cases": {
+            "checked_in_kad": false,
+            "cases_found": null,
+            "bankruptcy_cases_count": null,
+            "defendant_cases_count": null,
+            "recent_cases_count": null,
+            "user_summary": "Арбитражные дела: требуется ручная проверка",
+            "warnings": [
+              "Проверка связанных физических лиц по ИНН не выполнена"
+            ],
+            "risk_level": "unknown"
+          },
+          "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+          "verification_evidence": [
+            {
+              "check_name": "trusted_source",
+              "status": "confirmed_positive",
+              "evidence": "Домен входит в доверенный список",
+              "source": "market.yandex.ru",
+              "checked_at": "2026-09-13T10:36:34.700227+00:00"
+            }
+          ]
+        },
+        {
+          "exact_product_name": "Альгинатная масса HYDROGUM 5(Гидрогум 5), Zhermack",
+          "model": "Гидрогум 5",
+          "exact_model_match": true,
+          "price": 913.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Art Dentaire",
+          "url": "https://market.yandex.ru/card/alginatnaya-massa-hydrogum-5gidrogum-5-zhermack/4636398086?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:38.456863+00:00",
+          "supplier_name": "Art Dentaire",
+          "product_url": "https://market.yandex.ru/card/alginatnaya-massa-hydrogum-5gidrogum-5-zhermack/4636398086?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+          "public_price": 913.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true,
+          "domain": "market.yandex.ru",
+          "risk_flags": [],
+          "positive_signals": [
+            "Доверенный крупный источник"
+          ],
+          "unavailable_checks": [],
+          "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+          "verification_comment": "Доверенный крупный источник",
+          "arbitration_cases": {
+            "checked_in_kad": false,
+            "cases_found": null,
+            "bankruptcy_cases_count": null,
+            "defendant_cases_count": null,
+            "recent_cases_count": null,
+            "user_summary": "Арбитражные дела: требуется ручная проверка",
+            "warnings": [
+              "Проверка связанных физических лиц по ИНН не выполнена"
+            ],
+            "risk_level": "unknown"
+          },
+          "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+          "verification_evidence": [
+            {
+              "check_name": "trusted_source",
+              "status": "confirmed_positive",
+              "evidence": "Домен входит в доверенный список",
+              "source": "market.yandex.ru",
+              "checked_at": "2026-09-13T10:36:34.700304+00:00"
+            }
+          ]
+        },
+        {
+          "exact_product_name": "Гидрогум 5 (HYDROGUM 5) - Альгинат беспыльный (453г), Zhermack",
+          "model": "Гидрогум 5",
+          "exact_model_match": true,
+          "price": 1111.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "ДенталДепо",
+          "url": "https://market.yandex.ru/card/gidrogum-5-hydrogum-5---alginat-bespylnyy-453g-zhermack/103822647359?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:37.231657+00:00",
+          "supplier_name": "ДенталДепо",
+          "product_url": "https://market.yandex.ru/card/gidrogum-5-hydrogum-5---alginat-bespylnyy-453g-zhermack/103822647359?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+          "public_price": 1111.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true,
+          "domain": "market.yandex.ru",
+          "risk_flags": [],
+          "positive_signals": [
+            "Доверенный крупный источник"
+          ],
+          "unavailable_checks": [],
+          "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+          "verification_comment": "Доверенный крупный источник",
+          "arbitration_cases": {
+            "checked_in_kad": false,
+            "cases_found": null,
+            "bankruptcy_cases_count": null,
+            "defendant_cases_count": null,
+            "recent_cases_count": null,
+            "user_summary": "Арбитражные дела: требуется ручная проверка",
+            "warnings": [
+              "Проверка связанных физических лиц по ИНН не выполнена"
+            ],
+            "risk_level": "unknown"
+          },
+          "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+          "verification_evidence": [
+            {
+              "check_name": "trusted_source",
+              "status": "confirmed_positive",
+              "evidence": "Домен входит в доверенный список",
+              "source": "market.yandex.ru",
+              "checked_at": "2026-09-13T10:36:34.700313+00:00"
+            }
+          ]
+        }
+      ],
+      "source_errors": []
+    },
+    {
+      "procurement_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "item_number": 4,
+      "item_name": "Перфит / PERFIT Putty Асиликон основа 400 г,\nкатализатор 400 г",
+      "quantity": 5.0,
+      "customer_unit_price": 3022.5,
+      "exact_model": "PERFIT Putty",
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "offer_1": {
+        "supplier": "Дентал-шоп",
+        "price": 2646.0,
+        "url": "https://market.yandex.ru/card/slepochnaya-massa-perfit-perfit-putty-hand-mix/103154928744?cpa=1&cpm-adv=1&hid=71627494&nid=71630995&resale_goods=resale_new&sponsored=1",
+        "availability": "В наличии",
+        "antifraud_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ"
+      },
+      "offer_2": null,
+      "offer_3": null,
+      "best_safe_public_price": 2646.0,
+      "preliminary_economics": {
+        "status": "Предварительно рассчитано",
+        "calculation_basis": "ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ",
+        "customer_total": 15112.5,
+        "quantity": 5.0,
+        "eat_commission_rate": 0.03,
+        "eat_commission": 453.38,
+        "public_unit_price": 2646.0,
+        "public_total_for_quantity": 13230.0,
+        "preliminary_reserve_before_other_costs": 1429.12,
+        "purchase_price": null
+      },
+      "status": "ONLY_ONE_VALID_OFFER",
+      "comments": "НАЙДЕНО МЕНЕЕ 3 пригодных предложений",
+      "candidate_urls_found": 2,
+      "actual_prices_confirmed": 2,
+      "unique_suppliers_with_confirmed_price": 1,
+      "ranked_offers": [
+        {
+          "exact_product_name": "Слепочная масса А-силиконовый слепочный материал базового слоя Перфит Perfit Putty Hand Mix",
+          "model": "PERFIT Putty",
+          "exact_model_match": true,
+          "price": 2646.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Дентал-шоп",
+          "url": "https://market.yandex.ru/card/slepochnaya-massa-perfit-perfit-putty-hand-mix/103154928744?cpa=1&cpm-adv=1&hid=71627494&nid=71630995&resale_goods=resale_new&sponsored=1",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:46.978086+00:00",
+          "supplier_name": "Дентал-шоп",
+          "product_url": "https://market.yandex.ru/card/slepochnaya-massa-perfit-perfit-putty-hand-mix/103154928744?cpa=1&cpm-adv=1&hid=71627494&nid=71630995&resale_goods=resale_new&sponsored=1",
+          "public_price": 2646.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true
+        }
+      ],
+      "antifraud_history": [
+        {
+          "exact_product_name": "Слепочная масса А-силиконовый слепочный материал базового слоя Перфит Perfit Putty Hand Mix",
+          "model": "PERFIT Putty",
+          "exact_model_match": true,
+          "price": 2646.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Дентал-шоп",
+          "url": "https://market.yandex.ru/card/slepochnaya-massa-perfit-perfit-putty-hand-mix/103154928744?cpa=1&cpm-adv=1&hid=71627494&nid=71630995&resale_goods=resale_new&sponsored=1",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:46.978086+00:00",
+          "supplier_name": "Дентал-шоп",
+          "product_url": "https://market.yandex.ru/card/slepochnaya-massa-perfit-perfit-putty-hand-mix/103154928744?cpa=1&cpm-adv=1&hid=71627494&nid=71630995&resale_goods=resale_new&sponsored=1",
+          "public_price": 2646.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true,
+          "domain": "market.yandex.ru",
+          "risk_flags": [],
+          "positive_signals": [
+            "Доверенный крупный источник"
+          ],
+          "unavailable_checks": [],
+          "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+          "verification_comment": "Доверенный крупный источник",
+          "arbitration_cases": {
+            "checked_in_kad": false,
+            "cases_found": null,
+            "bankruptcy_cases_count": null,
+            "defendant_cases_count": null,
+            "recent_cases_count": null,
+            "user_summary": "Арбитражные дела: требуется ручная проверка",
+            "warnings": [
+              "Проверка связанных физических лиц по ИНН не выполнена"
+            ],
+            "risk_level": "unknown"
+          },
+          "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+          "verification_evidence": [
+            {
+              "check_name": "trusted_source",
+              "status": "confirmed_positive",
+              "evidence": "Домен входит в доверенный список",
+              "source": "market.yandex.ru",
+              "checked_at": "2026-09-13T10:36:34.700676+00:00"
+            }
+          ]
+        }
+      ],
+      "source_errors": []
+    },
+    {
+      "procurement_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "item_number": 5,
+      "item_name": "Перфит /PERFIT Light Body Асиликон 2х50мл картриджи",
+      "quantity": 5.0,
+      "customer_unit_price": 1937.5,
+      "exact_model": "PERFIT Light Body",
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "offer_1": {
+        "supplier": "Дентал-шоп",
+        "price": 1651.0,
+        "url": "https://market.yandex.ru/card/perfit-light-body-a-silikon-korregiruyushchiy-sloy/103168805602?cpa=1&hid=71641510&nid=71645009&resale_goods=resale_new",
+        "availability": "В наличии",
+        "antifraud_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ"
+      },
+      "offer_2": null,
+      "offer_3": null,
+      "best_safe_public_price": 1651.0,
+      "preliminary_economics": {
+        "status": "Предварительно рассчитано",
+        "calculation_basis": "ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ",
+        "customer_total": 9687.5,
+        "quantity": 5.0,
+        "eat_commission_rate": 0.03,
+        "eat_commission": 290.62,
+        "public_unit_price": 1651.0,
+        "public_total_for_quantity": 8255.0,
+        "preliminary_reserve_before_other_costs": 1141.88,
+        "purchase_price": null
+      },
+      "status": "ONLY_ONE_VALID_OFFER",
+      "comments": "НАЙДЕНО МЕНЕЕ 3 пригодных предложений",
+      "candidate_urls_found": 1,
+      "actual_prices_confirmed": 1,
+      "unique_suppliers_with_confirmed_price": 1,
+      "ranked_offers": [
+        {
+          "exact_product_name": "PERFIT Light Body А силикон коррегирующий слой",
+          "model": "PERFIT Light Body",
+          "exact_model_match": true,
+          "price": 1651.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Дентал-шоп",
+          "url": "https://market.yandex.ru/card/perfit-light-body-a-silikon-korregiruyushchiy-sloy/103168805602?cpa=1&hid=71641510&nid=71645009&resale_goods=resale_new",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:57.086527+00:00",
+          "supplier_name": "Дентал-шоп",
+          "product_url": "https://market.yandex.ru/card/perfit-light-body-a-silikon-korregiruyushchiy-sloy/103168805602?cpa=1&hid=71641510&nid=71645009&resale_goods=resale_new",
+          "public_price": 1651.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true
+        }
+      ],
+      "antifraud_history": [
+        {
+          "exact_product_name": "PERFIT Light Body А силикон коррегирующий слой",
+          "model": "PERFIT Light Body",
+          "exact_model_match": true,
+          "price": 1651.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Дентал-шоп",
+          "url": "https://market.yandex.ru/card/perfit-light-body-a-silikon-korregiruyushchiy-sloy/103168805602?cpa=1&hid=71641510&nid=71645009&resale_goods=resale_new",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:33:57.086527+00:00",
+          "supplier_name": "Дентал-шоп",
+          "product_url": "https://market.yandex.ru/card/perfit-light-body-a-silikon-korregiruyushchiy-sloy/103168805602?cpa=1&hid=71641510&nid=71645009&resale_goods=resale_new",
+          "public_price": 1651.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true,
+          "domain": "market.yandex.ru",
+          "risk_flags": [],
+          "positive_signals": [
+            "Доверенный крупный источник"
+          ],
+          "unavailable_checks": [],
+          "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+          "verification_comment": "Доверенный крупный источник",
+          "arbitration_cases": {
+            "checked_in_kad": false,
+            "cases_found": null,
+            "bankruptcy_cases_count": null,
+            "defendant_cases_count": null,
+            "recent_cases_count": null,
+            "user_summary": "Арбитражные дела: требуется ручная проверка",
+            "warnings": [
+              "Проверка связанных физических лиц по ИНН не выполнена"
+            ],
+            "risk_level": "unknown"
+          },
+          "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+          "verification_evidence": [
+            {
+              "check_name": "trusted_source",
+              "status": "confirmed_positive",
+              "evidence": "Домен входит в доверенный список",
+              "source": "market.yandex.ru",
+              "checked_at": "2026-09-13T10:36:34.701040+00:00"
+            }
+          ]
+        }
+      ],
+      "source_errors": []
+    },
+    {
+      "procurement_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "item_number": 6,
+      "item_name": "Фуджи 1 Fuji 1 -\nстеклоиномерный цемент\nхимического отверждения,\nуп./35г+25г",
+      "quantity": 5.0,
+      "customer_unit_price": 13950.0,
+      "exact_model": "Fuji 1",
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "offer_1": {
+        "supplier": "Crystallized in October",
+        "price": 27001.0,
+        "url": "https://market.yandex.ru/card/fuji-1-gold-label--fudzhi-1-35gr-por--20ml-zhidk-stekloionomernyy-tsement-dlya-postoyannoy-fiksatsii-fuji-one-meron-meron/6140415890?cpa=1&hid=71501065&nid=71501071&resale_goods=resale_new",
+        "availability": "В наличии",
+        "antifraud_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ"
+      },
+      "offer_2": null,
+      "offer_3": null,
+      "best_safe_public_price": 27001.0,
+      "preliminary_economics": {
+        "status": "Предварительно рассчитано",
+        "calculation_basis": "ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ",
+        "customer_total": 69750.0,
+        "quantity": 5.0,
+        "eat_commission_rate": 0.03,
+        "eat_commission": 2092.5,
+        "public_unit_price": 27001.0,
+        "public_total_for_quantity": 135005.0,
+        "preliminary_reserve_before_other_costs": -67347.5,
+        "purchase_price": null
+      },
+      "status": "ONLY_ONE_VALID_OFFER",
+      "comments": "НАЙДЕНО МЕНЕЕ 3 пригодных предложений",
+      "candidate_urls_found": 12,
+      "actual_prices_confirmed": 1,
+      "unique_suppliers_with_confirmed_price": 1,
+      "ranked_offers": [
+        {
+          "exact_product_name": "Fuji 1 Gold Label / Фуджи 1 (35гр. пор. + 20мл. жидк.) Стеклоиономерный цемент для постоянной фиксации, Fuji One, meron мерон",
+          "model": "Fuji 1",
+          "exact_model_match": true,
+          "price": 27001.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Crystallized in October",
+          "url": "https://market.yandex.ru/card/fuji-1-gold-label--fudzhi-1-35gr-por--20ml-zhidk-stekloionomernyy-tsement-dlya-postoyannoy-fiksatsii-fuji-one-meron-meron/6140415890?cpa=1&hid=71501065&nid=71501071&resale_goods=resale_new",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:34:08.271955+00:00",
+          "supplier_name": "Crystallized in October",
+          "product_url": "https://market.yandex.ru/card/fuji-1-gold-label--fudzhi-1-35gr-por--20ml-zhidk-stekloionomernyy-tsement-dlya-postoyannoy-fiksatsii-fuji-one-meron-meron/6140415890?cpa=1&hid=71501065&nid=71501071&resale_goods=resale_new",
+          "public_price": 27001.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true
+        }
+      ],
+      "antifraud_history": [
+        {
+          "exact_product_name": "Fuji 1 Gold Label / Фуджи 1 (35гр. пор. + 20мл. жидк.) Стеклоиономерный цемент для постоянной фиксации, Fuji One, meron мерон",
+          "model": "Fuji 1",
+          "exact_model_match": true,
+          "price": 27001.0,
+          "currency": "RUB",
+          "availability": "В наличии",
+          "seller": "Crystallized in October",
+          "url": "https://market.yandex.ru/card/fuji-1-gold-label--fudzhi-1-35gr-por--20ml-zhidk-stekloionomernyy-tsement-dlya-postoyannoy-fiksatsii-fuji-one-meron-meron/6140415890?cpa=1&hid=71501065&nid=71501071&resale_goods=resale_new",
+          "source": "market.yandex.ru",
+          "http_status": 200,
+          "discovered_by": "Яндекс Маркет",
+          "checked_at": "2026-09-13T10:34:08.271955+00:00",
+          "supplier_name": "Crystallized in October",
+          "product_url": "https://market.yandex.ru/card/fuji-1-gold-label--fudzhi-1-35gr-por--20ml-zhidk-stekloionomernyy-tsement-dlya-postoyannoy-fiksatsii-fuji-one-meron-meron/6140415890?cpa=1&hid=71501065&nid=71501071&resale_goods=resale_new",
+          "public_price": 27001.0,
+          "purchase_price": null,
+          "exact_model": true,
+          "price_confirmed_on_product_page": true,
+          "domain": "market.yandex.ru",
+          "risk_flags": [],
+          "positive_signals": [
+            "Доверенный крупный источник"
+          ],
+          "unavailable_checks": [],
+          "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+          "verification_comment": "Доверенный крупный источник",
+          "arbitration_cases": {
+            "checked_in_kad": false,
+            "cases_found": null,
+            "bankruptcy_cases_count": null,
+            "defendant_cases_count": null,
+            "recent_cases_count": null,
+            "user_summary": "Арбитражные дела: требуется ручная проверка",
+            "warnings": [
+              "Проверка связанных физических лиц по ИНН не выполнена"
+            ],
+            "risk_level": "unknown"
+          },
+          "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+          "verification_evidence": [
+            {
+              "check_name": "trusted_source",
+              "status": "confirmed_positive",
+              "evidence": "Домен входит в доверенный список",
+              "source": "market.yandex.ru",
+              "checked_at": "2026-09-13T10:36:34.701451+00:00"
+            }
+          ]
+        }
+      ],
+      "source_errors": [
+        {
+          "source": "Яндекс Маркет",
+          "url": "https://market.yandex.ru/category/fuji-1",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "Яндекс Маркет",
+          "url": "https://market.yandex.ru/category/fuji-1?page=2",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "Яндекс Маркет",
+          "url": "https://market.yandex.ru/category/fuji-1?page=3",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "ClimaArt",
+          "url": "https://climaart.ru/multisplit-vnutrinie/fujitsu-airflow-asyg12lmce-r",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "ClimaArt",
+          "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-asyg12lmce-r-aoyg12lmce-r",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "ClimaArt",
+          "url": "https://climaart.ru/multisplit-vnutrinie/fujitsu-airflow-asyg14lmce-r",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "ClimaArt",
+          "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-asyg14lmce-r-aoyg14lmce-r",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "ClimaArt",
+          "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-nordic-asyg12lmcb-aoyg12lmcbn",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "ClimaArt",
+          "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-nordic-asyg14lmcb-aoyg14lmcbn",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "ClimaArt",
+          "url": "https://climaart.ru/multisplit-narujnie-bloki/fujitsu-aoyg14lac2",
+          "error": "Страница не подтверждает точную модель"
+        },
+        {
+          "source": "ClimaArt",
+          "url": "https://climaart.ru/multisplit-narujnie-bloki/fujitsu-aoyg18lac2",
+          "error": "Страница не подтверждает точную модель"
+        }
+      ]
+    },
+    {
+      "procurement_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "item_number": 7,
+      "item_name": "Наконечник прямой НПМ-40 для\nмикромоторов с охлаждением",
+      "quantity": 5.0,
+      "customer_unit_price": 4185.0,
+      "exact_model": "НПМ-40",
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "offer_1": null,
+      "offer_2": null,
+      "offer_3": null,
+      "best_safe_public_price": null,
+      "preliminary_economics": {
+        "status": "Цена не подтверждена",
+        "calculation_basis": "ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ",
+        "customer_total": 20925.0,
+        "quantity": 5.0,
+        "eat_commission_rate": 0.03,
+        "eat_commission": 627.75,
+        "public_unit_price": null,
+        "public_total_for_quantity": null,
+        "preliminary_reserve_before_other_costs": null,
+        "purchase_price": null
+      },
+      "status": "EXACT_MODEL_NOT_FOUND",
+      "comments": "НАЙДЕНО МЕНЕЕ 3 пригодных предложений",
+      "candidate_urls_found": 0,
+      "actual_prices_confirmed": 0,
+      "unique_suppliers_with_confirmed_price": 0,
+      "ranked_offers": [],
+      "antifraud_history": [],
+      "source_errors": []
+    },
+    {
+      "procurement_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "item_number": 8,
+      "item_name": "Наконечник турбинный НСТк\n300-01 М4 кнопочный",
+      "quantity": 5.0,
+      "customer_unit_price": 4262.5,
+      "exact_model": "НСТк 300-01 М4",
+      "model_source": "CUSTOMER_SPECIFICATION",
+      "offer_1": null,
+      "offer_2": null,
+      "offer_3": null,
+      "best_safe_public_price": null,
+      "preliminary_economics": {
+        "status": "Цена не подтверждена",
+        "calculation_basis": "ПРЕДВАРИТЕЛЬНЫЙ РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ",
+        "customer_total": 21312.5,
+        "quantity": 5.0,
+        "eat_commission_rate": 0.03,
+        "eat_commission": 639.38,
+        "public_unit_price": null,
+        "public_total_for_quantity": null,
+        "preliminary_reserve_before_other_costs": null,
+        "purchase_price": null
+      },
+      "status": "EXACT_MODEL_NOT_FOUND",
+      "comments": "НАЙДЕНО МЕНЕЕ 3 пригодных предложений",
+      "candidate_urls_found": 0,
+      "actual_prices_confirmed": 0,
+      "unique_suppliers_with_confirmed_price": 0,
+      "ranked_offers": [],
+      "antifraud_history": [],
+      "source_errors": []
+    }
+  ]
+}

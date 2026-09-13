@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "unique_checked": 200,
+    "raw_records": 200,
+    "live_feed_duplicates": 0,
+    "api_pages_read": 20,
+    "independent_statistics": {
+      "items_count_at_most_10": 142,
+      "law_44fz_confirmed": 193,
+      "no_subsidy": 156,
+      "region_allowed": 123,
+      "no_bad_words": 58,
+      "price_150_400_thousand": 23
+    },
+    "results": {
+      "rejected": 151,
+      "confidential_locked": 44,
+      "passed": 4,
+      "manual_check": 1
+    },
+    "top_15_reasons": [
+      [
+        "price_below_min",
+        113
+      ],
+      [
+        "confidentiality_agreement_required",
+        44
+      ],
+      [
+        "bad_word: услуг",
+        35
+      ],
+      [
+        "region_not_allowed",
+        26
+      ],
+      [
+        "bad_word: работ",
+        26
+      ],
+      [
+        "bad_word: оказание",
+        25
+      ],
+      [
+        "bad_word: оказание услуг",
+        20
+      ],
+      [
+        "price_above_max",
+        20
+      ],
+      [
+        "too_many_items",
+        14
+      ],
+      [
+        "bad_word: услуги",
+        14
+      ],
+      [
+        "bad_word: ремонт",
+        9
+      ],
+      [
+        "region_not_determined",
+        7
+      ],
+      [
+        "bad_word: стекл",
+        7
+      ],
+      [
+        "bad_word: монтаж",
+        6
+      ],
+      [
+        "bad_word: запчасти",
+        6
+      ]
+    ],
+    "unmatched_region_names": {
+      "ОБЛАСТЬ АМУРСКАЯ": 1
+    },
+    "purchase_type_dictionary_size": 2,
+    "purchase_type_mapping_note": "Подтверждено API карточек ЕАТ для purchaseTypeId 1 и 2; прочие коды не определены.",
+    "confidential_locked": 44,
+    "real_manual_check": 1,
+    "parser_errors": 0,
+    "confidential_detection": {
+      "required_flags": {
+        "isTradeInfoHiddenByPrivacyAgreement": true,
+        "hideDetailsForUnauthorized": true
+      },
+      "locked_with_id": 44,
+      "card_url_template": "https://agregatoreat.ru/purchases/announcement/{id}/info"
+    }
+  },
+  "purchases": [
+    {
+      "id": "dcce4bd2-2c4b-41d6-b4e1-82a811e1d7b8",
+      "tradeNumber": "200909258126100549",
+      "subject": "Поставка медицинского расходного материала",
+      "price": 222254.0,
+      "organizer": {
+        "id": "02813fb3-d12d-4925-b9dc-38296493c6bb",
+        "regNumber": "200909258",
+        "name": "ФГБУЗ МСЧ № 59 ФМБА РОССИИ",
+        "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ \"МЕДИКО-САНИТАРНАЯ ЧАСТЬ № 59 ФЕДЕРАЛЬНОГО МЕДИКО-БИОЛОГИЧЕСКОГО АГЕНТСТВА\"",
+        "inn": "5838000569",
+        "kpp": "583801001",
+        "largestTaxpayerKpp": null,
+        "ogrn": "1025801500196",
+        "phoneNumber": "7(841)260-03-60",
+        "director": null,
+        "email": "cnab58@yandex.ru",
+        "isIncludedInRostech": false,
+        "address": "442960, Пензенская обл, г Заречный, ул ул Спортивная, д. 8"
+      },
+      "normalized_regions": [
+        "Пензенская область"
+      ],
+      "deliveryAddress": [
+        "Пензенская обл, г Заречный, ул Спортивная, д 8"
+      ],
+      "publishDate": "2026-09-04T08:41:31.517388",
+      "applicationFillingEndDate": "2026-09-04T10:41:00.518158",
+      "purchaseTypeTitle": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+      "items_count": 4,
+      "URL": "https://agregatoreat.ru/purchases/announcement/dcce4bd2-2c4b-41d6-b4e1-82a811e1d7b8/info",
+      "filter_result": "passed"
+    },
+    {
+      "id": "7b86567c-26d7-45c9-9a8d-8a5b6a73c707",
+      "tradeNumber": "200909247126100282",
+      "subject": "Поставка туристических палаток",
+      "price": 198200.0,
+      "organizer": {
+        "id": "abefb4be-80de-4019-944b-42e431dddf70",
+        "regNumber": "200909247",
+        "name": "ФГБОУ ВО \"НИУ \"МЭИ\"",
+        "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \"НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ \"МЭИ\"",
+        "inn": "7722019652",
+        "kpp": "772201001",
+        "largestTaxpayerKpp": null,
+        "ogrn": "1027700251644",
+        "phoneNumber": "+7(495)362-75-34",
+        "director": null,
+        "email": "UsatovaTM@mpei.ru",
+        "isIncludedInRostech": false,
+        "address": "111250, Г.МОСКВА, вн.тер.г. МУНИЦИПАЛЬНЫЙ ОКРУГ ЛЕФОРТОВО, УЛ. КРАСНОКАЗАРМЕННАЯ, Д. 14, СТР. 1"
+      },
+      "normalized_regions": [
+        "г. Москва"
+      ],
+      "deliveryAddress": [
+        "г Москва, ул Красноказарменная, д 14 стр 1, (Центральный склад)"
+      ],
+      "publishDate": "2026-09-04T08:40:15.157667",
+      "applicationFillingEndDate": "2026-09-04T10:40:00.158599",
+      "purchaseTypeTitle": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+      "items_count": 3,
+      "URL": "https://agregatoreat.ru/purchases/announcement/7b86567c-26d7-45c9-9a8d-8a5b6a73c707/info",
+      "filter_result": "passed"
+    },
+    {
+      "id": "cd3b22d2-7040-46d8-b998-f431073e16ed",
+      "tradeNumber": "100309200126100271",
+      "subject": "Поставка фильтров мембранных для обеспечения государственных нужд ФКУЗ Ставропольский противочумный институт Роспотребнадзора в рамках реализации распоряжения Правительства РФ от 22.01.2026 N 64-р",
+      "price": 171600.0,
+      "organizer": {
+        "id": "f0d852f0-0896-4b88-a29d-d40373c7b0fb",
+        "regNumber": "100309200",
+        "name": "ФКУЗ СТАВРОПОЛЬСКИЙ ПРОТИВОЧУМНЫЙ ИНСТИТУТ РОСПОТРЕБНАДЗОРА",
+        "fullName": "ФЕДЕРАЛЬНОЕ КАЗЁННОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ \"СТАВРОПОЛЬСКИЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ПРОТИВОЧУМНЫЙ ИНСТИТУТ\" ФЕДЕРАЛЬНОЙ СЛУЖБЫ ПО НАДЗОРУ В СФЕРЕ ЗАЩИТЫ ПРАВ ПОТРЕБИТЕЛЕЙ И БЛАГОПОЛУЧИЯ ЧЕЛОВЕКА",
+        "inn": "2636000641",
+        "kpp": "263601001",
+        "largestTaxpayerKpp": null,
+        "ogrn": "1022601949930",
+        "phoneNumber": "+7(865)274-77-41(355)",
+        "director": "КУЛИЧЕНКО АЛЕКСАНДР НИКОЛАЕВИЧ",
+        "email": "zaknip@mail.ru",
+        "isIncludedInRostech": false,
+        "address": "Ставропольский край, г Ставрополь, ул Советская, д 13/15"
+      },
+      "normalized_regions": [
+        "Ставропольский край"
+      ],
+      "deliveryAddress": [
+        "г Ставрополь, ул Доваторцев, д 9"
+      ],
+      "publishDate": "2026-09-04T08:20:38.446248",
+      "applicationFillingEndDate": "2026-09-04T10:20:00.447031",
+      "purchaseTypeTitle": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+      "items_count": 2,
+      "URL": "https://agregatoreat.ru/purchases/announcement/cd3b22d2-7040-46d8-b998-f431073e16ed/info",
+      "filter_result": "passed"
+    },
+    {
+      "id": "c7677467-7190-4f9b-9d4f-b48d8f30acc6",
+      "tradeNumber": "100087436126100114",
+      "subject": "Поставка молочных продуктов питания",
+      "price": 297000.0,
+      "organizer": {
+        "id": "cd9743a0-d67c-4d8b-843d-be0e183e2152",
+        "regNumber": "100087436",
+        "name": "ФКУ ИК-1 УФСИН РОССИИ ПО ВЛАДИМИРСКОЙ ОБЛАСТИ",
+        "fullName": "ФЕДЕРАЛЬНОЕ КАЗЕННОЕ УЧРЕЖДЕНИЕ \"ИСПРАВИТЕЛЬНАЯ КОЛОНИЯ № 1 УПРАВЛЕНИЯ ФЕДЕРАЛЬНОЙ СЛУЖБЫ ИСПОЛНЕНИЯ НАКАЗАНИЙ ПО ВЛАДИМИРСКОЙ ОБЛАСТИ\"",
+        "inn": "3324009464",
+        "kpp": "332401001",
+        "largestTaxpayerKpp": null,
+        "ogrn": "1023302751845",
+        "phoneNumber": "+7(958)567-19-46",
+        "director": "Муханов Александр Александрович",
+        "email": "ik1gol@rambler.ru",
+        "isIncludedInRostech": false,
+        "address": "601395, ВЛАДИМИРСКАЯ ОБЛАСТЬ, ул УЛ СОВЕТСКАЯ, д. Д. 50А"
+      },
+      "normalized_regions": [
+        "Владимирская область"
+      ],
+      "deliveryAddress": [
+        "Владимирская обл, Судогодский р-н, поселок Головино, ул Советская, д 50А"
+      ],
+      "publishDate": "2026-09-04T07:50:19.218157",
+      "applicationFillingEndDate": "2026-09-08T06:00:00",
+      "purchaseTypeTitle": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+      "items_count": 1,
+      "URL": "https://agregatoreat.ru/purchases/announcement/c7677467-7190-4f9b-9d4f-b48d8f30acc6/info",
+      "filter_result": "passed"
+    }
+  ]
+}

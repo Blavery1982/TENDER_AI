@@ -1,0 +1,224 @@
+{
+  "target_model": "Гидрогум 5",
+  "checked_at": "2026-09-13T10:33:22.491883+00:00",
+  "candidate_discovery": {
+    "model": "Гидрогум 5",
+    "sku": "Гидрогум 5",
+    "candidate_urls": [
+      {
+        "url": "https://market.yandex.ru/card/gidrogum-5---hydrogum-5/4372810458?sponsored=1&resale_goods=resale_new&hid=71645011&nid=71648510&cpa=1&cpm-adv=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      },
+      {
+        "url": "https://market.yandex.ru/card/gidrogum-5-hydrogum-5---alginat-bespylnyy-453g-zhermack/103822647359?resale_goods=resale_new&hid=82780018&nid=82783744&cpa=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      },
+      {
+        "url": "https://market.yandex.ru/card/alginatnaya-massa-hydrogum-5gidrogum-5-zhermack/4636398086?resale_goods=resale_new&hid=82780018&nid=82783744&cpa=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      }
+    ],
+    "candidate_count": 3,
+    "source_reports": [
+      {
+        "source": "Bing RSS",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Яндекс Маркет",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 3
+      },
+      {
+        "source": "XCOM",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "KNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "candidate_urls": 0
+      },
+      {
+        "source": "Ситилинк",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ВсеИнструменты",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ОНЛАЙН ТРЕЙД",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "DNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 401: Unauthorized",
+        "candidate_urls": 0
+      },
+      {
+        "source": "М.Видео",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Royal-Rus",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "ClimaArt",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "SDK-Climat",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      }
+    ]
+  },
+  "discovery_sources": [
+    {
+      "source": "Bing RSS",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Яндекс Маркет",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 3
+    },
+    {
+      "source": "XCOM",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "KNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "candidate_urls": 0
+    },
+    {
+      "source": "Ситилинк",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ВсеИнструменты",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ОНЛАЙН ТРЕЙД",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "DNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 401: Unauthorized",
+      "candidate_urls": 0
+    },
+    {
+      "source": "М.Видео",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Royal-Rus",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "ClimaArt",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "SDK-Climat",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    }
+  ],
+  "offers": [
+    {
+      "exact_product_name": "Гидрогум 5 - Hydrogum 5",
+      "model": "Гидрогум 5",
+      "exact_model_match": true,
+      "price": 835.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Мир стоматологов",
+      "url": "https://market.yandex.ru/card/gidrogum-5---hydrogum-5/4372810458?cpa=1&cpm-adv=1&hid=71645011&nid=71648510&resale_goods=resale_new&sponsored=1",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "discovered_by": "Яндекс Маркет",
+      "checked_at": "2026-09-13T10:33:36.005815+00:00"
+    },
+    {
+      "exact_product_name": "Альгинатная масса HYDROGUM 5(Гидрогум 5), Zhermack",
+      "model": "Гидрогум 5",
+      "exact_model_match": true,
+      "price": 913.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Art Dentaire",
+      "url": "https://market.yandex.ru/card/alginatnaya-massa-hydrogum-5gidrogum-5-zhermack/4636398086?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "discovered_by": "Яндекс Маркет",
+      "checked_at": "2026-09-13T10:33:38.456863+00:00"
+    },
+    {
+      "exact_product_name": "Гидрогум 5 (HYDROGUM 5) - Альгинат беспыльный (453г), Zhermack",
+      "model": "Гидрогум 5",
+      "exact_model_match": true,
+      "price": 1111.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "ДенталДепо",
+      "url": "https://market.yandex.ru/card/gidrogum-5-hydrogum-5---alginat-bespylnyy-453g-zhermack/103822647359?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "discovered_by": "Яндекс Маркет",
+      "checked_at": "2026-09-13T10:33:37.231657+00:00"
+    }
+  ],
+  "offers_found": 3,
+  "priced_offers_found": 3,
+  "minimum_price": 835.0,
+  "minimum_price_seller": "Мир стоматологов",
+  "minimum_price_url": "https://market.yandex.ru/card/gidrogum-5---hydrogum-5/4372810458?cpa=1&cpm-adv=1&hid=71645011&nid=71648510&resale_goods=resale_new&sponsored=1",
+  "source_errors": []
+}

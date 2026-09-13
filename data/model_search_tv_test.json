@@ -1,0 +1,265 @@
+{
+  "test_type": "single_procurement_model_search",
+  "procurement_id": "31f18b8a-d3b9-4cd8-890c-5d11824fc635",
+  "tradeNumber": "100250237126100180",
+  "subject": "Телевизор",
+  "source_card_file": "/Users/lubov/Documents/TENDER_AI/data/eat_single_31f18b8a-d3b9-4cd8-890c-5d11824fc635.json",
+  "analyzed_at": "2026-09-08T09:52:08.196440+00:00",
+  "documents": [
+    {
+      "file_name": "рап.pdf",
+      "document_type": 15,
+      "file_id": "723199e5-b842-496f-89d5-663ee24855df",
+      "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/31f18b8a-d3b9-4cd8-890c-5d11824fc635/15/723199e5-b842-496f-89d5-663ee24855df",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/31f18b8a-d3b9-4cd8-890c-5d11824fc635/рап.pdf",
+      "download_status": "downloaded"
+    },
+    {
+      "file_name": "кп.pdf",
+      "document_type": 14,
+      "file_id": "55343345-e9d3-4886-aefb-7d3401b3fcfb",
+      "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/31f18b8a-d3b9-4cd8-890c-5d11824fc635/14/55343345-e9d3-4886-aefb-7d3401b3fcfb",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/31f18b8a-d3b9-4cd8-890c-5d11824fc635/кп.pdf",
+      "download_status": "downloaded"
+    }
+  ],
+  "downloaded_documents": [
+    "data/contracts/31f18b8a-d3b9-4cd8-890c-5d11824fc635/рап.pdf",
+    "data/contracts/31f18b8a-d3b9-4cd8-890c-5d11824fc635/кп.pdf"
+  ],
+  "nmck_analysis": {
+    "quote_models": [
+      "General Electronics GE32LFN0",
+      "DEXP 43UCY3"
+    ],
+    "quote_unit_prices_rub": [
+      13750,
+      26600
+    ],
+    "quote_total_rub": 54100,
+    "eat_total_rub": 80700,
+    "findings": [
+      "GE32LFN0 из КП не соответствует ТЗ по разрешению и типу экрана.",
+      "DEXP 43UCY3 из КП не соответствует ТЗ по типу экрана.",
+      "В КП для второй позиции указана 1 штука, в карточке ЕАТ — 2 штуки.",
+      "Итог КП 54 100 ₽ не обосновывает итог карточки ЕАТ 80 700 ₽ при количестве 2+2."
+    ]
+  },
+  "positions": [
+    {
+      "item_index": 1,
+      "item_name": "Телевизор 30–35 дюймов, 4K UHD, OLED",
+      "quantity": 2,
+      "customer_unit_price_rub": 13750,
+      "price_threshold_80_percent_rub": 11000,
+      "requirements": [
+        {
+          "parameter": "Диагональ экрана",
+          "required_value": ">= 30 и < 35 дюймов"
+        },
+        {
+          "parameter": "Разрешение экрана",
+          "required_value": "4K UHD"
+        },
+        {
+          "parameter": "Тип экрана",
+          "required_value": "OLED"
+        }
+      ],
+      "candidate_models": [
+        {
+          "brand": "General Electronics",
+          "model": "GE32LFN0",
+          "parameter_check": [
+            {
+              "parameter": "Диагональ экрана",
+              "required_value": ">= 30 и < 35 дюймов",
+              "model_value": "32 дюйма",
+              "result": "complies",
+              "source": "https://general-electronics.com/en/product/led-televizor-ge32lfn0/",
+              "evidence": "Официально указана диагональ 32 дюйма."
+            },
+            {
+              "parameter": "Разрешение экрана",
+              "required_value": "4K UHD",
+              "model_value": "Full HD",
+              "result": "does_not_comply",
+              "source": "https://general-electronics.com/en/product/led-televizor-ge32lfn0/",
+              "evidence": "Официально указано Full HD, а требуется 4K UHD."
+            },
+            {
+              "parameter": "Тип экрана",
+              "required_value": "OLED",
+              "model_value": "LED, матрица VA",
+              "result": "does_not_comply",
+              "source": "https://general-electronics.com/en/product/led-televizor-ge32lfn0/",
+              "evidence": "Официально указан LED/VA, а требуется OLED."
+            }
+          ],
+          "technical_status": "non_compliant",
+          "production_status": "Модель присутствует в актуальном официальном каталоге",
+          "russia_availability": "Доступность в РФ подтверждается официальным российским каталогом",
+          "russia_availability_sources": [],
+          "russian_market_price_rub": null,
+          "price_source": null,
+          "rejection_reasons": [
+            "Не соответствует параметру: Разрешение экрана",
+            "Не соответствует параметру: Тип экрана"
+          ],
+          "price_check_status": "not_run_due_to_technical_result"
+        }
+      ],
+      "admitted_models": [],
+      "result_ru": "Нет модели, соответствующей всем требованиям ТЗ"
+    },
+    {
+      "item_index": 2,
+      "item_name": "Телевизор 40–45 дюймов, 4K UHD, OLED",
+      "quantity": 2,
+      "customer_unit_price_rub": 26600,
+      "price_threshold_80_percent_rub": 21280,
+      "requirements": [
+        {
+          "parameter": "Диагональ экрана",
+          "required_value": ">= 40 и < 45 дюймов"
+        },
+        {
+          "parameter": "Разрешение экрана",
+          "required_value": "4K UHD"
+        },
+        {
+          "parameter": "Тип экрана",
+          "required_value": "OLED"
+        }
+      ],
+      "candidate_models": [
+        {
+          "brand": "DEXP",
+          "model": "43UCY3",
+          "parameter_check": [
+            {
+              "parameter": "Диагональ экрана",
+              "required_value": ">= 40 и < 45 дюймов",
+              "model_value": "43 дюйма",
+              "result": "complies",
+              "source": "https://www.dns-shop.kz/product/characteristics/1ecd772ee75fed20/43-108-sm-televizor-dexp-43ucy3-cernyj/",
+              "evidence": "Указана диагональ 43 дюйма."
+            },
+            {
+              "parameter": "Разрешение экрана",
+              "required_value": "4K UHD",
+              "model_value": "3840×2160, 4K",
+              "result": "complies",
+              "source": "https://www.dns-shop.kz/product/characteristics/1ecd772ee75fed20/43-108-sm-televizor-dexp-43ucy3-cernyj/",
+              "evidence": "Указан стандарт 4K."
+            },
+            {
+              "parameter": "Тип экрана",
+              "required_value": "OLED",
+              "model_value": "LED",
+              "result": "does_not_comply",
+              "source": "https://www.dns-shop.kz/product/characteristics/1ecd772ee75fed20/43-108-sm-televizor-dexp-43ucy3-cernyj/",
+              "evidence": "Карточка называет модель LED-телевизором; OLED не подтвержден."
+            }
+          ],
+          "technical_status": "non_compliant",
+          "production_status": "Снятие с производства достоверно не установлено",
+          "russia_availability": "Предлагалась в приложенном КП; текущая доступность в РФ отдельно не подтверждена",
+          "russia_availability_sources": [],
+          "russian_market_price_rub": null,
+          "price_source": null,
+          "rejection_reasons": [
+            "Не соответствует параметру: Тип экрана"
+          ],
+          "price_check_status": "not_run_due_to_technical_result"
+        },
+        {
+          "brand": "LG",
+          "model": "OLED42C6RLA",
+          "parameter_check": [
+            {
+              "parameter": "Диагональ экрана",
+              "required_value": ">= 40 и < 45 дюймов",
+              "model_value": "42 дюйма",
+              "result": "complies",
+              "source": "https://www.lg.com/ru/televisions/lg-oled42c6rla",
+              "evidence": "Официально указана диагональ 42 дюйма."
+            },
+            {
+              "parameter": "Разрешение экрана",
+              "required_value": "4K UHD",
+              "model_value": "3840×2160, 4K UHD",
+              "result": "complies",
+              "source": "https://www.lg.com/ru/televisions/lg-oled42c6rla",
+              "evidence": "Официально указано 4K Ultra HD 3840×2160."
+            },
+            {
+              "parameter": "Тип экрана",
+              "required_value": "OLED",
+              "model_value": "4K OLED",
+              "result": "complies",
+              "source": "https://www.lg.com/ru/televisions/lg-oled42c6rla",
+              "evidence": "Официально указан экран 4K OLED."
+            }
+          ],
+          "technical_status": "fully_compliant",
+          "production_status": "Актуальная модель 2026 года в официальном каталоге LG Россия",
+          "russia_availability": "В наличии/доступна к заказу в российском магазине",
+          "russia_availability_sources": [
+            "https://www.technocity.ru/catalog/detail/1655606/"
+          ],
+          "russian_market_price_rub": 86230,
+          "price_source": "https://www.technocity.ru/catalog/detail/1655606/",
+          "rejection_reasons": [
+            "Технически соответствует, но цена выше порога"
+          ],
+          "price_check_status": "above_20_percent_threshold"
+        },
+        {
+          "brand": "Samsung",
+          "model": "QE42S90F",
+          "parameter_check": [
+            {
+              "parameter": "Диагональ экрана",
+              "required_value": ">= 40 и < 45 дюймов",
+              "model_value": "42 дюйма",
+              "result": "complies",
+              "source": "https://www.samsung.com/uk/tvs/oled-tv/s90f-42-inch-oled-4k-smart-tv-qe42s90faexxu/",
+              "evidence": "Официально указана диагональ 42 дюйма."
+            },
+            {
+              "parameter": "Разрешение экрана",
+              "required_value": "4K UHD",
+              "model_value": "3840×2160, 4K",
+              "result": "complies",
+              "source": "https://www.samsung.com/uk/tvs/oled-tv/s90f-42-inch-oled-4k-smart-tv-qe42s90faexxu/",
+              "evidence": "Официально указано 4K 3840×2160."
+            },
+            {
+              "parameter": "Тип экрана",
+              "required_value": "OLED",
+              "model_value": "OLED",
+              "result": "complies",
+              "source": "https://www.samsung.com/uk/tvs/oled-tv/s90f-42-inch-oled-4k-smart-tv-qe42s90faexxu/",
+              "evidence": "Официально указан тип OLED."
+            }
+          ],
+          "technical_status": "fully_compliant",
+          "production_status": "Актуальная модель 2025 года в официальном каталоге Samsung; сведений о снятии нет",
+          "russia_availability": "В наличии в российском магазине",
+          "russia_availability_sources": [
+            "https://www.bigstv.ru/product/televizor-samsung-qe42s90f/"
+          ],
+          "russian_market_price_rub": 87800,
+          "price_source": "https://www.bigstv.ru/product/televizor-samsung-qe42s90f/",
+          "rejection_reasons": [
+            "Технически соответствует, но цена выше порога"
+          ],
+          "price_check_status": "above_20_percent_threshold"
+        }
+      ],
+      "admitted_models": [],
+      "result_ru": "Модели соответствуют ТЗ, но цена выше порога −20%"
+    }
+  ]
+}

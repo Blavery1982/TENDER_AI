@@ -1,0 +1,93 @@
+{
+  "search_status": "completed",
+  "queries_used": [
+    "\"Телевизор\" модель характеристики",
+    "Телевизор В соответствии с техническим заданием Требуется модель",
+    "Телевизор datasheet"
+  ],
+  "live_queries_count": 3,
+  "candidates_found": 2,
+  "candidates_checked": 2,
+  "fully_compliant_count": 0,
+  "candidates": [
+    {
+      "exact_model": "2026/27",
+      "model_name": "2026/27",
+      "brand": null,
+      "candidate_source": "live_search",
+      "sources": [
+        "https://www.premierleague.com/en/tables/premier-league"
+      ],
+      "source_urls": [
+        "https://www.premierleague.com/en/tables/premier-league"
+      ],
+      "official_sources": [
+        "https://www.premierleague.com/en/tables/premier-league"
+      ],
+      "russian_availability_sources": [],
+      "public_price_sources": [],
+      "public_price": null,
+      "purchase_price": null,
+      "requirements_check": [
+        {
+          "requirement": "В соответствии с техническим заданием",
+          "found_value": null,
+          "result": "not_confirmed",
+          "source": null,
+          "evidence": null,
+          "confidence": "low"
+        }
+      ],
+      "status": "not_confirmed",
+      "technical_status": "not_confirmed",
+      "production_status": "in_production",
+      "russia_availability": "not_confirmed",
+      "warnings": [],
+      "checked_at": "2026-09-09T13:25:24.816647+00:00"
+    },
+    {
+      "exact_model": "2026-27",
+      "model_name": "2026-27",
+      "brand": null,
+      "candidate_source": "live_search",
+      "sources": [
+        "https://www.espn.com/soccer/standings/_/league/eng.1"
+      ],
+      "source_urls": [
+        "https://www.espn.com/soccer/standings/_/league/eng.1"
+      ],
+      "official_sources": [],
+      "russian_availability_sources": [],
+      "public_price_sources": [],
+      "public_price": null,
+      "purchase_price": null,
+      "requirements_check": [
+        {
+          "requirement": "В соответствии с техническим заданием",
+          "found_value": null,
+          "result": "not_confirmed",
+          "source": null,
+          "evidence": null,
+          "confidence": "low"
+        }
+      ],
+      "status": "not_confirmed",
+      "technical_status": "not_confirmed",
+      "production_status": "production_not_confirmed",
+      "russia_availability": "not_confirmed",
+      "warnings": [],
+      "checked_at": "2026-09-09T13:25:24.816647+00:00"
+    }
+  ],
+  "selected_model": null,
+  "selected_model_public_price": null,
+  "purchase_price": null,
+  "requirements_confirmed": 0,
+  "requirements_unconfirmed": 2,
+  "rejected_candidates": [],
+  "warnings": [],
+  "checked_at": "2026-09-09T13:25:24.816647+00:00",
+  "technical_fresh_until": "2026-10-09T13:25:24.816647+00:00",
+  "market_fresh_until": "2026-09-10T13:25:24.816647+00:00",
+  "cache_status": "miss"
+}

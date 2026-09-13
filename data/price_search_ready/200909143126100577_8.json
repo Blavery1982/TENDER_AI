@@ -1,0 +1,165 @@
+{
+  "target_model": "НСТк 300-01 М4",
+  "checked_at": "2026-09-13T10:34:24.737569+00:00",
+  "candidate_discovery": {
+    "model": "НСТк 300-01 М4",
+    "sku": "НСТк 300-01 М4",
+    "candidate_urls": [],
+    "candidate_count": 0,
+    "source_reports": [
+      {
+        "source": "Bing RSS",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Яндекс Маркет",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "XCOM",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "KNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "candidate_urls": 0
+      },
+      {
+        "source": "Ситилинк",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ВсеИнструменты",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ОНЛАЙН ТРЕЙД",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "DNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 401: Unauthorized",
+        "candidate_urls": 0
+      },
+      {
+        "source": "М.Видео",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Royal-Rus",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "ClimaArt",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "SDK-Climat",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      }
+    ]
+  },
+  "discovery_sources": [
+    {
+      "source": "Bing RSS",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Яндекс Маркет",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "XCOM",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "KNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "candidate_urls": 0
+    },
+    {
+      "source": "Ситилинк",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ВсеИнструменты",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ОНЛАЙН ТРЕЙД",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "DNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 401: Unauthorized",
+      "candidate_urls": 0
+    },
+    {
+      "source": "М.Видео",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Royal-Rus",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "ClimaArt",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "SDK-Climat",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    }
+  ],
+  "offers": [],
+  "offers_found": 0,
+  "priced_offers_found": 0,
+  "minimum_price": null,
+  "minimum_price_seller": null,
+  "minimum_price_url": null,
+  "source_errors": []
+}

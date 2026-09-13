@@ -1,0 +1,189 @@
+{
+  "target_model": "Royal Clima RC-TWN28HN",
+  "checked_at": "2026-09-11T12:12:26.206731+00:00",
+  "candidate_discovery": {
+    "model": "Royal Clima RC-TWN28HN",
+    "sku": "RC-TWN28HN",
+    "candidate_urls": [
+      {
+        "url": "https://royal-rus.ru/bytovye-konditsionery/seriya-triumph/nastennyy-konditsioner-royal-clima-rc-twn28hn/",
+        "discovered_by": "Royal-Rus",
+        "supplier_name": "Royal-Rus"
+      },
+      {
+        "url": "https://climaart.ru/triumph/konditsioner-royal-clima-rc-twn28hn",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      }
+    ],
+    "candidate_count": 2,
+    "source_reports": [
+      {
+        "source": "Яндекс Маркет",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "XCOM",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "KNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "candidate_urls": 0
+      },
+      {
+        "source": "Ситилинк",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ВсеИнструменты",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ОНЛАЙН ТРЕЙД",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "DNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 401: Unauthorized",
+        "candidate_urls": 0
+      },
+      {
+        "source": "М.Видео",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Royal-Rus",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 1
+      },
+      {
+        "source": "ClimaArt",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 1
+      },
+      {
+        "source": "SDK-Climat",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      }
+    ]
+  },
+  "discovery_sources": [
+    {
+      "source": "Яндекс Маркет",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "XCOM",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "KNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "candidate_urls": 0
+    },
+    {
+      "source": "Ситилинк",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ВсеИнструменты",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ОНЛАЙН ТРЕЙД",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "DNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 401: Unauthorized",
+      "candidate_urls": 0
+    },
+    {
+      "source": "М.Видео",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Royal-Rus",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 1
+    },
+    {
+      "source": "ClimaArt",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 1
+    },
+    {
+      "source": "SDK-Climat",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    }
+  ],
+  "offers": [
+    {
+      "exact_product_name": "Кондиционер Royal Clima RC-TWN28HN",
+      "model": "Royal Clima RC-TWN28HN",
+      "price": 23900.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "ClimaArt",
+      "url": "https://climaart.ru/triumph/konditsioner-royal-clima-rc-twn28hn",
+      "source": "climaart.ru",
+      "http_status": 200,
+      "checked_at": "2026-09-11T12:12:36.604324+00:00"
+    },
+    {
+      "exact_product_name": "Royal Clima RC-TWN28HN",
+      "model": "Royal Clima RC-TWN28HN",
+      "price": 26490.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Royal-Rus",
+      "url": "https://royal-rus.ru/bytovye-konditsionery/seriya-triumph/nastennyy-konditsioner-royal-clima-rc-twn28hn",
+      "source": "royal-rus.ru",
+      "http_status": 200,
+      "checked_at": "2026-09-11T12:12:35.963652+00:00"
+    }
+  ],
+  "offers_found": 2,
+  "priced_offers_found": 2,
+  "minimum_price": 23900.0,
+  "minimum_price_seller": "ClimaArt",
+  "minimum_price_url": "https://climaart.ru/triumph/konditsioner-royal-clima-rc-twn28hn",
+  "source_errors": []
+}

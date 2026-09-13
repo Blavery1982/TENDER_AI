@@ -1,0 +1,24 @@
+{
+  "search_status": "partial",
+  "queries_used": [
+    "\"Кондиционер бытовой\" модель характеристики",
+    "Кондиционер бытовой Мощность в режиме охлаждения ≥ 2.6 кВт Требуется Мощность в режиме нагрева ≥ 2.6 кВт Требуется модель",
+    "Кондиционер бытовой Площадь помещения ≥ 25 м^2 Требуется Дополнительные функции Автоматическая очистка, автоматический выбор режима, ночной режим, режим турбо, самодиагностика. Класс энергоэффективности (в режиме охлаждения) не ниже А datasheet"
+  ],
+  "live_queries_count": 3,
+  "candidates_found": 0,
+  "candidates_checked": 0,
+  "fully_compliant_count": 0,
+  "candidates": [],
+  "selected_model": null,
+  "selected_model_public_price": null,
+  "purchase_price": null,
+  "requirements_confirmed": 0,
+  "requirements_unconfirmed": 0,
+  "rejected_candidates": [],
+  "warnings": [],
+  "checked_at": "2026-09-09T13:25:09.011336+00:00",
+  "technical_fresh_until": "2026-10-09T13:25:09.011336+00:00",
+  "market_fresh_until": "2026-09-10T13:25:09.011336+00:00",
+  "cache_status": "miss"
+}

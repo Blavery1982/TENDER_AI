@@ -1,0 +1,279 @@
+{
+  "run_type": "PRIORITY_1_EXACT_MODEL_PRODUCTION_TEST",
+  "completed_at": "2026-09-11T14:14:28.471144+00:00",
+  "elapsed_seconds": 10.596,
+  "payload": {
+    "run_type": "LIVE_ONE_PROCUREMENT_E2E",
+    "generated_at": "2026-09-11T14:14:06.941032+00:00",
+    "procurement": {
+      "id": "fd71642c-1c03-4739-a487-f1e8fa2722a6",
+      "trade_number": "100316493126100091",
+      "url": "https://agregatoreat.ru/purchases/announcement/fd71642c-1c03-4739-a487-f1e8fa2722a6/info",
+      "subject": "Поставка источников бесперебойного питания",
+      "nmck": 218737.32,
+      "deadline": "2026-09-14T08:52:00.833641",
+      "delivery_address": "Российская Федерация, 123812, Москва, УЛИЦА БОЛЬШАЯ ГРУЗИНСКАЯ, 4/6",
+      "delivery_period": 10,
+      "delivery_working_days": true,
+      "payment_type": 2,
+      "commission_fee": 6671.49,
+      "contact": {
+        "fio": "-",
+        "email": "zakupki@dod-mpr.ru",
+        "phone": "+7(499)254-25-55(2371)"
+      },
+      "filter_result": "passed",
+      "purchase_type_title": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)"
+    },
+    "item": {
+      "position_number": 1,
+      "display_name": "Активная мощность: ≥ 1200Ватт;\nВерхняя граница диапазона входного напряжения (фаза-нейтраль) без перехода в режим работы от батарей: ≥ 300 Вольт;\nКоэффициент полезного действия ИБП: ≥ 97\nВозможность замены аккумуляторной батареи пользователем: Да;\nКоличество выходных разъемов питания с батарейной поддержкой: ≥ 8 Штука;\nЕмкость одного аккумулятора : ≥ 15\nМаксимально-допустимое номинальное напряжение аккумуляторных батарей: 12 Вольт;\nМасса : ≤ 50\tКилограмм;\nНоминальная входная частота: 50 Герц;\nФорм-фактор источника бесперебойного питания: Отдельно стоящий (напольный);\nМинимальная температура окружающей среды без снижения паспортных и эксплуатационных характеристик, ограничений по времени работы, гарантийных ограничений: 0;\nНаличие дисплея: Да;\nНижняя граница диапазона входного напряжения (фаза-нейтраль) без перехода в режим работы от батарей: ≤ 155 Вольт;\nНоминальное входное напряжение: ≥ 220  и  < 240;\n\nИБП CyberPower PR1500ELCD",
+      "name": "Источник бесперебойного питания",
+      "quantity": 4.0,
+      "unit": "шт",
+      "customer_unit_price": 54684.33,
+      "sum": 218737.32,
+      "okpd2_code": "26.20.40.110",
+      "eat_code": "BTIE_42028586"
+    },
+    "documents": {
+      "found": 1,
+      "processed": 1,
+      "read_methods": [
+        "text_layer"
+      ]
+    },
+    "audit": {
+      "status": "analyzed",
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется оформление пропуска",
+      "contract_analysis": "Документы проанализированы",
+      "requirements_count": 14,
+      "customer_check": {
+        "customer_name": null,
+        "customer_inn": null,
+        "customer_kpp": null,
+        "customer_ogrn": null,
+        "customer_data_source": "ИНН заказчика не определён",
+        "arbitration_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА КАД",
+        "arbitration_summary": "Арбитражные дела заказчика: требуется ручная проверка",
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "payment_risk_status": "Недостаточно данных для оценки риска оплаты",
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён",
+          "ИНН заказчика не определён"
+        ],
+        "manual_actions_required": [
+          {
+            "action": "Уточнить ИНН заказчика",
+            "customer_inn": "Нет данных"
+          }
+        ],
+        "checked_at": "2026-09-11T14:14:06.939855+00:00",
+        "arbitration_evidence": {
+          "checked_in_kad": false,
+          "checked_at": "2026-09-11T14:14:06.939855+00:00",
+          "searched_inn": null,
+          "cases_found": null,
+          "cases_count": null,
+          "plaintiff_cases_count": null,
+          "defendant_cases_count": null,
+          "bankruptcy_cases_count": null,
+          "other_cases_count": null,
+          "recent_cases_count": null,
+          "case_numbers": [],
+          "case_roles": [],
+          "case_dates": [],
+          "case_categories": [],
+          "kad_url": "https://kad.arbitr.ru",
+          "evidence": null,
+          "warnings": [
+            "Текущий ИНН поставщика не подтверждён"
+          ],
+          "user_summary": "Арбитражные дела: требуется ручная проверка",
+          "risk_level": "unknown"
+        }
+      }
+    },
+    "traceability": {
+      "traceability_status": "Не подлежит по имеющимся данным",
+      "traceability_reason": "Код ОКПД2 не соответствует ни одной потенциально прослеживаемой группе актуального справочника",
+      "traceability_attention": false,
+      "traceability_checked_at": "2026-09-11T17:14:06.940614+03:00",
+      "traceability_source_date": "2026-09-04",
+      "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+      "traceability_rules_stale": false,
+      "matched_okpd2": null,
+      "matched_tnved": null,
+      "supplier_verification": {
+        "country_of_origin": null,
+        "tnved": null,
+        "specific_batch_traceable": null,
+        "supplier_can_provide_upd_traceability_details": null
+      }
+    },
+    "model": {
+      "selected_model": "CyberPower PR1500ELCD",
+      "selection_reason": "Точная модель прямо указана заказчиком; эквивалент не разрешён",
+      "search_mode": "EXACT_MODEL_ONLY",
+      "compliance_status": "Соответствие не подтверждено",
+      "compliance_code": "not_confirmed",
+      "requirements_confirmed": 0,
+      "requirements_mismatched": 0,
+      "requirements_unconfirmed": 14,
+      "official_sources": [],
+      "production_status": "Актуальность производства не подтверждена",
+      "russia_availability": "Подтверждена карточкой российского Яндекс Маркета",
+      "customer_model": "CyberPower PR1500ELCD",
+      "equivalent_allowed": false,
+      "full_analogs": [],
+      "full_analogs_note": "НЕ ИСПОЛЬЗОВАТЬ ДЛЯ ПОДАЧИ — замена модели заказчиком не разрешена; дополнительный поиск аналогов не выполнялся в быстром pipeline"
+    },
+    "supplier_search": {
+      "target_discount_percent": 15,
+      "target_price": 46481.68,
+      "confirmed_offers": [
+        {
+          "supplier_name": "ОНЛАЙНТРЕЙД.РУ (через Яндекс Маркет)",
+          "product_url": "https://market.yandex.ru/card/istochnik-bespereboynogo-pitaniya-cyberpower-pr1500elcd-1500va1350w/102424077688?cpa=1&hid=80206796&nid=80208057&resale_goods=resale_new",
+          "domain": "market.yandex.ru",
+          "source_category": "marketplace",
+          "model": "CyberPower PR1500ELCD",
+          "product_name": "Источник бесперебойного питания Cyberpower PR1500ELCD 1500VA/1350W",
+          "exact_model": true,
+          "product_page_available": true,
+          "public_price": 91449.0,
+          "purchase_price": null,
+          "availability": "in_stock",
+          "checked_at": "2026-09-11T14:14:06.679483+00:00",
+          "source": "market.yandex.ru",
+          "risk_flags": [],
+          "positive_signals": [
+            "Доверенный крупный источник"
+          ],
+          "unavailable_checks": [],
+          "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+          "verification_comment": "Доверенный крупный источник",
+          "arbitration_cases": {
+            "checked_in_kad": false,
+            "cases_found": null,
+            "bankruptcy_cases_count": null,
+            "defendant_cases_count": null,
+            "recent_cases_count": null,
+            "user_summary": "Арбитражные дела: требуется ручная проверка",
+            "warnings": [
+              "Проверка связанных физических лиц по ИНН не выполнена"
+            ],
+            "risk_level": "unknown"
+          },
+          "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+          "verification_evidence": [
+            {
+              "check_name": "trusted_source",
+              "status": "confirmed_positive",
+              "evidence": "Домен входит в доверенный список",
+              "source": "market.yandex.ru",
+              "checked_at": "2026-09-11T14:14:06.936407+00:00"
+            }
+          ],
+          "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+          "target_price_difference": 44967.32,
+          "verification_scope": "Проверена торговая площадка; реквизиты продавца перед оплатой нужно подтвердить по счёту"
+        }
+      ],
+      "confirmed_count": 1,
+      "minimum_confirmed_price": 91449.0,
+      "suppliers_for_call": [
+        {
+          "supplier_name": "ОНЛАЙНТРЕЙД.РУ (через Яндекс Маркет)",
+          "product_url": "https://market.yandex.ru/card/istochnik-bespereboynogo-pitaniya-cyberpower-pr1500elcd-1500va1350w/102424077688?cpa=1&hid=80206796&nid=80208057&resale_goods=resale_new",
+          "domain": "market.yandex.ru",
+          "source_category": "marketplace",
+          "model": "CyberPower PR1500ELCD",
+          "product_name": "Источник бесперебойного питания Cyberpower PR1500ELCD 1500VA/1350W",
+          "exact_model": true,
+          "product_page_available": true,
+          "public_price": 91449.0,
+          "purchase_price": null,
+          "availability": "in_stock",
+          "checked_at": "2026-09-11T14:14:06.679483+00:00",
+          "source": "market.yandex.ru",
+          "risk_flags": [],
+          "positive_signals": [
+            "Доверенный крупный источник"
+          ],
+          "unavailable_checks": [],
+          "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+          "verification_comment": "Доверенный крупный источник",
+          "arbitration_cases": {
+            "checked_in_kad": false,
+            "cases_found": null,
+            "bankruptcy_cases_count": null,
+            "defendant_cases_count": null,
+            "recent_cases_count": null,
+            "user_summary": "Арбитражные дела: требуется ручная проверка",
+            "warnings": [
+              "Проверка связанных физических лиц по ИНН не выполнена"
+            ],
+            "risk_level": "unknown"
+          },
+          "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+          "verification_evidence": [
+            {
+              "check_name": "trusted_source",
+              "status": "confirmed_positive",
+              "evidence": "Домен входит в доверенный список",
+              "source": "market.yandex.ru",
+              "checked_at": "2026-09-11T14:14:06.936407+00:00"
+            }
+          ],
+          "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+          "target_price_difference": 44967.32,
+          "verification_scope": "Проверена торговая площадка; реквизиты продавца перед оплатой нужно подтвердить по счёту"
+        }
+      ],
+      "less_than_three": true
+    },
+    "logistics": {
+      "status": "Не рассчитана",
+      "estimated_cost": null
+    },
+    "warnings": [
+      "НАЙДЕНО МЕНЕЕ 3 ПОСТАВЩИКОВ",
+      "Полное соответствие модели всем требованиям ТЗ автоматически не подтверждено",
+      "ИНН и наименование заказчика не извлечены из доступной карточки/ТЗ",
+      "Подтверждённая публичная цена выше целевого порога закупки"
+    ],
+    "processing": {
+      "queue": "PRIORITY_1_EXACT_MODEL",
+      "model_discovery_before_price": false,
+      "elapsed_seconds": 10.596
+    },
+    "economics": {
+      "eat_commission_rate": 0.03,
+      "eat_commission": 6562.12,
+      "nmck_after_eat_commission": 212175.2,
+      "minimum_purchase_cost": 365796.0,
+      "preliminary_margin_before_logistics": -153620.8,
+      "logistics_included": false
+    }
+  },
+  "google_sheets": {
+    "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1iMas8iLqWuAECZQ7mQOM-ZDJFWzO0kulevFlEwX9w2w",
+    "worksheet": "🟢 Актуальные закупки",
+    "row": 2,
+    "service_account_email": "tender-bot@tenderai-490409.iam.gserviceaccount.com",
+    "key": [
+      "fd71642c-1c03-4739-a487-f1e8fa2722a6",
+      "1"
+    ]
+  },
+  "price_search_path": "/Users/lubov/Documents/TENDER_AI/data/price_search_fd71642c-1c03-4739-a487-f1e8fa2722a6.json"
+}

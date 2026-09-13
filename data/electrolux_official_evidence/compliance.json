@@ -1,0 +1,401 @@
+{
+  "requirements_check": [
+    {
+      "requirement": "Инверторный тип кондиционера",
+      "required_value": "Нет",
+      "operator": "equals",
+      "unit": null,
+      "found_value": "Нет",
+      "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_page": null,
+      "evidence": "Инверторный компрессор | Нет",
+      "result": "corresponds",
+      "confidence": "high",
+      "actual_unit": null,
+      "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_type": "PROFESSIONAL_STORE",
+      "parameter": "inverter",
+      "normalized_value": false,
+      "source_priority": 3,
+      "lower_priority_observations": []
+    },
+    {
+      "requirement": "Класс энергоэффективности (в режиме нагрева)",
+      "required_value": "не ниже А",
+      "operator": "minimum",
+      "unit": null,
+      "found_value": null,
+      "source": null,
+      "source_page": null,
+      "evidence": null,
+      "result": "could_not_confirm",
+      "confidence": "low",
+      "source_type": "OTHER",
+      "source_url": null,
+      "normalized_value": null
+    },
+    {
+      "requirement": "Класс энергоэффективности (в режиме охлаждения)",
+      "required_value": "не ниже А",
+      "operator": "minimum",
+      "unit": null,
+      "found_value": null,
+      "source": null,
+      "source_page": null,
+      "evidence": null,
+      "result": "could_not_confirm",
+      "confidence": "low",
+      "source_type": "OTHER",
+      "source_url": null,
+      "normalized_value": null
+    },
+    {
+      "requirement": "Наличие фильтров тонкой очистки воздуха",
+      "required_value": "да",
+      "operator": "equals",
+      "unit": null,
+      "found_value": null,
+      "source": null,
+      "source_page": null,
+      "evidence": null,
+      "result": "could_not_confirm",
+      "confidence": "low",
+      "source_type": "OTHER",
+      "source_url": null,
+      "normalized_value": null
+    },
+    {
+      "requirement": "Дополнительные функции",
+      "required_value": "Автоматическая очистка, автоматический выбор режима, ночной режим, режим турбо, самодиагностика.",
+      "operator": "equals",
+      "unit": null,
+      "found_value": "Автоматическая очистка; автоматический выбор режима; ночной режим; режим турбо; самодиагностика.",
+      "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_page": null,
+      "evidence": [
+        "Самоочистка внутреннего блока | Да",
+        "Автоматический режим | Да",
+        "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей.",
+        "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей.",
+        "Самодиагностика | да"
+      ],
+      "result": "corresponds",
+      "confidence": "high",
+      "function_checks": [
+        {
+          "requirement": "self_clean",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Да",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Самоочистка внутреннего блока | Да",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "self_clean",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "auto_mode",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Да",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Автоматический режим | Да",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "auto_mode",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "sleep_mode",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "да",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей.",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "sleep_mode",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "turbo_mode",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "да",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей.",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "turbo_mode",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "self_diagnosis",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "да",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Самодиагностика | да",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "self_diagnosis",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        }
+      ],
+      "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "parameter": "functions",
+      "normalized_value": {
+        "Автоматическая очистка": true,
+        "автоматический выбор режима": true,
+        "ночной режим": true,
+        "режим турбо": true,
+        "самодиагностика.": true
+      },
+      "source_type": [
+        "PROFESSIONAL_STORE"
+      ]
+    },
+    {
+      "requirement": "Тип внутреннего блока",
+      "required_value": "Настенный",
+      "operator": "equals",
+      "unit": null,
+      "found_value": null,
+      "source": null,
+      "source_page": null,
+      "evidence": null,
+      "result": "could_not_confirm",
+      "confidence": "low",
+      "source_type": "OTHER",
+      "source_url": null,
+      "normalized_value": null
+    },
+    {
+      "requirement": "Вид кондиционера",
+      "required_value": "Сплит-система",
+      "operator": "equals",
+      "unit": null,
+      "found_value": "Сплит-система",
+      "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_page": null,
+      "evidence": "Вид товара | Сплит-система",
+      "result": "corresponds",
+      "confidence": "high",
+      "actual_unit": null,
+      "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_type": "PROFESSIONAL_STORE",
+      "parameter": "product_type",
+      "normalized_value": "сплит-система",
+      "source_priority": 3,
+      "lower_priority_observations": []
+    },
+    {
+      "requirement": "Вид блока кондиционера",
+      "required_value": "Наружный",
+      "operator": "equals",
+      "unit": null,
+      "found_value": null,
+      "source": null,
+      "source_page": null,
+      "evidence": null,
+      "result": "could_not_confirm",
+      "confidence": "low",
+      "source_type": "OTHER",
+      "source_url": null,
+      "normalized_value": null
+    },
+    {
+      "requirement": "Наличие антибактериального фильтра",
+      "required_value": "да",
+      "operator": "equals",
+      "unit": null,
+      "found_value": null,
+      "source": null,
+      "source_page": null,
+      "evidence": null,
+      "result": "could_not_confirm",
+      "confidence": "low",
+      "source_type": "OTHER",
+      "source_url": null,
+      "normalized_value": null
+    },
+    {
+      "requirement": "Мощность в режиме охлаждения",
+      "required_value": "2.6 кВт",
+      "operator": "minimum",
+      "unit": "кВт",
+      "found_value": null,
+      "source": null,
+      "source_page": null,
+      "evidence": null,
+      "result": "could_not_confirm",
+      "confidence": "low",
+      "source_type": "OTHER",
+      "source_url": null,
+      "normalized_value": null
+    },
+    {
+      "requirement": "Мощность в режиме нагрева",
+      "required_value": "2.6 кВт",
+      "operator": "minimum",
+      "unit": "кВт",
+      "found_value": null,
+      "source": null,
+      "source_page": null,
+      "evidence": null,
+      "result": "could_not_confirm",
+      "confidence": "low",
+      "source_type": "OTHER",
+      "source_url": null,
+      "normalized_value": null
+    },
+    {
+      "requirement": "Площадь помещения",
+      "required_value": "25 м^2",
+      "operator": "minimum",
+      "unit": "м^2",
+      "found_value": "25 м2",
+      "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_page": null,
+      "evidence": "Обслуживаемая площадь | 25 м2",
+      "result": "corresponds",
+      "confidence": "high",
+      "actual_unit": "м²",
+      "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_type": "PROFESSIONAL_STORE",
+      "parameter": "room_area",
+      "normalized_value": {
+        "values": [
+          "25"
+        ],
+        "dimension": "area",
+        "base_unit": "area",
+        "source_unit": "м²",
+        "conversion_factor": "1"
+      },
+      "source_priority": 3,
+      "lower_priority_observations": []
+    },
+    {
+      "requirement": "Цвет",
+      "required_value": "белый",
+      "operator": "equals",
+      "unit": null,
+      "found_value": "Белый",
+      "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_page": null,
+      "evidence": "Цвет корпуса | Белый",
+      "result": "corresponds",
+      "confidence": "high",
+      "actual_unit": null,
+      "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "source_type": "PROFESSIONAL_STORE",
+      "parameter": "цвет",
+      "normalized_value": "белый",
+      "source_priority": 3,
+      "lower_priority_observations": []
+    }
+  ],
+  "status": "not_confirmed",
+  "technical_status": "not_confirmed",
+  "status_ru": "Соответствие не подтверждено",
+  "api_requests": 2,
+  "counts": {
+    "corresponds": 5,
+    "could_not_confirm": 8
+  },
+  "exact_sku_confirmed": true,
+  "official_evidence_verified": false,
+  "selected_model": null,
+  "document_review": {
+    "url": "https://ecoclima.ru/erc/2022/08/16/896f51281d6a75266ad0c0193165542ad952c913.pdf",
+    "source_type": "OTHER",
+    "page": 12,
+    "exact_model_column": "EACS-09 HP/N3",
+    "visual_check": "table_page12.png",
+    "authenticity": "Manufacturer-styled licensed manual mirrored by third parties; official origin not independently verified",
+    "not_used_as_official_evidence": true,
+    "observations": [
+      {
+        "parameter": "energy_efficiency",
+        "value": "A",
+        "limitation": "No separate heating/cooling designation"
+      },
+      {
+        "parameter": "capacity_cooling_heating",
+        "value": "9000/9400",
+        "limitation": "Unit absent; no BTU/h assumption or conversion"
+      },
+      {
+        "parameter": "input_power",
+        "value": "821/763 W",
+        "limitation": "Electrical consumption, not delivered capacity"
+      },
+      {
+        "parameter": "outdoor_unit",
+        "value": "720x428x310 mm",
+        "limitation": "Exact model column; document provenance unverified"
+      },
+      {
+        "parameter": "antibacterial_filter",
+        "value": "3 ступень - антибактериальный фильтр",
+        "limitation": "Series-wide statement, not a separate exact-model cell"
+      },
+      {
+        "parameter": "wall_mounting",
+        "value": "Крепления для монтажа на стену (только для внутреннего блока)",
+        "limitation": "Series-wide statement; not accepted as verified official evidence"
+      }
+    ]
+  },
+  "provenance_checks": [
+    {
+      "url": "https://electrolux-home.ru/info-about-sellers/",
+      "finding": "Retail sellers; manufacturer status not established"
+    },
+    {
+      "url": "https://home-comfort.ru/",
+      "finding": "Website referenced by manual, climate product support available"
+    },
+    {
+      "url": "https://home-comfort.ru/support/manual/",
+      "finding": "HTTP 403; no bypass or retry"
+    }
+  ]
+}

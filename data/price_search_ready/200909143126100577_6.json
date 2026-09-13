@@ -1,0 +1,297 @@
+{
+  "target_model": "Fuji 1",
+  "checked_at": "2026-09-13T10:33:57.346942+00:00",
+  "candidate_discovery": {
+    "model": "Fuji 1",
+    "sku": "Fuji 1",
+    "candidate_urls": [
+      {
+        "url": "https://market.yandex.ru/category/fuji-1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      },
+      {
+        "url": "https://market.yandex.ru/card/fuji-1-gold-label--fudzhi-1-35gr-por--20ml-zhidk-stekloionomernyy-tsement-dlya-postoyannoy-fiksatsii-fuji-one-meron-meron/6140415890?resale_goods=resale_new&hid=71501065&nid=71501071&cpa=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      },
+      {
+        "url": "https://market.yandex.ru/category/fuji-1?page=2",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      },
+      {
+        "url": "https://market.yandex.ru/category/fuji-1?page=3",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      },
+      {
+        "url": "https://climaart.ru/multisplit-vnutrinie/fujitsu-airflow-asyg12lmce-r",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      },
+      {
+        "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-asyg12lmce-r-aoyg12lmce-r",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      },
+      {
+        "url": "https://climaart.ru/multisplit-vnutrinie/fujitsu-airflow-asyg14lmce-r",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      },
+      {
+        "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-asyg14lmce-r-aoyg14lmce-r",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      },
+      {
+        "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-nordic-asyg12lmcb-aoyg12lmcbn",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      },
+      {
+        "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-nordic-asyg14lmcb-aoyg14lmcbn",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      },
+      {
+        "url": "https://climaart.ru/multisplit-narujnie-bloki/fujitsu-aoyg14lac2",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      },
+      {
+        "url": "https://climaart.ru/multisplit-narujnie-bloki/fujitsu-aoyg18lac2",
+        "discovered_by": "ClimaArt",
+        "supplier_name": "ClimaArt"
+      }
+    ],
+    "candidate_count": 12,
+    "source_reports": [
+      {
+        "source": "Bing RSS",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Яндекс Маркет",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 5
+      },
+      {
+        "source": "XCOM",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "KNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "candidate_urls": 0
+      },
+      {
+        "source": "Ситилинк",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ВсеИнструменты",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ОНЛАЙН ТРЕЙД",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "DNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 401: Unauthorized",
+        "candidate_urls": 0
+      },
+      {
+        "source": "М.Видео",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Royal-Rus",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "ClimaArt",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 8
+      },
+      {
+        "source": "SDK-Climat",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      }
+    ]
+  },
+  "discovery_sources": [
+    {
+      "source": "Bing RSS",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Яндекс Маркет",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 5
+    },
+    {
+      "source": "XCOM",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "KNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "candidate_urls": 0
+    },
+    {
+      "source": "Ситилинк",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ВсеИнструменты",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ОНЛАЙН ТРЕЙД",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "DNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 401: Unauthorized",
+      "candidate_urls": 0
+    },
+    {
+      "source": "М.Видео",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Royal-Rus",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "ClimaArt",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 8
+    },
+    {
+      "source": "SDK-Climat",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    }
+  ],
+  "offers": [
+    {
+      "exact_product_name": "Fuji 1 Gold Label / Фуджи 1 (35гр. пор. + 20мл. жидк.) Стеклоиономерный цемент для постоянной фиксации, Fuji One, meron мерон",
+      "model": "Fuji 1",
+      "exact_model_match": true,
+      "price": 27001.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Crystallized in October",
+      "url": "https://market.yandex.ru/card/fuji-1-gold-label--fudzhi-1-35gr-por--20ml-zhidk-stekloionomernyy-tsement-dlya-postoyannoy-fiksatsii-fuji-one-meron-meron/6140415890?cpa=1&hid=71501065&nid=71501071&resale_goods=resale_new",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "discovered_by": "Яндекс Маркет",
+      "checked_at": "2026-09-13T10:34:08.271955+00:00"
+    }
+  ],
+  "offers_found": 1,
+  "priced_offers_found": 1,
+  "minimum_price": 27001.0,
+  "minimum_price_seller": "Crystallized in October",
+  "minimum_price_url": "https://market.yandex.ru/card/fuji-1-gold-label--fudzhi-1-35gr-por--20ml-zhidk-stekloionomernyy-tsement-dlya-postoyannoy-fiksatsii-fuji-one-meron-meron/6140415890?cpa=1&hid=71501065&nid=71501071&resale_goods=resale_new",
+  "source_errors": [
+    {
+      "source": "Яндекс Маркет",
+      "url": "https://market.yandex.ru/category/fuji-1",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "Яндекс Маркет",
+      "url": "https://market.yandex.ru/category/fuji-1?page=2",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "Яндекс Маркет",
+      "url": "https://market.yandex.ru/category/fuji-1?page=3",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "ClimaArt",
+      "url": "https://climaart.ru/multisplit-vnutrinie/fujitsu-airflow-asyg12lmce-r",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "ClimaArt",
+      "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-asyg12lmce-r-aoyg12lmce-r",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "ClimaArt",
+      "url": "https://climaart.ru/multisplit-vnutrinie/fujitsu-airflow-asyg14lmce-r",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "ClimaArt",
+      "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-asyg14lmce-r-aoyg14lmce-r",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "ClimaArt",
+      "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-nordic-asyg12lmcb-aoyg12lmcbn",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "ClimaArt",
+      "url": "https://climaart.ru/nastenie-kondicioneri_split-sistema/fujitsu-airflow-nordic-asyg14lmcb-aoyg14lmcbn",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "ClimaArt",
+      "url": "https://climaart.ru/multisplit-narujnie-bloki/fujitsu-aoyg14lac2",
+      "error": "Страница не подтверждает точную модель"
+    },
+    {
+      "source": "ClimaArt",
+      "url": "https://climaart.ru/multisplit-narujnie-bloki/fujitsu-aoyg18lac2",
+      "error": "Страница не подтверждает точную модель"
+    }
+  ]
+}

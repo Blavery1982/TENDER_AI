@@ -1,0 +1,848 @@
+{
+  "checked_at": "2026-09-08T14:31:01.706981+00:00",
+  "sites": [
+    {
+      "supplier_name": "ООО «Стокинг»",
+      "domain": "stoking.ru",
+      "product_url": "https://stoking.ru/products/klassicheskie-split-sistemy-royal-clima-serii-triumph-upgrade-rc-twn28hn",
+      "verification_checks": {
+        "whois_status": "available",
+        "error": "TimeoutError",
+        "rdap_error": "HTTPError",
+        "domain_created_at": "2017-02-14",
+        "domain_age_days": 3493,
+        "registrar": "R01-RU",
+        "expiration_date": null,
+        "source": "https://whoistory.com/2017/02/14/stoking.ru.html",
+        "domain_age_years": 9.56,
+        "primary_automatic_source_unavailable": true,
+        "wayback_status": "unavailable",
+        "cms_status": "available",
+        "cms": "unknown",
+        "ip_status": "available",
+        "addresses": [
+          "5.252.32.110"
+        ],
+        "reverse_dns": [],
+        "sites_on_same_ip": null,
+        "note": "Число соседних сайтов без надёжного открытого API не определялось.",
+        "company": {
+          "inn": "5904993922",
+          "ogrn": "1145958010010",
+          "name": "ООО «Стокинг»",
+          "active": true,
+          "registered_at": "2014-03-14",
+          "director": "Карташов Михаил Николаевич",
+          "director_changed_within_6_months": false,
+          "site_company_mismatch": false,
+          "government_procurement": true,
+          "source": "https://www.elec.ru/org/5904993922/"
+        },
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+        "requisites_consistent": false,
+        "requisites_conflict_evidence": {
+          "inn": [
+            "5904993921",
+            "5904993922"
+          ],
+          "ogrn": [
+            "1145958010010"
+          ]
+        },
+        "legal_source": [
+          "https://stoking.ru/contacts",
+          "https://stoking.ru/about",
+          "https://stoking.ru/privacy-policy",
+          "https://stoking.ru/data-processing",
+          "https://stoking.ru/delivery",
+          "https://stoking.ru/payment",
+          "https://stoking.ru"
+        ],
+        "domain_source": "https://whoistory.com/2017/02/14/stoking.ru.html",
+        "history_evidence": null
+      },
+      "risk_flags": [
+        "Реквизиты сайта противоречат друг другу"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "wayback"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "Реквизиты сайта противоречат друг другу; Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Компания действует; Есть участие в государственных закупках; wayback",
+      "purchase_price": null,
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "stoking.ru",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 9.56 лет",
+          "source": "https://whoistory.com/2017/02/14/stoking.ru.html",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "confirmed_positive",
+          "evidence": "ООО «Стокинг»; ИНН 5904993922; действует",
+          "source": "https://www.elec.ru/org/5904993922/",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "requisites_consistency",
+          "status": "red_flag",
+          "evidence": {
+            "inn": [
+              "5904993921",
+              "5904993922"
+            ],
+            "ogrn": [
+              "1145958010010"
+            ]
+          },
+          "source": [
+            "https://stoking.ru/contacts",
+            "https://stoking.ru/about",
+            "https://stoking.ru/privacy-policy",
+            "https://stoking.ru/data-processing",
+            "https://stoking.ru/delivery",
+            "https://stoking.ru/payment",
+            "https://stoking.ru"
+          ],
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "government_procurement",
+          "status": "confirmed_positive",
+          "evidence": "Подтверждено участие в государственных закупках",
+          "source": "https://www.elec.ru/org/5904993922/",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS: unknown",
+          "source": "stoking.ru",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "5.252.32.110"
+            ],
+            "reverse_dns": [],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        }
+      ],
+      "site_requisites_scan": {
+        "status": "completed",
+        "checked_at": "2026-09-08T14:29:15.808432+00:00",
+        "pages_checked": 19,
+        "pages_with_evidence": [
+          {
+            "url": "https://stoking.ru/contacts",
+            "title": "Контакты платформы инженерного оборудования Stoking — адреса, телефоны и почты",
+            "requisites": {
+              "inn": [
+                "5904993922"
+              ],
+              "ogrn": [],
+              "companies": [
+                "ООО «Стокинг"
+              ],
+              "emails": [
+                "info@stoking.ru",
+                "sale@stoking.ru",
+                "shop@stoking.ru"
+              ],
+              "phones": [
+                "+7 (800) 600-90-16",
+                "8 (800) 600-90-16",
+                "84278695520-178427869",
+                "88006009016",
+                "88491679307"
+              ]
+            }
+          },
+          {
+            "url": "https://stoking.ru/about",
+            "title": "О компании — платформа инженерного оборудования Stoking",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [
+                "ООО «Стокинг"
+              ],
+              "emails": [
+                "sale@stoking.ru",
+                "shop@stoking.ru"
+              ],
+              "phones": [
+                "8 (800) 600-90-16",
+                "84278695520-178427869",
+                "88006009016",
+                "88491679307"
+              ]
+            }
+          },
+          {
+            "url": "https://stoking.ru/privacy-policy",
+            "title": "Политика в отношении обработки персональных данных",
+            "requisites": {
+              "inn": [
+                "5904993921"
+              ],
+              "ogrn": [],
+              "companies": [
+                "ООО «Стокинг"
+              ],
+              "emails": [
+                "sale@stoking.ru",
+                "shop@stoking.ru"
+              ],
+              "phones": [
+                "8 (800) 600-90-16",
+                "84278695520-178427869",
+                "88006009016",
+                "88491679307"
+              ]
+            }
+          },
+          {
+            "url": "https://stoking.ru/data-processing",
+            "title": "Политика обработки персональных данных",
+            "requisites": {
+              "inn": [
+                "5904993922"
+              ],
+              "ogrn": [
+                "1145958010010"
+              ],
+              "companies": [
+                "ООО «Стокинг"
+              ],
+              "emails": [
+                "info@stoking.ru",
+                "sale@stoking.ru",
+                "shop@stoking.ru"
+              ],
+              "phones": [
+                "8 (800) 600-90-16",
+                "8(800)600-90-16",
+                "8(800)600-90-16",
+                "84278695520-178427869",
+                "88006009016",
+                "88491679307"
+              ]
+            }
+          },
+          {
+            "url": "https://stoking.ru/delivery",
+            "title": "Быстрая доставка по всей РФ от платформы инженерного оборудования Stoking",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [
+                "ООО «Стокинг"
+              ],
+              "emails": [
+                "sale@stoking.ru",
+                "shop@stoking.ru"
+              ],
+              "phones": [
+                "8 (800) 600-90-16",
+                "84278695520-178427869",
+                "88006009016",
+                "88491679307"
+              ]
+            }
+          },
+          {
+            "url": "https://stoking.ru/payment",
+            "title": "Способы оплаты на платформе инженерного оборудования Stoking",
+            "requisites": {
+              "inn": [
+                "5904993922"
+              ],
+              "ogrn": [
+                "1145958010010"
+              ],
+              "companies": [
+                "АО \"ТБАНК",
+                "ООО «Стокинг"
+              ],
+              "emails": [
+                "sale@stoking.ru",
+                "shop@stoking.ru"
+              ],
+              "phones": [
+                "8 (800) 600-90-16",
+                "810145250000974",
+                "810710001579499",
+                "84278695520-178427869",
+                "88006009016",
+                "88491679307"
+              ]
+            }
+          },
+          {
+            "url": "https://stoking.ru",
+            "title": "Большой каталог товаров для любых инженерных решений. Быстрая доставка, скидки и акции на Stoking",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [
+                "ООО «Стокинг",
+                "ООО СТОКИНГ\\"
+              ],
+              "emails": [
+                "info@stoking.ru",
+                "sale@stoking.ru",
+                "shop@stoking.ru"
+              ],
+              "phones": [
+                "+7 (800) 600-90-16",
+                "8 (800) 600-90-16",
+                "84278695520-178427869",
+                "88006009016",
+                "88491679307"
+              ]
+            }
+          }
+        ],
+        "inn": [
+          "5904993921",
+          "5904993922"
+        ],
+        "ogrn": [
+          "1145958010010"
+        ],
+        "requisites_consistent": false,
+        "conflict": true
+      },
+      "domain_check": {
+        "whois_status": "available",
+        "error": "TimeoutExpired",
+        "rdap_error": "HTTPError",
+        "domain_created_at": "2017-02-14",
+        "domain_age_days": 3493,
+        "registrar": "R01-RU",
+        "expiration_date": null,
+        "source": "https://whoistory.com/2017/02/14/stoking.ru.html",
+        "domain_age_years": 9.56,
+        "primary_automatic_source_unavailable": true
+      },
+      "wayback_check": {
+        "wayback_status": "unavailable",
+        "error": "TimeoutError"
+      },
+      "cms_check": {
+        "cms_status": "available",
+        "cms": "unknown"
+      },
+      "ip_check": {
+        "ip_status": "available",
+        "addresses": [
+          "5.252.32.110"
+        ],
+        "reverse_dns": [],
+        "sites_on_same_ip": null,
+        "note": "Число соседних сайтов без надёжного открытого API не определялось."
+      }
+    },
+    {
+      "supplier_name": "Royal-Clima.com.ru",
+      "domain": "royal-clima.com.ru",
+      "product_url": "https://royal-clima.com.ru/royal-clima-rc-twn28hn-triumph",
+      "verification_checks": {
+        "whois_status": "unavailable",
+        "error": "TimeoutError",
+        "rdap_error": "HTTPError",
+        "domain_created_at": null,
+        "domain_age_days": null,
+        "registrar": null,
+        "expiration_date": null,
+        "source": "RDAP + WHOIS fallback",
+        "wayback_status": "unavailable",
+        "cms_status": "available",
+        "cms": "OpenCart",
+        "ip_status": "available",
+        "addresses": [
+          "45.130.41.23"
+        ],
+        "reverse_dns": [
+          "ssl.melon.beget.com"
+        ],
+        "sites_on_same_ip": null,
+        "note": "Число соседних сайтов без надёжного открытого API не определялось.",
+        "company": {
+          "inn": null,
+          "ogrn": null,
+          "name": null,
+          "active": null,
+          "director_changed_within_6_months": null,
+          "source": null
+        },
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+        "requisites_consistent": true,
+        "requisites_conflict_evidence": null,
+        "legal_source": [
+          "https://royal-clima.com.ru/privacypolicy",
+          "https://royal-clima.com.ru/delivery",
+          "https://royal-clima.com.ru"
+        ],
+        "domain_source": "RDAP + WHOIS fallback",
+        "history_evidence": null
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "wayback",
+        "whois",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; whois; wayback",
+      "purchase_price": null,
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "royal-clima.com.ru",
+          "checked_at": "2026-09-08T14:30:21.098299+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": "RDAP + WHOIS fallback",
+          "checked_at": "2026-09-08T14:30:21.098299+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": [
+            "https://royal-clima.com.ru/privacypolicy",
+            "https://royal-clima.com.ru/delivery",
+            "https://royal-clima.com.ru"
+          ],
+          "checked_at": "2026-09-08T14:30:21.098299+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-08T14:30:21.098299+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "confirmed_positive",
+          "evidence": "CMS: OpenCart",
+          "source": "royal-clima.com.ru",
+          "checked_at": "2026-09-08T14:30:21.098299+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "45.130.41.23"
+            ],
+            "reverse_dns": [
+              "ssl.melon.beget.com"
+            ],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:30:21.098299+00:00"
+        }
+      ],
+      "site_requisites_scan": {
+        "status": "completed",
+        "checked_at": "2026-09-08T14:29:52.335822+00:00",
+        "pages_checked": 19,
+        "pages_with_evidence": [
+          {
+            "url": "https://royal-clima.com.ru/privacypolicy",
+            "title": "Политика конфиденциальности сайта royal-clima.com.ru",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [],
+              "emails": [
+                "info@royal-clima.com.ru"
+              ],
+              "phones": [
+                "+7 (800) 100-46-08",
+                "+7(800)100-46-08",
+                "+7(800)1004608"
+              ]
+            }
+          },
+          {
+            "url": "https://royal-clima.com.ru/delivery",
+            "title": "Доставка",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [],
+              "emails": [
+                "info@royal-clima.com.ru"
+              ],
+              "phones": [
+                "+7 (800) 100-46-08",
+                "+7(800)100-46-08",
+                "+7(800)1004608"
+              ]
+            }
+          },
+          {
+            "url": "https://royal-clima.com.ru",
+            "title": "Royal-Clima (Роял Клима) официальный сайт.",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [],
+              "emails": [
+                "info@royal-clima.com.ru"
+              ],
+              "phones": [
+                "+7 (800) 100-46-08",
+                "+7(800)100-46-08",
+                "+7(800)1004608",
+                "80) 27 190",
+                "81) 35 390"
+              ]
+            }
+          }
+        ],
+        "inn": [],
+        "ogrn": [],
+        "requisites_consistent": true,
+        "conflict": false
+      },
+      "domain_check": {
+        "whois_status": "unavailable",
+        "error": "TimeoutExpired",
+        "rdap_error": "HTTPError",
+        "domain_created_at": null,
+        "domain_age_days": null,
+        "registrar": null,
+        "expiration_date": null,
+        "source": "RDAP + WHOIS fallback"
+      },
+      "wayback_check": {
+        "wayback_status": "unavailable",
+        "error": "TimeoutError"
+      },
+      "cms_check": {
+        "cms_status": "available",
+        "cms": "OpenCart"
+      },
+      "ip_check": {
+        "ip_status": "available",
+        "addresses": [
+          "45.130.41.23"
+        ],
+        "reverse_dns": [
+          "ssl.melon.beget.com"
+        ],
+        "sites_on_same_ip": null,
+        "note": "Число соседних сайтов без надёжного открытого API не определялось."
+      }
+    },
+    {
+      "supplier_name": "ООО «Точка Холода»",
+      "domain": "tochkaholoda.ru",
+      "product_url": "https://tochkaholoda.ru/catalog/kondicioner-royal-clima-rc-twn28hn",
+      "verification_checks": {
+        "whois_status": "available",
+        "error": "TimeoutError",
+        "rdap_error": "HTTPError",
+        "domain_created_at": "2009-04-14",
+        "domain_age_days": 6356,
+        "registrar": null,
+        "expiration_date": null,
+        "source": "https://whoistory.com/2009/04/14/",
+        "domain_age_years": 17.4,
+        "primary_automatic_source_unavailable": true,
+        "wayback_status": "unavailable",
+        "cms_status": "available",
+        "cms": "WordPress",
+        "ip_status": "available",
+        "addresses": [
+          "92.255.110.161"
+        ],
+        "reverse_dns": [
+          "1056115-makhotinvds.tmweb.ru"
+        ],
+        "sites_on_same_ip": null,
+        "note": "Число соседних сайтов без надёжного открытого API не определялось.",
+        "company": {
+          "inn": "7701097787",
+          "ogrn": "1157746298104",
+          "name": "ООО «Точка Холода»",
+          "active": true,
+          "registered_at": "2015-04-02",
+          "director": "Чижов Дмитрий Владимирович",
+          "director_changed_within_6_months": null,
+          "site_company_mismatch": false,
+          "government_procurement": true,
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda"
+        },
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+        "requisites_consistent": true,
+        "requisites_conflict_evidence": null,
+        "legal_source": [
+          "https://tochkaholoda.ru/contacts",
+          "https://tochkaholoda.ru/company",
+          "https://tochkaholoda.ru/privacy-policy",
+          "https://tochkaholoda.ru/delivery",
+          "https://tochkaholoda.ru"
+        ],
+        "domain_source": "https://whoistory.com/2009/04/14/",
+        "history_evidence": null
+      },
+      "risk_flags": [],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Реквизиты сайта согласованы",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+      "verification_comment": "Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Компания действует; Реквизиты сайта согласованы; Есть участие в государственных закупках; Не удалось автоматически проверить изменения руководства; wayback",
+      "purchase_price": null,
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "tochkaholoda.ru",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 17.4 лет",
+          "source": "https://whoistory.com/2009/04/14/",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "confirmed_positive",
+          "evidence": "ООО «Точка Холода»; ИНН 7701097787; действует",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "requisites_consistency",
+          "status": "confirmed_positive",
+          "evidence": "На страницах сайта используется ИНН 7701097787",
+          "source": [
+            "https://tochkaholoda.ru/contacts",
+            "https://tochkaholoda.ru/company",
+            "https://tochkaholoda.ru/privacy-policy",
+            "https://tochkaholoda.ru/delivery",
+            "https://tochkaholoda.ru"
+          ],
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "government_procurement",
+          "status": "confirmed_positive",
+          "evidence": "Подтверждено участие в государственных закупках",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "confirmed_positive",
+          "evidence": "CMS: WordPress",
+          "source": "tochkaholoda.ru",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "92.255.110.161"
+            ],
+            "reverse_dns": [
+              "1056115-makhotinvds.tmweb.ru"
+            ],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        }
+      ],
+      "site_requisites_scan": {
+        "status": "completed",
+        "checked_at": "2026-09-08T14:30:32.155854+00:00",
+        "pages_checked": 19,
+        "pages_with_evidence": [
+          {
+            "url": "https://tochkaholoda.ru/contacts",
+            "title": "Контакты | Интернет магазин TochkaHoloda.ru",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [],
+              "emails": [
+                "info@tochkaholoda.ru"
+              ],
+              "phones": [
+                "+7 (499) 638-28-01"
+              ]
+            }
+          },
+          {
+            "url": "https://tochkaholoda.ru/company",
+            "title": "О компании | Интернет магазин TochkaHoloda.ru",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [],
+              "emails": [
+                "info@tochkaholoda.ru"
+              ],
+              "phones": [
+                "+7 (499) 638-28-01"
+              ]
+            }
+          },
+          {
+            "url": "https://tochkaholoda.ru/privacy-policy",
+            "title": "Политика конфиденциальности | Интернет магазин TochkaHoloda.ru",
+            "requisites": {
+              "inn": [
+                "7701097787"
+              ],
+              "ogrn": [
+                "1157746298104"
+              ],
+              "companies": [
+                "ООО «ТОЧКА ХОЛОДА"
+              ],
+              "emails": [
+                "info@tochkaholoda.ru"
+              ],
+              "phones": [
+                "+7 (499) 638-28-01"
+              ]
+            }
+          },
+          {
+            "url": "https://tochkaholoda.ru/delivery",
+            "title": "Доставка и самовывоз | Интернет магазин TochkaHoloda.ru",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [],
+              "emails": [
+                "info@tochkaholoda.ru"
+              ],
+              "phones": [
+                "+7 (499) 638-28-01"
+              ]
+            }
+          },
+          {
+            "url": "https://tochkaholoda.ru",
+            "title": "Климатическая техника для дома и промышленное климатическое оборудование купить в Москве | Интернет-магазин ТочкаХолода",
+            "requisites": {
+              "inn": [],
+              "ogrn": [],
+              "companies": [],
+              "emails": [
+                "info@tochkaholoda.ru"
+              ],
+              "phones": [
+                "+7 (499) 638-28-01"
+              ]
+            }
+          }
+        ],
+        "inn": [
+          "7701097787"
+        ],
+        "ogrn": [
+          "1157746298104"
+        ],
+        "requisites_consistent": true,
+        "conflict": false
+      },
+      "domain_check": {
+        "whois_status": "available",
+        "error": "TimeoutExpired",
+        "rdap_error": "HTTPError",
+        "domain_created_at": "2009-04-14",
+        "domain_age_days": 6356,
+        "registrar": null,
+        "expiration_date": null,
+        "source": "https://whoistory.com/2009/04/14/",
+        "domain_age_years": 17.4,
+        "primary_automatic_source_unavailable": true
+      },
+      "wayback_check": {
+        "wayback_status": "unavailable",
+        "error": "TimeoutError"
+      },
+      "cms_check": {
+        "cms_status": "available",
+        "cms": "WordPress"
+      },
+      "ip_check": {
+        "ip_status": "available",
+        "addresses": [
+          "92.255.110.161"
+        ],
+        "reverse_dns": [
+          "1056115-makhotinvds.tmweb.ru"
+        ],
+        "sites_on_same_ip": null,
+        "note": "Число соседних сайтов без надёжного открытого API не определялось."
+      }
+    }
+  ]
+}

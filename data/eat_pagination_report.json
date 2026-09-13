@@ -1,0 +1,593 @@
+{
+  "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+  "captured_request": {
+    "method": "POST",
+    "page_path": "page",
+    "captured_page": 1,
+    "size_path": "size",
+    "size": 10,
+    "sort": [
+      {
+        "fieldName": "publishDate",
+        "direction": 2
+      }
+    ],
+    "other_request_field_names": [
+      "applicationFillingEndDate",
+      "applicationFillingStartDate",
+      "applicationFillingStartDateBegin",
+      "applicationFillingStartDateEnd",
+      "contractPriceEnd",
+      "contractPriceStart",
+      "contractSignDateEnd",
+      "contractSignDateStart",
+      "createDateTime",
+      "customerContractNumber",
+      "customerId",
+      "customerInn",
+      "customerKpp",
+      "customerNameOrInn",
+      "dealStates",
+      "deliveryAddress",
+      "deliveryAddressRegionCodes",
+      "deliveryDateEnd",
+      "deliveryDateStart",
+      "eisTradeNumber",
+      "etpType",
+      "excludeCancelledByCustomer",
+      "excludeExternalTrades",
+      "favoriteTag",
+      "hasLinkedExternalTrade",
+      "isChangeDealTermsProtocolReceived",
+      "isCustomerSendingAwaiting",
+      "isCustomerSigningAwaiting",
+      "isDealTerminationSignAwaiting",
+      "isEatOnly",
+      "isLoser",
+      "isOnlyRelatedSpecificSupplier",
+      "isReviewAwaiting",
+      "isRussianItemsPurchase",
+      "isSmpOnly",
+      "isSpecificSupplier",
+      "isSupplierAdditionalAgreementSignAwaiting",
+      "isSupplierSigningAwaiting",
+      "isWinner",
+      "ktruCodes",
+      "lotItemEatCodes",
+      "lotStates",
+      "number",
+      "okpd2Codes",
+      "organizationId",
+      "organizerRegion",
+      "organizerRegions",
+      "page",
+      "priceEnd",
+      "priceStart",
+      "productCode",
+      "publishDateBegin",
+      "publishDateEnd",
+      "purchaseMethods",
+      "purchaseName",
+      "purchaseTypeIds",
+      "searchText",
+      "size",
+      "sort",
+      "specificSupplierSubType",
+      "stateDefenseOrderOnly",
+      "supplierNameOrInn",
+      "tradeLotEatEnum",
+      "types",
+      "updateDateBegin",
+      "updateDateEnd"
+    ]
+  },
+  "numbering": {
+    "base_page": 1,
+    "evidence": "page=0 совпал с page=1; page=2 вернул следующий диапазон"
+  },
+  "page_diagnostics": [
+    {
+      "requested_page": 1,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        "100233783126100094",
+        null,
+        "100279683126100048"
+      ],
+      "last_3_trade_numbers": [
+        "100284606126100091",
+        "200907618126100105",
+        null
+      ],
+      "first_publish_date": "2026-09-04T08:24:21.047268",
+      "last_publish_date": "2026-09-04T08:21:59.654767",
+      "first_3_ids": [
+        "cea8976e-a382-4c97-83e7-b24a2ac264db",
+        "c9ebfbf5-b077-4371-ac68-2742a33fb72f",
+        "a473adfc-e5af-4814-8512-092106e2e0ed"
+      ],
+      "last_3_ids": [
+        "a8000c35-ca16-4a5e-ba56-35bee98eb6dd",
+        "32c43cf7-7809-49ac-a86e-8179d5d1ffd6",
+        "348af615-e77f-4ff4-be9c-4dc6fd48ae95"
+      ]
+    },
+    {
+      "requested_page": 2,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        null,
+        "200906538126100027",
+        "200906416126100313"
+      ],
+      "last_3_trade_numbers": [
+        null,
+        "100223952126100093",
+        "200910275126100113"
+      ],
+      "first_publish_date": "2026-09-04T08:21:59.654767",
+      "last_publish_date": "2026-09-04T08:19:57.543521",
+      "first_3_ids": [
+        "348af615-e77f-4ff4-be9c-4dc6fd48ae95",
+        "137a8439-4f48-4b89-85bd-d91732468b94",
+        "f1db5e0d-2e72-48e6-8532-9c0996cc89df"
+      ],
+      "last_3_ids": [
+        "cb4ded9e-ae17-4efd-8626-26e5be307817",
+        "fffcbe8a-7c0a-46fb-80d7-1f57aceba650",
+        "7be7fe0f-1011-4122-979a-33e62c00a5dd"
+      ]
+    },
+    {
+      "requested_page": 3,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        "200906702126100379",
+        "100026714126100063",
+        "200909258126100548"
+      ],
+      "last_3_trade_numbers": [
+        "100209022126100101",
+        "200909309126100328",
+        null
+      ],
+      "first_publish_date": "2026-09-04T08:19:27.611715",
+      "last_publish_date": "2026-09-04T08:17:59.228071",
+      "first_3_ids": [
+        "b768c252-156b-4b6a-8e77-443b0aa767ad",
+        "78f5e9a0-8502-4209-8a53-b1032a3ff17f",
+        "f50fe59a-a052-4903-a8fb-7aa1448bfc95"
+      ],
+      "last_3_ids": [
+        "0ce8a155-aec9-445e-875b-d7e2035bc99d",
+        "b7d6b053-8100-498d-a3ae-5774b9d29e7c",
+        "fb287372-5fa0-488b-998a-fc11c186ef24"
+      ]
+    },
+    {
+      "requested_page": 4,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        null,
+        "100207450126100116",
+        "100243434126100115"
+      ],
+      "last_3_trade_numbers": [
+        null,
+        "200910413126100037",
+        "100293002126100172"
+      ],
+      "first_publish_date": "2026-09-04T08:17:59.228071",
+      "last_publish_date": "2026-09-04T08:12:47.11455",
+      "first_3_ids": [
+        "fb287372-5fa0-488b-998a-fc11c186ef24",
+        "e9f105a9-d6e7-4cda-bd90-4da71f22b930",
+        "bc8bdbee-c688-4370-9244-e6f5391c3557"
+      ],
+      "last_3_ids": [
+        "eb779ca6-21ac-4881-8709-a757b387ba7b",
+        "982ed0eb-e224-4ad8-927d-e9128b81cce1",
+        "0cea3a5d-4be6-47cc-aa54-189e46266baf"
+      ]
+    },
+    {
+      "requested_page": 5,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        "100293002126100172",
+        "200907993126100018",
+        null
+      ],
+      "last_3_trade_numbers": [
+        "200911020126100064",
+        "200906764126100131",
+        "200909687126100670"
+      ],
+      "first_publish_date": "2026-09-04T08:12:47.11455",
+      "last_publish_date": "2026-09-04T08:10:59.19201",
+      "first_3_ids": [
+        "0cea3a5d-4be6-47cc-aa54-189e46266baf",
+        "8c5280a5-d2c4-49ba-a915-75a0be06a780",
+        "22f417bc-12bc-4390-96bb-3df43a796006"
+      ],
+      "last_3_ids": [
+        "1a38db0f-d8ef-474a-82ab-263c2a705734",
+        "3170b8ca-174d-477e-b63a-19c9286e00ba",
+        "ad4c575e-e306-43ca-8bc4-2c877aff879f"
+      ]
+    },
+    {
+      "requested_page": 6,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        null,
+        "200909083126100156",
+        "200910413126100039"
+      ],
+      "last_3_trade_numbers": [
+        null,
+        "100232548126100129",
+        null
+      ],
+      "first_publish_date": "2026-09-04T08:10:47.414936",
+      "last_publish_date": "2026-09-04T08:06:24.856454",
+      "first_3_ids": [
+        "295d444b-37ee-4a8c-af59-61591322042c",
+        "3e7fadfc-f628-42ec-90e5-3381e1008bba",
+        "8737aba7-87d6-438a-aa9b-07a29b76d31f"
+      ],
+      "last_3_ids": [
+        "9e6d4717-1a6a-4441-87fd-e0ed1bc08cf9",
+        "01a6bce6-c3bc-438d-ac42-1a4e0e0d0c09",
+        "475ddbc9-e8d0-4f89-90cb-640635047b4e"
+      ]
+    },
+    {
+      "requested_page": 7,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        null,
+        "100235055126100064",
+        "200907878126100022"
+      ],
+      "last_3_trade_numbers": [
+        "200907389126100182",
+        null,
+        "100293730126100180"
+      ],
+      "first_publish_date": "2026-09-04T08:05:46.506026",
+      "last_publish_date": "2026-09-04T08:02:32.557854",
+      "first_3_ids": [
+        "65f10179-4941-4f90-92cf-0d32e219481f",
+        "4cfbdb9d-42fc-4419-82c2-7d5fd2bee51e",
+        "9f139ac8-1b84-4260-96ab-a31c35c5690f"
+      ],
+      "last_3_ids": [
+        "70591b9b-5ea7-4255-80db-eb3b45e6e3e3",
+        "939d7ba0-91b7-493d-b84a-50d6f7f397ca",
+        "620a8998-a2a1-456f-bb6b-79661e12da30"
+      ]
+    },
+    {
+      "requested_page": 8,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        "100109903126100133",
+        "100059397126100061",
+        "100919663126100049"
+      ],
+      "last_3_trade_numbers": [
+        null,
+        null,
+        "100919986126100393"
+      ],
+      "first_publish_date": "2026-09-04T08:02:31.507331",
+      "last_publish_date": "2026-09-04T07:59:01.662456",
+      "first_3_ids": [
+        "a545434b-a315-431a-9535-639cb1a02fdf",
+        "d82afdd5-333b-4760-a68f-d246eda7611d",
+        "48eaeff0-2a4e-4bf3-87ac-2c86d988e116"
+      ],
+      "last_3_ids": [
+        "a8162db3-20ed-4b86-997f-602b6eee0b4d",
+        "7d3930a0-8c86-45a1-93ad-84804537f9e7",
+        "4f80b66e-1b91-4f6e-b7b7-99cfe7e6122e"
+      ]
+    },
+    {
+      "requested_page": 9,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        null,
+        "100130162126100201",
+        null
+      ],
+      "last_3_trade_numbers": [
+        null,
+        "100292041126100346",
+        "200763686126100996"
+      ],
+      "first_publish_date": "2026-09-04T07:58:58.880558",
+      "last_publish_date": "2026-09-04T07:55:51.539664",
+      "first_3_ids": [
+        "818c7e5d-86d1-4543-bcad-dcd2539518de",
+        "2b387a51-948b-49fa-bbf9-c0e74ff5940e",
+        "d1513237-40ec-4927-a0d9-d01021080d1a"
+      ],
+      "last_3_ids": [
+        "174da579-6942-4474-a03e-c7c31d73894f",
+        "5f0f29b8-2ef7-431f-a12d-abd6a658033e",
+        "bdba0443-4e8c-43d1-89cb-f6248fb1dab6"
+      ]
+    },
+    {
+      "requested_page": 10,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        "100177886126100061",
+        "100181598126100098",
+        null
+      ],
+      "last_3_trade_numbers": [
+        "200908429126100038",
+        "200908975126100303",
+        null
+      ],
+      "first_publish_date": "2026-09-04T07:55:39.37503",
+      "last_publish_date": "2026-09-04T07:51:15.240339",
+      "first_3_ids": [
+        "8525de33-08b0-40f9-828b-3009d9f25eb1",
+        "f5ca501d-5318-4572-9ec2-de79979ded18",
+        "f3052fbe-2c50-439c-8992-e4ebb2ab1ac4"
+      ],
+      "last_3_ids": [
+        "dd2f6afa-8872-4c7f-942c-462c08472344",
+        "ba5ba809-2e16-41bc-a7a8-e0799e957200",
+        "3a984398-7a3d-4b01-82aa-d4f3de2deaba"
+      ]
+    },
+    {
+      "requested_page": 11,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        null,
+        "100309200126100270",
+        "200909114126100293"
+      ],
+      "last_3_trade_numbers": [
+        "200909096126100404",
+        "100302333126100047",
+        "100254448126100122"
+      ],
+      "first_publish_date": "2026-09-04T07:51:05.678509",
+      "last_publish_date": "2026-09-04T07:49:28.514749",
+      "first_3_ids": [
+        "c7a2133a-3807-4524-a3d5-6772d91ca82b",
+        "40607ee5-d8b5-4b09-8cd9-d8c9f064af53",
+        "b6485273-ccf6-4623-b21c-26d5fa3110bd"
+      ],
+      "last_3_ids": [
+        "744f6f90-1d7a-4896-b64f-47dded2417c6",
+        "a7edf866-1d15-4ed6-997b-22c22dad356b",
+        "1e7fba23-0477-442d-a146-17ef9fc3c17b"
+      ]
+    },
+    {
+      "requested_page": 12,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        "200910528126100027",
+        "200762822126100379",
+        "100014975126100013"
+      ],
+      "last_3_trade_numbers": [
+        "200905767126100037",
+        null,
+        null
+      ],
+      "first_publish_date": "2026-09-04T07:49:24.645051",
+      "last_publish_date": "2026-09-04T07:45:32.257582",
+      "first_3_ids": [
+        "12d6f63e-1df2-4ff1-8346-655e052833ed",
+        "5e64e0db-e486-4c85-84df-aebee3a2d93c",
+        "9e1ae9e5-f951-4a19-8f00-3c8abdf4eace"
+      ],
+      "last_3_ids": [
+        "38fa49fd-a4dc-4778-a340-dac4905cb769",
+        "ee646c51-52de-4b56-9e0e-bf3cb92c3af9",
+        "c46b50a6-fd72-4f9b-8640-76b4659a2b8e"
+      ]
+    },
+    {
+      "requested_page": 13,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        "100163894126100049",
+        "100920394126100069",
+        null
+      ],
+      "last_3_trade_numbers": [
+        "200908944126100413",
+        "100250255126100145",
+        "100248699126100188"
+      ],
+      "first_publish_date": "2026-09-04T07:45:06.409317",
+      "last_publish_date": "2026-09-04T07:41:22.648001",
+      "first_3_ids": [
+        "99c9fb7d-56fb-45f3-8398-2b01b61399c3",
+        "f60f5a5d-d87b-41cc-a6d4-416adc757b32",
+        "e2f48d44-7ca6-4912-a4d8-508be688e1f0"
+      ],
+      "last_3_ids": [
+        "edfaa6a1-18a9-4f7b-a6eb-c554ba908ebf",
+        "1a88b0c0-cac5-48db-bd81-2806f175072f",
+        "402825e0-5744-4443-8d7d-4141dcc4534b"
+      ]
+    },
+    {
+      "requested_page": 14,
+      "returned_count": 10,
+      "first_3_trade_numbers": [
+        "200908111125100546",
+        "100092019126100195",
+        null
+      ],
+      "last_3_trade_numbers": [
+        "200909398126100143",
+        null,
+        "100251992126100079"
+      ],
+      "first_publish_date": "2026-09-04T07:40:57.768216",
+      "last_publish_date": "2026-09-04T07:38:17.335413",
+      "first_3_ids": [
+        "2995c2e0-7da2-42ea-bc74-da5e490962d6",
+        "c2d9b153-3bee-497b-ab08-8282dc9916c3",
+        "99dd52fc-0a85-4ca0-b552-3e0c1a1764d1"
+      ],
+      "last_3_ids": [
+        "6934a506-040d-4440-9b22-87639987fa04",
+        "c4be6983-a295-4028-9db9-6da38f6d20a4",
+        "ff51fda7-d7fc-4bbd-8563-b3b5f72d471d"
+      ]
+    }
+  ],
+  "total_field": "totalCount",
+  "total": 2127,
+  "pages_read": 14,
+  "raw_records": 140,
+  "unique_ids_seen": 137,
+  "unique_trade_numbers_saved": 100,
+  "duplicate_ids": 3,
+  "repeated_full_pages": 0,
+  "law_search": {
+    "cards_opened": 3,
+    "candidate_fields": [
+      {
+        "field": "[].title",
+        "value": "Закупка по п.5.2 ч.1 ст.93 Закона №44-ФЗ",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка по п.5.1 ч.1 ст.93 Закона №44-ФЗ",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка по п.6 ч.1 ст.93 Закона №44-ФЗ",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка по п.12 ч.1 ст.93 Закона №44-ФЗ",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Упрощенная закупка до 1 000 000 руб. (Закон №223-ФЗ)",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка до 500 000 руб. (ч. 15 ст. 4. Закона №223-ФЗ)",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка до 100 000 руб. (ч. 15 ст. 4. Закона №223-ФЗ)",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка по п.9 ч.1 ст.93 Закона №44-ФЗ",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка до 1 500 000 руб. (п. 28 ч.1 ст. 93 Закона №44-ФЗ)",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка до 600 000 руб. (п. 5 ч.1 ст. 93 Закона №44-ФЗ)",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка в соответствии с положением о закупке Заказчика (223-ФЗ)",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "[].title",
+        "value": "Закупка по п. 28.1 ч.1 ст. 93 Закона №44-ФЗ",
+        "source": "https://tender-api.agregatoreat.ru/api/Trade/filter-purchase-types"
+      },
+      {
+        "field": "trade.purchaseTypeTitle",
+        "value": "Закупка до 600 000 руб. (п. 5 ч.1 ст. 93 Закона №44-ФЗ)",
+        "source": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/cea8976e-a382-4c97-83e7-b24a2ac264db"
+      },
+      {
+        "field": "trade.lot.isFillingApplicationByPart1Particle31Law44",
+        "value": true,
+        "source": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/cea8976e-a382-4c97-83e7-b24a2ac264db"
+      },
+      {
+        "field": "trade.purchaseTypeTitle",
+        "value": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+        "source": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/a473adfc-e5af-4814-8512-092106e2e0ed"
+      },
+      {
+        "field": "trade.lot.isFillingApplicationByPart1Particle31Law44",
+        "value": true,
+        "source": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/a473adfc-e5af-4814-8512-092106e2e0ed"
+      },
+      {
+        "field": "trade.purchaseTypeTitle",
+        "value": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+        "source": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/ce097247-760f-4dca-9958-6cd57a173b81"
+      },
+      {
+        "field": "trade.lot.dealTerminationInfo",
+        "value": "Расторжение Контракта допускается по соглашению Сторон, по решению суда, в случае одностороннего отказа Стороны от исполнения Контракта в соответствии с гражданским законодательством. Покупатель вправе принять решение об одностороннем отказе от исполнения Контракта по основаниям, предусмотренным Гражданским кодексом Российской Федерации для одностороннего отказа от исполнения отдельных видов обязательств, в том числе: 1) отказ передать Покупателю Товар или принадлежности к нему; 2) существенное нарушение требований к качеству Товара, а именно обнаружение покупателем неустранимых недостатков, недостатков, которые не могут быть устранены без несоразмерных расходов или затрат времени, или выявляются неоднократно, либо проявляются вновь после их устранения, и других подобных недостатков; 3) невыполнение в разумный срок требования Покупателя о доукомплектовании Товара; 4) неоднократное нарушение поставщиком сроков поставки Товара (нарушение срока поставки может быть расценено в качестве неоднократного в условиях, когда срок поставки Товара по Контракту нарушен и после предъявления Покупателем требования об исполнении обязательства Товар незамедлительно не поставлен Поставщиком); 5) нарушение Контракта Поставщиком предполагается существенным в случае однократного нарушения срока поставки Товара более чем на 14 (четырнадцать) календарных дней. Расторжение Контракта в связи с односторонним отказом Покупателя или Поставщика от исполнения Контракта осуществляется в порядке, установленном Федеральным законом от 05.04.2013 № 44-ФЗ «О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд». При расторжении настоящего Контракта в связи с односторонним отказом Стороны от исполнения Контракта другая Сторона вправе потребовать возмещения только фактически понесенного ущерба, непосредственно обусловленного обстоятельствами, являющимися основанием для принятия решения об одностороннем отказе от исполнения Контракта.",
+        "source": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/ce097247-760f-4dca-9958-6cd57a173b81"
+      },
+      {
+        "field": "trade.lot.isFillingApplicationByPart1Particle31Law44",
+        "value": true,
+        "source": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/ce097247-760f-4dca-9958-6cd57a173b81"
+      }
+    ],
+    "conclusion": "В API карточки найден прямой текст закона в trade.purchaseTypeTitle.",
+    "proven_field": "trade.purchaseTypeTitle",
+    "example": "Закупка до 600 000 руб. (п. 5 ч.1 ст. 93 Закона №44-ФЗ)",
+    "confidence": "высокая"
+  },
+  "pagination_analysis": {
+    "page_zero_behavior": "page=0 совпал с page=1; page=2 вернул следующий диапазон",
+    "boundary_repeats": [
+      {
+        "previous_page": 1,
+        "next_page": 2,
+        "repeated_id": "348af615-e77f-4ff4-be9c-4dc6fd48ae95"
+      },
+      {
+        "previous_page": 3,
+        "next_page": 4,
+        "repeated_id": "fb287372-5fa0-488b-998a-fc11c186ef24"
+      },
+      {
+        "previous_page": 4,
+        "next_page": 5,
+        "repeated_id": "0cea3a5d-4be6-47cc-aa54-189e46266baf"
+      }
+    ],
+    "cause": "Живая лента изменилась между offset-страницами при сортировке только по publishDate; отдельные записи сдвинулись через границу страниц.",
+    "previous_report_problem": "Старый счётчик ошибочно считал исключённые записи дублями."
+  }
+}

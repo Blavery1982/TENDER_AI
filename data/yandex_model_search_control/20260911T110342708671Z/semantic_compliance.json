@@ -1,0 +1,3147 @@
+{
+  "new_api_requests": 0,
+  "candidates": [
+    {
+      "brand": "Electrolux",
+      "sku": "EACS-09HP/N3",
+      "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+      "recognized_skus": [
+        "EACS-09HP/N3"
+      ],
+      "page_matches": true,
+      "extracted_facts": [
+        [
+          "покупка в",
+          "1 клик",
+          null,
+          "Покупка в 1 клик"
+        ],
+        [
+          "поддержка",
+          "24\\7",
+          null,
+          "Поддержка 24\\7"
+        ],
+        [
+          "turbo_mode",
+          "да",
+          null,
+          "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей."
+        ],
+        [
+          "sleep_mode",
+          "да",
+          null,
+          "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей."
+        ],
+        [
+          "цвет",
+          "Белый",
+          null,
+          "Цвет корпуса | Белый"
+        ],
+        [
+          "product_type",
+          "Сплит-система",
+          null,
+          "Вид товара | Сплит-система"
+        ],
+        [
+          "уровень шума внутреннего блока",
+          "28 дБ",
+          null,
+          "Уровень шума внутреннего блока | 28 дБ"
+        ],
+        [
+          "room_area",
+          "25 м2",
+          null,
+          "Обслуживаемая площадь | 25 м2"
+        ],
+        [
+          "functions",
+          "Обогрев , Охлаждение",
+          null,
+          "Режимы работы | Обогрев , Охлаждение"
+        ],
+        [
+          "режим осушения воздуха",
+          "да",
+          null,
+          "Режим осушения воздуха | да"
+        ],
+        [
+          "напряжение, в",
+          "220-240/50/1",
+          null,
+          "Напряжение, В | 220-240/50/1"
+        ],
+        [
+          "особенности",
+          "бесшумный внутренний блок самоочистка внутреннего блока авторестарт датчик движения система против образования льда теплый старт",
+          null,
+          "Особенности | бесшумный внутренний блок самоочистка внутреннего блока авторестарт датчик движения система против образования льда теплый старт"
+        ],
+        [
+          "фильтр предварительной очистки",
+          "Да",
+          null,
+          "Фильтр предварительной очистки | Да"
+        ],
+        [
+          "sleep_mode",
+          "Да",
+          null,
+          "Ночной режим | Да"
+        ],
+        [
+          "auto_mode",
+          "Да",
+          null,
+          "Автоматический режим | Да"
+        ],
+        [
+          "ионизация",
+          "Да",
+          null,
+          "Ионизация | Да"
+        ],
+        [
+          "воздушный поток м3ч",
+          "530 м3/час",
+          "м",
+          "Воздушный поток м3ч | 530 м3/час"
+        ],
+        [
+          "self_diagnosis",
+          "да",
+          null,
+          "Самодиагностика | да"
+        ],
+        [
+          "self_clean",
+          "Да",
+          null,
+          "Самоочистка внутреннего блока | Да"
+        ],
+        [
+          "вес внутреннего блока",
+          "9 кг",
+          null,
+          "Вес внутреннего блока | 9 кг"
+        ],
+        [
+          "вес внешнего блока",
+          "26 кг",
+          null,
+          "Вес внешнего блока | 26 кг"
+        ],
+        [
+          "минимальная наружная температура при охлаждении",
+          "18 °С",
+          null,
+          "Минимальная наружная температура при охлаждении | 18 °С"
+        ],
+        [
+          "максимальная наружная температура при охлаждении",
+          "43 °С",
+          null,
+          "Максимальная наружная температура при охлаждении | 43 °С"
+        ],
+        [
+          "официальная гарантия",
+          "2 года",
+          null,
+          "Официальная гарантия | 2 года"
+        ],
+        [
+          "room_area",
+          "27",
+          "м²",
+          "Площадь м² | 27"
+        ],
+        [
+          "inverter",
+          "Нет",
+          null,
+          "Инверторный компрессор | Нет"
+        ],
+        [
+          "бренд",
+          "Electrolux",
+          null,
+          "Бренд | Electrolux"
+        ]
+      ],
+      "requirements_check": [
+        {
+          "requirement": "Инверторный тип кондиционера",
+          "required_value": "Нет",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Нет",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Инверторный компрессор | Нет",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "inverter",
+          "normalized_value": false,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме нагрева)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме охлаждения)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие фильтров тонкой очистки воздуха",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Дополнительные функции",
+          "required_value": "Автоматическая очистка, автоматический выбор режима, ночной режим, режим турбо, самодиагностика.",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Автоматическая очистка; автоматический выбор режима; ночной режим; режим турбо; самодиагностика.",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": [
+            "Самоочистка внутреннего блока | Да",
+            "Автоматический режим | Да",
+            "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей.",
+            "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей.",
+            "Самодиагностика | да"
+          ],
+          "result": "corresponds",
+          "confidence": "high",
+          "function_checks": [
+            {
+              "requirement": "self_clean",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "Да",
+              "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_page": null,
+              "evidence": "Самоочистка внутреннего блока | Да",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "self_clean",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            },
+            {
+              "requirement": "auto_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "Да",
+              "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_page": null,
+              "evidence": "Автоматический режим | Да",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "auto_mode",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            },
+            {
+              "requirement": "sleep_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "да",
+              "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_page": null,
+              "evidence": "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей.",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "sleep_mode",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            },
+            {
+              "requirement": "turbo_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "да",
+              "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_page": null,
+              "evidence": "Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей.",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "turbo_mode",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            },
+            {
+              "requirement": "self_diagnosis",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "да",
+              "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_page": null,
+              "evidence": "Самодиагностика | да",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "self_diagnosis",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            }
+          ],
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "parameter": "functions",
+          "normalized_value": {
+            "Автоматическая очистка": true,
+            "автоматический выбор режима": true,
+            "ночной режим": true,
+            "режим турбо": true,
+            "самодиагностика.": true
+          },
+          "source_type": [
+            "PROFESSIONAL_STORE"
+          ]
+        },
+        {
+          "requirement": "Тип внутреннего блока",
+          "required_value": "Настенный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Вид кондиционера",
+          "required_value": "Сплит-система",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Сплит-система",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Вид товара | Сплит-система",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "product_type",
+          "normalized_value": "сплит-система",
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Вид блока кондиционера",
+          "required_value": "Наружный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие антибактериального фильтра",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Мощность в режиме охлаждения",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Мощность в режиме нагрева",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Площадь помещения",
+          "required_value": "25 м^2",
+          "operator": "minimum",
+          "unit": "м^2",
+          "found_value": "25 м2",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Обслуживаемая площадь | 25 м2",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": "м²",
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "room_area",
+          "normalized_value": {
+            "values": [
+              "25"
+            ],
+            "dimension": "area",
+            "base_unit": "area",
+            "source_unit": "м²",
+            "conversion_factor": "1"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Цвет",
+          "required_value": "белый",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Белый",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_page": null,
+          "evidence": "Цвет корпуса | Белый",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "цвет",
+          "normalized_value": "белый",
+          "source_priority": 3,
+          "lower_priority_observations": []
+        }
+      ],
+      "status": "not_confirmed",
+      "technical_status": "not_confirmed",
+      "status_ru": "Соответствие не подтверждено",
+      "counts": {
+        "corresponds": 5,
+        "could_not_confirm": 8
+      }
+    },
+    {
+      "brand": "LG",
+      "sku": "DC07RH",
+      "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+      "recognized_skus": [
+        "DC07RH"
+      ],
+      "page_matches": true,
+      "extracted_facts": [
+        [
+          "купить в",
+          "1 клик",
+          null,
+          "Купить в 1 клик"
+        ],
+        [
+          "настенная сплит-система lg dc07rh",
+          "это уникальная модель, отличающаяся стильным дизайном и большим набором полезных функций. Модель оснащена многоуровневой системой очистки воздуха, в которую кроме фильтров входят ионизатор воздуха и ультрафиолетовая лампа. Для управления кондиционером предусмотрен ИК-пульт, также можно настроить удаленный доступ по Wi-Fi.",
+          null,
+          "Настенная сплит-система LG DC07RH – это уникальная модель, отличающаяся стильным дизайном и большим набором полезных функций. Модель оснащена многоуровневой системой очистки воздуха, в которую кроме фильтров входят ионизатор воздуха и ультрафиолетовая лампа. Для управления кондиционером предусмотрен ИК-пульт, также можно настроить удаленный доступ по Wi-Fi."
+        ],
+        [
+          "технология dual inverter компрессор с",
+          "10-летней гарантией",
+          null,
+          "Технология Dual Inverter компрессор с 10-летней гарантией"
+        ],
+        [
+          "технология ионизации воздуха plasmaster ionizer+ устраняет до",
+          "99,9% бактерий",
+          null,
+          "Технология ионизации воздуха Plasmaster Ionizer+ устраняет до 99,9% бактерий"
+        ],
+        [
+          "бренд",
+          "LG",
+          null,
+          "Бренд | LG"
+        ],
+        [
+          "серия",
+          "Dc Rh Evo Max",
+          null,
+          "Серия | Dc Rh Evo Max"
+        ],
+        [
+          "тип товара",
+          "Настенная сплит-система",
+          null,
+          "Тип товара | Настенная сплит-система"
+        ],
+        [
+          "гарантия",
+          "24 месяца",
+          null,
+          "Гарантия | 24 месяца"
+        ],
+        [
+          "room_area",
+          "до 20 (м2)",
+          null,
+          "Площадь обслуживания | до 20 (м2)"
+        ],
+        [
+          "способность охлаждения",
+          "07 (BTU)",
+          null,
+          "Способность охлаждения | 07 (BTU)"
+        ],
+        [
+          "cooling_capacity",
+          "3.2 (кВт)",
+          null,
+          "Мощность охлаждения | 3.2 (кВт)"
+        ],
+        [
+          "heating_capacity",
+          "3.5 (кВт)",
+          null,
+          "Мощность обогрева | 3.5 (кВт)"
+        ],
+        [
+          "потребление на холод",
+          "1400 (Вт)",
+          null,
+          "Потребление на холод | 1400 (Вт)"
+        ],
+        [
+          "потребление на тепло",
+          "1600 (Вт)",
+          null,
+          "Потребление на тепло | 1600 (Вт)"
+        ],
+        [
+          "уровень шума внутреннего блока",
+          "22 дБ(А)",
+          null,
+          "Уровень шума внутреннего блока | 22 дБ(А)"
+        ],
+        [
+          "уровень шума наружного блока",
+          "48 дБ(А)",
+          null,
+          "Уровень шума наружного блока | 48 дБ(А)"
+        ],
+        [
+          "расход свежего воздуха внутреннего блока",
+          "Нет",
+          null,
+          "Расход свежего воздуха внутреннего блока | Нет"
+        ],
+        [
+          "расход комнатного воздуха внутреннего блока",
+          "720 (м3/ч)",
+          null,
+          "Расход комнатного воздуха внутреннего блока | 720 (м3/ч)"
+        ],
+        [
+          "напряжение электропитания",
+          "1/220-240/50 (В/Гц/Ф)",
+          null,
+          "Напряжение электропитания | 1/220-240/50 (В/Гц/Ф)"
+        ],
+        [
+          "размеры внутреннего блока",
+          "753x308x189 (мм)",
+          null,
+          "Размеры внутреннего блока | 753x308x189 (мм)"
+        ],
+        [
+          "размеры наружного блока",
+          "717x495x230 (мм)",
+          null,
+          "Размеры наружного блока | 717x495x230 (мм)"
+        ],
+        [
+          "вес внутреннего блока",
+          "7.8 (кг)",
+          null,
+          "Вес внутреннего блока | 7.8 (кг)"
+        ],
+        [
+          "вес наружного блока",
+          "25.7 (кг)",
+          null,
+          "Вес наружного блока | 25.7 (кг)"
+        ],
+        [
+          "max. длина медной трассы",
+          "15 (м.п.)",
+          null,
+          "Max. длина медной трассы | 15 (м.п.)"
+        ],
+        [
+          "диаметр воздуховода свежего воздуха",
+          "Нет",
+          null,
+          "Диаметр воздуховода свежего воздуха | Нет"
+        ],
+        [
+          "диаметр жидкостной трубы",
+          "6.35 (1/4)",
+          null,
+          "Диаметр жидкостной трубы | 6.35 (1/4)"
+        ],
+        [
+          "диаметр газовой трубы",
+          "9.52 (3/8)",
+          null,
+          "Диаметр газовой трубы | 9.52 (3/8)"
+        ],
+        [
+          "режим работы",
+          "Охлаждение+Обогрев",
+          null,
+          "Режим работы | Охлаждение+Обогрев"
+        ],
+        [
+          "wifi",
+          "Есть",
+          null,
+          "WiFi | Есть"
+        ],
+        [
+          "регулировка жалюзи с пульта (горизонтально)",
+          "Есть",
+          null,
+          "Регулировка жалюзи с пульта (горизонтально) | Есть"
+        ],
+        [
+          "self_clean",
+          "Есть",
+          null,
+          "Самоочистка внутреннего блока | Есть"
+        ],
+        [
+          "self_diagnosis",
+          "Есть",
+          null,
+          "Самодиагностика | Есть"
+        ],
+        [
+          "sleep_mode",
+          "Есть",
+          null,
+          "Ночной режим | Есть"
+        ],
+        [
+          "авторестарт",
+          "Есть",
+          null,
+          "Авторестарт | Есть"
+        ],
+        [
+          "авто-режим",
+          "Есть",
+          null,
+          "Авто-режим | Есть"
+        ],
+        [
+          "пульт д/у",
+          "Есть",
+          null,
+          "Пульт Д/У | Есть"
+        ],
+        [
+          "подмес воздуха с улицы",
+          "Нет",
+          null,
+          "Подмес воздуха с улицы | Нет"
+        ],
+        [
+          "датчик движения",
+          "Нет",
+          null,
+          "Датчик движения | Нет"
+        ],
+        [
+          "регулировка жалюзи с пульта (вертикально)",
+          "Есть",
+          null,
+          "Регулировка жалюзи с пульта (вертикально) | Есть"
+        ],
+        [
+          "fine_filter",
+          "Есть",
+          null,
+          "Фильтр тонкой очистки | Есть"
+        ],
+        [
+          "фильтр грубой очистки",
+          "Есть",
+          null,
+          "Фильтр грубой очистки | Есть"
+        ],
+        [
+          "antibacterial_filter",
+          "Есть",
+          null,
+          "Антибактериальный фильтр | Есть"
+        ],
+        [
+          "антиаллергенный фильтр",
+          "Есть",
+          null,
+          "Антиаллергенный фильтр | Есть"
+        ],
+        [
+          "ионизатор воздуха",
+          "Есть",
+          null,
+          "Ионизатор воздуха | Есть"
+        ],
+        [
+          "плазменный фильтр",
+          "Есть",
+          null,
+          "Плазменный фильтр | Есть"
+        ],
+        [
+          "heppa фильтр",
+          "Нет",
+          null,
+          "HEPPA фильтр | Нет"
+        ],
+        [
+          "температурные границы на охлаждение",
+          "-10...+48°C",
+          null,
+          "Температурные границы на охлаждение | -10...+48°C"
+        ],
+        [
+          "температурные границы на обогрев",
+          "-10...+24°C",
+          null,
+          "Температурные границы на обогрев | -10...+24°C"
+        ],
+        [
+          "цвет",
+          "Белый",
+          null,
+          "Цвет внутреннего блока | Белый"
+        ],
+        [
+          "бренд компрессора",
+          "LG",
+          null,
+          "Бренд компрессора | LG"
+        ],
+        [
+          "inverter",
+          "inverter",
+          null,
+          "Тип компрессора | inverter"
+        ],
+        [
+          "хладагент",
+          "R32",
+          null,
+          "Хладагент | R32"
+        ],
+        [
+          "сторона подключения электропитания",
+          "Наружный блок",
+          null,
+          "Сторона подключения электропитания | Наружный блок"
+        ]
+      ],
+      "requirements_check": [
+        {
+          "requirement": "Инверторный тип кондиционера",
+          "required_value": "Нет",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "inverter",
+          "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_page": null,
+          "evidence": "Тип компрессора | inverter",
+          "result": "does_not_comply",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "inverter",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме нагрева)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме охлаждения)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие фильтров тонкой очистки воздуха",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Есть",
+          "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_page": null,
+          "evidence": "Фильтр тонкой очистки | Есть",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "fine_filter",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Дополнительные функции",
+          "required_value": "Автоматическая очистка, автоматический выбор режима, ночной режим, режим турбо, самодиагностика.",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Автоматическая очистка; ночной режим; самодиагностика.",
+          "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_page": null,
+          "evidence": [
+            "Самоочистка внутреннего блока | Есть",
+            null,
+            "Ночной режим | Есть",
+            null,
+            "Самодиагностика | Есть"
+          ],
+          "result": "could_not_confirm",
+          "confidence": "low",
+          "function_checks": [
+            {
+              "requirement": "self_clean",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "Есть",
+              "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+              "source_page": null,
+              "evidence": "Самоочистка внутреннего блока | Есть",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "self_clean",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            },
+            {
+              "requirement": "auto_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "sleep_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "Есть",
+              "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+              "source_page": null,
+              "evidence": "Ночной режим | Есть",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "sleep_mode",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            },
+            {
+              "requirement": "turbo_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "self_diagnosis",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "Есть",
+              "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+              "source_page": null,
+              "evidence": "Самодиагностика | Есть",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "self_diagnosis",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            }
+          ],
+          "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "parameter": "functions",
+          "normalized_value": {
+            "Автоматическая очистка": true,
+            "автоматический выбор режима": null,
+            "ночной режим": true,
+            "режим турбо": null,
+            "самодиагностика.": true
+          },
+          "source_type": [
+            "PROFESSIONAL_STORE",
+            "OTHER"
+          ]
+        },
+        {
+          "requirement": "Тип внутреннего блока",
+          "required_value": "Настенный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Вид кондиционера",
+          "required_value": "Сплит-система",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Вид блока кондиционера",
+          "required_value": "Наружный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие антибактериального фильтра",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Есть",
+          "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_page": null,
+          "evidence": "Антибактериальный фильтр | Есть",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "antibacterial_filter",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Мощность в режиме охлаждения",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": "3.2 (кВт)",
+          "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_page": null,
+          "evidence": "Мощность охлаждения | 3.2 (кВт)",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": "квт",
+          "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "cooling_capacity",
+          "normalized_value": {
+            "values": [
+              "3200.0"
+            ],
+            "dimension": "power",
+            "base_unit": "W",
+            "source_unit": "квт",
+            "conversion_factor": "1000"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Мощность в режиме нагрева",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": "3.5 (кВт)",
+          "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_page": null,
+          "evidence": "Мощность обогрева | 3.5 (кВт)",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": "квт",
+          "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "heating_capacity",
+          "normalized_value": {
+            "values": [
+              "3500.0"
+            ],
+            "dimension": "power",
+            "base_unit": "W",
+            "source_unit": "квт",
+            "conversion_factor": "1000"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Площадь помещения",
+          "required_value": "25 м^2",
+          "operator": "minimum",
+          "unit": "м^2",
+          "found_value": "до 20 (м2)",
+          "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_page": null,
+          "evidence": "Площадь обслуживания | до 20 (м2)",
+          "result": "does_not_comply",
+          "confidence": "high",
+          "actual_unit": "м²",
+          "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "room_area",
+          "normalized_value": {
+            "values": [
+              "20"
+            ],
+            "dimension": "area",
+            "base_unit": "area",
+            "source_unit": "м²",
+            "conversion_factor": "1"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Цвет",
+          "required_value": "белый",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Белый",
+          "source": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_page": null,
+          "evidence": "Цвет внутреннего блока | Белый",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "цвет",
+          "normalized_value": "белый",
+          "source_priority": 3,
+          "lower_priority_observations": []
+        }
+      ],
+      "status": "non_compliant",
+      "technical_status": "non_compliant",
+      "status_ru": "Не соответствует ТЗ",
+      "counts": {
+        "does_not_comply": 2,
+        "could_not_confirm": 6,
+        "corresponds": 5
+      }
+    },
+    {
+      "brand": "Hisense",
+      "sku": "AS-09UW4RYRKB05",
+      "source": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+      "recognized_skus": [
+        "AS-09UW4RYRKB05"
+      ],
+      "page_matches": true,
+      "extracted_facts": [
+        [
+          "бренд",
+          "Hisense",
+          null,
+          "Бренд | Hisense"
+        ],
+        [
+          "модель",
+          "AS-09UW4RYRKB05",
+          null,
+          "Модель | AS-09UW4RYRKB05"
+        ],
+        [
+          "цвет",
+          "Белый",
+          null,
+          "Цвет | Белый"
+        ],
+        [
+          "вес (брутто)",
+          "32 кг",
+          "кг",
+          "Вес (брутто), кг | 32 кг"
+        ],
+        [
+          "размеры внутреннего блока (шхвхг)",
+          "83.2x25.6x20.3 см",
+          null,
+          "Размеры внутреннего блока (ШхВхГ) | 83.2x25.6x20.3 см"
+        ],
+        [
+          "успей купить до",
+          "11.09.2026",
+          null,
+          "Успей купить до 11.09.2026"
+        ],
+        [
+          "в наличии",
+          "10 шт.",
+          null,
+          "В наличии - 10 шт."
+        ],
+        [
+          "от",
+          "990 ₽ в пределах МКАД",
+          null,
+          "от 990 ₽ в пределах МКАД"
+        ],
+        [
+          "+",
+          "60 за каждый км от МКАД",
+          null,
+          "+ 60 за каждый км от МКАД"
+        ],
+        [
+          "самовывозc 10",
+          "00 до 19:00",
+          null,
+          "Самовывозc 10:00 до 19:00"
+        ],
+        [
+          "бесплатно из",
+          "2 магазинов",
+          null,
+          "Бесплатно из 2 магазинов"
+        ],
+        [
+          "бренд",
+          "Hisense",
+          null,
+          "Бренд | Hisense"
+        ],
+        [
+          "модель",
+          "AS-09UW4RYRKB05",
+          null,
+          "Модель | AS-09UW4RYRKB05"
+        ],
+        [
+          "цвет",
+          "Белый",
+          null,
+          "Цвет | Белый"
+        ],
+        [
+          "?страна-производитель может отличаться от заявленной страна производитель",
+          "Китай",
+          null,
+          "?Страна-производитель может отличаться от заявленной Страна производитель | Китай"
+        ],
+        [
+          "гарантийный срок",
+          "3 года",
+          null,
+          "Гарантийный срок | 3 года"
+        ],
+        [
+          "product_type",
+          "сплит-система",
+          null,
+          "Тип кондиционера | сплит-система"
+        ],
+        [
+          "вид установки кондиционера",
+          "настенные",
+          null,
+          "Вид установки кондиционера | настенные"
+        ],
+        [
+          "тип блока",
+          "комплект",
+          null,
+          "Тип блока | комплект"
+        ],
+        [
+          "inverter",
+          "есть",
+          null,
+          "Инверторная технология | есть"
+        ],
+        [
+          "мощность btu",
+          "9",
+          null,
+          "Мощность BTU | 9"
+        ],
+        [
+          "room_area",
+          "28 м2",
+          null,
+          "Обслуживаемая площадь | 28 м2"
+        ],
+        [
+          "марка компрессора",
+          "GMCC",
+          null,
+          "Марка компрессора | GMCC"
+        ],
+        [
+          "хладагент",
+          "R32",
+          null,
+          "Хладагент | R32"
+        ],
+        [
+          "functions",
+          "обогрев, охлаждение",
+          null,
+          "Режимы работы | обогрев, охлаждение"
+        ],
+        [
+          "дополнительные режимы",
+          "авто, ночной, турбо режим, осушение, вентиляция",
+          null,
+          "Дополнительные режимы | авто, ночной, турбо режим, осушение, вентиляция"
+        ],
+        [
+          "дополнительные функции и особенности",
+          "непрерывное движение заслонок, самоочистка внутреннего блока, авторестарт",
+          null,
+          "Дополнительные функции и особенности | непрерывное движение заслонок, самоочистка внутреннего блока, авторестарт"
+        ],
+        [
+          "self_diagnosis",
+          "есть",
+          null,
+          "Самодиагностика | есть"
+        ],
+        [
+          "управление и комфорт",
+          "дисплей, пульт ДУ, таймер включения/выключения",
+          null,
+          "Управление и комфорт | дисплей, пульт ДУ, таймер включения/выключения"
+        ],
+        [
+          "уникальные технологии",
+          "I Feel",
+          null,
+          "Уникальные технологии | I Feel"
+        ],
+        [
+          "управление со смартфона",
+          "Wi-Fi есть",
+          null,
+          "Управление со смартфона | Wi-Fi есть"
+        ],
+        [
+          "тип фильтра",
+          "антибактериальный",
+          null,
+          "Тип фильтра | антибактериальный"
+        ],
+        [
+          "фильтры",
+          "предварительный фильтр, фильтр тонкой очистки воздуха",
+          null,
+          "Фильтры | предварительный фильтр, фильтр тонкой очистки воздуха"
+        ],
+        [
+          "класс энергопотребления",
+          "A",
+          null,
+          "Класс энергопотребления | A"
+        ],
+        [
+          "мощность охлождения, внутренний блок",
+          "2750 Вт",
+          null,
+          "Мощность охлождения, внутренний блок | 2750 Вт"
+        ],
+        [
+          "heating_capacity",
+          "2900 Вт",
+          null,
+          "Мощность обогрева, внутренний блок | 2900 Вт"
+        ],
+        [
+          "input_power",
+          "857 Вт",
+          null,
+          "Потребляемая мощность при охлаждении | 857 Вт"
+        ],
+        [
+          "input_power",
+          "733 Вт",
+          null,
+          "Потребляемая мощность при обогреве | 733 Вт"
+        ],
+        [
+          "уровень шума, внутренний блок",
+          "22.5 дБ",
+          null,
+          "Уровень шума, внутренний блок | 22.5 дБ"
+        ],
+        [
+          "уровень шума, внешний блок",
+          "50 дБ",
+          null,
+          "Уровень шума, внешний блок | 50 дБ"
+        ],
+        [
+          "вес (брутто)",
+          "32 кг",
+          "кг",
+          "Вес (брутто), кг | 32 кг"
+        ],
+        [
+          "размеры внутреннего блока (шхвхг)",
+          "83.2x25.6x20.3 см",
+          null,
+          "Размеры внутреннего блока (ШхВхГ) | 83.2x25.6x20.3 см"
+        ],
+        [
+          "размеры внешнего блока (шхвхг)",
+          "66x48.2x24 см",
+          null,
+          "Размеры внешнего блока (ШхВхГ) | 66x48.2x24 см"
+        ],
+        [
+          "вес внутреннего блока",
+          "8 кг",
+          null,
+          "Вес внутреннего блока | 8 кг"
+        ],
+        [
+          "вес внешнего блока",
+          "23 кг",
+          null,
+          "Вес внешнего блока | 23 кг"
+        ],
+        [
+          "коммуникации (трасса) максимальная длина",
+          "20 м",
+          null,
+          "Коммуникации (трасса) максимальная длина | 20 м"
+        ],
+        [
+          "комплектация",
+          "Внутренний блок. Наружный блок. Пульт управления. Инструкция. Гарантийный талон.",
+          null,
+          "Комплектация | Внутренний блок. Наружный блок. Пульт управления. Инструкция. Гарантийный талон."
+        ],
+        [
+          "компания market777 доставляет товары каждый день в заранее согласованное время",
+          "с 13.00 до 19.00, либо с 18.00 до полуночи.",
+          null,
+          "Компания Market777 доставляет товары каждый день в заранее согласованное время: с 13.00 до 19.00, либо с 18.00 до полуночи."
+        ],
+        [
+          "перед приездом курьер обязательно вам позвонит. ожидание, при отсутствии клиента на адресе получения заказа, составляет не более",
+          "15 минут, далее заказ либо переносится на следующие свободные даты, либо машина продолжит ожидание на платной основе, исходя из тарифа 20руб за минуту ожидания. Повторная доставка оформляется и оплачивается отдельно. При форсмажорных обстоятельствах (пробки, поломка автомобиля и т.д.) курьер связывается с клиентом для переноса времени доставки. Если у покупателя изменились обстоятельства, надо поставить в известность компанию о невозможности приёма заказа за 2 часа до назначенного срока.",
+          null,
+          "Перед приездом курьер обязательно вам позвонит. Ожидание, при отсутствии клиента на адресе получения заказа, составляет не более 15 минут, далее заказ либо переносится на следующие свободные даты, либо машина продолжит ожидание на платной основе, исходя из тарифа 20руб за минуту ожидания. Повторная доставка оформляется и оплачивается отдельно. При форсмажорных обстоятельствах (пробки, поломка автомобиля и т.д.) курьер связывается с клиентом для переноса времени доставки. Если у покупателя изменились обстоятельства, надо поставить в известность компанию о невозможности приёма заказа за 2 часа до назначенного срока."
+        ],
+        [
+          "региональную доставку можно осуществить после",
+          "100% предоплаты на пункте самовывоза (в этом случае мы согласуем с вами дату отправки и условия транспортировки, а также транспортную компанию, услугами которой вы хотите воспользоваться, стоимость доставки вашего заказа в офис ТК, соответствует условиям стандартной доставки в домашнем регионе магазина, с условиями доставки ТК можно ознакомиться на информационном ресурсе выбранной вами ТК.",
+          null,
+          "Региональную доставку можно осуществить после 100% предоплаты на пункте самовывоза (в этом случае мы согласуем с вами дату отправки и условия транспортировки, а также транспортную компанию, услугами которой вы хотите воспользоваться, стоимость доставки вашего заказа в офис ТК, соответствует условиям стандартной доставки в домашнем регионе магазина, с условиями доставки ТК можно ознакомиться на информационном ресурсе выбранной вами ТК."
+        ],
+        [
+          "для мелких товаров (проигрыватели, фотоаппаратура, смартфоны, компьютеры, аксессуары и т.д.)",
+          "790 рублей + 60 рублей за каждый километр дальше МКАД.",
+          null,
+          "Для мелких товаров (проигрыватели, фотоаппаратура, смартфоны, компьютеры, аксессуары и т.д.) – 790 рублей + 60 рублей за каждый километр дальше МКАД."
+        ],
+        [
+          "более крупные товары (сплит-системы, домашние кинотеатры, акустика, телевизоры и пр.)",
+          "990 рублей + 60 рублей за каждый километр за пределами МКАД.",
+          null,
+          "Более крупные товары (сплит-системы, домашние кинотеатры, акустика, телевизоры и пр.) – 990 рублей + 60 рублей за каждый километр за пределами МКАД."
+        ],
+        [
+          "холодильное оборудование",
+          "1690 рублей + 60 рублей за каждый километр дальше МКАД.",
+          null,
+          "Холодильное оборудование – 1690 рублей + 60 рублей за каждый километр дальше МКАД."
+        ],
+        [
+          "при заказе нескольких крупных товаров к цене доставки прибавляется по",
+          "200 рублей за каждую единицу техники.",
+          null,
+          "При заказе нескольких крупных товаров к цене доставки прибавляется по 200 рублей за каждую единицу техники."
+        ],
+        [
+          "стоимость доставки в день заказа",
+          "1990 рублей.",
+          null,
+          "Стоимость доставки в день заказа – 1990 рублей."
+        ],
+        [
+          "в случае доставки в зону платной парковки, закрытой территории и/или подземного паркинга, покупателю необходимо заблаговременно позаботиться о предоставлении беспрепятственного въезда и парковочного места. при весе товара более",
+          "25 кг, парковка должна быть не далее 30 м от адреса. Время ожидания клиента водителем на адресе не более 15 минут.",
+          null,
+          "В случае доставки в зону платной парковки, закрытой территории и/или подземного паркинга, покупателю необходимо заблаговременно позаботиться о предоставлении беспрепятственного въезда и парковочного места. При весе товара более 25 кг, парковка должна быть не далее 30 м от адреса. Время ожидания клиента водителем на адресе не более 15 минут."
+        ],
+        [
+          "цена подъема на лифте к квартире составляет",
+          "500 рублей (кроме отдельных видов холодильной техники).",
+          null,
+          "Цена подъема на лифте к квартире составляет 500 рублей (кроме отдельных видов холодильной техники)."
+        ],
+        [
+          "подъем холодильных аппаратов side by side",
+          "1000 рублей.",
+          null,
+          "Подъем холодильных аппаратов side by side – 1000 рублей."
+        ],
+        [
+          "для товаров массой свыше 15 килограмм, крупногабаритной техники и телевизиров с диагональю, превышающей 40 дюймов, цена за каждый этаж",
+          "500 рублей.",
+          null,
+          "Для товаров массой свыше 15 килограмм, крупногабаритной техники и телевизиров с диагональю, превышающей 40 дюймов, цена за каждый этаж – 500 рублей."
+        ],
+        [
+          "если диагональ телевизора любой марки превышает",
+          "75 дюймов, подъем осуществляют двое грузчиков. При этом доставка на первый этаж будет стоить 500 рублей. За каждый последующий этаж прибавляется 500 рублей.",
+          null,
+          "Если диагональ телевизора любой марки превышает 75 дюймов, подъем осуществляют двое грузчиков. При этом доставка на первый этаж будет стоить 500 рублей. За каждый последующий этаж прибавляется 500 рублей."
+        ],
+        [
+          "цена подъема на каждый этаж составляет 300 рублей. к общей сумме прибавляется цена заноса на крыльцо или на первую лифтовую площадку",
+          "300 рублей.",
+          null,
+          "Цена подъема на каждый этаж составляет 300 рублей. К общей сумме прибавляется цена заноса на крыльцо или на первую лифтовую площадку – 300 рублей."
+        ],
+        [
+          "при отсутствии действующего лифта",
+          "по 500 рублей за каждый этаж.",
+          null,
+          "При отсутствии действующего лифта – по 500 рублей за каждый этаж."
+        ]
+      ],
+      "requirements_check": [
+        {
+          "requirement": "Инверторный тип кондиционера",
+          "required_value": "Нет",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "есть",
+          "source": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_page": null,
+          "evidence": "Инверторная технология | есть",
+          "result": "does_not_comply",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "inverter",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме нагрева)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме охлаждения)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие фильтров тонкой очистки воздуха",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Дополнительные функции",
+          "required_value": "Автоматическая очистка, автоматический выбор режима, ночной режим, режим турбо, самодиагностика.",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "самодиагностика.",
+          "source": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_page": null,
+          "evidence": [
+            null,
+            null,
+            null,
+            null,
+            "Самодиагностика | есть"
+          ],
+          "result": "could_not_confirm",
+          "confidence": "low",
+          "function_checks": [
+            {
+              "requirement": "self_clean",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "auto_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "sleep_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "turbo_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "self_diagnosis",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "есть",
+              "source": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+              "source_page": null,
+              "evidence": "Самодиагностика | есть",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "self_diagnosis",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            }
+          ],
+          "source_url": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "parameter": "functions",
+          "normalized_value": {
+            "Автоматическая очистка": null,
+            "автоматический выбор режима": null,
+            "ночной режим": null,
+            "режим турбо": null,
+            "самодиагностика.": true
+          },
+          "source_type": [
+            "OTHER",
+            "PROFESSIONAL_STORE"
+          ]
+        },
+        {
+          "requirement": "Тип внутреннего блока",
+          "required_value": "Настенный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Вид кондиционера",
+          "required_value": "Сплит-система",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "сплит-система",
+          "source": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_page": null,
+          "evidence": "Тип кондиционера | сплит-система",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "product_type",
+          "normalized_value": "сплит-система",
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Вид блока кондиционера",
+          "required_value": "Наружный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие антибактериального фильтра",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Мощность в режиме охлаждения",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Мощность в режиме нагрева",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": "2900 Вт",
+          "source": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_page": null,
+          "evidence": "Мощность обогрева, внутренний блок | 2900 Вт",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": "вт",
+          "source_url": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "heating_capacity",
+          "normalized_value": {
+            "values": [
+              "2900"
+            ],
+            "dimension": "power",
+            "base_unit": "W",
+            "source_unit": "вт",
+            "conversion_factor": "1"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Площадь помещения",
+          "required_value": "25 м^2",
+          "operator": "minimum",
+          "unit": "м^2",
+          "found_value": "28 м2",
+          "source": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_page": null,
+          "evidence": "Обслуживаемая площадь | 28 м2",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": "м²",
+          "source_url": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "room_area",
+          "normalized_value": {
+            "values": [
+              "28"
+            ],
+            "dimension": "area",
+            "base_unit": "area",
+            "source_unit": "м²",
+            "conversion_factor": "1"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Цвет",
+          "required_value": "белый",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Белый",
+          "source": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_page": null,
+          "evidence": "Цвет | Белый",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "цвет",
+          "normalized_value": "белый",
+          "source_priority": 3,
+          "lower_priority_observations": []
+        }
+      ],
+      "status": "non_compliant",
+      "technical_status": "non_compliant",
+      "status_ru": "Не соответствует ТЗ",
+      "counts": {
+        "does_not_comply": 1,
+        "could_not_confirm": 8,
+        "corresponds": 4
+      }
+    },
+    {
+      "brand": "Energolux",
+      "sku": "SAS09BN3-AI/SAU09BN3-AI-LE",
+      "source": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+      "recognized_skus": [
+        "SAS09BN3-AI/SAU09BN3-AI-LE"
+      ],
+      "page_matches": true,
+      "extracted_facts": [
+        [
+          "бренд",
+          "Energolux",
+          null,
+          "Бренд | Energolux"
+        ],
+        [
+          "модель",
+          "SAS09BN3-AI/SAU09BN3-AI-LE",
+          null,
+          "Модель | SAS09BN3-AI/SAU09BN3-AI-LE"
+        ],
+        [
+          "цвет",
+          "Белый",
+          null,
+          "Цвет | Белый"
+        ],
+        [
+          "вес (брутто)",
+          "36 кг",
+          "кг",
+          "Вес (брутто), кг | 36 кг"
+        ],
+        [
+          "размеры внутреннего блока (шхвхг)",
+          "79.2x29.2x20.1 см",
+          null,
+          "Размеры внутреннего блока (ШхВхГ) | 79.2x29.2x20.1 см"
+        ],
+        [
+          "успей купить до",
+          "11.09.2026",
+          null,
+          "Успей купить до 11.09.2026"
+        ],
+        [
+          "в наличии",
+          "10 шт.",
+          null,
+          "В наличии - 10 шт."
+        ],
+        [
+          "от",
+          "990 ₽ в пределах МКАД",
+          null,
+          "от 990 ₽ в пределах МКАД"
+        ],
+        [
+          "+",
+          "60 за каждый км от МКАД",
+          null,
+          "+ 60 за каждый км от МКАД"
+        ],
+        [
+          "самовывозc 10",
+          "00 до 19:00",
+          null,
+          "Самовывозc 10:00 до 19:00"
+        ],
+        [
+          "бесплатно из",
+          "2 магазинов",
+          null,
+          "Бесплатно из 2 магазинов"
+        ],
+        [
+          "бренд",
+          "Energolux",
+          null,
+          "Бренд | Energolux"
+        ],
+        [
+          "модель",
+          "SAS09BN3-AI/SAU09BN3-AI-LE",
+          null,
+          "Модель | SAS09BN3-AI/SAU09BN3-AI-LE"
+        ],
+        [
+          "цвет",
+          "Белый",
+          null,
+          "Цвет | Белый"
+        ],
+        [
+          "?страна-производитель может отличаться от заявленной страна производитель",
+          "Китай",
+          null,
+          "?Страна-производитель может отличаться от заявленной Страна производитель | Китай"
+        ],
+        [
+          "гарантийный срок",
+          "5 лет",
+          null,
+          "Гарантийный срок | 5 лет"
+        ],
+        [
+          "product_type",
+          "сплит-система",
+          null,
+          "Тип кондиционера | сплит-система"
+        ],
+        [
+          "вид установки кондиционера",
+          "настенные",
+          null,
+          "Вид установки кондиционера | настенные"
+        ],
+        [
+          "тип блока",
+          "комплект",
+          null,
+          "Тип блока | комплект"
+        ],
+        [
+          "inverter",
+          "есть",
+          null,
+          "Инверторная технология | есть"
+        ],
+        [
+          "мощность btu",
+          "9",
+          null,
+          "Мощность BTU | 9"
+        ],
+        [
+          "room_area",
+          "25 м2",
+          null,
+          "Обслуживаемая площадь | 25 м2"
+        ],
+        [
+          "марка компрессора",
+          "GMCC",
+          null,
+          "Марка компрессора | GMCC"
+        ],
+        [
+          "хладагент",
+          "R32",
+          null,
+          "Хладагент | R32"
+        ],
+        [
+          "functions",
+          "обогрев, охлаждение",
+          null,
+          "Режимы работы | обогрев, охлаждение"
+        ],
+        [
+          "дополнительные режимы",
+          "вентиляция, осушение, турбо",
+          null,
+          "Дополнительные режимы | вентиляция, осушение, турбо"
+        ],
+        [
+          "дополнительные функции и особенности",
+          "самоочистка внутреннего блока",
+          null,
+          "Дополнительные функции и особенности | самоочистка внутреннего блока"
+        ],
+        [
+          "мин. поддерживаемая температура",
+          "16 °C",
+          null,
+          "Мин. поддерживаемая температура | 16 °C"
+        ],
+        [
+          "макс. поддерживаемая температура",
+          "30 °C",
+          null,
+          "Макс. поддерживаемая температура | 30 °C"
+        ],
+        [
+          "self_diagnosis",
+          "есть",
+          null,
+          "Самодиагностика | есть"
+        ],
+        [
+          "управление и комфорт",
+          "дисплей, индикация работы, пульт ДУ, регулировка направления воздушного потока, таймер включения/выключения",
+          null,
+          "Управление и комфорт | дисплей, индикация работы, пульт ДУ, регулировка направления воздушного потока, таймер включения/выключения"
+        ],
+        [
+          "уникальные технологии",
+          "I Feel",
+          null,
+          "Уникальные технологии | I Feel"
+        ],
+        [
+          "управление со смартфона",
+          "опционально",
+          null,
+          "Управление со смартфона | опционально"
+        ],
+        [
+          "тип фильтра",
+          "антибактериальный",
+          null,
+          "Тип фильтра | антибактериальный"
+        ],
+        [
+          "фильтры",
+          "предварительный фильтр, фильтр тонкой очистки воздуха",
+          null,
+          "Фильтры | предварительный фильтр, фильтр тонкой очистки воздуха"
+        ],
+        [
+          "класс энергопотребления",
+          "A++",
+          null,
+          "Класс энергопотребления | A++"
+        ],
+        [
+          "мощность охлождения, внутренний блок",
+          "2600 Вт",
+          null,
+          "Мощность охлождения, внутренний блок | 2600 Вт"
+        ],
+        [
+          "heating_capacity",
+          "2700 Вт",
+          null,
+          "Мощность обогрева, внутренний блок | 2700 Вт"
+        ],
+        [
+          "input_power",
+          "1090 Вт",
+          null,
+          "Потребляемая мощность при охлаждении | 1090 Вт"
+        ],
+        [
+          "input_power",
+          "970 Вт",
+          null,
+          "Потребляемая мощность при обогреве | 970 Вт"
+        ],
+        [
+          "уровень шума, внутренний блок",
+          "19 дБ",
+          null,
+          "Уровень шума, внутренний блок | 19 дБ"
+        ],
+        [
+          "вес (брутто)",
+          "36 кг",
+          "кг",
+          "Вес (брутто), кг | 36 кг"
+        ],
+        [
+          "размеры внутреннего блока (шхвхг)",
+          "79.2x29.2x20.1 см",
+          null,
+          "Размеры внутреннего блока (ШхВхГ) | 79.2x29.2x20.1 см"
+        ],
+        [
+          "размеры внешнего блока (шхвхг)",
+          "65x45.5x23.3 см",
+          null,
+          "Размеры внешнего блока (ШхВхГ) | 65x45.5x23.3 см"
+        ],
+        [
+          "вес внутреннего блока",
+          "8.5 кг",
+          null,
+          "Вес внутреннего блока | 8.5 кг"
+        ],
+        [
+          "вес внешнего блока",
+          "25 кг",
+          null,
+          "Вес внешнего блока | 25 кг"
+        ],
+        [
+          "коммуникации (трасса) максимальная длина",
+          "35 м",
+          null,
+          "Коммуникации (трасса) максимальная длина | 35 м"
+        ],
+        [
+          "комплектация",
+          "комплект ( внутренний+ внешний ) блоки, пульт, гарантийный талон, паспорт ( инструкция).",
+          null,
+          "Комплектация | комплект ( внутренний+ внешний ) блоки, пульт, гарантийный талон, паспорт ( инструкция)."
+        ],
+        [
+          "внутренние блоки серии bern le имеют матовое покрытие и привлекательный дизайн. особенностью этой серии является увеличенная длина фреонопровода",
+          "от 35 м до 40 м. В этой серии наши инженеры реализовали ключевые технологии: высокоэффективное FULL DCинверторное управление (кроме 12 BTU), объемное воздухораспределение, многоступенчатую фильтрацию воздуха, генератор холодной плазмы и многое другое. Серия имеет высокий европейский класс энергоэффективности А++. Сочетание передовых разработок и качественной элементной базы позволяют сохранять высокую эффективность работы в режиме обогрева даже при уличной температуре -15°С. В комплекте поставляются антибактериальный и угольный фильтры. При работе кондиционера в сверхтихом режиме уровень шума составляет 19 дБ(А). Эффективная функция самоочистки позволяет поддерживать теплообменники в идеальном состоянии. Модели данной серии имеют Wi-Fi подготовку. Пульт дистанционного управления имеет русский перевод на клавишах, в комплекте также поставляется держатель для пульта.",
+          null,
+          "Внутренние блоки серии Bern LE имеют матовое покрытие и привлекательный дизайн. Особенностью этой серии является увеличенная длина фреонопровода – от 35 м до 40 м. В этой серии наши инженеры реализовали ключевые технологии: высокоэффективное FULL DCинверторное управление (кроме 12 BTU), объемное воздухораспределение, многоступенчатую фильтрацию воздуха, генератор холодной плазмы и многое другое. Серия имеет высокий европейский класс энергоэффективности А++. Сочетание передовых разработок и качественной элементной базы позволяют сохранять высокую эффективность работы в режиме обогрева даже при уличной температуре -15°С. В комплекте поставляются антибактериальный и угольный фильтры. При работе кондиционера в сверхтихом режиме уровень шума составляет 19 дБ(А). Эффективная функция самоочистки позволяет поддерживать теплообменники в идеальном состоянии. Модели данной серии имеют Wi-Fi подготовку. Пульт дистанционного управления имеет русский перевод на клавишах, в комплекте также поставляется держатель для пульта."
+        ],
+        [
+          "сочетание передовых разработок и качественной элементной базы позволяют сохранять высокую эффективность работы в режиме обогрева даже при уличной температуре",
+          "-20°С. В комплекте поставляются антибактериальный и угольный фильтры. При работе кондиционера в сверхтихом режиме уровень шума, создаваемого внутренним блоком, не превышает 21 дБ(А). Опционально возможно подключение Wi-Fi модуля для дистанционного управления кондиционером из любой точки мира.",
+          null,
+          "Сочетание передовых разработок и качественной элементной базы позволяют сохранять высокую эффективность работы в режиме обогрева даже при уличной температуре -20°С. В комплекте поставляются антибактериальный и угольный фильтры. При работе кондиционера в сверхтихом режиме уровень шума, создаваемого внутренним блоком, не превышает 21 дБ(А). Опционально возможно подключение Wi-Fi модуля для дистанционного управления кондиционером из любой точки мира."
+        ],
+        [
+          "работа на обогрев до",
+          "-15С",
+          null,
+          "Работа на обогрев до -15С"
+        ],
+        [
+          "уровень шума от",
+          "19 дБ(А)",
+          null,
+          "Уровень шума от 19 дБ(А)"
+        ],
+        [
+          "объемное распределение воздушного потока",
+          "4D Air Flow",
+          null,
+          "Объемное распределение воздушного потока 4D Air Flow"
+        ],
+        [
+          "компания market777 доставляет товары каждый день в заранее согласованное время",
+          "с 13.00 до 19.00, либо с 18.00 до полуночи.",
+          null,
+          "Компания Market777 доставляет товары каждый день в заранее согласованное время: с 13.00 до 19.00, либо с 18.00 до полуночи."
+        ],
+        [
+          "перед приездом курьер обязательно вам позвонит. ожидание, при отсутствии клиента на адресе получения заказа, составляет не более",
+          "15 минут, далее заказ либо переносится на следующие свободные даты, либо машина продолжит ожидание на платной основе, исходя из тарифа 20руб за минуту ожидания. Повторная доставка оформляется и оплачивается отдельно. При форсмажорных обстоятельствах (пробки, поломка автомобиля и т.д.) курьер связывается с клиентом для переноса времени доставки. Если у покупателя изменились обстоятельства, надо поставить в известность компанию о невозможности приёма заказа за 2 часа до назначенного срока.",
+          null,
+          "Перед приездом курьер обязательно вам позвонит. Ожидание, при отсутствии клиента на адресе получения заказа, составляет не более 15 минут, далее заказ либо переносится на следующие свободные даты, либо машина продолжит ожидание на платной основе, исходя из тарифа 20руб за минуту ожидания. Повторная доставка оформляется и оплачивается отдельно. При форсмажорных обстоятельствах (пробки, поломка автомобиля и т.д.) курьер связывается с клиентом для переноса времени доставки. Если у покупателя изменились обстоятельства, надо поставить в известность компанию о невозможности приёма заказа за 2 часа до назначенного срока."
+        ],
+        [
+          "региональную доставку можно осуществить после",
+          "100% предоплаты на пункте самовывоза (в этом случае мы согласуем с вами дату отправки и условия транспортировки, а также транспортную компанию, услугами которой вы хотите воспользоваться, стоимость доставки вашего заказа в офис ТК, соответствует условиям стандартной доставки в домашнем регионе магазина, с условиями доставки ТК можно ознакомиться на информационном ресурсе выбранной вами ТК.",
+          null,
+          "Региональную доставку можно осуществить после 100% предоплаты на пункте самовывоза (в этом случае мы согласуем с вами дату отправки и условия транспортировки, а также транспортную компанию, услугами которой вы хотите воспользоваться, стоимость доставки вашего заказа в офис ТК, соответствует условиям стандартной доставки в домашнем регионе магазина, с условиями доставки ТК можно ознакомиться на информационном ресурсе выбранной вами ТК."
+        ],
+        [
+          "для мелких товаров (проигрыватели, фотоаппаратура, смартфоны, компьютеры, аксессуары и т.д.)",
+          "790 рублей + 60 рублей за каждый километр дальше МКАД.",
+          null,
+          "Для мелких товаров (проигрыватели, фотоаппаратура, смартфоны, компьютеры, аксессуары и т.д.) – 790 рублей + 60 рублей за каждый километр дальше МКАД."
+        ],
+        [
+          "более крупные товары (сплит-системы, домашние кинотеатры, акустика, телевизоры и пр.)",
+          "990 рублей + 60 рублей за каждый километр за пределами МКАД.",
+          null,
+          "Более крупные товары (сплит-системы, домашние кинотеатры, акустика, телевизоры и пр.) – 990 рублей + 60 рублей за каждый километр за пределами МКАД."
+        ],
+        [
+          "холодильное оборудование",
+          "1690 рублей + 60 рублей за каждый километр дальше МКАД.",
+          null,
+          "Холодильное оборудование – 1690 рублей + 60 рублей за каждый километр дальше МКАД."
+        ],
+        [
+          "при заказе нескольких крупных товаров к цене доставки прибавляется по",
+          "200 рублей за каждую единицу техники.",
+          null,
+          "При заказе нескольких крупных товаров к цене доставки прибавляется по 200 рублей за каждую единицу техники."
+        ],
+        [
+          "стоимость доставки в день заказа",
+          "1990 рублей.",
+          null,
+          "Стоимость доставки в день заказа – 1990 рублей."
+        ],
+        [
+          "в случае доставки в зону платной парковки, закрытой территории и/или подземного паркинга, покупателю необходимо заблаговременно позаботиться о предоставлении беспрепятственного въезда и парковочного места. при весе товара более",
+          "25 кг, парковка должна быть не далее 30 м от адреса. Время ожидания клиента водителем на адресе не более 15 минут.",
+          null,
+          "В случае доставки в зону платной парковки, закрытой территории и/или подземного паркинга, покупателю необходимо заблаговременно позаботиться о предоставлении беспрепятственного въезда и парковочного места. При весе товара более 25 кг, парковка должна быть не далее 30 м от адреса. Время ожидания клиента водителем на адресе не более 15 минут."
+        ],
+        [
+          "цена подъема на лифте к квартире составляет",
+          "500 рублей (кроме отдельных видов холодильной техники).",
+          null,
+          "Цена подъема на лифте к квартире составляет 500 рублей (кроме отдельных видов холодильной техники)."
+        ],
+        [
+          "подъем холодильных аппаратов side by side",
+          "1000 рублей.",
+          null,
+          "Подъем холодильных аппаратов side by side – 1000 рублей."
+        ],
+        [
+          "для товаров массой свыше 15 килограмм, крупногабаритной техники и телевизиров с диагональю, превышающей 40 дюймов, цена за каждый этаж",
+          "500 рублей.",
+          null,
+          "Для товаров массой свыше 15 килограмм, крупногабаритной техники и телевизиров с диагональю, превышающей 40 дюймов, цена за каждый этаж – 500 рублей."
+        ],
+        [
+          "если диагональ телевизора любой марки превышает",
+          "75 дюймов, подъем осуществляют двое грузчиков. При этом доставка на первый этаж будет стоить 500 рублей. За каждый последующий этаж прибавляется 500 рублей.",
+          null,
+          "Если диагональ телевизора любой марки превышает 75 дюймов, подъем осуществляют двое грузчиков. При этом доставка на первый этаж будет стоить 500 рублей. За каждый последующий этаж прибавляется 500 рублей."
+        ],
+        [
+          "цена подъема на каждый этаж составляет 300 рублей. к общей сумме прибавляется цена заноса на крыльцо или на первую лифтовую площадку",
+          "300 рублей.",
+          null,
+          "Цена подъема на каждый этаж составляет 300 рублей. К общей сумме прибавляется цена заноса на крыльцо или на первую лифтовую площадку – 300 рублей."
+        ],
+        [
+          "при отсутствии действующего лифта",
+          "по 500 рублей за каждый этаж.",
+          null,
+          "При отсутствии действующего лифта – по 500 рублей за каждый этаж."
+        ]
+      ],
+      "requirements_check": [
+        {
+          "requirement": "Инверторный тип кондиционера",
+          "required_value": "Нет",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "есть",
+          "source": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_page": null,
+          "evidence": "Инверторная технология | есть",
+          "result": "does_not_comply",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "inverter",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме нагрева)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме охлаждения)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие фильтров тонкой очистки воздуха",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Дополнительные функции",
+          "required_value": "Автоматическая очистка, автоматический выбор режима, ночной режим, режим турбо, самодиагностика.",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "самодиагностика.",
+          "source": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_page": null,
+          "evidence": [
+            null,
+            null,
+            null,
+            null,
+            "Самодиагностика | есть"
+          ],
+          "result": "could_not_confirm",
+          "confidence": "low",
+          "function_checks": [
+            {
+              "requirement": "self_clean",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "auto_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "sleep_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "turbo_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "self_diagnosis",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "есть",
+              "source": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+              "source_page": null,
+              "evidence": "Самодиагностика | есть",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "self_diagnosis",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            }
+          ],
+          "source_url": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "parameter": "functions",
+          "normalized_value": {
+            "Автоматическая очистка": null,
+            "автоматический выбор режима": null,
+            "ночной режим": null,
+            "режим турбо": null,
+            "самодиагностика.": true
+          },
+          "source_type": [
+            "OTHER",
+            "PROFESSIONAL_STORE"
+          ]
+        },
+        {
+          "requirement": "Тип внутреннего блока",
+          "required_value": "Настенный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Вид кондиционера",
+          "required_value": "Сплит-система",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "сплит-система",
+          "source": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_page": null,
+          "evidence": "Тип кондиционера | сплит-система",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "product_type",
+          "normalized_value": "сплит-система",
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Вид блока кондиционера",
+          "required_value": "Наружный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие антибактериального фильтра",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Мощность в режиме охлаждения",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Мощность в режиме нагрева",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": "2700 Вт",
+          "source": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_page": null,
+          "evidence": "Мощность обогрева, внутренний блок | 2700 Вт",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": "вт",
+          "source_url": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "heating_capacity",
+          "normalized_value": {
+            "values": [
+              "2700"
+            ],
+            "dimension": "power",
+            "base_unit": "W",
+            "source_unit": "вт",
+            "conversion_factor": "1"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Площадь помещения",
+          "required_value": "25 м^2",
+          "operator": "minimum",
+          "unit": "м^2",
+          "found_value": "25 м2",
+          "source": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_page": null,
+          "evidence": "Обслуживаемая площадь | 25 м2",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": "м²",
+          "source_url": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "room_area",
+          "normalized_value": {
+            "values": [
+              "25"
+            ],
+            "dimension": "area",
+            "base_unit": "area",
+            "source_unit": "м²",
+            "conversion_factor": "1"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Цвет",
+          "required_value": "белый",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Белый",
+          "source": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_page": null,
+          "evidence": "Цвет | Белый",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "цвет",
+          "normalized_value": "белый",
+          "source_priority": 3,
+          "lower_priority_observations": []
+        }
+      ],
+      "status": "non_compliant",
+      "technical_status": "non_compliant",
+      "status_ru": "Не соответствует ТЗ",
+      "counts": {
+        "does_not_comply": 1,
+        "could_not_confirm": 8,
+        "corresponds": 4
+      }
+    },
+    {
+      "brand": "Hisense",
+      "sku": "AS-13UW4RXVQF00",
+      "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+      "recognized_skus": [
+        "AS-13UW4RXVQF00"
+      ],
+      "page_matches": true,
+      "extracted_facts": [
+        [
+          "покупка в",
+          "1 клик",
+          null,
+          "Покупка в 1 клик"
+        ],
+        [
+          "поддержка",
+          "24\\7",
+          null,
+          "Поддержка 24\\7"
+        ],
+        [
+          "air sensation superior dc inverter на озонобезопасном хладагенте r32",
+          "сенсационная новинка от Hisense с уникальной технологией притока свежего воздуха до 50 м3/час!",
+          null,
+          "AIR SENSATION SUPERIOR DC Inverter на озонобезопасном хлаДагенте R32 — сенсационная новинка от Hisense с уникальной технологией притока свежего воздуха до 50 м3/час!"
+        ],
+        [
+          "сплит-системам air sensation присвоен класс а+++ по европейской системе классификации eu erp, что гарантирует высочайшую экономичность и производительность моделей. более того, серия является одной из самых тихих в ассортиментном ряду hisense",
+          "уровень шума внутреннего блока в режиме Quiet составляет всего 18 дБ(А).",
+          null,
+          "Сплит-системам AIR SENSATION присвоен класс А+++ по европейской системе классификации EU ERP, что гарантирует высочайшую экономичность и производительность моделей. Более того, серия является одной из самых тихих в ассортиментном ряду Hisense — уровень шума внутреннего блока в режиме Quiet составляет всего 18 дБ(А)."
+        ],
+        [
+          "product_type",
+          "Сплит-система",
+          null,
+          "Вид товара | Сплит-система"
+        ],
+        [
+          "уровень шума внутреннего блока",
+          "18",
+          null,
+          "Уровень шума внутреннего блока | 18"
+        ],
+        [
+          "room_area",
+          "40 м2",
+          null,
+          "Обслуживаемая площадь | 40 м2"
+        ],
+        [
+          "functions",
+          "Обогрев , Охлаждение",
+          null,
+          "Режимы работы | Обогрев , Охлаждение"
+        ],
+        [
+          "18 производительность холод",
+          "3.50 (1.00 – 4.40)",
+          null,
+          "18 Производительность холод | 3.50 (1.00 – 4.40)"
+        ],
+        [
+          "input_power",
+          "0.81 (0.18 – 0.90)",
+          null,
+          "20 Потребляемая мощность охлаждение | 0.81 (0.18 – 0.90)"
+        ],
+        [
+          "input_power",
+          "1.04 (0.30 – 1.28)",
+          null,
+          "Потребляемая мощность обогрев | 1.04 (0.30 – 1.28)"
+        ],
+        [
+          "heating_capacity",
+          "4.20 (1.60 – 4.80)",
+          null,
+          "Производительность тепло | 4.20 (1.60 – 4.80)"
+        ],
+        [
+          "напряжение, в",
+          "220-240/50/1",
+          null,
+          "Напряжение, В | 220-240/50/1"
+        ],
+        [
+          "23 3d auto air",
+          "Да",
+          null,
+          "23 3D AUTO Air | Да"
+        ],
+        [
+          "особенности",
+          "Горизонтальные + Вертикальные",
+          null,
+          "Особенности | Горизонтальные + Вертикальные"
+        ],
+        [
+          "фильтр предварительной очистки",
+          "Нет",
+          null,
+          "Фильтр предварительной очистки | Нет"
+        ],
+        [
+          "модуль уф-обеззараживания",
+          "Нет",
+          null,
+          "Модуль УФ-обеззараживания | Нет"
+        ],
+        [
+          "28 плазменная очистка воздуха",
+          "Да",
+          null,
+          "28 Плазменная очистка воздуха | Да"
+        ],
+        [
+          "класс энергоэффективности",
+          "A+++",
+          null,
+          "Класс энергоэффективности | A+++"
+        ],
+        [
+          "3 серия",
+          "AIR SENSATION SUPERIOR DC Inverter",
+          null,
+          "3 Серия | AIR SENSATION SUPERIOR DC Inverter"
+        ],
+        [
+          "51 скрытый дисплей",
+          "Да",
+          null,
+          "51 Скрытый дисплей | Да"
+        ],
+        [
+          "максимальная длина трассы",
+          "20",
+          null,
+          "Максимальная длина трассы | 20"
+        ],
+        [
+          "41 антивирусный фильтр",
+          "Да",
+          null,
+          "41 Антивирусный фильтр | Да"
+        ],
+        [
+          "42 катехиновый фильтр",
+          "Да",
+          null,
+          "42 Катехиновый фильтр | Да"
+        ],
+        [
+          "43 фильтр с витамином c",
+          "Да",
+          null,
+          "43 Фильтр с витамином C | Да"
+        ],
+        [
+          "45 нера-фильтр",
+          "Да",
+          null,
+          "45 НЕРА-фильтр | Да"
+        ],
+        [
+          "48 фильтр с ионами серебра",
+          "Да",
+          null,
+          "48 Фильтр с ионами серебра | Да"
+        ],
+        [
+          "fine_filter",
+          "Hepa H11",
+          null,
+          "49 Дополнительные фильтры тонкой очистки в комплекте | Hepa H11"
+        ],
+        [
+          "таймер включения/выключения",
+          "да",
+          null,
+          "Таймер включения/выключения | да"
+        ],
+        [
+          "self_clean",
+          "Да",
+          null,
+          "Самоочистка внутреннего блока | Да"
+        ],
+        [
+          "воздушный поток м3ч",
+          "360/390/420/470/510/550/600",
+          "м",
+          "Воздушный поток м3ч | 360/390/420/470/510/550/600"
+        ],
+        [
+          "вес внутреннего блока",
+          "13 , 5",
+          null,
+          "Вес внутреннего блока | 13 , 5"
+        ],
+        [
+          "вес внешнего блока",
+          "33",
+          null,
+          "Вес внешнего блока | 33"
+        ],
+        [
+          "габариты внутреннего блока",
+          "978x313x217",
+          null,
+          "Габариты внутреннего блока | 978x313x217"
+        ],
+        [
+          "габариты наружного блока",
+          "810x585x280",
+          null,
+          "Габариты наружного блока | 810x585x280"
+        ],
+        [
+          "63 бренд компрессора",
+          "GMCC",
+          null,
+          "63 Бренд компрессора | GMCC"
+        ],
+        [
+          "хладагент",
+          "R32",
+          null,
+          "Хладагент | R32"
+        ],
+        [
+          "страна производства",
+          "КНР",
+          null,
+          "Страна производства | КНР"
+        ],
+        [
+          "antibacterial_filter",
+          "Да",
+          null,
+          "39 Антибактериальный фильтр | Да"
+        ],
+        [
+          "официальная гарантия",
+          "5 лет",
+          null,
+          "Официальная гарантия | 5 лет"
+        ],
+        [
+          "room_area",
+          "35",
+          "м²",
+          "Площадь м² | 35"
+        ],
+        [
+          "inverter",
+          "Да",
+          null,
+          "Инверторный компрессор | Да"
+        ],
+        [
+          "бренд",
+          "Hisense",
+          null,
+          "Бренд | Hisense"
+        ]
+      ],
+      "requirements_check": [
+        {
+          "requirement": "Инверторный тип кондиционера",
+          "required_value": "Нет",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Да",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_page": null,
+          "evidence": "Инверторный компрессор | Да",
+          "result": "does_not_comply",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "inverter",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме нагрева)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Класс энергоэффективности (в режиме охлаждения)",
+          "required_value": "не ниже А",
+          "operator": "minimum",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие фильтров тонкой очистки воздуха",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Hepa H11",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_page": null,
+          "evidence": "49 Дополнительные фильтры тонкой очистки в комплекте | Hepa H11",
+          "result": "could_not_confirm",
+          "confidence": "low",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "fine_filter",
+          "normalized_value": "hepa h11",
+          "source_priority": 3
+        },
+        {
+          "requirement": "Дополнительные функции",
+          "required_value": "Автоматическая очистка, автоматический выбор режима, ночной режим, режим турбо, самодиагностика.",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Автоматическая очистка",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_page": null,
+          "evidence": [
+            "Самоочистка внутреннего блока | Да",
+            null,
+            null,
+            null,
+            null
+          ],
+          "result": "could_not_confirm",
+          "confidence": "low",
+          "function_checks": [
+            {
+              "requirement": "self_clean",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": "Да",
+              "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+              "source_page": null,
+              "evidence": "Самоочистка внутреннего блока | Да",
+              "result": "corresponds",
+              "confidence": "high",
+              "actual_unit": null,
+              "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+              "source_type": "PROFESSIONAL_STORE",
+              "parameter": "self_clean",
+              "normalized_value": true,
+              "source_priority": 3,
+              "lower_priority_observations": []
+            },
+            {
+              "requirement": "auto_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "sleep_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "turbo_mode",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            },
+            {
+              "requirement": "self_diagnosis",
+              "required_value": "да",
+              "operator": "equals",
+              "unit": null,
+              "found_value": null,
+              "source": null,
+              "source_page": null,
+              "evidence": null,
+              "result": "could_not_confirm",
+              "confidence": "low"
+            }
+          ],
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "parameter": "functions",
+          "normalized_value": {
+            "Автоматическая очистка": true,
+            "автоматический выбор режима": null,
+            "ночной режим": null,
+            "режим турбо": null,
+            "самодиагностика.": null
+          },
+          "source_type": [
+            "PROFESSIONAL_STORE",
+            "OTHER"
+          ]
+        },
+        {
+          "requirement": "Тип внутреннего блока",
+          "required_value": "Настенный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Вид кондиционера",
+          "required_value": "Сплит-система",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Сплит-система",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_page": null,
+          "evidence": "Вид товара | Сплит-система",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "product_type",
+          "normalized_value": "сплит-система",
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Вид блока кондиционера",
+          "required_value": "Наружный",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Наличие антибактериального фильтра",
+          "required_value": "да",
+          "operator": "equals",
+          "unit": null,
+          "found_value": "Да",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_page": null,
+          "evidence": "39 Антибактериальный фильтр | Да",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "antibacterial_filter",
+          "normalized_value": true,
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Мощность в режиме охлаждения",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        },
+        {
+          "requirement": "Мощность в режиме нагрева",
+          "required_value": "2.6 кВт",
+          "operator": "minimum",
+          "unit": "кВт",
+          "found_value": "4.20 (1.60 – 4.80)",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_page": null,
+          "evidence": "Производительность тепло | 4.20 (1.60 – 4.80)",
+          "result": "could_not_confirm",
+          "confidence": "low",
+          "actual_unit": null,
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "heating_capacity",
+          "normalized_value": "4.20 (1.60 – 4.80)",
+          "source_priority": 3
+        },
+        {
+          "requirement": "Площадь помещения",
+          "required_value": "25 м^2",
+          "operator": "minimum",
+          "unit": "м^2",
+          "found_value": "40 м2",
+          "source": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_page": null,
+          "evidence": "Обслуживаемая площадь | 40 м2",
+          "result": "corresponds",
+          "confidence": "high",
+          "actual_unit": "м²",
+          "source_url": "https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/",
+          "source_type": "PROFESSIONAL_STORE",
+          "parameter": "room_area",
+          "normalized_value": {
+            "values": [
+              "40"
+            ],
+            "dimension": "area",
+            "base_unit": "area",
+            "source_unit": "м²",
+            "conversion_factor": "1"
+          },
+          "source_priority": 3,
+          "lower_priority_observations": []
+        },
+        {
+          "requirement": "Цвет",
+          "required_value": "белый",
+          "operator": "equals",
+          "unit": null,
+          "found_value": null,
+          "source": null,
+          "source_page": null,
+          "evidence": null,
+          "result": "could_not_confirm",
+          "confidence": "low"
+        }
+      ],
+      "status": "non_compliant",
+      "technical_status": "non_compliant",
+      "status_ru": "Не соответствует ТЗ",
+      "counts": {
+        "does_not_comply": 1,
+        "could_not_confirm": 9,
+        "corresponds": 3
+      }
+    }
+  ]
+}

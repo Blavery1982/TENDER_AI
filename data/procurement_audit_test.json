@@ -1,0 +1,667 @@
+{
+  "tradeNumber": "100309200126100271",
+  "purchase_id": "cd3b22d2-7040-46d8-b998-f431073e16ed",
+  "subject": "Поставка фильтров мембранных для обеспечения государственных нужд ФКУЗ Ставропольский противочумный институт Роспотребнадзора в рамках реализации распоряжения Правительства РФ от 22.01.2026 N 64-р",
+  "documents": [
+    {
+      "file_name": "проект контракта фильтр мембранн.doc",
+      "format": "DOC",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/100309200126100271/проект контракта фильтр мембранн.doc",
+      "document_parse_status": "analyzed",
+      "document_kinds": [
+        "contract_draft",
+        "specification"
+      ],
+      "document_kinds_ru": [
+        "Проект договора / контракт",
+        "Спецификация"
+      ]
+    },
+    {
+      "file_name": "Приложение №2 обоснование НМЦК.xlsx",
+      "format": "XLSX",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/100309200126100271/Приложение _2 обоснование НМЦК.xlsx",
+      "document_parse_status": "analyzed",
+      "document_kinds": [
+        "price_justification"
+      ],
+      "document_kinds_ru": [
+        "Обоснование НМЦК / расчёт цены"
+      ]
+    }
+  ],
+  "normalized_tz": [
+    {
+      "item_index": 1,
+      "name": "Стерилизующий фильтр для технологических газов - соответствие.\n Капсула фильтрующая:\n  - Мембрана гидрофобная – PTFE, микробный рейтинг – 0,2 мкм;\n- Адаптер – ТС1;\n- Эффективная зона фильтрации – не менее 0,045 м кв.;\n - Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут;\nСодержание эндотоксинов: не более 0,25Eu/ml\nСоответствие международным стандартам: FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004 \nНаличие с каждым фильтром результата теста о прохождении целостности: соответствие.\nРуководство по валидации – наличие.",
+      "short_name": "Фильтр мембранный капсульный",
+      "quantity": 6.0,
+      "unit": "шт",
+      "brand": null,
+      "model": null,
+      "required_characteristics": [
+        {
+          "parameter": "Стерилизующий фильтр для технологических газов",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Капсула фильтрующая",
+          "required_value": "",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Мембрана гидрофобная",
+          "required_value": "PTFE, микробный рейтинг – 0,2 мкм",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Адаптер",
+          "required_value": "ТС1",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Эффективная зона фильтрации",
+          "required_value": "не менее 0,045 м кв.",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+          "required_value": "Требуется",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Содержание эндотоксинов",
+          "required_value": "не более 0,25Eu/ml",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Соответствие международным стандартам",
+          "required_value": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Наличие с каждым фильтром результата теста о прохождении целостности",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Руководство по валидации",
+          "required_value": "наличие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        }
+      ],
+      "configuration": [],
+      "document_requirements": [
+        {
+          "parameter": "Соответствие международным стандартам",
+          "required_value": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Наличие с каждым фильтром результата теста о прохождении целостности",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Руководство по валидации",
+          "required_value": "наличие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        }
+      ],
+      "origin_requirements": [],
+      "other_mandatory_conditions": []
+    },
+    {
+      "item_index": 2,
+      "name": "Стерилизующий фильтр для технологических газов - соответствие.\nМатериал мембраны: гидрофобный политетрафторэтилен -  PTFE\nРазмер пор: не более 0,2 мкм \nПлощадь фильтрации: не менее 0,37м2\nВысота фильтроэлемента: 5 дюймов для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»\nАдаптер – Т 126- для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»\nМаксимальный перепад давления при прямом потоке: не менее 5,2 бар при температуре 15С0 \nМаксимальный перепад давления при обратном потоке: не менее 2,1 бар при температуре 15С0 \nСодержание эндотоксинов: не более 0,25Eu/ml\nЭкстрагируемые вещества: не более 15mg/10 дюймов\nАвтоклавирование 126С, 60 мин: не менее 60 циклов \nАвтоклавирование 140С, 60 мин: не менее 40 циклов \nСтерилизация в линии 126С, 60 мин: не менее 60 циклов\nСтерилизация в линии 140С, 60 мин: не менее 40 циклов\nТест целостности:\nТочка пузырька 25С: не менее 1бар\nДиффузионный поток 25С, 0.8 бар: не более 30мл/мин \nСоответствие международным стандартам: FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004 \nНаличие с каждым фильтров результата теста о прохождении целостности: соответствие.\nРуководство по валидации – наличие.\n",
+      "short_name": "Фильтр мембранный",
+      "quantity": 9.0,
+      "unit": "шт",
+      "brand": null,
+      "model": null,
+      "required_characteristics": [
+        {
+          "parameter": "Стерилизующий фильтр для технологических газов",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Материал мембраны",
+          "required_value": "гидрофобный политетрафторэтилен -  PTFE",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Размер пор",
+          "required_value": "не более 0,2 мкм",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Площадь фильтрации",
+          "required_value": "не менее 0,37м2",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Высота фильтроэлемента",
+          "required_value": "5 дюймов для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Адаптер",
+          "required_value": "Т 126- для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Максимальный перепад давления при прямом потоке",
+          "required_value": "не менее 5,2 бар при температуре 15С0",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Максимальный перепад давления при обратном потоке",
+          "required_value": "не менее 2,1 бар при температуре 15С0",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Содержание эндотоксинов",
+          "required_value": "не более 0,25Eu/ml",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Экстрагируемые вещества",
+          "required_value": "не более 15mg/10 дюймов",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Автоклавирование 126С, 60 мин",
+          "required_value": "не менее 60 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Автоклавирование 140С, 60 мин",
+          "required_value": "не менее 40 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Стерилизация в линии 126С, 60 мин",
+          "required_value": "не менее 60 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Стерилизация в линии 140С, 60 мин",
+          "required_value": "не менее 40 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Тест целостности",
+          "required_value": "",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Точка пузырька 25С",
+          "required_value": "не менее 1бар",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Диффузионный поток 25С, 0.8 бар",
+          "required_value": "не более 30мл/мин",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Соответствие международным стандартам",
+          "required_value": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Наличие с каждым фильтров результата теста о прохождении целостности",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Руководство по валидации",
+          "required_value": "наличие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        }
+      ],
+      "configuration": [],
+      "document_requirements": [
+        {
+          "parameter": "Соответствие международным стандартам",
+          "required_value": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Наличие с каждым фильтров результата теста о прохождении целостности",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Руководство по валидации",
+          "required_value": "наличие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        }
+      ],
+      "origin_requirements": [],
+      "other_mandatory_conditions": []
+    }
+  ],
+  "position_assessments": [
+    {
+      "item_index": 1,
+      "item_name": "Фильтр мембранный капсульный",
+      "customer_unit_price": 11200.0,
+      "target_price_80_percent": 8960.0,
+      "requirements": [
+        {
+          "parameter": "Стерилизующий фильтр для технологических газов",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Капсула фильтрующая",
+          "required_value": "",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Мембрана гидрофобная",
+          "required_value": "PTFE, микробный рейтинг – 0,2 мкм",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Адаптер",
+          "required_value": "ТС1",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Эффективная зона фильтрации",
+          "required_value": "не менее 0,045 м кв.",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+          "required_value": "Требуется",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Содержание эндотоксинов",
+          "required_value": "не более 0,25Eu/ml",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Соответствие международным стандартам",
+          "required_value": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Наличие с каждым фильтром результата теста о прохождении целостности",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Руководство по валидации",
+          "required_value": "наличие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        }
+      ],
+      "model_identification_clues": [],
+      "candidate_models": [],
+      "suitable_models_determined_by_tz": "Модель, полностью соответствующая ТЗ, не найдена — проверить ТЗ заказчика",
+      "model_technical_check_ru": "Не удалось подтвердить",
+      "model_price_check_ru": "Не удалось подтвердить",
+      "conclusion": "Не удалось подтвердить реальную модель и её рыночную цену; переход к списку подходящих моделей невозможен."
+    },
+    {
+      "item_index": 2,
+      "item_name": "Фильтр мембранный",
+      "customer_unit_price": 11600.0,
+      "target_price_80_percent": 9280.0,
+      "requirements": [
+        {
+          "parameter": "Стерилизующий фильтр для технологических газов",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Материал мембраны",
+          "required_value": "гидрофобный политетрафторэтилен -  PTFE",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Размер пор",
+          "required_value": "не более 0,2 мкм",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Площадь фильтрации",
+          "required_value": "не менее 0,37м2",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Высота фильтроэлемента",
+          "required_value": "5 дюймов для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Адаптер",
+          "required_value": "Т 126- для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Максимальный перепад давления при прямом потоке",
+          "required_value": "не менее 5,2 бар при температуре 15С0",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Максимальный перепад давления при обратном потоке",
+          "required_value": "не менее 2,1 бар при температуре 15С0",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Содержание эндотоксинов",
+          "required_value": "не более 0,25Eu/ml",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Экстрагируемые вещества",
+          "required_value": "не более 15mg/10 дюймов",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Автоклавирование 126С, 60 мин",
+          "required_value": "не менее 60 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Автоклавирование 140С, 60 мин",
+          "required_value": "не менее 40 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Стерилизация в линии 126С, 60 мин",
+          "required_value": "не менее 60 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Стерилизация в линии 140С, 60 мин",
+          "required_value": "не менее 40 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Тест целостности",
+          "required_value": "",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Точка пузырька 25С",
+          "required_value": "не менее 1бар",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Диффузионный поток 25С, 0.8 бар",
+          "required_value": "не более 30мл/мин",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Соответствие международным стандартам",
+          "required_value": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Наличие с каждым фильтров результата теста о прохождении целостности",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Руководство по валидации",
+          "required_value": "наличие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        }
+      ],
+      "model_identification_clues": [
+        {
+          "text": "domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+          "meaning": "Модель корпуса оборудования заказчика, не модель закупаемого фильтра"
+        },
+        {
+          "text": "domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+          "meaning": "Модель корпуса оборудования заказчика, не модель закупаемого фильтра"
+        }
+      ],
+      "candidate_models": [],
+      "suitable_models_determined_by_tz": "Модель, полностью соответствующая ТЗ, не найдена — проверить ТЗ заказчика",
+      "model_technical_check_ru": "Не удалось подтвердить",
+      "model_price_check_ru": "Не удалось подтвердить",
+      "conclusion": "Не удалось подтвердить реальную модель и её рыночную цену; переход к списку подходящих моделей невозможен."
+    }
+  ],
+  "tz_audit_status": "manual_check",
+  "tz_audit_status_ru": "Нужна ручная проверка",
+  "tz_audit_note": "Явных противоречий и невозможных параметров не найдено, но позиция 2 содержит точную привязку к имеющемуся корпусу domnick hunter demi HSI Plus, адаптеру T 126 и размеру 5 дюймов; совместимость требует ручной проверки.",
+  "special_conditions_short": "Погрузочно-разгрузочные работы за счёт поставщика; Уведомить о доставке минимум за 2 дня; Доставка силами поставщика",
+  "special_conditions_evidence": [
+    {
+      "type": "unloading",
+      "document": "проект контракта фильтр мембранн.doc",
+      "text_fragment": "й Федерации Заказчиком. 2.3. Цена Контракта включает в себя стоимость Товара, все подлежащие уплате налоги, сборы, погрузочно-разгрузочные работы, стоимость упаковки (тары), маркировки, страхование, пошлины, НДС, и другие обязательные платежи, которые Поставщ",
+      "confidence": "high"
+    },
+    {
+      "type": "advance_notice",
+      "document": "проект контракта фильтр мембранн.doc",
+      "text_fragment": "вки), срок поставки товара: с момента заключения Контракта по 18 декабря 2026 года – включительно. 3.2. Поставщик не менее чем за 2 дня до осуществления поставки Товара направляет в адрес Заказчика уведомление о времени и дате доставки Товара в место доставки. 3.3. Одновременно с поставкой Товара Поставщик передает Заказчику надлежащим образом оформленные первичные учетн",
+      "confidence": "high"
+    },
+    {
+      "type": "supplier_delivery",
+      "document": "проект контракта фильтр мембранн.doc",
+      "text_fragment": "альным законом из суммы, подлежащей оплате Поставщику. 3. Порядок, сроки и условия поставки и приемки Товара 3.1. Поставщик самостоятельно доставляет Товар по адресу: 355037, Российская Федерация, Ставропольский край, г. Ставрополь, ул. Доваторцев, 9 (далее – м",
+      "confidence": "high"
+    }
+  ],
+  "price_justification": {
+    "method": "Сопоставимые рыночные цены",
+    "sources": [
+      "Коммерческое предложение №1           вх 5309 от 04.09.2026 г.",
+      "Коммерческое предложение №2           вх 5307 от 03.09.2026 г.",
+      "Коммерческое предложение №3           вх 5308 от 03.09.2026 г."
+    ],
+    "products": [
+      {
+        "name": "Фильтр мембранный ",
+        "unit": "шт",
+        "quantity": 9,
+        "source_prices": [
+          12300,
+          13200,
+          11600
+        ],
+        "calculated_unit_price": 12366.66,
+        "calculated_total": 111299.94,
+        "brand": null,
+        "model": null,
+        "article": null,
+        "characteristics": []
+      },
+      {
+        "name": "Фильтр мембранный капсульный",
+        "unit": "шт",
+        "quantity": 6,
+        "source_prices": [
+          11900,
+          12900,
+          11200
+        ],
+        "calculated_unit_price": 12000,
+        "calculated_total": 72000,
+        "brand": null,
+        "model": null,
+        "article": null,
+        "characteristics": []
+      }
+    ]
+  },
+  "price_justification_status": "model_not_identified",
+  "price_justification_status_ru": "Не указана",
+  "model_from_price_justification": "Не указана",
+  "price_justification_note": "Найдены расчёт НМЦК и три ценовых предложения, но без приложенных КП, брендов, моделей, артикулов и характеристик.",
+  "price_to_tz_comparison": [
+    {
+      "item_index": 1,
+      "tz_product": "Фильтр мембранный капсульный",
+      "price_justification_product": "Фильтр мембранный ",
+      "identified_model": null,
+      "parameter_results": [],
+      "result": "нет данных",
+      "source": "Приложение №2 — обоснование НМЦК.xlsx",
+      "explanation": "В расчёте есть общее наименование и цены, но нет бренда, модели, артикула и характеристик товара из коммерческих предложений."
+    },
+    {
+      "item_index": 2,
+      "tz_product": "Фильтр мембранный",
+      "price_justification_product": "Фильтр мембранный ",
+      "identified_model": null,
+      "parameter_results": [],
+      "result": "нет данных",
+      "source": "Приложение №2 — обоснование НМЦК.xlsx",
+      "explanation": "В расчёте есть общее наименование и цены, но нет бренда, модели, артикула и характеристик товара из коммерческих предложений."
+    }
+  ],
+  "detected_mismatches": [],
+  "mismatch_short": "Несоответствия не доказаны: модели и характеристики товаров из трёх КП отсутствуют.",
+  "pre_supplier_check_status": "ready_with_attention",
+  "pre_supplier_check_status_ru": "Можно искать, но есть риски",
+  "pre_supplier_check_note": "ТЗ не признано невозможным; следующий автоматический этап — внешний поиск и строгая проверка моделей по всем параметрам.",
+  "model_search_status": "external_model_search_required",
+  "model_search_status_ru": "Требуется внешний поиск модели по ТЗ"
+}

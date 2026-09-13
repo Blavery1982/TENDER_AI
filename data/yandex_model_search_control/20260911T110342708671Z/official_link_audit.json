@@ -1,0 +1,37 @@
+[
+  {
+    "sku": "EACS-09HP/N3",
+    "saved_html": "saved_html/0.html",
+    "links_examined": 570,
+    "technical_or_manufacturer_links": [],
+    "official_evidence_found": false
+  },
+  {
+    "sku": "DC07RH",
+    "saved_html": "saved_html/1.html",
+    "links_examined": 111,
+    "technical_or_manufacturer_links": [],
+    "official_evidence_found": false
+  },
+  {
+    "sku": "AS-09UW4RYRKB05",
+    "saved_html": "saved_html/2.html",
+    "links_examined": 599,
+    "technical_or_manufacturer_links": [],
+    "official_evidence_found": false
+  },
+  {
+    "sku": "SAS09BN3-AI/SAU09BN3-AI-LE",
+    "saved_html": "saved_html/3.html",
+    "links_examined": 611,
+    "technical_or_manufacturer_links": [],
+    "official_evidence_found": false
+  },
+  {
+    "sku": "AS-13UW4RXVQF00",
+    "saved_html": "saved_html/4.html",
+    "links_examined": 570,
+    "technical_or_manufacturer_links": [],
+    "official_evidence_found": false
+  }
+]

@@ -1,0 +1,236 @@
+{
+  "target_model": "CyberPower PR1500ELCD",
+  "checked_at": "2026-09-11T15:54:21.698526+00:00",
+  "candidate_discovery": {
+    "model": "CyberPower PR1500ELCD",
+    "sku": "PR1500ELCD",
+    "candidate_urls": [
+      {
+        "url": "https://market.yandex.ru/card/istochnik-bespereboynogo-pitaniya-cyberpower-pr1500elcd-1500va1350w/102424077688?resale_goods=resale_new&hid=80206796&nid=80208057&cpa=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      }
+    ],
+    "candidate_count": 1,
+    "source_reports": [
+      {
+        "source": "Яндекс Маркет",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 1
+      },
+      {
+        "source": "XCOM",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "KNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "candidate_urls": 0
+      },
+      {
+        "source": "Ситилинк",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ВсеИнструменты",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ОНЛАЙН ТРЕЙД",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "DNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 401: Unauthorized",
+        "candidate_urls": 0
+      },
+      {
+        "source": "М.Видео",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Royal-Rus",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "ClimaArt",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "SDK-Climat",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      }
+    ]
+  },
+  "discovery_sources": [
+    {
+      "source": "Яндекс Маркет",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 1
+    },
+    {
+      "source": "XCOM",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "KNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "candidate_urls": 0
+    },
+    {
+      "source": "Ситилинк",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ВсеИнструменты",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ОНЛАЙН ТРЕЙД",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "DNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 401: Unauthorized",
+      "candidate_urls": 0
+    },
+    {
+      "source": "М.Видео",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Royal-Rus",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "ClimaArt",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "SDK-Climat",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    }
+  ],
+  "offers": [
+    {
+      "exact_product_name": "Источник бесперебойного питания Cyberpower PR1500ELCD 1500VA/1350W",
+      "model": "CyberPower PR1500ELCD",
+      "exact_model_match": true,
+      "price": 91449.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Яндекс Маркет",
+      "url": "https://market.yandex.ru/card/istochnik-bespereboynogo-pitaniya-cyberpower-pr1500elcd-1500va1350w/102424077688?cpa=1&hid=80206796&nid=80208057&resale_goods=resale_new",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "discovered_by": "Яндекс Маркет",
+      "checked_at": "2026-09-11T15:54:30.392290+00:00"
+    },
+    {
+      "exact_product_name": "ИБП CyberPower PR1500ELCD",
+      "model": "CyberPower PR1500ELCD",
+      "exact_model_match": true,
+      "price": 114530.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Регард",
+      "url": "https://regard.ru/product/131501/ibp-cyberpower-pr1500elcd",
+      "source": "www.regard.ru",
+      "http_status": 200,
+      "discovered_by": "публичный web-поиск",
+      "checked_at": "2026-09-11T15:54:36.363097+00:00"
+    },
+    {
+      "exact_product_name": "ИБП CyberPower PR1500ELCD",
+      "model": "CyberPower PR1500ELCD",
+      "exact_model_match": true,
+      "price": 118326.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "KNS",
+      "url": "https://kns.ru/product/ups-cyberpower-pr1500elcd",
+      "source": "www.kns.ru",
+      "http_status": 200,
+      "discovered_by": "публичный web-поиск",
+      "checked_at": "2026-09-11T15:54:31.617050+00:00"
+    },
+    {
+      "exact_product_name": "ИБП CyberPower PR1500ELCD {Line-Interactive, Tower, 1500VA/1350W USB/RS-232/EPO/SNMPslot (8 С13) 12В/17 Ач х 2}",
+      "model": "CyberPower PR1500ELCD",
+      "exact_model_match": true,
+      "price": 127020.0,
+      "currency": "RUB",
+      "availability": "Под заказ",
+      "seller": "ТехноСити",
+      "url": "https://technocity.ru/catalog/detail/1212231",
+      "source": "www.technocity.ru",
+      "http_status": 200,
+      "discovered_by": "публичный web-поиск",
+      "checked_at": "2026-09-11T15:54:38.461242+00:00"
+    },
+    {
+      "exact_product_name": "\n                                Источник бесперебойного питания CyberPower PR1500ELCD                            ",
+      "model": "CyberPower PR1500ELCD",
+      "exact_model_match": true,
+      "price": null,
+      "currency": null,
+      "availability": null,
+      "seller": "XCOM-SHOP",
+      "url": "https://xcom-shop.ru/cyberpower_pr1500elcd_313778.html",
+      "source": "www.xcom-shop.ru",
+      "http_status": 200,
+      "discovered_by": "публичный web-поиск",
+      "checked_at": "2026-09-11T15:54:33.544839+00:00"
+    }
+  ],
+  "offers_found": 5,
+  "priced_offers_found": 4,
+  "minimum_price": 91449.0,
+  "minimum_price_seller": "Яндекс Маркет",
+  "minimum_price_url": "https://market.yandex.ru/card/istochnik-bespereboynogo-pitaniya-cyberpower-pr1500elcd-1500va1350w/102424077688?cpa=1&hid=80206796&nid=80208057&resale_goods=resale_new",
+  "source_errors": [
+    {
+      "source": "АСА",
+      "url": "https://asa.ru/catalog/istochniki_bespereboynogo_pitaniya_ibp/108534",
+      "error": "HTTP 404"
+    }
+  ]
+}

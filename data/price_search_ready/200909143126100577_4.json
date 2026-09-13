@@ -1,0 +1,205 @@
+{
+  "target_model": "PERFIT Putty",
+  "checked_at": "2026-09-13T10:33:38.718177+00:00",
+  "candidate_discovery": {
+    "model": "PERFIT Putty",
+    "sku": "PERFIT Putty",
+    "candidate_urls": [
+      {
+        "url": "https://market.yandex.ru/card/slepochnaya-massa-perfit-perfit-putty-hand-mix/103154928744?sponsored=1&resale_goods=resale_new&hid=71627494&nid=71630995&cpa=1&cpm-adv=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      },
+      {
+        "url": "https://market.yandex.ru/card/perfit-patti-perfit-putty--slepochnyy-material-400g400g/103186702602?resale_goods=resale_new&hid=82780018&nid=82783744&cpa=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      }
+    ],
+    "candidate_count": 2,
+    "source_reports": [
+      {
+        "source": "Bing RSS",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Яндекс Маркет",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 2
+      },
+      {
+        "source": "XCOM",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "KNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "candidate_urls": 0
+      },
+      {
+        "source": "Ситилинк",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ВсеИнструменты",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ОНЛАЙН ТРЕЙД",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "DNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 401: Unauthorized",
+        "candidate_urls": 0
+      },
+      {
+        "source": "М.Видео",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Royal-Rus",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "ClimaArt",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "SDK-Climat",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      }
+    ]
+  },
+  "discovery_sources": [
+    {
+      "source": "Bing RSS",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Яндекс Маркет",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 2
+    },
+    {
+      "source": "XCOM",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "KNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "candidate_urls": 0
+    },
+    {
+      "source": "Ситилинк",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ВсеИнструменты",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ОНЛАЙН ТРЕЙД",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "DNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 401: Unauthorized",
+      "candidate_urls": 0
+    },
+    {
+      "source": "М.Видео",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Royal-Rus",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "ClimaArt",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "SDK-Climat",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    }
+  ],
+  "offers": [
+    {
+      "exact_product_name": "Слепочная масса А-силиконовый слепочный материал базового слоя Перфит Perfit Putty Hand Mix",
+      "model": "PERFIT Putty",
+      "exact_model_match": true,
+      "price": 2646.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Дентал-шоп",
+      "url": "https://market.yandex.ru/card/slepochnaya-massa-perfit-perfit-putty-hand-mix/103154928744?cpa=1&cpm-adv=1&hid=71627494&nid=71630995&resale_goods=resale_new&sponsored=1",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "discovered_by": "Яндекс Маркет",
+      "checked_at": "2026-09-13T10:33:46.978086+00:00"
+    },
+    {
+      "exact_product_name": "Перфит Патти (PERFIT Putty ), слепочный материал, 400г+400г",
+      "model": "PERFIT Putty",
+      "exact_model_match": true,
+      "price": 2799.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Дентал-шоп",
+      "url": "https://market.yandex.ru/card/perfit-patti-perfit-putty--slepochnyy-material-400g400g/103186702602?cpa=1&hid=82780018&nid=82783744&resale_goods=resale_new",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "discovered_by": "Яндекс Маркет",
+      "checked_at": "2026-09-13T10:33:48.266039+00:00"
+    }
+  ],
+  "offers_found": 2,
+  "priced_offers_found": 2,
+  "minimum_price": 2646.0,
+  "minimum_price_seller": "Дентал-шоп",
+  "minimum_price_url": "https://market.yandex.ru/card/slepochnaya-massa-perfit-perfit-putty-hand-mix/103154928744?cpa=1&cpm-adv=1&hid=71627494&nid=71630995&resale_goods=resale_new&sponsored=1",
+  "source_errors": []
+}

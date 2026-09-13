@@ -1,0 +1,14 @@
+﻿requirement,status,source_type,source_url,exact_evidence,normalized_value
+Инверторный тип кондиционера,corresponds,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"""Инверторный компрессор | Нет""",false
+Класс энергоэффективности (в режиме нагрева),could_not_confirm,OTHER,,null,null
+Класс энергоэффективности (в режиме охлаждения),could_not_confirm,OTHER,,null,null
+Наличие фильтров тонкой очистки воздуха,could_not_confirm,OTHER,,null,null
+Дополнительные функции,corresponds,['PROFESSIONAL_STORE'],https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"[""Самоочистка внутреннего блока | Да"", ""Автоматический режим | Да"", ""Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей."", ""Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей."", ""Самодиагностика | да""]","{""Автоматическая очистка"": true, ""автоматический выбор режима"": true, ""ночной режим"": true, ""режим турбо"": true, ""самодиагностика."": true}"
+Тип внутреннего блока,could_not_confirm,OTHER,,null,null
+Вид кондиционера,corresponds,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"""Вид товара | Сплит-система""","""сплит-система"""
+Вид блока кондиционера,could_not_confirm,OTHER,,null,null
+Наличие антибактериального фильтра,could_not_confirm,OTHER,,null,null
+Мощность в режиме охлаждения,could_not_confirm,OTHER,,null,null
+Мощность в режиме нагрева,could_not_confirm,OTHER,,null,null
+Площадь помещения,corresponds,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"""Обслуживаемая площадь | 25 м2""","{""values"": [""25""], ""dimension"": ""area"", ""base_unit"": ""area"", ""source_unit"": ""м²"", ""conversion_factor"": ""1""}"
+Цвет,corresponds,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"""Цвет корпуса | Белый""","""белый"""

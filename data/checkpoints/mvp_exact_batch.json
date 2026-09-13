@@ -1,0 +1,20 @@
+{
+  "updated_at": "2026-09-12T07:47:11.982471+00:00",
+  "completed_supplier_searches": {
+    "00000000-0000-0000-0000-000000000000:1": {
+      "summary": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+      "error": "ValueError: Не удалось однозначно выделить exact SKU",
+      "top_offers": [],
+      "all_verified_offers": [],
+      "verification_counts": {}
+    },
+    "00000000-0000-0000-0000-000000000000:2": {
+      "summary": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+      "error": "ValueError: Не удалось однозначно выделить exact SKU",
+      "top_offers": [],
+      "all_verified_offers": [],
+      "verification_counts": {}
+    }
+  },
+  "supplier_search_cap": 10
+}

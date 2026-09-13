@@ -1,0 +1,1709 @@
+{
+  "purchases_analyzed": 99,
+  "all_fields": [
+    {
+      "field": "additionalAgreementSupplierSignLimit",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "appInformationVisible",
+      "example": true,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationFillingEndDate",
+      "example": "2026-09-04T10:15:00.991075",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationFillingPeriod",
+      "example": 2,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationFillingProlongationCount",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationFillingProlongationPeriod",
+      "example": 22,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 1
+    },
+    {
+      "field": "applicationFillingProlongationPeriods",
+      "example": [
+        {
+          "order": 0,
+          "value": 22
+        },
+        {
+          "order": 1,
+          "value": 48
+        }
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationFillingProlongationPeriods[]",
+      "example": [
+        {
+          "order": 0,
+          "value": 22
+        },
+        {
+          "order": 1,
+          "value": 48
+        }
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationFillingProlongationPeriods[].order",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationFillingProlongationPeriods[].value",
+      "example": 22,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationFillingStartDate",
+      "example": "2026-09-04T08:15:00.991075",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationGuarantee",
+      "example": 147.5,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationPurchasers",
+      "example": null,
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "applicationPurchasersCount",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applicationPurchasers[]",
+      "example": null,
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "applicationsCount",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "applyUrl",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "bestPrice",
+      "example": 336.0,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 6
+    },
+    {
+      "field": "bestPriceApplicationSubType",
+      "example": 0,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 6
+    },
+    {
+      "field": "bestPriceHidden",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "budget",
+      "example": "Федеральный бюджет (средства Федерального бюджета 2026 года)",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 68
+    },
+    {
+      "field": "changeDealTermsProtocolAnsweringLimit",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "commissionFee",
+      "example": 89.98,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "commissionFeeForSmp",
+      "example": 89.98,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "contractConclusionDate",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "contractExecutionDate",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "contractExpirationDate",
+      "example": "2026-12-31T00:00:00",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 80
+    },
+    {
+      "field": "contractSignDate",
+      "example": "2026-09-11T00:00:00",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "contractSignedDate",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "currentOrganizationFavoriteTagValue",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "customerContractNumber",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "customerDateLimit",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "dealState",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "dealTerminationApproveDate",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "deliveryDate",
+      "example": "2026-09-28T00:00:00",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "deliveryInfos",
+      "example": [
+        {
+          "deliveryScheduleInfo": null,
+          "deliveryInfo": null,
+          "deliveryAddress": null
+        }
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "deliveryInfos[]",
+      "example": [
+        {
+          "deliveryScheduleInfo": null,
+          "deliveryInfo": null,
+          "deliveryAddress": null
+        }
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress",
+      "example": {
+        "id": 0,
+        "formattedFullInfo": "Красноярский край, г Красноярск, ул Урванцева, д 6Д",
+        "okato": "04401374000",
+        "country": "Россия",
+        "countryCode": "RU",
+        "regionName": "Красноярский край",
+        "regionCode": "24",
+        "federalDistrict": null,
+        "area": null,
+        "city": "г Красноярск",
+        "cityDistrict": null,
+        "settlement": null,
+        "street": "ул Урванцева",
+        "house": "д 6Д",
+        "office": null,
+        "planningStructure": "",
+        "additionalTerritory": "",
+        "landPlot": "",
+        "subordinateObject": "",
+        "postIndex": "660118",
+        "fiasCode": "77c6a39e-cee2-41b5-8bf0-f5eea2629ee0",
+        "immutableProperties": null
+      },
+      "data_types": [
+        "null",
+        "object"
+      ],
+      "filled_in_purchases": 97
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.additionalTerritory",
+      "example": null,
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.area",
+      "example": "Г.О. ГОРОД-КУРОРТ СОЧИ",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 15
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.city",
+      "example": "г Красноярск",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 86
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.cityDistrict",
+      "example": "Советский р-н",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 6
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.country",
+      "example": "Россия",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 88
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.countryCode",
+      "example": "RU",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 96
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.federalDistrict",
+      "example": null,
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.fiasCode",
+      "example": "77c6a39e-cee2-41b5-8bf0-f5eea2629ee0",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 84
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.formattedFullInfo",
+      "example": "Красноярский край, г Красноярск, ул Урванцева, д 6Д",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 97
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.house",
+      "example": "д 6Д",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 84
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.id",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 97
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.immutableProperties",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.landPlot",
+      "example": null,
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.office",
+      "example": "д.2-а",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 4
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.okato",
+      "example": "04401374000",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 88
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.planningStructure",
+      "example": "Аптека",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 1
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.postIndex",
+      "example": "660118",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 95
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.regionCode",
+      "example": "24",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 97
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.regionName",
+      "example": "Красноярский край",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 97
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.settlement",
+      "example": "р-н Хостинский",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 13
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.street",
+      "example": "ул Урванцева",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 86
+    },
+    {
+      "field": "deliveryInfos[].deliveryAddress.subordinateObject",
+      "example": "склад",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 1
+    },
+    {
+      "field": "deliveryInfos[].deliveryInfo",
+      "example": "\n",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 33
+    },
+    {
+      "field": "deliveryInfos[].deliveryScheduleInfo",
+      "example": "Время доставки товара: в рабочее время Заказчика (понедельник – четверг с 8:30 до 17:30, пятница - с 8:30 до 16:15, обеденный перерыв – с 12:30 \nдо 13:15). ",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 35
+    },
+    {
+      "field": "deliveryPeriod",
+      "example": 15,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 55
+    },
+    {
+      "field": "deliveryType",
+      "example": 3,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "dynamicHiddenPeriodMinutes",
+      "example": 15,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 95
+    },
+    {
+      "field": "eisTradeNumber",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "etpTypeIcon",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "etpTypeName",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "externalTradeNumber",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "favoriteTagsAmount",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "hasChangesInLotItemPrice",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "hasChangesInPrice",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "hasChangesInPriceControl",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "hideDetailsForUnauthorized",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "id",
+      "example": "66fce79e-afa8-4bdf-9584-2685d4f17a10",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "informationSystemId",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "isApplicationFillingPauseOnHoliday",
+      "example": true,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isApplicationFillingProlongationHappened",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isContractEnable",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isDeliveryDateInDays",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isDeliveryDaysWorking",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isDynamicHidden",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isEisContractConclusion",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isEtp",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isExternalTradeExists",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isFsk",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isHiddenContractFromThirdParties",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isInitialMaximumContractPriceTrade",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isNoNdsWinner",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isNoNdsWinnerAvailable",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isOffersDynamicAllowed",
+      "example": true,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isResultProtocolEnable",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isRussianItemsPurchase",
+      "example": true,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isSmp",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isSpecificSupplier",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isTradeCanBePublished",
+      "example": true,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isTradeInfoHiddenByPrivacyAgreement",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "isTradeQuantityUndefined",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems",
+      "example": [
+        {
+          "orderNumber": 0,
+          "name": "Право использования программы для ЭВМ «Контур.Диадок», тарифный план «250 документов»",
+          "quantity": 1.0,
+          "unitPrice": 2950.0,
+          "sum": 2950.0,
+          "quantityUndefined": false,
+          "okpd2Code": "58.29.50.000",
+          "okpd2Title": "Услуги по предоставлению лицензий на право использовать компьютерное программное обеспечение",
+          "ktruCode": "58.29.11.000-00000004",
+          "ktruTitle": "Программное обеспечение",
+          "eatCode": "283413",
+          "eatTitle": "ПРЕДОСТАВЛЕНИЕ ПРАВА ИСПОЛЬЗОВАНИЯ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ",
+          "esklpCode": null,
+          "esklpTitle": null,
+          "okeiCode": "796",
+          "okeiTitle": "шт",
+          "requireOfferSpecification": false,
+          "offerId": "9a5f9e09-76b1-483c-ac67-97ef7e8fcb72",
+          "offerNumber": "300427491.000005618_26",
+          "description": "Договор заключается по форме правообладателя АО \"ПФ \"СКБ Контур\". В закупочной сессии обязательно нужно размещать проект договора и устанавливать признак \"С возможностью редактирования по результатам закупочной сессии\".",
+          "imageIds": [
+            "4a9fd777-866c-49fe-bc00-8c0f97e76cd1"
+          ],
+          "imageFiles": [
+            {
+              "fileId": "4a9fd777-866c-49fe-bc00-8c0f97e76cd1",
+              "fileName": "Лого контур.jpg"
+            }
+          ],
+          "characteristics": [],
+          "countryOfOrigin": "Россия",
+          "countryCodeOfOrigin": "643",
+          "priceOption": 1
+        }
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[]",
+      "example": [
+        {
+          "orderNumber": 0,
+          "name": "Право использования программы для ЭВМ «Контур.Диадок», тарифный план «250 документов»",
+          "quantity": 1.0,
+          "unitPrice": 2950.0,
+          "sum": 2950.0,
+          "quantityUndefined": false,
+          "okpd2Code": "58.29.50.000",
+          "okpd2Title": "Услуги по предоставлению лицензий на право использовать компьютерное программное обеспечение",
+          "ktruCode": "58.29.11.000-00000004",
+          "ktruTitle": "Программное обеспечение",
+          "eatCode": "283413",
+          "eatTitle": "ПРЕДОСТАВЛЕНИЕ ПРАВА ИСПОЛЬЗОВАНИЯ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ",
+          "esklpCode": null,
+          "esklpTitle": null,
+          "okeiCode": "796",
+          "okeiTitle": "шт",
+          "requireOfferSpecification": false,
+          "offerId": "9a5f9e09-76b1-483c-ac67-97ef7e8fcb72",
+          "offerNumber": "300427491.000005618_26",
+          "description": "Договор заключается по форме правообладателя АО \"ПФ \"СКБ Контур\". В закупочной сессии обязательно нужно размещать проект договора и устанавливать признак \"С возможностью редактирования по результатам закупочной сессии\".",
+          "imageIds": [
+            "4a9fd777-866c-49fe-bc00-8c0f97e76cd1"
+          ],
+          "imageFiles": [
+            {
+              "fileId": "4a9fd777-866c-49fe-bc00-8c0f97e76cd1",
+              "fileName": "Лого контур.jpg"
+            }
+          ],
+          "characteristics": [],
+          "countryOfOrigin": "Россия",
+          "countryCodeOfOrigin": "643",
+          "priceOption": 1
+        }
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].characteristics",
+      "example": null,
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "lotItems[].characteristics[]",
+      "example": null,
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "lotItems[].countryCodeOfOrigin",
+      "example": "643",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 19
+    },
+    {
+      "field": "lotItems[].countryOfOrigin",
+      "example": "Россия",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 19
+    },
+    {
+      "field": "lotItems[].description",
+      "example": "Договор заключается по форме правообладателя АО \"ПФ \"СКБ Контур\". В закупочной сессии обязательно нужно размещать проект договора и устанавливать признак \"С возможностью редактирования по результатам закупочной сессии\".",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].eatCode",
+      "example": "283413",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].eatTitle",
+      "example": "ПРЕДОСТАВЛЕНИЕ ПРАВА ИСПОЛЬЗОВАНИЯ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].esklpCode",
+      "example": "21.20.10.211-000014-1-00146-0000000000000",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 1
+    },
+    {
+      "field": "lotItems[].esklpTitle",
+      "example": "ДОКСОРУБИЦИН",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 1
+    },
+    {
+      "field": "lotItems[].imageFiles",
+      "example": [
+        {
+          "fileId": "4a9fd777-866c-49fe-bc00-8c0f97e76cd1",
+          "fileName": "Лого контур.jpg"
+        }
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 8
+    },
+    {
+      "field": "lotItems[].imageFiles[]",
+      "example": [
+        {
+          "fileId": "4a9fd777-866c-49fe-bc00-8c0f97e76cd1",
+          "fileName": "Лого контур.jpg"
+        }
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 8
+    },
+    {
+      "field": "lotItems[].imageFiles[].fileId",
+      "example": "4a9fd777-866c-49fe-bc00-8c0f97e76cd1",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 8
+    },
+    {
+      "field": "lotItems[].imageFiles[].fileName",
+      "example": "Лого контур.jpg",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 8
+    },
+    {
+      "field": "lotItems[].imageIds",
+      "example": [
+        "4a9fd777-866c-49fe-bc00-8c0f97e76cd1"
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 8
+    },
+    {
+      "field": "lotItems[].imageIds[]",
+      "example": [
+        "4a9fd777-866c-49fe-bc00-8c0f97e76cd1"
+      ],
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 8
+    },
+    {
+      "field": "lotItems[].ktruCode",
+      "example": "58.29.11.000-00000004",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 28
+    },
+    {
+      "field": "lotItems[].ktruTitle",
+      "example": "Программное обеспечение",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 28
+    },
+    {
+      "field": "lotItems[].name",
+      "example": "Право использования программы для ЭВМ «Контур.Диадок», тарифный план «250 документов»",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].offerId",
+      "example": "9a5f9e09-76b1-483c-ac67-97ef7e8fcb72",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].offerNumber",
+      "example": "300427491.000005618_26",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 8
+    },
+    {
+      "field": "lotItems[].okeiCode",
+      "example": "796",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].okeiTitle",
+      "example": "шт",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].okpd2Code",
+      "example": "58.29.50.000",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].okpd2Title",
+      "example": "Услуги по предоставлению лицензий на право использовать компьютерное программное обеспечение",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].orderNumber",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].priceOption",
+      "example": 1,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].quantity",
+      "example": 1.0,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 97
+    },
+    {
+      "field": "lotItems[].quantityUndefined",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].requireOfferSpecification",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].sum",
+      "example": 2950.0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotItems[].unitPrice",
+      "example": 2950.0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "lotState",
+      "example": 2,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "modificationNumber",
+      "example": 1,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "needProposalDocumentation",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo",
+      "example": {
+        "id": "83546b33-b822-446a-9ebf-dd0196a2c4b2",
+        "regNumber": "200910480",
+        "name": "ИПЭ УРО РАН",
+        "fullName": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ ИНСТИТУТ ПРОМЫШЛЕННОЙ ЭКОЛОГИИ УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК",
+        "inn": "6660001481",
+        "kpp": "667001001",
+        "largestTaxpayerKpp": null,
+        "ogrn": "1026604959370",
+        "phoneNumber": "+7(343)374-59-62",
+        "director": null,
+        "email": "iie@ecko.uran.ru",
+        "isIncludedInRostech": false,
+        "address": "620108, СВЕРДЛОВСКАЯ ОБЛАСТЬ, Г. ЕКАТЕРИНБУРГ, ул УЛ. СОФЬИ КОВАЛЕВСКОЙ, д. Д.20"
+      },
+      "data_types": [
+        "object"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.address",
+      "example": "620108, СВЕРДЛОВСКАЯ ОБЛАСТЬ, Г. ЕКАТЕРИНБУРГ, ул УЛ. СОФЬИ КОВАЛЕВСКОЙ, д. Д.20",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 95
+    },
+    {
+      "field": "organizerInfo.director",
+      "example": "Протасенко Виктор Геннадьевич",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 58
+    },
+    {
+      "field": "organizerInfo.email",
+      "example": "iie@ecko.uran.ru",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.fullName",
+      "example": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ НАУКИ ИНСТИТУТ ПРОМЫШЛЕННОЙ ЭКОЛОГИИ УРАЛЬСКОГО ОТДЕЛЕНИЯ РОССИЙСКОЙ АКАДЕМИИ НАУК",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.id",
+      "example": "83546b33-b822-446a-9ebf-dd0196a2c4b2",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.inn",
+      "example": "6660001481",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.isIncludedInRostech",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.kpp",
+      "example": "667001001",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.largestTaxpayerKpp",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "organizerInfo.name",
+      "example": "ИПЭ УРО РАН",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.ogrn",
+      "example": "1026604959370",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.phoneNumber",
+      "example": "+7(343)374-59-62",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "organizerInfo.regNumber",
+      "example": "200910480",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "parentTradeId",
+      "example": "8cd167d2-3c54-4308-b40a-dbbdf37345e7",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 2
+    },
+    {
+      "field": "planRegistrationNumber",
+      "example": null,
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "price",
+      "example": 2950.0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "priceDiscount",
+      "example": 0.0,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 6
+    },
+    {
+      "field": "priceDiscountPercent",
+      "example": 0,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 6
+    },
+    {
+      "field": "proposalDocumentationRequirements",
+      "example": "Реквизиты  и характеристики товара в формате Word ",
+      "data_types": [
+        "null",
+        "string"
+      ],
+      "filled_in_purchases": 26
+    },
+    {
+      "field": "protocolPublishedDate",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "providerSignDateLimit",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "publishDate",
+      "example": "2026-09-04T08:15:08.988852",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "purchaseMethod",
+      "example": 1,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "purchaseTypeId",
+      "example": "2",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "qualifiedSuppliers",
+      "example": null,
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "qualifiedSuppliers[]",
+      "example": null,
+      "data_types": [
+        "array"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "regulationDate",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "sessionConclusionContractPrice",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "showBudgetSection",
+      "example": true,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "signedByCurrentUserPrivacyAgreementType",
+      "example": 0,
+      "data_types": [
+        "null",
+        "number"
+      ],
+      "filled_in_purchases": 2
+    },
+    {
+      "field": "specificSupplierSubtype",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "stateDefenseOrder",
+      "example": false,
+      "data_types": [
+        "boolean"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "subject",
+      "example": "Предоставление простой (неисключительной) лицензии на право использования программы для ЭВМ «Контур.Диадок», тарифный план «250 документов»",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "tooltips",
+      "example": {
+        "tradeCardCommissionAmount": "<p>Комиссионный сбор - сбор, взимаемый Оператором ЕАТ с Поставщика (подрядчика, исполнителя), с которым заключена сделка с использованием ЕАТ, в размере 2,5% (минимум 60,00 ₽ без учета НДС) от Стартовой цены без учета налога на добавленную стоимость.</p>",
+        "tradeCardGuaranteeAmount": "<p>Составляет <span class=\"system-anchor\" contenteditable=\"false\">5.0</span> % от Стартовой цены или ценового предложения, если такое предложение при проведении закупочной сессии на право заключения контракта больше Стартовой цены, но не менее минимального размера обеспечительного депозита. </p><p>Обеспечение блокируется у всех Участников, которые подают заявку.</p><p>Необходимая сумма должна быть в свободной части депозита. Из суммы обеспечения будет списан комиссионный сбор у Победителя закупки, оставшаяся сумма будет разблокирована в течение 1 рабочего дня. </p><p>Остальным Участникам сумма обеспечения разблокируется автоматически в полном объеме в течение 1 рабочего дня.</p>"
+      },
+      "data_types": [
+        "object"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "tooltips.tradeCardCommissionAmount",
+      "example": "<p>Комиссионный сбор - сбор, взимаемый Оператором ЕАТ с Поставщика (подрядчика, исполнителя), с которым заключена сделка с использованием ЕАТ, в размере 2,5% (минимум 60,00 ₽ без учета НДС) от Стартовой цены без учета налога на добавленную стоимость.</p>",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "tooltips.tradeCardGuaranteeAmount",
+      "example": "<p>Составляет <span class=\"system-anchor\" contenteditable=\"false\">5.0</span> % от Стартовой цены или ценового предложения, если такое предложение при проведении закупочной сессии на право заключения контракта больше Стартовой цены, но не менее минимального размера обеспечительного депозита. </p><p>Обеспечение блокируется у всех Участников, которые подают заявку.</p><p>Необходимая сумма должна быть в свободной части депозита. Из суммы обеспечения будет списан комиссионный сбор у Победителя закупки, оставшаяся сумма будет разблокирована в течение 1 рабочего дня. </p><p>Остальным Участникам сумма обеспечения разблокируется автоматически в полном объеме в течение 1 рабочего дня.</p>",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "totalPrice",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "tradeCancelingDate",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "tradeLotCancelReason",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    },
+    {
+      "field": "tradeLotCancelReasonEnum",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "tradeNumber",
+      "example": "200910480126100037",
+      "data_types": [
+        "string"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "type",
+      "example": 1,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "unFavoriteTagsAmount",
+      "example": 0,
+      "data_types": [
+        "number"
+      ],
+      "filled_in_purchases": 99
+    },
+    {
+      "field": "winnerId",
+      "example": null,
+      "data_types": [
+        "null"
+      ],
+      "filled_in_purchases": 0
+    }
+  ],
+  "identified_mappings": {
+    "purchase_number": {
+      "field": "tradeNumber",
+      "example": "200910480126100037",
+      "confidence": "высокая"
+    },
+    "name": {
+      "field": "subject",
+      "example": "Предоставление простой (неисключительной) лицензии на право использования программы для ЭВМ «Контур.Диадок», тарифный план «250 документов»",
+      "confidence": "высокая"
+    },
+    "price": {
+      "field": "price",
+      "example": 2950.0,
+      "confidence": "высокая"
+    },
+    "customer": {
+      "field": "organizerInfo.name",
+      "example": "ИПЭ УРО РАН",
+      "confidence": "высокая"
+    },
+    "delivery_place": {
+      "field": "deliveryInfos[].deliveryAddress.formattedFullInfo",
+      "example": "Красноярский край, г Красноярск, ул Урванцева, д 6Д",
+      "confidence": "высокая"
+    },
+    "region": {
+      "field": "deliveryInfos[].deliveryAddress.regionName",
+      "example": "Красноярский край",
+      "confidence": "высокая"
+    },
+    "law_44_fz": {
+      "field": "не определено",
+      "example": null,
+      "confidence": "не определено"
+    },
+    "description": {
+      "field": "lotItems[].description",
+      "example": "Договор заключается по форме правообладателя АО \"ПФ \"СКБ Контур\". В закупочной сессии обязательно нужно размещать проект договора и устанавливать признак \"С возможностью редактирования по результатам закупочной сессии\".",
+      "confidence": "высокая"
+    },
+    "publication_date": {
+      "field": "publishDate",
+      "example": "2026-09-04T08:15:08.988852",
+      "confidence": "высокая"
+    },
+    "application_end": {
+      "field": "applicationFillingEndDate",
+      "example": "2026-09-04T10:15:00.991075",
+      "confidence": "высокая"
+    },
+    "status": {
+      "field": "lotState",
+      "example": 2,
+      "confidence": "средняя: значение является кодом"
+    },
+    "items_count": {
+      "field": "lotItems (длина массива)",
+      "example": 1,
+      "confidence": "высокая"
+    }
+  },
+  "pagination": {
+    "page_field": "page",
+    "initial_page": 1,
+    "offset_field": null,
+    "page_size_field": "size",
+    "page_size": 10,
+    "total_field": "totalCount",
+    "total": 2122,
+    "pages_read": 15,
+    "duplicates_removed": 41
+  }
+}

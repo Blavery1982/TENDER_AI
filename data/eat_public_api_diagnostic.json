@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-09-13T15:34:24.524867+00:00",
+  "http_status": null,
+  "content_type": null,
+  "classification": "transport_error",
+  "redirect_to_login": false,
+  "captcha_detected": false
+}

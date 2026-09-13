@@ -1,0 +1,453 @@
+{
+  "pages_read": 50,
+  "unique_checked": 500,
+  "passed_found": 12,
+  "page_summaries": [
+    {
+      "page": 1,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 2,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 3,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 4,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 5,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 6,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 7,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 8,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 9,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 10,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 11,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 12,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 13,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 14,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 15,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 16,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 17,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 18,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 19,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 20,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 21,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 22,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 23,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 24,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 25,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 26,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 27,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 28,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 29,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 30,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 31,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 32,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 33,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 34,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 35,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 36,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 37,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    },
+    {
+      "page": 38,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 39,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 40,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 41,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 42,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 43,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 44,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 45,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 46,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 47,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 48,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 49,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 0
+    },
+    {
+      "page": 50,
+      "returned": 10,
+      "new_unique": 10,
+      "passed": 1
+    }
+  ],
+  "passed_candidates": [
+    {
+      "id": "bfb7719b-656f-42dc-a15c-908589dc7108",
+      "tradeNumber": "200909993126100032",
+      "subject": "Ремонт",
+      "price": 270000.0,
+      "applicationFillingEndDate": "2026-09-14T15:03:00.916047",
+      "items_count": 1,
+      "candidate_models": [],
+      "page": 2
+    },
+    {
+      "id": "a17cee15-da1a-42d3-a9fb-c54f1a1cdac6",
+      "tradeNumber": "200907456126100246",
+      "subject": "Поставка поставку наркотических и/или психотропных лекарственных средств\nМНН: ФЕНТАНИЛ, ТРИМЕПЕРИДИН, ДИАЗЕПАМ, РЕМИФЕНТАНИЛ (Д-36, СЗ-ЛС-56-26)",
+      "price": 242308.8,
+      "applicationFillingEndDate": "2026-09-14T14:00:00.773368",
+      "items_count": 5,
+      "candidate_models": [],
+      "page": 3
+    },
+    {
+      "id": "e99cf804-1805-453e-a69f-6e446b41d419",
+      "tradeNumber": "100032348126100110",
+      "subject": "Закупка оборудования продовольственной службы: Шкаф холодильный",
+      "price": 280000.0,
+      "applicationFillingEndDate": "2026-09-15T05:30:00",
+      "items_count": 2,
+      "candidate_models": [],
+      "page": 6
+    },
+    {
+      "id": "918a2826-290c-47c2-ad8f-e54df0422149",
+      "tradeNumber": "100032348126100109",
+      "subject": "Закупка оборудования продовольственной службы: Камера холодильная среднетемпературная",
+      "price": 200000.0,
+      "applicationFillingEndDate": "2026-09-15T05:30:00",
+      "items_count": 1,
+      "candidate_models": [],
+      "page": 7
+    },
+    {
+      "id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "tradeNumber": "100110512126100716",
+      "subject": "Поставка запасных частей к вычислительной технике.",
+      "price": 168225.0,
+      "applicationFillingEndDate": "2026-09-15T06:00:00",
+      "items_count": 5,
+      "candidate_models": [
+        "FASTON F2",
+        "UTP 4PR"
+      ],
+      "page": 18
+    },
+    {
+      "id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "tradeNumber": "200909143126100577",
+      "subject": "403-26-МЗ Стоматология",
+      "price": 336040.0,
+      "applicationFillingEndDate": "2026-09-15T06:00:00",
+      "items_count": 8,
+      "candidate_models": [],
+      "page": 20
+    },
+    {
+      "id": "69d7b4a4-9693-4c84-9708-23a5f1ac83e8",
+      "tradeNumber": "200909083126100174",
+      "subject": "Транспортные услуги № 26606",
+      "price": 377500.0,
+      "applicationFillingEndDate": "2026-09-14T11:32:00.385098",
+      "items_count": 3,
+      "candidate_models": [],
+      "page": 23
+    },
+    {
+      "id": "f85e62bb-5bc6-4591-8c6d-189b91c3242d",
+      "tradeNumber": "100920440126100774",
+      "subject": "Поставка оборудования для модернизации системы видеонаблюдения по адресу набережная реки Мойки д. 120 литера А и видеокамеры по адресу набережная реки Мойки д. 124 литера А (дополнительно к существующим).",
+      "price": 152936.4,
+      "applicationFillingEndDate": "2026-09-14T11:18:00.64881",
+      "items_count": 10,
+      "candidate_models": [
+        "Optimus U1IC-16F/2G/1S",
+        "FTR SE Eletec 4х2хAWG24",
+        "Optimus NVR-5362",
+        "Optimus IP-S015.0",
+        "Optimus IP-S025.0"
+      ],
+      "page": 26
+    },
+    {
+      "id": "9a9f34bf-9eee-44e7-8961-d743c35e8e0c",
+      "tradeNumber": "100920440126100773",
+      "subject": "Поставка оборудования для модернизации системы видеонаблюдения по адресу набережная реки Мойки д. 120 литера А и видеокамеры по адресу набережная реки Мойки д. 124 литера А (дополнительно к существующим).",
+      "price": 152936.4,
+      "applicationFillingEndDate": "2026-09-14T11:09:00.12829",
+      "items_count": 10,
+      "candidate_models": [
+        "Optimus IP-S015.0",
+        "Optimus NVR-5362",
+        "FTR SE Eletec 4х2хAWG24",
+        "Optimus U1IC-16F/2G/1S",
+        "Optimus IP-S025.0"
+      ],
+      "page": 28
+    },
+    {
+      "id": "880c9b6e-e4ff-4e10-a831-ecf86e25aa21",
+      "tradeNumber": "100099468126100096",
+      "subject": "Поставка системы видеонаблюдения",
+      "price": 220500.0,
+      "applicationFillingEndDate": "2026-09-15T10:39:00",
+      "items_count": 1,
+      "candidate_models": [],
+      "page": 31
+    },
+    {
+      "id": "f4418138-9661-4735-ba04-6785897dd862",
+      "tradeNumber": "200910252126100037",
+      "subject": "Материалы для производства углепластиков",
+      "price": 184629.0,
+      "applicationFillingEndDate": "2026-09-14T10:02:00.438659",
+      "items_count": 1,
+      "candidate_models": [],
+      "page": 37
+    },
+    {
+      "id": "fd71642c-1c03-4739-a487-f1e8fa2722a6",
+      "tradeNumber": "100316493126100091",
+      "subject": "Поставка источников бесперебойного питания",
+      "price": 218737.32,
+      "applicationFillingEndDate": "2026-09-14T08:52:00.833641",
+      "items_count": 1,
+      "candidate_models": [
+        "CyberPower PR1500ELCD"
+      ],
+      "page": 50
+    }
+  ],
+  "selected_id": "fd71642c-1c03-4739-a487-f1e8fa2722a6",
+  "selected_trade_number": "100316493126100091",
+  "selected_subject": "Поставка источников бесперебойного питания",
+  "candidate_models": [
+    "CyberPower PR1500ELCD"
+  ],
+  "documents_found": 1
+}

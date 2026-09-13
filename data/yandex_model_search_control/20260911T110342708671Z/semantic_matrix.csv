@@ -1,0 +1,66 @@
+﻿sku,parameter,status,value,source_type,source_url,evidence,normalized_value
+EACS-09HP/N3,Инверторный тип кондиционера,corresponds,Нет,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"""Инверторный компрессор | Нет""",false
+EACS-09HP/N3,Класс энергоэффективности (в режиме нагрева),could_not_confirm,,,,null,null
+EACS-09HP/N3,Класс энергоэффективности (в режиме охлаждения),could_not_confirm,,,,null,null
+EACS-09HP/N3,Наличие фильтров тонкой очистки воздуха,could_not_confirm,,,,null,null
+EACS-09HP/N3,Дополнительные функции,corresponds,Автоматическая очистка; автоматический выбор режима; ночной режим; режим турбо; самодиагностика.,['PROFESSIONAL_STORE'],https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"[""Самоочистка внутреннего блока | Да"", ""Автоматический режим | Да"", ""Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей."", ""Режим «Турбо» и ночной режим работы, а также удобный таймер и LED-дисплей."", ""Самодиагностика | да""]","{""Автоматическая очистка"": true, ""автоматический выбор режима"": true, ""ночной режим"": true, ""режим турбо"": true, ""самодиагностика."": true}"
+EACS-09HP/N3,Тип внутреннего блока,could_not_confirm,,,,null,null
+EACS-09HP/N3,Вид кондиционера,corresponds,Сплит-система,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"""Вид товара | Сплит-система""","""сплит-система"""
+EACS-09HP/N3,Вид блока кондиционера,could_not_confirm,,,,null,null
+EACS-09HP/N3,Наличие антибактериального фильтра,could_not_confirm,,,,null,null
+EACS-09HP/N3,Мощность в режиме охлаждения,could_not_confirm,,,,null,null
+EACS-09HP/N3,Мощность в режиме нагрева,could_not_confirm,,,,null,null
+EACS-09HP/N3,Площадь помещения,corresponds,25 м2,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"""Обслуживаемая площадь | 25 м2""","{""values"": [""25""], ""dimension"": ""area"", ""base_unit"": ""area"", ""source_unit"": ""м²"", ""conversion_factor"": ""1""}"
+EACS-09HP/N3,Цвет,corresponds,Белый,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-electrolux-eacs-09hp-n3/,"""Цвет корпуса | Белый""","""белый"""
+DC07RH,Инверторный тип кондиционера,does_not_comply,inverter,PROFESSIONAL_STORE,https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy,"""Тип компрессора | inverter""",true
+DC07RH,Класс энергоэффективности (в режиме нагрева),could_not_confirm,,,,null,null
+DC07RH,Класс энергоэффективности (в режиме охлаждения),could_not_confirm,,,,null,null
+DC07RH,Наличие фильтров тонкой очистки воздуха,corresponds,Есть,PROFESSIONAL_STORE,https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy,"""Фильтр тонкой очистки | Есть""",true
+DC07RH,Дополнительные функции,could_not_confirm,Автоматическая очистка; ночной режим; самодиагностика.,"['PROFESSIONAL_STORE', 'OTHER']",https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy,"[""Самоочистка внутреннего блока | Есть"", null, ""Ночной режим | Есть"", null, ""Самодиагностика | Есть""]","{""Автоматическая очистка"": true, ""автоматический выбор режима"": null, ""ночной режим"": true, ""режим турбо"": null, ""самодиагностика."": true}"
+DC07RH,Тип внутреннего блока,could_not_confirm,,,,null,null
+DC07RH,Вид кондиционера,could_not_confirm,,,,null,null
+DC07RH,Вид блока кондиционера,could_not_confirm,,,,null,null
+DC07RH,Наличие антибактериального фильтра,corresponds,Есть,PROFESSIONAL_STORE,https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy,"""Антибактериальный фильтр | Есть""",true
+DC07RH,Мощность в режиме охлаждения,corresponds,3.2 (кВт),PROFESSIONAL_STORE,https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy,"""Мощность охлаждения | 3.2 (кВт)""","{""values"": [""3200.0""], ""dimension"": ""power"", ""base_unit"": ""W"", ""source_unit"": ""квт"", ""conversion_factor"": ""1000""}"
+DC07RH,Мощность в режиме нагрева,corresponds,3.5 (кВт),PROFESSIONAL_STORE,https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy,"""Мощность обогрева | 3.5 (кВт)""","{""values"": [""3500.0""], ""dimension"": ""power"", ""base_unit"": ""W"", ""source_unit"": ""квт"", ""conversion_factor"": ""1000""}"
+DC07RH,Площадь помещения,does_not_comply,до 20 (м2),PROFESSIONAL_STORE,https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy,"""Площадь обслуживания | до 20 (м2)""","{""values"": [""20""], ""dimension"": ""area"", ""base_unit"": ""area"", ""source_unit"": ""м²"", ""conversion_factor"": ""1""}"
+DC07RH,Цвет,corresponds,Белый,PROFESSIONAL_STORE,https://techno-more.ru/product/split-sistema-lg-dc07rh-belyy,"""Цвет внутреннего блока | Белый""","""белый"""
+AS-09UW4RYRKB05,Инверторный тип кондиционера,does_not_comply,есть,PROFESSIONAL_STORE,https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/,"""Инверторная технология | есть""",true
+AS-09UW4RYRKB05,Класс энергоэффективности (в режиме нагрева),could_not_confirm,,,,null,null
+AS-09UW4RYRKB05,Класс энергоэффективности (в режиме охлаждения),could_not_confirm,,,,null,null
+AS-09UW4RYRKB05,Наличие фильтров тонкой очистки воздуха,could_not_confirm,,,,null,null
+AS-09UW4RYRKB05,Дополнительные функции,could_not_confirm,самодиагностика.,"['OTHER', 'PROFESSIONAL_STORE']",https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/,"[null, null, null, null, ""Самодиагностика | есть""]","{""Автоматическая очистка"": null, ""автоматический выбор режима"": null, ""ночной режим"": null, ""режим турбо"": null, ""самодиагностика."": true}"
+AS-09UW4RYRKB05,Тип внутреннего блока,could_not_confirm,,,,null,null
+AS-09UW4RYRKB05,Вид кондиционера,corresponds,сплит-система,PROFESSIONAL_STORE,https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/,"""Тип кондиционера | сплит-система""","""сплит-система"""
+AS-09UW4RYRKB05,Вид блока кондиционера,could_not_confirm,,,,null,null
+AS-09UW4RYRKB05,Наличие антибактериального фильтра,could_not_confirm,,,,null,null
+AS-09UW4RYRKB05,Мощность в режиме охлаждения,could_not_confirm,,,,null,null
+AS-09UW4RYRKB05,Мощность в режиме нагрева,corresponds,2900 Вт,PROFESSIONAL_STORE,https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/,"""Мощность обогрева, внутренний блок | 2900 Вт""","{""values"": [""2900""], ""dimension"": ""power"", ""base_unit"": ""W"", ""source_unit"": ""вт"", ""conversion_factor"": ""1""}"
+AS-09UW4RYRKB05,Площадь помещения,corresponds,28 м2,PROFESSIONAL_STORE,https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/,"""Обслуживаемая площадь | 28 м2""","{""values"": [""28""], ""dimension"": ""area"", ""base_unit"": ""area"", ""source_unit"": ""м²"", ""conversion_factor"": ""1""}"
+AS-09UW4RYRKB05,Цвет,corresponds,Белый,PROFESSIONAL_STORE,https://www.market777.ru/product/konditsioner-hisense-as-09uw4ryrkb05-zoom-dc-inverter-2023-komplekt/,"""Цвет | Белый""","""белый"""
+SAS09BN3-AI/SAU09BN3-AI-LE,Инверторный тип кондиционера,does_not_comply,есть,PROFESSIONAL_STORE,https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/,"""Инверторная технология | есть""",true
+SAS09BN3-AI/SAU09BN3-AI-LE,Класс энергоэффективности (в режиме нагрева),could_not_confirm,,,,null,null
+SAS09BN3-AI/SAU09BN3-AI-LE,Класс энергоэффективности (в режиме охлаждения),could_not_confirm,,,,null,null
+SAS09BN3-AI/SAU09BN3-AI-LE,Наличие фильтров тонкой очистки воздуха,could_not_confirm,,,,null,null
+SAS09BN3-AI/SAU09BN3-AI-LE,Дополнительные функции,could_not_confirm,самодиагностика.,"['OTHER', 'PROFESSIONAL_STORE']",https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/,"[null, null, null, null, ""Самодиагностика | есть""]","{""Автоматическая очистка"": null, ""автоматический выбор режима"": null, ""ночной режим"": null, ""режим турбо"": null, ""самодиагностика."": true}"
+SAS09BN3-AI/SAU09BN3-AI-LE,Тип внутреннего блока,could_not_confirm,,,,null,null
+SAS09BN3-AI/SAU09BN3-AI-LE,Вид кондиционера,corresponds,сплит-система,PROFESSIONAL_STORE,https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/,"""Тип кондиционера | сплит-система""","""сплит-система"""
+SAS09BN3-AI/SAU09BN3-AI-LE,Вид блока кондиционера,could_not_confirm,,,,null,null
+SAS09BN3-AI/SAU09BN3-AI-LE,Наличие антибактериального фильтра,could_not_confirm,,,,null,null
+SAS09BN3-AI/SAU09BN3-AI-LE,Мощность в режиме охлаждения,could_not_confirm,,,,null,null
+SAS09BN3-AI/SAU09BN3-AI-LE,Мощность в режиме нагрева,corresponds,2700 Вт,PROFESSIONAL_STORE,https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/,"""Мощность обогрева, внутренний блок | 2700 Вт""","{""values"": [""2700""], ""dimension"": ""power"", ""base_unit"": ""W"", ""source_unit"": ""вт"", ""conversion_factor"": ""1""}"
+SAS09BN3-AI/SAU09BN3-AI-LE,Площадь помещения,corresponds,25 м2,PROFESSIONAL_STORE,https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/,"""Обслуживаемая площадь | 25 м2""","{""values"": [""25""], ""dimension"": ""area"", ""base_unit"": ""area"", ""source_unit"": ""м²"", ""conversion_factor"": ""1""}"
+SAS09BN3-AI/SAU09BN3-AI-LE,Цвет,corresponds,Белый,PROFESSIONAL_STORE,https://www.market777.ru/product/nastennyy-konditsioner-energolux-sas09bn3-ai-sau09bn3-ai-le/,"""Цвет | Белый""","""белый"""
+AS-13UW4RXVQF00,Инверторный тип кондиционера,does_not_comply,Да,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/,"""Инверторный компрессор | Да""",true
+AS-13UW4RXVQF00,Класс энергоэффективности (в режиме нагрева),could_not_confirm,,,,null,null
+AS-13UW4RXVQF00,Класс энергоэффективности (в режиме охлаждения),could_not_confirm,,,,null,null
+AS-13UW4RXVQF00,Наличие фильтров тонкой очистки воздуха,could_not_confirm,Hepa H11,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/,"""49 Дополнительные фильтры тонкой очистки в комплекте | Hepa H11""","""hepa h11"""
+AS-13UW4RXVQF00,Дополнительные функции,could_not_confirm,Автоматическая очистка,"['PROFESSIONAL_STORE', 'OTHER']",https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/,"[""Самоочистка внутреннего блока | Да"", null, null, null, null]","{""Автоматическая очистка"": true, ""автоматический выбор режима"": null, ""ночной режим"": null, ""режим турбо"": null, ""самодиагностика."": null}"
+AS-13UW4RXVQF00,Тип внутреннего блока,could_not_confirm,,,,null,null
+AS-13UW4RXVQF00,Вид кондиционера,corresponds,Сплит-система,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/,"""Вид товара | Сплит-система""","""сплит-система"""
+AS-13UW4RXVQF00,Вид блока кондиционера,could_not_confirm,,,,null,null
+AS-13UW4RXVQF00,Наличие антибактериального фильтра,corresponds,Да,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/,"""39 Антибактериальный фильтр | Да""",true
+AS-13UW4RXVQF00,Мощность в режиме охлаждения,could_not_confirm,,,,null,null
+AS-13UW4RXVQF00,Мощность в режиме нагрева,could_not_confirm,4.20 (1.60 – 4.80),PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/,"""Производительность тепло | 4.20 (1.60 – 4.80)""","""4.20 (1.60 – 4.80)"""
+AS-13UW4RXVQF00,Площадь помещения,corresponds,40 м2,PROFESSIONAL_STORE,https://domkbt.ru/product/%D1%81%D0%BF%D0%BB%D0%B8%D1%82-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-hisense-as-13uw4rxvqf00/,"""Обслуживаемая площадь | 40 м2""","{""values"": [""40""], ""dimension"": ""area"", ""base_unit"": ""area"", ""source_unit"": ""м²"", ""conversion_factor"": ""1""}"
+AS-13UW4RXVQF00,Цвет,could_not_confirm,,,,null,null

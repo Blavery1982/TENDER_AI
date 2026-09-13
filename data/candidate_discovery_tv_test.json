@@ -1,0 +1,172 @@
+{
+  "target_model": "Samsung QE42S90F",
+  "checked_at": "2026-09-11T12:12:46.203982+00:00",
+  "candidate_discovery": {
+    "model": "Samsung QE42S90F",
+    "sku": "QE42S90F",
+    "candidate_urls": [
+      {
+        "url": "https://market.yandex.ru/card/qd-oled-televizor-samsung-qe42s90f-4k-ultra-hd/5352040035?resale_goods=resale_new&hid=90639&nid=26960210&cpa=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      }
+    ],
+    "candidate_count": 1,
+    "source_reports": [
+      {
+        "source": "Яндекс Маркет",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 1
+      },
+      {
+        "source": "XCOM",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "KNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "candidate_urls": 0
+      },
+      {
+        "source": "Ситилинк",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ВсеИнструменты",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ОНЛАЙН ТРЕЙД",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "DNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 401: Unauthorized",
+        "candidate_urls": 0
+      },
+      {
+        "source": "М.Видео",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Royal-Rus",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "ClimaArt",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "SDK-Climat",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      }
+    ]
+  },
+  "discovery_sources": [
+    {
+      "source": "Яндекс Маркет",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 1
+    },
+    {
+      "source": "XCOM",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "KNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "candidate_urls": 0
+    },
+    {
+      "source": "Ситилинк",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ВсеИнструменты",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ОНЛАЙН ТРЕЙД",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "DNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 401: Unauthorized",
+      "candidate_urls": 0
+    },
+    {
+      "source": "М.Видео",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Royal-Rus",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "ClimaArt",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "SDK-Climat",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    }
+  ],
+  "offers": [
+    {
+      "exact_product_name": "QD-OLED телевизор Samsung QE42S90F 4K Ultra HD",
+      "model": "Samsung QE42S90F",
+      "price": 118595.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Яндекс Маркет",
+      "url": "https://market.yandex.ru/card/qd-oled-televizor-samsung-qe42s90f-4k-ultra-hd/5352040035?cpa=1&hid=90639&nid=26960210&resale_goods=resale_new",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "checked_at": "2026-09-11T12:12:55.525716+00:00"
+    }
+  ],
+  "offers_found": 1,
+  "priced_offers_found": 1,
+  "minimum_price": 118595.0,
+  "minimum_price_seller": "Яндекс Маркет",
+  "minimum_price_url": "https://market.yandex.ru/card/qd-oled-televizor-samsung-qe42s90f-4k-ultra-hd/5352040035?cpa=1&hid=90639&nid=26960210&resale_goods=resale_new",
+  "source_errors": []
+}

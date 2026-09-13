@@ -1,0 +1,17 @@
+{
+  "target_model": "Electrolux EACS-09HP/N3",
+  "checked_at": "2026-09-13T13:17:36.878482+00:00",
+  "candidate_discovery": {
+    "candidate_urls": [],
+    "candidate_count": 0,
+    "source_reports": []
+  },
+  "discovery_sources": [],
+  "offers": [],
+  "offers_found": 0,
+  "priced_offers_found": 0,
+  "minimum_price": null,
+  "minimum_price_seller": null,
+  "minimum_price_url": null,
+  "source_errors": []
+}

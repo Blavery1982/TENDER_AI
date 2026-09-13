@@ -1,0 +1,172 @@
+{
+  "target_model": "HP Color LaserJet Pro MFP M283fdn",
+  "checked_at": "2026-09-11T12:12:36.711088+00:00",
+  "candidate_discovery": {
+    "model": "HP Color LaserJet Pro MFP M283fdn",
+    "sku": "M283fdn",
+    "candidate_urls": [
+      {
+        "url": "https://market.yandex.ru/card/mfu-lazernoye-hp-color-laserjet-pro-m283fdn-tsvetn-a4-belyy/4378921783?resale_goods=resale_new&hid=70063179&nid=70063693&cpa=1",
+        "discovered_by": "Яндекс Маркет",
+        "supplier_name": "Яндекс Маркет"
+      }
+    ],
+    "candidate_count": 1,
+    "source_reports": [
+      {
+        "source": "Яндекс Маркет",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 1
+      },
+      {
+        "source": "XCOM",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "KNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "candidate_urls": 0
+      },
+      {
+        "source": "Ситилинк",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ВсеИнструменты",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 403: Forbidden",
+        "candidate_urls": 0
+      },
+      {
+        "source": "ОНЛАЙН ТРЕЙД",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "DNS",
+        "status": "error",
+        "error": "HTTPError: HTTP Error 401: Unauthorized",
+        "candidate_urls": 0
+      },
+      {
+        "source": "М.Видео",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "Royal-Rus",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "ClimaArt",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      },
+      {
+        "source": "SDK-Climat",
+        "status": "ok",
+        "http_status": 200,
+        "candidate_urls": 0
+      }
+    ]
+  },
+  "discovery_sources": [
+    {
+      "source": "Яндекс Маркет",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 1
+    },
+    {
+      "source": "XCOM",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "KNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "candidate_urls": 0
+    },
+    {
+      "source": "Ситилинк",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ВсеИнструменты",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "candidate_urls": 0
+    },
+    {
+      "source": "ОНЛАЙН ТРЕЙД",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "DNS",
+      "status": "error",
+      "error": "HTTPError: HTTP Error 401: Unauthorized",
+      "candidate_urls": 0
+    },
+    {
+      "source": "М.Видео",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "Royal-Rus",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "ClimaArt",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    },
+    {
+      "source": "SDK-Climat",
+      "status": "ok",
+      "http_status": 200,
+      "candidate_urls": 0
+    }
+  ],
+  "offers": [
+    {
+      "exact_product_name": "МФУ лазерное HP Color LaserJet Pro M283fdn, цветн, A4, белый",
+      "model": "HP Color LaserJet Pro MFP M283fdn",
+      "price": 150235.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "Яндекс Маркет",
+      "url": "https://market.yandex.ru/card/mfu-lazernoye-hp-color-laserjet-pro-m283fdn-tsvetn-a4-belyy/4378921783?cpa=1&hid=70063179&nid=70063693&resale_goods=resale_new",
+      "source": "market.yandex.ru",
+      "http_status": 200,
+      "checked_at": "2026-09-11T12:12:46.097989+00:00"
+    }
+  ],
+  "offers_found": 1,
+  "priced_offers_found": 1,
+  "minimum_price": 150235.0,
+  "minimum_price_seller": "Яндекс Маркет",
+  "minimum_price_url": "https://market.yandex.ru/card/mfu-lazernoye-hp-color-laserjet-pro-m283fdn-tsvetn-a4-belyy/4378921783?cpa=1&hid=70063179&nid=70063693&resale_goods=resale_new",
+  "source_errors": []
+}

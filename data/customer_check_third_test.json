@@ -1,0 +1,166 @@
+{
+  "tradeNumber": "100205573126100053",
+  "customer_check": {
+    "customer_name": "Федеральное казенное учреждение «Следственный изолятор № 1 Главного управления Федеральной службы исполнения наказаний по г. Москве»",
+    "customer_inn": "7718115635",
+    "customer_kpp": "771801001",
+    "customer_ogrn": "1037700126177",
+    "customer_data_source": "Документы закупки",
+    "arbitration_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА КАД",
+    "arbitration_summary": "Арбитражные дела заказчика: требуется ручная проверка",
+    "cases_count": null,
+    "plaintiff_cases_count": null,
+    "defendant_cases_count": null,
+    "bankruptcy_cases_count": null,
+    "recent_cases_count": null,
+    "case_numbers": [],
+    "case_roles": [],
+    "case_dates": [],
+    "case_categories": [],
+    "payment_risk_status": "Риск оплаты не оценён автоматически — требуется ручная проверка КАД",
+    "warnings": [
+      "Проверка арбитражных дел автоматически не выполнена: документированный публичный API КАД не подтверждён"
+    ],
+    "manual_actions_required": [
+      {
+        "action": "Проверить КАД вручную",
+        "customer_name": "Федеральное казенное учреждение «Следственный изолятор № 1 Главного управления Федеральной службы исполнения наказаний по г. Москве»",
+        "customer_inn": "7718115635",
+        "url": "https://kad.arbitr.ru",
+        "reason": "Автоматический результат КАД недоступен или неоднозначен"
+      }
+    ],
+    "checked_at": "2026-09-09T09:27:47.059052+00:00",
+    "arbitration_evidence": {
+      "checked_in_kad": false,
+      "checked_at": "2026-09-09T09:27:47.059052+00:00",
+      "searched_inn": "7718115635",
+      "cases_found": null,
+      "cases_count": null,
+      "plaintiff_cases_count": null,
+      "defendant_cases_count": null,
+      "bankruptcy_cases_count": null,
+      "other_cases_count": null,
+      "recent_cases_count": null,
+      "case_numbers": [],
+      "case_roles": [],
+      "case_dates": [],
+      "case_categories": [],
+      "kad_url": "https://kad.arbitr.ru",
+      "evidence": null,
+      "warnings": [
+        "Проверка арбитражных дел автоматически не выполнена: документированный публичный API КАД не подтверждён"
+      ],
+      "user_summary": "Арбитражные дела: требуется ручная проверка",
+      "risk_level": "unknown"
+    }
+  },
+  "customer_check_google_sheets": {
+    "ПРОВЕРКА ЗАКАЗЧИКА": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА КАД",
+    "АРБИТРАЖ ЗАКАЗЧИКА": "Арбитражные дела заказчика: требуется ручная проверка",
+    "СУДЫ — КОЛИЧЕСТВО": "Нет данных",
+    "СУДЫ — ОТВЕТЧИК": "Нет данных",
+    "СУДЫ — ИСТЕЦ": "Нет данных",
+    "БАНКРОТНЫЕ ДЕЛА": "Нет данных",
+    "РИСК ОПЛАТЫ": "Риск оплаты не оценён автоматически — требуется ручная проверка КАД",
+    "КОММЕНТАРИЙ ПО ЗАКАЗЧИКУ": "Проверка арбитражных дел автоматически не выполнена: документированный публичный API КАД не подтверждён"
+  },
+  "pipeline_continued_to_procurement_audit": true,
+  "stage_log": [
+    {
+      "stage": "procurement",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "procurement",
+      "status": "completed",
+      "detail": ""
+    },
+    {
+      "stage": "customer_check",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "customer_check",
+      "status": "completed",
+      "detail": ""
+    },
+    {
+      "stage": "documents",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "documents",
+      "status": "completed",
+      "detail": ""
+    },
+    {
+      "stage": "traceability",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "traceability",
+      "status": "completed",
+      "detail": ""
+    },
+    {
+      "stage": "procurement_audit",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "procurement_audit",
+      "status": "completed",
+      "detail": ""
+    },
+    {
+      "stage": "model_search",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "model_search",
+      "status": "completed",
+      "detail": ""
+    },
+    {
+      "stage": "supplier_verification",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "supplier_verification",
+      "status": "completed",
+      "detail": ""
+    },
+    {
+      "stage": "supplier_search",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "supplier_search",
+      "status": "completed",
+      "detail": ""
+    },
+    {
+      "stage": "calculator",
+      "status": "started",
+      "detail": ""
+    },
+    {
+      "stage": "calculator",
+      "status": "incomplete",
+      "detail": ""
+    },
+    {
+      "stage": "final_decision",
+      "status": "completed",
+      "detail": ""
+    }
+  ]
+}

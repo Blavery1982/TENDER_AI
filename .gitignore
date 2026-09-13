@@ -1,0 +1,14 @@
+.env
+secrets/
+.venv/
+__pycache__/
+logs/
+*.log
+credentials*.json
+token*.json
+*.pyc
+*.pyo
+*.DS_Store
+
+# Large local data export; GitHub rejects files over 100 MB.
+data/eat_live_full_collection.json

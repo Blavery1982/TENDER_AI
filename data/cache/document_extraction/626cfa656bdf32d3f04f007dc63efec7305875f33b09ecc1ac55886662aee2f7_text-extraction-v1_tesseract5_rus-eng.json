@@ -1,0 +1,757 @@
+{
+  "text": "ИНН 7107113472 / КПП 210701001\n\nОГРН 1167454060787\n\nР/С 4070281 0900810147958\n\nФИЛИАЛ \"ЦЕНТРАЛЬНЫЙ\" БАНКА ВТБ (ПАО)\n\nООО’СПЕКТР nnn\n\nпо запросу Федеральное казенное учреждение «Нелог-Сервис» Федеральной налоговой службы (г. Москва}\n\nO00 \"СПЕКТР\"\n\nКоммерческое предложение МеКОМ/0000004352 от 05.08.2026\n\nReni\noe)\n\nМонитор ExeGate 27” 7 695,00 123 120,00\nБатарея BB Battery ВР 5-12 uit 8 2 835,00 22 680,00\nкабель dp-dp 2.0m шт 14 490,00 6 860,00\n\nКоннектор Cablexpert RJ-45 (ВР8С)\n\nуниверсальный кат.бе\nКабель PROconnect витая пара UTP АРВ шт 4 45 075,00 15 075,00\n2ААМИС, CCA, CATSe, РЕ, бухта 305 м _\nв ут. в, HAC AA fe *\nДао в\n\n= 1 490,00 490,00\n\nКурпяков Кирилл Андреевич\nГенеральный директор\nООО \"СПЕКТР\"\n\nтел: 8 (4872) 70-11-32\nspektr-tula@inbox.ru\n\nкол-во листов, 7 - |\n\n",
+  "document_parse_status": "analyzed",
+  "rows": [],
+  "read_method": "ocr",
+  "ocr_engine": "Tesseract 5 rus+eng",
+  "ocr_pages": [
+    1
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "read_method": "ocr",
+      "text": "ИНН 7107113472 / КПП 210701001\n\nОГРН 1167454060787\n\nР/С 4070281 0900810147958\n\nФИЛИАЛ \"ЦЕНТРАЛЬНЫЙ\" БАНКА ВТБ (ПАО)\n\nООО’СПЕКТР nnn\n\nпо запросу Федеральное казенное учреждение «Нелог-Сервис» Федеральной налоговой службы (г. Москва}\n\nO00 \"СПЕКТР\"\n\nКоммерческое предложение МеКОМ/0000004352 от 05.08.2026\n\nReni\noe)\n\nМонитор ExeGate 27” 7 695,00 123 120,00\nБатарея BB Battery ВР 5-12 uit 8 2 835,00 22 680,00\nкабель dp-dp 2.0m шт 14 490,00 6 860,00\n\nКоннектор Cablexpert RJ-45 (ВР8С)\n\nуниверсальный кат.бе\nКабель PROconnect витая пара UTP АРВ шт 4 45 075,00 15 075,00\n2ААМИС, CCA, CATSe, РЕ, бухта 305 м _\nв ут. в, HAC AA fe *\nДао в\n\n= 1 490,00 490,00\n\nКурпяков Кирилл Андреевич\nГенеральный директор\nООО \"СПЕКТР\"\n\nтел: 8 (4872) 70-11-32\nspektr-tula@inbox.ru\n\nкол-во листов, 7 - |\n\n",
+      "text_layer_quality": {
+        "non_whitespace_characters": 0,
+        "alphanumeric_ratio": 0.0,
+        "replacement_characters": 0
+      },
+      "average_confidence": 83.96,
+      "minimum_confidence": 0.0,
+      "low_confidence_word_count": 21,
+      "word_count": 119
+    }
+  ],
+  "raw_ocr_text": "ИНН 7107113472 / КПП 210701001\n\nОГРН 1167454060787\n\nР/С 4070281 0900810147958\n\nФИЛИАЛ \"ЦЕНТРАЛЬНЫЙ\" БАНКА ВТБ (ПАО)\n\nООО’СПЕКТР nnn\n\nпо запросу Федеральное казенное учреждение «Нелог-Сервис» Федеральной налоговой службы (г. Москва}\n\nO00 \"СПЕКТР\"\n\nКоммерческое предложение МеКОМ/0000004352 от 05.08.2026\n\nReni\noe)\n\nМонитор ExeGate 27” 7 695,00 123 120,00\nБатарея BB Battery ВР 5-12 uit 8 2 835,00 22 680,00\nкабель dp-dp 2.0m шт 14 490,00 6 860,00\n\nКоннектор Cablexpert RJ-45 (ВР8С)\n\nуниверсальный кат.бе\nКабель PROconnect витая пара UTP АРВ шт 4 45 075,00 15 075,00\n2ААМИС, CCA, CATSe, РЕ, бухта 305 м _\nв ут. в, HAC AA fe *\nДао в\n\n= 1 490,00 490,00\n\nКурпяков Кирилл Андреевич\nГенеральный директор\nООО \"СПЕКТР\"\n\nтел: 8 (4872) 70-11-32\nspektr-tula@inbox.ru\n\nкол-во листов, 7 - |\n\n",
+  "critical_values": [
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "7107113472",
+      "recognized_value": "7107113472",
+      "confidence": 93.07,
+      "confirmed": true,
+      "possible_recognition_variants": [
+        "7107113A72",
+        "71071I3472",
+        "71071l3472",
+        "7107I13472",
+        "7107l13472",
+        "71O7113472",
+        "7I07113472",
+        "7l07113472"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "210701001",
+      "recognized_value": "210701001",
+      "confidence": 86.76,
+      "confirmed": true,
+      "possible_recognition_variants": [
+        "21070100I",
+        "21070100l",
+        "2107010O1",
+        "210701O01",
+        "21070I001",
+        "21070l001",
+        "2107O1001",
+        "21O701001",
+        "2I0701001",
+        "2l0701001"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "1167454060787",
+      "recognized_value": "1167454060787",
+      "confidence": 92.84,
+      "confirmed": true,
+      "possible_recognition_variants": [
+        "11674540607B7",
+        "116745406O787",
+        "1167454O60787",
+        "116745A060787",
+        "11674S4060787",
+        "1167A54060787",
+        "1I67454060787",
+        "1l67454060787",
+        "I167454060787",
+        "l167454060787"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "4070281 0900810147958",
+      "recognized_value": "4070281 0900810147958",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "4070281 090081014795B",
+        "4070281 09008101479S8",
+        "4070281 09008101A7958",
+        "4070281 0900810I47958",
+        "4070281 0900810l47958",
+        "4070281 090081O147958",
+        "4070281 09008I0147958",
+        "4070281 09008l0147958",
+        "4070281 0900B10147958",
+        "4070281 090O810147958",
+        "4070281 09O0810147958",
+        "4070281 O900810147958",
+        "407028I 0900810147958",
+        "407028l 0900810147958",
+        "40702B1 0900810147958",
+        "407O281 0900810147958",
+        "4O70281 0900810147958",
+        "A070281 0900810147958"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "0000004352",
+      "recognized_value": "0000004352",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "00000043S2",
+        "000000A352",
+        "00000O4352",
+        "0000O04352",
+        "000O004352",
+        "00O0004352",
+        "0O00004352",
+        "O000004352"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "05.08.2026",
+      "recognized_value": "05.08.2026",
+      "confidence": 47.05,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "05.08.2O26",
+        "05.0B.2026",
+        "05.O8.2026",
+        "0S.08.2026",
+        "O5.08.2026"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "27",
+      "recognized_value": "27",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "7 695,00 123 120,00",
+      "recognized_value": "7 695,00 123 120,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "7 695,00 123 120,0O",
+        "7 695,00 123 120,O0",
+        "7 695,00 123 12O,00",
+        "7 695,00 123 I20,00",
+        "7 695,00 123 l20,00",
+        "7 695,00 I23 120,00",
+        "7 695,00 l23 120,00",
+        "7 695,0O 123 120,00",
+        "7 695,O0 123 120,00",
+        "7 69S,00 123 120,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "5",
+      "recognized_value": "5",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "S"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "12",
+      "recognized_value": "12",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "I2",
+        "l2"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "8 2 835,00 22 680,00",
+      "recognized_value": "8 2 835,00 22 680,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "8 2 835,00 22 680,0O",
+        "8 2 835,00 22 680,O0",
+        "8 2 835,00 22 68O,00",
+        "8 2 835,00 22 6B0,00",
+        "8 2 835,0O 22 680,00",
+        "8 2 835,O0 22 680,00",
+        "8 2 83S,00 22 680,00",
+        "8 2 B35,00 22 680,00",
+        "B 2 835,00 22 680,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "2",
+      "recognized_value": "2",
+      "confidence": 94.2,
+      "confirmed": true,
+      "possible_recognition_variants": [],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "14 490,00 6 860,00",
+      "recognized_value": "14 490,00 6 860,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "14 490,00 6 860,0O",
+        "14 490,00 6 860,O0",
+        "14 490,00 6 86O,00",
+        "14 490,00 6 B60,00",
+        "14 490,0O 6 860,00",
+        "14 490,O0 6 860,00",
+        "14 49O,00 6 860,00",
+        "14 A90,00 6 860,00",
+        "1A 490,00 6 860,00",
+        "I4 490,00 6 860,00",
+        "l4 490,00 6 860,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "45",
+      "recognized_value": "45",
+      "confidence": 88.82,
+      "confirmed": true,
+      "possible_recognition_variants": [
+        "4S",
+        "A5"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "4 45 075,00 15 075,00",
+      "recognized_value": "4 45 075,00 15 075,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "4 45 075,00 15 075,0O",
+        "4 45 075,00 15 075,O0",
+        "4 45 075,00 15 07S,00",
+        "4 45 075,00 15 O75,00",
+        "4 45 075,00 1S 075,00",
+        "4 45 075,00 I5 075,00",
+        "4 45 075,00 l5 075,00",
+        "4 45 075,0O 15 075,00",
+        "4 45 075,O0 15 075,00",
+        "4 45 07S,00 15 075,00",
+        "4 45 O75,00 15 075,00",
+        "4 4S 075,00 15 075,00",
+        "4 A5 075,00 15 075,00",
+        "A 45 075,00 15 075,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "305",
+      "recognized_value": "305",
+      "confidence": 78.47,
+      "confirmed": true,
+      "possible_recognition_variants": [
+        "30S",
+        "3O5"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "1 490,00 490,00",
+      "recognized_value": "1 490,00 490,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "1 490,00 490,0O",
+        "1 490,00 490,O0",
+        "1 490,00 49O,00",
+        "1 490,00 A90,00",
+        "1 490,0O 490,00",
+        "1 490,O0 490,00",
+        "1 49O,00 490,00",
+        "1 A90,00 490,00",
+        "I 490,00 490,00",
+        "l 490,00 490,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "8",
+      "recognized_value": "8",
+      "confidence": 96.21,
+      "confirmed": true,
+      "possible_recognition_variants": [
+        "B"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "4872",
+      "recognized_value": "4872",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "4B72",
+        "A872"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "70",
+      "recognized_value": "70",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "7O"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "11",
+      "recognized_value": "11",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "1I",
+        "1l",
+        "I1",
+        "l1"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "32",
+      "recognized_value": "32",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "7",
+      "recognized_value": "7",
+      "confidence": 86.34,
+      "confirmed": true,
+      "possible_recognition_variants": [],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "model_or_article",
+      "source_fragment": "RJ-45",
+      "recognized_value": "RJ-45",
+      "confidence": 91.57,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "RJ-4S",
+        "RJ-A5"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "model_or_article",
+      "source_fragment": "2ААМИС",
+      "recognized_value": "2ААМИС",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    }
+  ],
+  "doubtful_critical_values": [
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "4070281 0900810147958",
+      "recognized_value": "4070281 0900810147958",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "4070281 090081014795B",
+        "4070281 09008101479S8",
+        "4070281 09008101A7958",
+        "4070281 0900810I47958",
+        "4070281 0900810l47958",
+        "4070281 090081O147958",
+        "4070281 09008I0147958",
+        "4070281 09008l0147958",
+        "4070281 0900B10147958",
+        "4070281 090O810147958",
+        "4070281 09O0810147958",
+        "4070281 O900810147958",
+        "407028I 0900810147958",
+        "407028l 0900810147958",
+        "40702B1 0900810147958",
+        "407O281 0900810147958",
+        "4O70281 0900810147958",
+        "A070281 0900810147958"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "0000004352",
+      "recognized_value": "0000004352",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "00000043S2",
+        "000000A352",
+        "00000O4352",
+        "0000O04352",
+        "000O004352",
+        "00O0004352",
+        "0O00004352",
+        "O000004352"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "05.08.2026",
+      "recognized_value": "05.08.2026",
+      "confidence": 47.05,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "05.08.2O26",
+        "05.0B.2026",
+        "05.O8.2026",
+        "0S.08.2026",
+        "O5.08.2026"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "27",
+      "recognized_value": "27",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "7 695,00 123 120,00",
+      "recognized_value": "7 695,00 123 120,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "7 695,00 123 120,0O",
+        "7 695,00 123 120,O0",
+        "7 695,00 123 12O,00",
+        "7 695,00 123 I20,00",
+        "7 695,00 123 l20,00",
+        "7 695,00 I23 120,00",
+        "7 695,00 l23 120,00",
+        "7 695,0O 123 120,00",
+        "7 695,O0 123 120,00",
+        "7 69S,00 123 120,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "5",
+      "recognized_value": "5",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "S"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "12",
+      "recognized_value": "12",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "I2",
+        "l2"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "8 2 835,00 22 680,00",
+      "recognized_value": "8 2 835,00 22 680,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "8 2 835,00 22 680,0O",
+        "8 2 835,00 22 680,O0",
+        "8 2 835,00 22 68O,00",
+        "8 2 835,00 22 6B0,00",
+        "8 2 835,0O 22 680,00",
+        "8 2 835,O0 22 680,00",
+        "8 2 83S,00 22 680,00",
+        "8 2 B35,00 22 680,00",
+        "B 2 835,00 22 680,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "14 490,00 6 860,00",
+      "recognized_value": "14 490,00 6 860,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "14 490,00 6 860,0O",
+        "14 490,00 6 860,O0",
+        "14 490,00 6 86O,00",
+        "14 490,00 6 B60,00",
+        "14 490,0O 6 860,00",
+        "14 490,O0 6 860,00",
+        "14 49O,00 6 860,00",
+        "14 A90,00 6 860,00",
+        "1A 490,00 6 860,00",
+        "I4 490,00 6 860,00",
+        "l4 490,00 6 860,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "4 45 075,00 15 075,00",
+      "recognized_value": "4 45 075,00 15 075,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "4 45 075,00 15 075,0O",
+        "4 45 075,00 15 075,O0",
+        "4 45 075,00 15 07S,00",
+        "4 45 075,00 15 O75,00",
+        "4 45 075,00 1S 075,00",
+        "4 45 075,00 I5 075,00",
+        "4 45 075,00 l5 075,00",
+        "4 45 075,0O 15 075,00",
+        "4 45 075,O0 15 075,00",
+        "4 45 07S,00 15 075,00",
+        "4 45 O75,00 15 075,00",
+        "4 4S 075,00 15 075,00",
+        "4 A5 075,00 15 075,00",
+        "A 45 075,00 15 075,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "1 490,00 490,00",
+      "recognized_value": "1 490,00 490,00",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "1 490,00 490,0O",
+        "1 490,00 490,O0",
+        "1 490,00 49O,00",
+        "1 490,00 A90,00",
+        "1 490,0O 490,00",
+        "1 490,O0 490,00",
+        "1 49O,00 490,00",
+        "1 A90,00 490,00",
+        "I 490,00 490,00",
+        "l 490,00 490,00"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "4872",
+      "recognized_value": "4872",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "4B72",
+        "A872"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "70",
+      "recognized_value": "70",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "7O"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "11",
+      "recognized_value": "11",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "1I",
+        "1l",
+        "I1",
+        "l1"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "number_or_unit",
+      "source_fragment": "32",
+      "recognized_value": "32",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    },
+    {
+      "page_number": 1,
+      "value_type": "model_or_article",
+      "source_fragment": "RJ-45",
+      "recognized_value": "RJ-45",
+      "confidence": 91.57,
+      "confirmed": false,
+      "possible_recognition_variants": [
+        "RJ-4S",
+        "RJ-A5"
+      ],
+      "external_confirmation_source": null,
+      "identification_method": "ocr"
+    },
+    {
+      "page_number": 1,
+      "value_type": "model_or_article",
+      "source_fragment": "2ААМИС",
+      "recognized_value": "2ААМИС",
+      "confidence": null,
+      "confirmed": false,
+      "possible_recognition_variants": [],
+      "external_confirmation_source": null,
+      "identification_method": "ocr_requires_review"
+    }
+  ],
+  "warnings": [
+    "Требуется проверка распознавания документа"
+  ]
+}

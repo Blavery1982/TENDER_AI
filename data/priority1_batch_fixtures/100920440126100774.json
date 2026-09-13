@@ -1,0 +1,880 @@
+{
+  "purchase_id": "f85e62bb-5bc6-4591-8c6d-189b91c3242d",
+  "card_url": "https://agregatoreat.ru/purchases/announcement/f85e62bb-5bc6-4591-8c6d-189b91c3242d/info",
+  "purchase_type_title": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+  "filter": {
+    "filter_result": "passed"
+  },
+  "raw": {
+    "publishDate": "2026-09-11T11:18:01.647187",
+    "id": "f85e62bb-5bc6-4591-8c6d-189b91c3242d",
+    "tradeNumber": "100920440126100774",
+    "purchaseMethod": 4,
+    "processingPurchaseMethod": null,
+    "type": 1,
+    "purchaseTypeTitle": "Закупка до 600 000 руб. (п. 4 ч.1 ст. 93 Закона №44-ФЗ)",
+    "purchaseTypeId": "1",
+    "contactFio": "Сараева Анастасия Владимировна",
+    "contactEmail": "a.saraeva@vniio.ru",
+    "contactPhone": "+7(812)244-00-00(215)",
+    "contactFax": null,
+    "contactAddInfo": "",
+    "stateDefenseOrder": false,
+    "applicationsCount": 0,
+    "applicationFillingPeriod": 24,
+    "applicationFillingProlongationPeriod": null,
+    "applicationFillingProlongationPeriods": [
+      {
+        "order": 0,
+        "value": 48
+      }
+    ],
+    "applicationFillingProlongationCount": 0,
+    "isApplicationFillingProlongationHappened": false,
+    "isApplicationFillingPauseOnHoliday": true,
+    "isPlannedPurchase": false,
+    "applicationFillingStartDate": "2026-09-11T11:18:00.64881",
+    "modificationNumber": 1,
+    "allowDocumentChanges": true,
+    "isSmp": false,
+    "planRegistrationNumber": "",
+    "lot": {
+      "id": "00000000-0000-0000-0000-000000000000",
+      "lotItems": [
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 0,
+          "offerNumber": null,
+          "description": "•\tБатарея изготовлена по технологии AGM+GEL.\n•\tАккумулятор предназначен для работы как в буферном, так и в циклическом режимах.\n•\tКорпус аккумулятора выполнен из огнестойкого пластика ABS. \n•\tБатарея необслуживаемая, не требует долива воды.\n•\tЕмкость аккумулятора - 120 А*ч\n•\tMax ток заряда - 2.16 А\n•\tВыходное напряжение - 12 В\n•\tТип клемм - болт М8\n•\tПолярность - прямая\n",
+          "name": "Батарея аккумуляторная гелевая",
+          "quantity": 1.0,
+          "unitPrice": 12525.6,
+          "sum": 12525.6,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "27.20.23.190",
+            "title": "Батареи аккумуляторные прочие"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "AVTR_010400000000",
+            "title": "АККУМУЛЯТОРНАЯ БАТАРЕЯ"
+          },
+          "okei": {
+            "code": "796",
+            "title": "шт",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 1,
+          "offerNumber": null,
+          "description": "Optimus NVR-5362. Формат сжатия\nH 265/H 264, 2 диска\n",
+          "name": "IP- видеорегистратор\t",
+          "quantity": 1.0,
+          "unitPrice": 18652.8,
+          "sum": 18652.8,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "26.40.33.114",
+            "title": "Видеорегистраторы"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "250303",
+            "title": "ВИДЕОРЕГИСТРАТОРЫ"
+          },
+          "okei": {
+            "code": "796",
+            "title": "шт",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 2,
+          "offerNumber": null,
+          "description": "Optimus U1IC-16F/2G/1S, 16 портов до 100 Мбит/c RJ-45, PoE+2порта по 1000 Мбит/c RJ-45",
+          "name": "Коммутатор\t",
+          "quantity": 1.0,
+          "unitPrice": 9844.0,
+          "sum": 9844.0,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "26.30.11.110",
+            "title": "Средства связи, выполняющие функцию систем коммутации"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "240302",
+            "title": "КОММУТАТОРЫ"
+          },
+          "okei": {
+            "code": "796",
+            "title": "шт",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 3,
+          "offerNumber": null,
+          "description": "Optimus IP-S015.0 (2,8) MPC",
+          "name": "Видеокамера\t",
+          "quantity": 6.0,
+          "unitPrice": 6108.8,
+          "sum": 36652.8,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "26.40.33.110",
+            "title": "Видеокамеры"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "BTIE_43040107",
+            "title": "ВИДЕОКАМЕРЫ"
+          },
+          "okei": {
+            "code": "796",
+            "title": "шт",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 4,
+          "offerNumber": null,
+          "description": "\tOptimus IP-S015.0 (3,6) MPC",
+          "name": "Видеокамера\t ",
+          "quantity": 2.0,
+          "unitPrice": 5924.0,
+          "sum": 11848.0,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "26.40.33.110",
+            "title": "Видеокамеры"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "BTIE_43040107",
+            "title": "ВИДЕОКАМЕРЫ"
+          },
+          "okei": {
+            "code": "796",
+            "title": "шт",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 5,
+          "offerNumber": null,
+          "description": "Optimus IP-S025.0 (2,8) MP_V.3",
+          "name": "Видеокамера",
+          "quantity": 1.0,
+          "unitPrice": 5482.4,
+          "sum": 5482.4,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "26.40.33.110",
+            "title": "Видеокамеры"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "BTIE_43040107",
+            "title": "ВИДЕОКАМЕРЫ"
+          },
+          "okei": {
+            "code": "796",
+            "title": "шт",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 6,
+          "offerNumber": null,
+          "description": "Optimus IP-S015.0 (2,8-12)P_V.2",
+          "name": "Видеокамера\t",
+          "quantity": 1.0,
+          "unitPrice": 8452.8,
+          "sum": 8452.8,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "26.40.33.110",
+            "title": "Видеокамеры"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "BTIE_43040107",
+            "title": "ВИДЕОКАМЕРЫ"
+          },
+          "okei": {
+            "code": "796",
+            "title": "шт",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 7,
+          "offerNumber": null,
+          "description": "FTR SE Eletec 4х2хAWG24, наружный, медь, 305 м/уп",
+          "name": "Кабель\t",
+          "quantity": 2.0,
+          "unitPrice": 10206.0,
+          "sum": 20412.0,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "27.32.13.150",
+            "title": "Кабели, провода и шнуры связи"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "BTIE_48138672",
+            "title": "КАБЕЛИ И ПЕРЕХОДНИКИ"
+          },
+          "okei": {
+            "code": "778",
+            "title": "УПАК",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 8,
+          "offerNumber": null,
+          "description": "руба гофрированная\t20 мм, «Строитель ПР» безгалогенная (HF), лёгкого типа с зондом ПНД, 100 м/уп",
+          "name": "Труба гофрированная\t",
+          "quantity": 1.0,
+          "unitPrice": 2076.0,
+          "sum": 2076.0,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "22.21.29.120",
+            "title": "Трубки, шланги и рукава прочие пластмассовые"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "25070303",
+            "title": "ТРУБА ГОФРИРОВАННАЯ"
+          },
+          "okei": {
+            "code": "778",
+            "title": "УПАК",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        },
+        {
+          "requireOfferSpecification": false,
+          "offerId": "00000000-0000-0000-0000-000000000000",
+          "orderNumber": 9,
+          "offerNumber": null,
+          "description": "6 ТБ WD Purple SurveiIIance\n(WD64PURZ)\n",
+          "name": "Жёсткий диск\t",
+          "quantity": 1.0,
+          "unitPrice": 26990.0,
+          "sum": 26990.0,
+          "quantityUndefined": false,
+          "okpd2": {
+            "code": "26.20.21.110",
+            "title": "Базовые системы хранения данных (обеспечивающие сохранность данных при отключении питания)"
+          },
+          "esklp": null,
+          "ktru": {
+            "code": null,
+            "title": null
+          },
+          "eat": {
+            "code": "BTIE_49697575",
+            "title": "ЖЕСТКИЕ ДИСКИ"
+          },
+          "okei": {
+            "code": "796",
+            "title": "шт",
+            "precision": 0
+          },
+          "characteristics": [],
+          "imageFiles": [],
+          "isPriceWithTax": false,
+          "taxPercent": null,
+          "calculatedTax": null,
+          "priceOption": 1,
+          "priceOptionReason": null,
+          "countryOfOrigin": {
+            "code": null,
+            "title": null
+          },
+          "russianItemsRegistry": null,
+          "russianItemsRegistryNum": null,
+          "ntin": null,
+          "isReference": false,
+          "referenceOfferId": null,
+          "referenceOfferNumber": null,
+          "ektruPassportNumber": null,
+          "isGispReference": false
+        }
+      ],
+      "description": null,
+      "subject": "Поставка оборудования для модернизации системы видеонаблюдения по адресу набережная реки Мойки д. 120 литера А и видеокамеры по адресу набережная реки Мойки д. 124 литера А (дополнительно к существующим).",
+      "price": 152936.4,
+      "commissionFee": 4664.56,
+      "minOperatorCommission": 73.2,
+      "commissionFeeForSmp": 4664.56,
+      "contractSignDate": "2026-09-18T00:00:00",
+      "contractExpirationDate": "2026-12-31T00:00:00",
+      "paymentTypes": [
+        2
+      ],
+      "paymentType": 2,
+      "otherPaymentTypeDescription": null,
+      "paymentCondition": 3,
+      "paymentFrequency": null,
+      "prepaidAmount": null,
+      "paymentPrepayDetails": null,
+      "dealTerminationInfo": "В соответствии с действующим законодательством Российской Федерации",
+      "isDealTerminationAvailable": true,
+      "additionalConditions": "В соответствии с Приложением № 1 к контракту. При подаче заявки необходимо конкретизировать наименование, эквивалентность исключить. В случае не исключения фразы «или эквивалент» заявка подлежит отклонению. При наличии характеристик с значениями \"не более\", \"не менее\", «тип» необходимо указать конкретные характеристики.",
+      "ikz": "261783905878078390100100010000000244",
+      "isTrusteeCustomer": null,
+      "deliveryInfos": [
+        {
+          "deliveryScheduleInfo": null,
+          "deliveryInfo": "В поставку включены доставка, погрузка и разгрузка Товара, перенос Товара до места, указанного Заказчиком, собственными силами и за свой счет.\nУстановлен запрет на поставку Товара третьими лицами. При поставке упакованного товара на внешней упаковке должны быть прикреплены документы, позволяющие идентифицировать номер/дату Контракта, предмет Контракта и самого Поставщика (требования установлены в соответствии с правилами обеспечения безопасности в учреждении).\nДля осуществления допуска на территорию Заказчика Поставщик не позднее 1 (Одного) рабочего дня до даты поставки Товара обязан предоставить Заказчику паспортные данные водителя, марку и госномер автомашины.\n",
+          "deliveryAddress": {
+            "id": 0,
+            "formattedFullInfo": "г Санкт-Петербург, наб Реки Мойки, д 124 литера А",
+            "okato": "40262561000",
+            "country": "Россия",
+            "countryCode": "RU",
+            "regionName": "г Санкт-Петербург",
+            "regionCode": "78",
+            "federalDistrict": null,
+            "area": null,
+            "city": "г Санкт-Петербург",
+            "cityDistrict": null,
+            "settlement": null,
+            "street": "наб Реки Мойки",
+            "house": "д 124 литера А",
+            "office": "",
+            "planningStructure": "",
+            "additionalTerritory": "",
+            "landPlot": "",
+            "subordinateObject": "",
+            "postIndex": "190121",
+            "fiasCode": "a1f46d57-1905-491c-aa0f-fa25e4b540ee",
+            "immutableProperties": null
+          }
+        },
+        {
+          "deliveryScheduleInfo": null,
+          "deliveryInfo": "В поставку включены доставка, погрузка и разгрузка Товара, перенос Товара до места, указанного Заказчиком, собственными силами и за свой счет.\nУстановлен запрет на поставку Товара третьими лицами. При поставке упакованного товара на внешней упаковке должны быть прикреплены документы, позволяющие идентифицировать номер/дату Контракта, предмет Контракта и самого Поставщика (требования установлены в соответствии с правилами обеспечения безопасности в учреждении).\nДля осуществления допуска на территорию Заказчика Поставщик не позднее 1 (Одного) рабочего дня до даты поставки Товара обязан предоставить Заказчику паспортные данные водителя, марку и госномер автомашины.\n",
+          "deliveryAddress": {
+            "id": 0,
+            "formattedFullInfo": "г Санкт-Петербург, наб Реки Мойки, д 120 литера А",
+            "okato": "40262561000",
+            "country": "Россия",
+            "countryCode": "RU",
+            "regionName": "г Санкт-Петербург",
+            "regionCode": "78",
+            "federalDistrict": null,
+            "area": null,
+            "city": "г Санкт-Петербург",
+            "cityDistrict": null,
+            "settlement": null,
+            "street": "наб Реки Мойки",
+            "house": "д 120 литера А",
+            "office": "",
+            "planningStructure": "",
+            "additionalTerritory": "",
+            "landPlot": "",
+            "subordinateObject": "",
+            "postIndex": "190121",
+            "fiasCode": "ed7b0794-379a-403e-b3fb-ad9e68f5d653",
+            "immutableProperties": null
+          }
+        }
+      ],
+      "deliveryAddress": {
+        "id": 0,
+        "formattedFullInfo": null,
+        "okato": null,
+        "country": null,
+        "countryCode": null,
+        "regionName": null,
+        "regionCode": null,
+        "federalDistrict": null,
+        "area": null,
+        "city": null,
+        "cityDistrict": null,
+        "settlement": null,
+        "street": null,
+        "house": null,
+        "office": null,
+        "planningStructure": null,
+        "additionalTerritory": null,
+        "landPlot": null,
+        "subordinateObject": null,
+        "postIndex": null,
+        "fiasCode": null,
+        "immutableProperties": null
+      },
+      "deliveryType": 1,
+      "deliveryDate": "2026-10-08T20:59:59",
+      "isDeliveryDateInDays": true,
+      "deliveryPeriod": 14,
+      "isDeliveryDaysWorking": true,
+      "documents": [
+        {
+          "id": "689fcc67-f39b-43e7-a424-917b6531c5e0",
+          "createdOn": "2026-09-11T11:17:13.965449",
+          "name": "Приложение к Контракту №1.docx",
+          "documentName": null,
+          "typeName": null,
+          "size": 25317,
+          "type": 4,
+          "signatureId": "aa9d1cea-6b6a-4074-adf5-4595eb3ef7c9",
+          "immutableProperties": null
+        },
+        {
+          "id": "2368d4ca-2921-420a-8029-f6db7901cc53",
+          "createdOn": "2026-09-11T11:17:13.965449",
+          "name": "Приложение к Контракту №2 (Планы).pdf",
+          "documentName": null,
+          "typeName": null,
+          "size": 471591,
+          "type": 4,
+          "signatureId": "13a4d3b8-9cdd-4111-8090-fa87e28763b7",
+          "immutableProperties": null
+        },
+        {
+          "id": "0409e86d-9a0a-4e04-b100-17a2afe8ca84",
+          "createdOn": "2026-09-11T11:17:13.965449",
+          "name": "НМЦК.xlsx",
+          "documentName": null,
+          "typeName": null,
+          "size": 17831,
+          "type": 14,
+          "signatureId": "aa524344-9049-4de5-858b-225eebd39ced",
+          "immutableProperties": null
+        },
+        {
+          "id": "a7ed5c22-18b0-4d91-afce-733aa53b7c3e",
+          "createdOn": "2026-09-11T11:17:44.917851",
+          "name": "Информация по закупке №100920440126100774_44.html",
+          "documentName": null,
+          "typeName": null,
+          "size": 0,
+          "type": 2,
+          "signatureId": "21e23b75-e506-4f1f-ad9d-4e92fab6377e",
+          "immutableProperties": null
+        },
+        {
+          "id": "21da38ba-8925-419c-aec2-6b9bf68f9529",
+          "createdOn": "2026-09-11T11:17:44.917852",
+          "name": "TradeDto-f85e62bb-5bc6-4591-8c6d-189b91c3242d.xml",
+          "documentName": null,
+          "typeName": null,
+          "size": 5377,
+          "type": 3,
+          "signatureId": "6bde9df7-6198-43fc-a72f-b503d1fa9e59",
+          "immutableProperties": null
+        }
+      ],
+      "contractType": 1,
+      "isSignedCustomCustomerContractAvailable": false,
+      "isPaymentInDaysSinceDealExecuting": false,
+      "isPaymentInDaysSinceSigninAcceptanceDocument": true,
+      "paymentDateInDays": 10,
+      "isPaymentPeriodWorkDays": true,
+      "paymentDate": null,
+      "applicationFillingStartDate": "2026-09-11T11:18:00.64881",
+      "applicationFillingEndDate": "2026-09-14T11:18:00.64881",
+      "lotState": 2,
+      "stateDefenseOrder": false,
+      "stateOrderId": null,
+      "specAccountBank": null,
+      "specAccountBik": null,
+      "specAccountCorrespondingAccount": null,
+      "specAccount": null,
+      "priceSource": 2,
+      "priceSourceOrganizationId": null,
+      "priceSourceOrganizationType": null,
+      "priceSourceOrganizationInn": null,
+      "priceSourceOrganizationKpp": null,
+      "priceSourceOrganizationName": null,
+      "priceCalculationMethod": 1,
+      "priceSourceDocumentsUploadRefused": false,
+      "needProposalDocumentation": false,
+      "proposalDocumentationRequirements": null,
+      "subType": 0,
+      "responsibilities": [
+        {
+          "number": 1,
+          "description": "В соответствии с Постановлением от 30.08.2017 №1042"
+        }
+      ],
+      "isRussianItemsPurchase": false,
+      "isNewRussianItemsJanuary2025Tooltip": true,
+      "paymentAccount": "03214643000000013225",
+      "bankName": "ОКЦ № 1 ВВГУ Банка России//УФК по Нижегородской области г Нижний Новгород",
+      "bankCorrespondentAccount": "40102810745370000024",
+      "bankBik": "012202102",
+      "bankAddress": "603082, Нижегородская обл, г Нижний Новгород, Нижегородский р-н, тер Кремль, к 1А",
+      "additionalRequisitesAndInfo": "УФК по г. Санкт-Петербургу",
+      "fkAccountNumbers": [
+        "20726В03760"
+      ],
+      "correspondentFkAccountNumber": "40102810745370000024",
+      "oktmo": "40301000",
+      "kbk": null,
+      "isFillingApplicationByPart1Particle31Law44": true,
+      "showBudgetSection": true,
+      "budget": "средства бюджетных учреждений на финансовое обеспечение выполнения государственного задания на выполнение работ.\n\n",
+      "isNoNdsWinnerAvailable": false,
+      "isNoNdsWinner": false,
+      "isFsk": false,
+      "isRostechRequirementsConfirmation": false,
+      "signedByCurrentUserPrivacyAgreementType": null,
+      "isUseOf11DecimalPlacesInUnitPrice": false,
+      "favoriteTagsAmount": 1,
+      "unFavoriteTagsAmount": 0,
+      "currentOrganizationFavoriteTagValue": null,
+      "customerAcceptanceServiceDeadlineInfo": "приемка Товара осуществляется Заказчиком в срок не более 5 (Пяти) рабочих дней с даты поставки Товара, оформляется документом о приемке (Товарная накладная, либо универсальный передаточный документ), который подписывается Заказчиком, или же Поставщику Заказчиком направляется в письменной форме мотивированный отказ от подписания такого документа\n",
+      "supplierFulfillmentDocumentsProvisionInfo": "одновременно с Товаром Поставщик передает Заказчику:\n- полный комплект документов, подтверждающих факт поставки Товара: товарную накладную и счет-фактуру (при наличии) и\\или универсальный передаточный документ, акта приемки товаров, работ, услуг (ф. 0510452), а также счет на оплату Товара;\n",
+      "isTradeInfoHiddenByPrivacyAgreement": false,
+      "isEisContractConclusion": false
+    },
+    "is44FzRnp": true,
+    "is223FzRnp": false,
+    "isCustomerRnp": false,
+    "tradeCancelingDate": null,
+    "protocolPublishedDate": null,
+    "tradeLotCancelReason": null,
+    "rejectReasons": [],
+    "otherReasonCancel": null,
+    "reasonCancelFileId": null,
+    "reasonCancelFileName": null,
+    "reasonCancelFileCreatedOn": null,
+    "supplierRejectReasons": [],
+    "applicationGuarantee": 7646.82,
+    "bestPrice": null,
+    "isPhysicalPersonParticipationProhibited": false,
+    "isManuallyPublishApplicationReviewProtocol": true,
+    "externalTradeInfo": null,
+    "isWinner": false,
+    "isCancelReasonVisible": false,
+    "isRejectApplicationReasonVisible": false,
+    "isDeclineContractReasonVisible": false,
+    "isEtp": false,
+    "applyUrl": null,
+    "detailsUrl": null,
+    "etpTypeName": null,
+    "etpTypeIcon": null,
+    "isCountryOfOriginRequired": true,
+    "isDealPositionQuotationAndQuantityOfferingEnabled": false,
+    "parentTradeId": null,
+    "parentTradeNumber": null,
+    "isSpecificSupplier": false,
+    "specificSupplierSubtype": 0,
+    "isInitialMaximumContractPriceTrade": false,
+    "initialMaximumContractPriceTradeId": null,
+    "initialMaximumContractPriceTradeNumber": null,
+    "initialMaximumContractPriceTradeStatus": null,
+    "initialMaximumContractPriceTradeLotState": 0,
+    "qualifiedSuppliers": [],
+    "specificSupplierTradesInfo": [],
+    "isApprovedDealTermsChangingApprovalExists": false,
+    "isWaitingDealTermsChangingApprovalExists": false,
+    "isSpecificSupplierTradeCanBeCreated": false,
+    "specificSupplierTradeCreationErrors": null,
+    "isSpecificSupplierTenderDiscussionTradeCanBeCreated": false,
+    "specificSupplierTenderDiscussionTradeCreationErrors": null,
+    "specificSupplierTenderDiscussionExistingTradeId": null,
+    "specificSupplierTenderDiscussionExistingTradeStatus": null,
+    "specificSupplierTenderDiscussionExistingTradeNumber": null,
+    "hideTradeInfoFz44": false,
+    "dealState": 0,
+    "contractSendingPeriod": {
+      "type": 2,
+      "period": 1
+    },
+    "customerDateLimit": null,
+    "providerSignDateLimit": null,
+    "regulationDate": null,
+    "changeDealTermsProtocolAnsweringLimit": null,
+    "additionalAgreementSupplierSignLimit": null,
+    "dealTerminationApproveDate": null,
+    "customerContractNumber": null,
+    "stateOrderId": null,
+    "specAccountBank": null,
+    "specAccountBik": null,
+    "specAccountCorrespondingAccount": null,
+    "specAccount": null,
+    "priceSource": 2,
+    "priceSourceOrganizationId": null,
+    "priceSourceOrganizationType": null,
+    "priceSourceOrganizationInn": null,
+    "priceSourceOrganizationKpp": null,
+    "priceSourceOrganizationName": null,
+    "priceCalculationMethod": 1,
+    "priceSourceDocumentsUploadRefused": false,
+    "isPriceSourceHidden": false,
+    "customer": {
+      "id": "71e9d0da-04a5-4242-bc2b-7163e8275437",
+      "name": "ФГБУ \"ВНИИОКЕАНГЕОЛОГИЯ\"",
+      "inn": "7839058780",
+      "kpp": "783901001",
+      "ogrn": "1167847101730",
+      "largestTaxpayerKpp": null,
+      "contactFio": "Сараева Анастасия Владимировна",
+      "contactEmail": "a.saraeva@vniio.ru",
+      "contactPhone": "+7(812)244-00-00(215)",
+      "address": "г Санкт-Петербург, наб Реки Мойки, д 124 литера А",
+      "email": "a.saraeva@vniio.ru",
+      "isIncludedInRostech": false
+    },
+    "subject": "Поставка оборудования для модернизации системы видеонаблюдения по адресу набережная реки Мойки д. 120 литера А и видеокамеры по адресу набережная реки Мойки д. 124 литера А (дополнительно к существующим).",
+    "price": 152936.4,
+    "applicationFillingEndDate": "2026-09-14T11:18:00.64881"
+  },
+  "documents": [
+    {
+      "file_name": "Приложение к Контракту №1.docx",
+      "document_type": 4,
+      "file_id": "689fcc67-f39b-43e7-a424-917b6531c5e0",
+      "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/f85e62bb-5bc6-4591-8c6d-189b91c3242d/4/689fcc67-f39b-43e7-a424-917b6531c5e0",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/100920440126100774/Приложение к Контракту _1.docx",
+      "download_status": "downloaded"
+    },
+    {
+      "file_name": "Приложение к Контракту №2 (Планы).pdf",
+      "document_type": 4,
+      "file_id": "2368d4ca-2921-420a-8029-f6db7901cc53",
+      "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/f85e62bb-5bc6-4591-8c6d-189b91c3242d/4/2368d4ca-2921-420a-8029-f6db7901cc53",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/100920440126100774/Приложение к Контракту _2 (Планы).pdf",
+      "download_status": "downloaded"
+    }
+  ],
+  "selection": {
+    "source": "priority1_limited_batch",
+    "deadline_order": 2
+  }
+}

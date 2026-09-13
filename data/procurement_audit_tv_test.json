@@ -1,0 +1,166 @@
+{
+  "tradeNumber": "100250237126100180",
+  "purchase_id": "31f18b8a-d3b9-4cd8-890c-5d11824fc635",
+  "subject": "Телевизор",
+  "audited_at": "2026-09-08T10:17:11.150406+00:00",
+  "source_model_search_file": "/Users/lubov/Documents/TENDER_AI/data/model_search_tv_test.json",
+  "customer_document_issues": [
+    {
+      "issue_type": "price_justification_model_mismatch",
+      "position_number": 1,
+      "description": "Модель из КП General Electronics GE32LFN0 не соответствует ТЗ: Full HD/LED вместо 4K/OLED.",
+      "evidence": {
+        "model": "General Electronics GE32LFN0",
+        "mismatched_parameters": [
+          "Не соответствует параметру: Разрешение экрана",
+          "Не соответствует параметру: Тип экрана"
+        ],
+        "parameter_check": [
+          {
+            "parameter": "Диагональ экрана",
+            "required_value": ">= 30 и < 35 дюймов",
+            "model_value": "32 дюйма",
+            "result": "complies",
+            "source": "https://general-electronics.com/en/product/led-televizor-ge32lfn0/",
+            "evidence": "Официально указана диагональ 32 дюйма."
+          },
+          {
+            "parameter": "Разрешение экрана",
+            "required_value": "4K UHD",
+            "model_value": "Full HD",
+            "result": "does_not_comply",
+            "source": "https://general-electronics.com/en/product/led-televizor-ge32lfn0/",
+            "evidence": "Официально указано Full HD, а требуется 4K UHD."
+          },
+          {
+            "parameter": "Тип экрана",
+            "required_value": "OLED",
+            "model_value": "LED, матрица VA",
+            "result": "does_not_comply",
+            "source": "https://general-electronics.com/en/product/led-televizor-ge32lfn0/",
+            "evidence": "Официально указан LED/VA, а требуется OLED."
+          }
+        ],
+        "source_document": "кп.pdf"
+      },
+      "severity": "high"
+    },
+    {
+      "issue_type": "price_justification_model_mismatch",
+      "position_number": 2,
+      "description": "Модель из КП DEXP 43UCY3 не соответствует ТЗ: LED вместо OLED.",
+      "evidence": {
+        "model": "DEXP 43UCY3",
+        "mismatched_parameters": [
+          "Не соответствует параметру: Тип экрана"
+        ],
+        "parameter_check": [
+          {
+            "parameter": "Диагональ экрана",
+            "required_value": ">= 40 и < 45 дюймов",
+            "model_value": "43 дюйма",
+            "result": "complies",
+            "source": "https://www.dns-shop.kz/product/characteristics/1ecd772ee75fed20/43-108-sm-televizor-dexp-43ucy3-cernyj/",
+            "evidence": "Указана диагональ 43 дюйма."
+          },
+          {
+            "parameter": "Разрешение экрана",
+            "required_value": "4K UHD",
+            "model_value": "3840×2160, 4K",
+            "result": "complies",
+            "source": "https://www.dns-shop.kz/product/characteristics/1ecd772ee75fed20/43-108-sm-televizor-dexp-43ucy3-cernyj/",
+            "evidence": "Указан стандарт 4K."
+          },
+          {
+            "parameter": "Тип экрана",
+            "required_value": "OLED",
+            "model_value": "LED",
+            "result": "does_not_comply",
+            "source": "https://www.dns-shop.kz/product/characteristics/1ecd772ee75fed20/43-108-sm-televizor-dexp-43ucy3-cernyj/",
+            "evidence": "Карточка называет модель LED-телевизором; OLED не подтвержден."
+          }
+        ],
+        "source_document": "кп.pdf"
+      },
+      "severity": "high"
+    },
+    {
+      "issue_type": "quantity_mismatch",
+      "position_number": 2,
+      "description": "В КП указана 1 штука второй позиции, в карточке ЕАТ и ТЗ — 2 штуки.",
+      "evidence": {
+        "commercial_offer_quantity": 1,
+        "eat_quantity": 2,
+        "tz_quantity": 2,
+        "source_document": "кп.pdf"
+      },
+      "severity": "high"
+    },
+    {
+      "issue_type": "nmck_not_supported",
+      "position_number": null,
+      "description": "Итог КП 54 100 ₽ не подтверждает НМЦК 80 700 ₽.",
+      "evidence": {
+        "commercial_offer_total_rub": 54100,
+        "eat_nmck_rub": 80700,
+        "difference_rub": 26600,
+        "commercial_offer_line_totals_rub": [
+          27500,
+          26600
+        ]
+      },
+      "severity": "high"
+    },
+    {
+      "issue_type": "possible_customer_tz_error",
+      "position_number": null,
+      "description": "Найденные серийные OLED 4K телевизоры требуемой диагонали существенно дороже заложенной цены.",
+      "evidence": {
+        "position_2_threshold_rub": 21280,
+        "confirmed_models": [
+          {
+            "model": "LG OLED42C6RLA",
+            "russian_price_rub": 86230
+          },
+          {
+            "model": "Samsung QE42S90F",
+            "russian_price_rub": 87800
+          }
+        ],
+        "position_1_fully_compliant_models_found": 0
+      },
+      "severity": "warning"
+    }
+  ],
+  "customer_document_issues_summary_ru": "КП не соответствует ТЗ: GE32LFN0 — Full HD/LED вместо 4K/OLED; DEXP 43UCY3 — LED вместо OLED; количество в КП не совпадает с ЕАТ; итог КП не обосновывает НМЦК.",
+  "google_sheets_future_field": {
+    "column": "ОШИБКИ В ДОКУМЕНТАХ ЗАКАЗЧИКА",
+    "value": "КП не соответствует ТЗ: GE32LFN0 — Full HD/LED вместо 4K/OLED; DEXP 43UCY3 — LED вместо OLED; количество в КП не совпадает с ЕАТ; итог КП не обосновывает НМЦК."
+  },
+  "position_classification": [
+    {
+      "position_number": 1,
+      "final_reasons_ru": [
+        "Обоснование НМЦК не соответствует ТЗ",
+        "Нет модели, полностью соответствующей всем требованиям ТЗ"
+      ]
+    },
+    {
+      "position_number": 2,
+      "final_reasons_ru": [
+        "Обоснование НМЦК не соответствует ТЗ",
+        "Модель существует, но цена выше ценового порога"
+      ]
+    }
+  ],
+  "automatic_supplier_search_allowed": false,
+  "final_reasons_ru": [
+    "Обоснование НМЦК не соответствует ТЗ",
+    "Противоречие количества/суммы",
+    "ТЗ содержит вероятную ошибку заказчика",
+    "Модель существует, но цена выше ценового порога",
+    "Нет модели, полностью соответствующей всем требованиям ТЗ"
+  ],
+  "supplier_search_status": "do_not_search_customer_justification_error",
+  "supplier_search_status_ru": "Не тратить время — ошибка/несоответствие в обосновании НМЦК"
+}

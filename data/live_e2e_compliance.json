@@ -1,0 +1,182 @@
+{
+  "model": "CyberPower PR1500ELCD",
+  "official_sources": [
+    "https://www.cyberpower.com/ru/ru/product/sku/PR1500ELCD"
+  ],
+  "requirements_count": 14,
+  "assessment": {
+    "requirements_check": [
+      {
+        "requirement": "Активная мощность",
+        "required_value": "≥ 1200Ватт",
+        "operator": "minimum",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Верхняя граница диапазона входного напряжения (фаза-нейтраль) без перехода в режим работы от батарей",
+        "required_value": "≥ 300 Вольт",
+        "operator": "minimum",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Коэффициент полезного действия ИБП",
+        "required_value": "≥ 97",
+        "operator": "minimum",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Возможность замены аккумуляторной батареи пользователем",
+        "required_value": "Да",
+        "operator": "equals",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Емкость одного аккумулятора",
+        "required_value": "≥ 15",
+        "operator": "minimum",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Максимально-допустимое номинальное напряжение аккумуляторных батарей",
+        "required_value": "12 Вольт",
+        "operator": "equals",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Масса",
+        "required_value": "≤ 50\tКилограмм",
+        "operator": "maximum",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Номинальная входная частота",
+        "required_value": "50 Герц",
+        "operator": "equals",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Форм-фактор источника бесперебойного питания",
+        "required_value": "Отдельно стоящий (напольный)",
+        "operator": "equals",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Минимальная температура окружающей среды без снижения паспортных и эксплуатационных характеристик, ограничений по времени работы, гарантийных ограничений",
+        "required_value": "0",
+        "operator": "equals",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Наличие дисплея",
+        "required_value": "Да",
+        "operator": "equals",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Нижняя граница диапазона входного напряжения (фаза-нейтраль) без перехода в режим работы от батарей",
+        "required_value": "≤ 155 Вольт",
+        "operator": "maximum",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "Номинальное входное напряжение",
+        "required_value": "≥ 220  и  < 240",
+        "operator": "minimum",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      },
+      {
+        "requirement": "1.  Место поставки товара",
+        "required_value": "123242, г. Москва, Большая Грузинская улица, 4/6, стр. 1, по рабочим дням.",
+        "operator": "equals",
+        "unit": null,
+        "found_value": null,
+        "source": null,
+        "source_page": null,
+        "evidence": null,
+        "result": "could_not_confirm",
+        "confidence": "low"
+      }
+    ],
+    "status": "not_confirmed",
+    "technical_status": "not_confirmed",
+    "status_ru": "Соответствие не подтверждено"
+  }
+}

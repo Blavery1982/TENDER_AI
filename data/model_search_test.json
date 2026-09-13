@@ -1,0 +1,779 @@
+{
+  "tradeNumber": "100309200126100271",
+  "subject": "Поставка фильтров мембранных для обеспечения государственных нужд ФКУЗ Ставропольский противочумный институт Роспотребнадзора в рамках реализации распоряжения Правительства РФ от 22.01.2026 N 64-р",
+  "searched_at": "2026-09-13T14:35:59.977384+00:00",
+  "stages": [
+    "technical_discovery",
+    "price_discovery"
+  ],
+  "positions": [
+    {
+      "item_index": 1,
+      "item_name": "Фильтр мембранный капсульный",
+      "customer_unit_price": 11200.0,
+      "target_price_80_percent": 8960.0,
+      "search_query_terms": [
+        "Мембрана гидрофобная PTFE, микробный рейтинг – 0,2 мкм",
+        "Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут Требуется",
+        "Адаптер ТС1",
+        "Эффективная зона фильтрации не менее 0,045 м кв.",
+        "Соответствие международным стандартам FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+        "Содержание эндотоксинов не более 0,25Eu/ml"
+      ],
+      "requirements": [
+        {
+          "parameter": "Стерилизующий фильтр для технологических газов",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Капсула фильтрующая",
+          "required_value": "",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Мембрана гидрофобная",
+          "required_value": "PTFE, микробный рейтинг – 0,2 мкм",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Адаптер",
+          "required_value": "ТС1",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Эффективная зона фильтрации",
+          "required_value": "не менее 0,045 м кв.",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+          "required_value": "Требуется",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Содержание эндотоксинов",
+          "required_value": "не более 0,25Eu/ml",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Соответствие международным стандартам",
+          "required_value": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Наличие с каждым фильтром результата теста о прохождении целостности",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Руководство по валидации",
+          "required_value": "наличие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 1",
+          "criticality": "mandatory"
+        }
+      ],
+      "candidate_models": [
+        {
+          "brand": "Pall",
+          "model": "Emflon PFRW Kleenpak KA1PFRW1",
+          "market_price": null,
+          "market_price_source": null,
+          "price_check_status": "price_not_confirmed",
+          "technical_status": "non_compliant",
+          "parameter_check": [
+            {
+              "parameter": "Стерилизующий фильтр для технологических газов",
+              "tz_requirement": "соответствие.",
+              "model_value": "Стерильная фильтрация воздуха и газов",
+              "result": "complies",
+              "source": "https://shop.pall.com/us/en/products/zidKA1PFRW1",
+              "evidence": "Стерильная фильтрация воздуха и газов"
+            },
+            {
+              "parameter": "Капсула фильтрующая",
+              "tz_requirement": "",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Мембрана гидрофобная",
+              "tz_requirement": "PTFE, микробный рейтинг – 0,2 мкм",
+              "model_value": "Гидрофобная двухслойная PTFE",
+              "result": "complies",
+              "source": "https://shop.pall.com/us/en/products/zidKA1PFRW1",
+              "evidence": "Гидрофобная двухслойная PTFE"
+            },
+            {
+              "parameter": "Адаптер",
+              "tz_requirement": "ТС1",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Эффективная зона фильтрации",
+              "tz_requirement": "не менее 0,045 м кв.",
+              "model_value": "0,04 м²",
+              "result": "does_not_comply",
+              "source": "https://shop.pall.com/us/en/food-beverage/zidimmfdh4o",
+              "evidence": "0,04 м²"
+            },
+            {
+              "parameter": "Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+              "tz_requirement": "Требуется",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Содержание эндотоксинов",
+              "tz_requirement": "не более 0,25Eu/ml",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Соответствие международным стандартам",
+              "tz_requirement": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Наличие с каждым фильтром результата теста о прохождении целостности",
+              "tz_requirement": "соответствие.",
+              "model_value": "Заводской тест целостности",
+              "result": "complies",
+              "source": "https://shop.pall.com/us/en/products/zidKA1PFRW1",
+              "evidence": "Заводской тест целостности"
+            },
+            {
+              "parameter": "Руководство по валидации",
+              "tz_requirement": "наличие.",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            }
+          ],
+          "unconfirmed_parameters": [
+            "Капсула фильтрующая",
+            "Адаптер",
+            "Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+            "Содержание эндотоксинов",
+            "Соответствие международным стандартам",
+            "Руководство по валидации"
+          ],
+          "mismatched_parameters": [
+            "Эффективная зона фильтрации"
+          ],
+          "confidence": "high",
+          "rejection_reasons": [
+            "Не соответствует параметру: Эффективная зона фильтрации",
+            "Не удалось подтвердить параметр: Капсула фильтрующая",
+            "Не удалось подтвердить параметр: Адаптер",
+            "Не удалось подтвердить параметр: Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+            "Не удалось подтвердить параметр: Содержание эндотоксинов",
+            "Не удалось подтвердить параметр: Соответствие международным стандартам",
+            "Не удалось подтвердить параметр: Руководство по валидации",
+            "Доступность для поставки в РФ не подтверждена"
+          ],
+          "technical_sources": [
+            "https://shop.pall.com/us/en/products/zidKA1PFRW1",
+            "https://shop.pall.com/us/en/food-beverage/zidimmfdh4o"
+          ],
+          "production_status": "in_production",
+          "production_status_ru": "Модель представлена в актуальном каталоге производителя",
+          "production_status_sources": [
+            "https://shop.pall.com/us/en/products/zidKA1PFRW1",
+            "https://shop.pall.com/us/en/food-beverage/zidimmfdh4o"
+          ],
+          "production_status_note": "Найдена действующая страница модели производителя; сведений о снятии с производства не обнаружено.",
+          "russia_availability": "not_confirmed",
+          "russia_availability_ru": "Доступность для поставки в РФ не подтверждена",
+          "russia_availability_sources": [],
+          "russia_availability_note": "Подтверждающая страница российского рынка для точной модели не найдена.",
+          "price_discovery_status": "not_started_technical_check_failed"
+        },
+        {
+          "brand": "Sartorius",
+          "model": "Sartofluor LG Capsule 5181307T5--OO--D",
+          "market_price": null,
+          "market_price_source": null,
+          "price_check_status": "price_not_confirmed",
+          "technical_status": "non_compliant",
+          "parameter_check": [
+            {
+              "parameter": "Стерилизующий фильтр для технологических газов",
+              "tz_requirement": "соответствие.",
+              "model_value": "Стерильная фильтрация газов",
+              "result": "complies",
+              "source": "https://shop.sartorius.com/ch/p/sartofluor-lg-capsule-02-m-size-5/5181307T5--OO--D",
+              "evidence": "Стерильная фильтрация газов"
+            },
+            {
+              "parameter": "Капсула фильтрующая",
+              "tz_requirement": "",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Мембрана гидрофобная",
+              "tz_requirement": "PTFE, микробный рейтинг – 0,2 мкм",
+              "model_value": "Гидрофобная PTFE",
+              "result": "complies",
+              "source": "https://shop.sartorius.com/ch/p/sartofluor-lg-capsule-02-m-size-5/5181307T5--OO--D",
+              "evidence": "Гидрофобная PTFE"
+            },
+            {
+              "parameter": "Адаптер",
+              "tz_requirement": "ТС1",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Эффективная зона фильтрации",
+              "tz_requirement": "не менее 0,045 м кв.",
+              "model_value": "0,03 м²",
+              "result": "does_not_comply",
+              "source": "https://shop.sartorius.com/ch/p/sartofluor-lg-capsule-02-m-size-5/5181307T5--OO--D",
+              "evidence": "0,03 м²"
+            },
+            {
+              "parameter": "Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+              "tz_requirement": "Требуется",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Содержание эндотоксинов",
+              "tz_requirement": "не более 0,25Eu/ml",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Соответствие международным стандартам",
+              "tz_requirement": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Наличие с каждым фильтром результата теста о прохождении целостности",
+              "tz_requirement": "соответствие.",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            },
+            {
+              "parameter": "Руководство по валидации",
+              "tz_requirement": "наличие.",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": null,
+              "evidence": null
+            }
+          ],
+          "unconfirmed_parameters": [
+            "Капсула фильтрующая",
+            "Адаптер",
+            "Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+            "Содержание эндотоксинов",
+            "Соответствие международным стандартам",
+            "Наличие с каждым фильтром результата теста о прохождении целостности",
+            "Руководство по валидации"
+          ],
+          "mismatched_parameters": [
+            "Эффективная зона фильтрации"
+          ],
+          "confidence": "high",
+          "rejection_reasons": [
+            "Не соответствует параметру: Эффективная зона фильтрации",
+            "Не удалось подтвердить параметр: Капсула фильтрующая",
+            "Не удалось подтвердить параметр: Адаптер",
+            "Не удалось подтвердить параметр: Количество стерилизаций не менее 30 циклов при температуре 125 градусов Цельсия,  30 минут",
+            "Не удалось подтвердить параметр: Содержание эндотоксинов",
+            "Не удалось подтвердить параметр: Соответствие международным стандартам",
+            "Не удалось подтвердить параметр: Наличие с каждым фильтром результата теста о прохождении целостности",
+            "Не удалось подтвердить параметр: Руководство по валидации",
+            "Доступность для поставки в РФ не подтверждена"
+          ],
+          "technical_sources": [
+            "https://shop.sartorius.com/ch/p/sartofluor-lg-capsule-02-m-size-5/5181307T5--OO--D"
+          ],
+          "production_status": "in_production",
+          "production_status_ru": "Модель представлена в актуальном каталоге производителя",
+          "production_status_sources": [
+            "https://shop.sartorius.com/ch/p/sartofluor-lg-capsule-02-m-size-5/5181307T5--OO--D"
+          ],
+          "production_status_note": "Найдена действующая страница модели производителя; сведений о снятии с производства не обнаружено.",
+          "russia_availability": "not_confirmed",
+          "russia_availability_ru": "Доступность для поставки в РФ не подтверждена",
+          "russia_availability_sources": [],
+          "russia_availability_note": "Подтверждающая страница российского рынка для точной модели не найдена.",
+          "price_discovery_status": "not_started_technical_check_failed"
+        }
+      ],
+      "models_for_supplier_search": [],
+      "admitted_models": [],
+      "result_ru": "ПРОДОЛЖИТЬ ПОИСК МОДЕЛЕЙ — недостаточно полностью подтверждённых кандидатов"
+    },
+    {
+      "item_index": 2,
+      "item_name": "Фильтр мембранный",
+      "customer_unit_price": 11600.0,
+      "target_price_80_percent": 9280.0,
+      "search_query_terms": [
+        "Стерилизация в линии 140С, 60 мин не менее 40 циклов",
+        "Стерилизация в линии 126С, 60 мин не менее 60 циклов",
+        "Размер пор не более 0,2 мкм",
+        "Площадь фильтрации не менее 0,37м2",
+        "Максимальный перепад давления при прямом потоке не менее 5,2 бар при температуре 15С0",
+        "Максимальный перепад давления при обратном потоке не менее 2,1 бар при температуре 15С0"
+      ],
+      "requirements": [
+        {
+          "parameter": "Стерилизующий фильтр для технологических газов",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Материал мембраны",
+          "required_value": "гидрофобный политетрафторэтилен -  PTFE",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Размер пор",
+          "required_value": "не более 0,2 мкм",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Площадь фильтрации",
+          "required_value": "не менее 0,37м2",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Высота фильтроэлемента",
+          "required_value": "5 дюймов для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Адаптер",
+          "required_value": "Т 126- для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Максимальный перепад давления при прямом потоке",
+          "required_value": "не менее 5,2 бар при температуре 15С0",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Максимальный перепад давления при обратном потоке",
+          "required_value": "не менее 2,1 бар при температуре 15С0",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Содержание эндотоксинов",
+          "required_value": "не более 0,25Eu/ml",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Экстрагируемые вещества",
+          "required_value": "не более 15mg/10 дюймов",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Автоклавирование 126С, 60 мин",
+          "required_value": "не менее 60 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Автоклавирование 140С, 60 мин",
+          "required_value": "не менее 40 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Стерилизация в линии 126С, 60 мин",
+          "required_value": "не менее 60 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Стерилизация в линии 140С, 60 мин",
+          "required_value": "не менее 40 циклов",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Тест целостности",
+          "required_value": "",
+          "comparison_type": "equals",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Точка пузырька 25С",
+          "required_value": "не менее 1бар",
+          "comparison_type": "minimum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Диффузионный поток 25С, 0.8 бар",
+          "required_value": "не более 30мл/мин",
+          "comparison_type": "maximum",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Соответствие международным стандартам",
+          "required_value": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Наличие с каждым фильтров результата теста о прохождении целостности",
+          "required_value": "соответствие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        },
+        {
+          "parameter": "Руководство по валидации",
+          "required_value": "наличие.",
+          "comparison_type": "required",
+          "source": "Карточка ЕАТ, позиция 2",
+          "criticality": "mandatory"
+        }
+      ],
+      "candidate_models": [
+        {
+          "brand": "Parker domnick hunter",
+          "model": "HIGH FLOW TETPOR II ZHFT/A T (уплотнение не определено)",
+          "market_price": null,
+          "market_price_source": null,
+          "price_check_status": "price_not_confirmed",
+          "technical_status": "not_confirmed",
+          "parameter_check": [
+            {
+              "parameter": "Стерилизующий фильтр для технологических газов",
+              "tz_requirement": "соответствие.",
+              "model_value": "Стерилизующий фильтр воздуха/газов",
+              "result": "complies",
+              "source": "https://www.parker.com/content/dam/Parker-com/Countries-2011/South-Korea/Support/Literature/KFD/%EC%A0%9C%EC%95%BD-%EB%B0%8F-%EB%B0%94%EC%9D%B4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%82%B0%EC%97%85-%ED%95%84%ED%84%B0-%EC%A0%9C%ED%92%88-%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8_Filtration_%ED%8C%8C%EC%B9%B4%EC%BD%94%EB%A6%AC%EC%95%84_%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8.pdf",
+              "evidence": "Стерилизующий фильтр воздуха/газов"
+            },
+            {
+              "parameter": "Материал мембраны",
+              "tz_requirement": "гидрофобный политетрафторэтилен -  PTFE",
+              "model_value": "PTFE",
+              "result": "complies",
+              "source": "https://www.parker.com/content/dam/Parker-com/Countries-2011/South-Korea/Support/Literature/KFD/%EC%A0%9C%EC%95%BD-%EB%B0%8F-%EB%B0%94%EC%9D%B4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%82%B0%EC%97%85-%ED%95%84%ED%84%B0-%EC%A0%9C%ED%92%88-%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8_Filtration_%ED%8C%8C%EC%B9%B4%EC%BD%94%EB%A6%AC%EC%95%84_%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8.pdf",
+              "evidence": "PTFE"
+            },
+            {
+              "parameter": "Размер пор",
+              "tz_requirement": "не более 0,2 мкм",
+              "model_value": "0,2 мкм",
+              "result": "complies",
+              "source": "https://www.parker.com/content/dam/Parker-com/Countries-2011/South-Korea/Support/Literature/KFD/%EC%A0%9C%EC%95%BD-%EB%B0%8F-%EB%B0%94%EC%9D%B4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%82%B0%EC%97%85-%ED%95%84%ED%84%B0-%EC%A0%9C%ED%92%88-%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8_Filtration_%ED%8C%8C%EC%B9%B4%EC%BD%94%EB%A6%AC%EC%95%84_%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8.pdf",
+              "evidence": "0,2 мкм"
+            },
+            {
+              "parameter": "Площадь фильтрации",
+              "tz_requirement": "не менее 0,37м2",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Высота фильтроэлемента",
+              "tz_requirement": "5 дюймов для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+              "model_value": "5 дюймов (код A)",
+              "result": "complies",
+              "source": "https://www.parker.com/content/dam/Parker-com/Countries-2011/South-Korea/Support/Literature/KFD/%EC%A0%9C%EC%95%BD-%EB%B0%8F-%EB%B0%94%EC%9D%B4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%82%B0%EC%97%85-%ED%95%84%ED%84%B0-%EC%A0%9C%ED%92%88-%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8_Filtration_%ED%8C%8C%EC%B9%B4%EC%BD%94%EB%A6%AC%EC%95%84_%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8.pdf",
+              "evidence": "5 дюймов (код A)"
+            },
+            {
+              "parameter": "Адаптер",
+              "tz_requirement": "Т 126- для оборудования имеющегося у Заказчика  - корпус фильтра domnick hunter demi HSI Plus санитарный, 316L, под фильтроэлементы 5” на Т 126, вход\\выход 1 ½” Tri-Clamp, воздушка и дренаж «под шланг»",
+              "model_value": "TRUESEAL (код T)",
+              "result": "complies",
+              "source": "https://www.parker.com/content/dam/Parker-com/Countries-2011/South-Korea/Support/Literature/KFD/%EC%A0%9C%EC%95%BD-%EB%B0%8F-%EB%B0%94%EC%9D%B4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%82%B0%EC%97%85-%ED%95%84%ED%84%B0-%EC%A0%9C%ED%92%88-%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8_Filtration_%ED%8C%8C%EC%B9%B4%EC%BD%94%EB%A6%AC%EC%95%84_%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8.pdf",
+              "evidence": "TRUESEAL (код T)"
+            },
+            {
+              "parameter": "Максимальный перепад давления при прямом потоке",
+              "tz_requirement": "не менее 5,2 бар при температуре 15С0",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Максимальный перепад давления при обратном потоке",
+              "tz_requirement": "не менее 2,1 бар при температуре 15С0",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Содержание эндотоксинов",
+              "tz_requirement": "не более 0,25Eu/ml",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Экстрагируемые вещества",
+              "tz_requirement": "не более 15mg/10 дюймов",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Автоклавирование 126С, 60 мин",
+              "tz_requirement": "не менее 60 циклов",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Автоклавирование 140С, 60 мин",
+              "tz_requirement": "не менее 40 циклов",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Стерилизация в линии 126С, 60 мин",
+              "tz_requirement": "не менее 60 циклов",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Стерилизация в линии 140С, 60 мин",
+              "tz_requirement": "не менее 40 циклов",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Тест целостности",
+              "tz_requirement": "",
+              "model_value": "Все картриджи проходят заводской тест целостности методом диффузионного потока и аэрозольного испытания",
+              "result": "complies",
+              "source": "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+              "evidence": "Все картриджи проходят заводской тест целостности методом диффузионного потока и аэрозольного испытания"
+            },
+            {
+              "parameter": "Точка пузырька 25С",
+              "tz_requirement": "не менее 1бар",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Диффузионный поток 25С, 0.8 бар",
+              "tz_requirement": "не более 30мл/мин",
+              "model_value": "Для размера A: 5,6 мл/мин при 0,8 бар",
+              "result": "complies",
+              "source": "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+              "evidence": "Для размера A: 5,6 мл/мин при 0,8 бар"
+            },
+            {
+              "parameter": "Соответствие международным стандартам",
+              "tz_requirement": "FDA 21 CFR 177 ISO 10993-Part 1, 5 USP Class VI-121 ° C Regulation (EC) No 1935/2004",
+              "model_value": "21 CFR 177; EC1935/2004; USP Class VI; ISO10993",
+              "result": "complies",
+              "source": "https://www.parker.com/content/dam/Parker-com/Countries-2011/South-Korea/Support/Literature/KFD/%EC%A0%9C%EC%95%BD-%EB%B0%8F-%EB%B0%94%EC%9D%B4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%82%B0%EC%97%85-%ED%95%84%ED%84%B0-%EC%A0%9C%ED%92%88-%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8_Filtration_%ED%8C%8C%EC%B9%B4%EC%BD%94%EB%A6%AC%EC%95%84_%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8.pdf",
+              "evidence": "21 CFR 177; EC1935/2004; USP Class VI; ISO10993"
+            },
+            {
+              "parameter": "Наличие с каждым фильтров результата теста о прохождении целостности",
+              "tz_requirement": "соответствие.",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            },
+            {
+              "parameter": "Руководство по валидации",
+              "tz_requirement": "наличие.",
+              "model_value": null,
+              "result": "not_confirmed",
+              "source": [
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+                "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+              ],
+              "evidence": "В изученных официальных документах Parker точное требуемое значение не найдено."
+            }
+          ],
+          "unconfirmed_parameters": [
+            "Площадь фильтрации",
+            "Максимальный перепад давления при прямом потоке",
+            "Максимальный перепад давления при обратном потоке",
+            "Содержание эндотоксинов",
+            "Экстрагируемые вещества",
+            "Автоклавирование 126С, 60 мин",
+            "Автоклавирование 140С, 60 мин",
+            "Стерилизация в линии 126С, 60 мин",
+            "Стерилизация в линии 140С, 60 мин",
+            "Точка пузырька 25С",
+            "Наличие с каждым фильтров результата теста о прохождении целостности",
+            "Руководство по валидации"
+          ],
+          "mismatched_parameters": [],
+          "confidence": "high",
+          "rejection_reasons": [
+            "Не удалось подтвердить параметр: Площадь фильтрации",
+            "Не удалось подтвердить параметр: Максимальный перепад давления при прямом потоке",
+            "Не удалось подтвердить параметр: Максимальный перепад давления при обратном потоке",
+            "Не удалось подтвердить параметр: Содержание эндотоксинов",
+            "Не удалось подтвердить параметр: Экстрагируемые вещества",
+            "Не удалось подтвердить параметр: Автоклавирование 126С, 60 мин",
+            "Не удалось подтвердить параметр: Автоклавирование 140С, 60 мин",
+            "Не удалось подтвердить параметр: Стерилизация в линии 126С, 60 мин",
+            "Не удалось подтвердить параметр: Стерилизация в линии 140С, 60 мин",
+            "Не удалось подтвердить параметр: Точка пузырька 25С",
+            "Не удалось подтвердить параметр: Наличие с каждым фильтров результата теста о прохождении целостности",
+            "Не удалось подтвердить параметр: Руководство по валидации",
+            "Актуальность производства не подтверждена"
+          ],
+          "technical_sources": [
+            "https://www.parker.com/content/dam/Parker-com/Countries-2011/South-Korea/Support/Literature/KFD/%EC%A0%9C%EC%95%BD-%EB%B0%8F-%EB%B0%94%EC%9D%B4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%82%B0%EC%97%85-%ED%95%84%ED%84%B0-%EC%A0%9C%ED%92%88-%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8_Filtration_%ED%8C%8C%EC%B9%B4%EC%BD%94%EB%A6%AC%EC%95%84_%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8.pdf",
+            "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+            "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf"
+          ],
+          "production_status": "production_not_confirmed",
+          "production_status_ru": "Актуальность производства не подтверждена",
+          "production_status_sources": [
+            "https://www.parker.com/content/dam/Parker-com/Countries-2011/South-Korea/Support/Literature/KFD/%EC%A0%9C%EC%95%BD-%EB%B0%8F-%EB%B0%94%EC%9D%B4%EC%98%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%82%B0%EC%97%85-%ED%95%84%ED%84%B0-%EC%A0%9C%ED%92%88-%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8_Filtration_%ED%8C%8C%EC%B9%B4%EC%BD%94%EB%A6%AC%EC%95%84_%EC%B9%B4%ED%83%88%EB%A1%9C%EA%B7%B8.pdf",
+            "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/FoodBev/UK-Lit/DS_FBG_02_HF_TETPOR_II_1B.pdf",
+            "https://www.parker.com/content/dam/Parker-com/Literature/Bioscience-Division/LS/Datasheets/High_Flow_Tetpor-II_Air-Gas_Filter_Datasheet.pdf",
+            "https://www.radwell.com/Buy/PARKER/DOMNICK%20HUNTER/ZHFT-DIV-AT"
+          ],
+          "production_status_note": "Серия присутствует в материалах Parker, но независимый источник помечает базовый ZHFT/AT как discontinued; официальный статус точного исполнения не найден.",
+          "russia_availability": "available_to_order",
+          "russia_availability_ru": "Доступно к заказу в России",
+          "russia_availability_sources": [
+            "https://ru-parker.com/zhftat-v/",
+            "https://ei.spb.ru/product/413632",
+            "https://parker-filter.ru/index.php?id=49864"
+          ],
+          "russia_availability_note": "Найдены российские страницы с заказом по запросу и доставкой по РФ; числовая цена не опубликована.",
+          "price_discovery_status": "not_started_technical_check_failed"
+        }
+      ],
+      "models_for_supplier_search": [],
+      "admitted_models": [],
+      "result_ru": "ПРОДОЛЖИТЬ ПОИСК МОДЕЛЕЙ — недостаточно полностью подтверждённых кандидатов"
+    }
+  ]
+}

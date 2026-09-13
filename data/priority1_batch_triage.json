@@ -1,0 +1,167 @@
+[
+  {
+    "fixture": "/Users/lubov/Documents/TENDER_AI/data/priority1_batch_fixtures/100099468126100096.json",
+    "id": "880c9b6e-e4ff-4e10-a831-ecf86e25aa21",
+    "trade_number": "100099468126100096",
+    "deadline": "2026-09-15T10:39:00",
+    "items_count": 1,
+    "documents_processed": 1,
+    "audit_status": "analyzed",
+    "exact_items": [],
+    "queue": {
+      "priority": 2,
+      "queue": "PRIORITY_2_MODEL_NOT_SPECIFIED",
+      "deadline": "2026-09-15T10:39:00",
+      "exact_models": []
+    }
+  },
+  {
+    "fixture": "/Users/lubov/Documents/TENDER_AI/data/priority1_batch_fixtures/100110512126100716.json",
+    "id": "1219e37d-4823-499b-97bc-006e9c338180",
+    "trade_number": "100110512126100716",
+    "deadline": "2026-09-15T06:00:00",
+    "items_count": 5,
+    "documents_processed": 3,
+    "audit_status": "analyzed",
+    "exact_items": [
+      {
+        "item_number": 2,
+        "model": "FASTON F2",
+        "mode": "EXACT_MODEL_OR_EQUIVALENT",
+        "requirements": 11
+      },
+      {
+        "item_number": 5,
+        "model": "UTP 4PR",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 10
+      }
+    ],
+    "queue": {
+      "priority": 2,
+      "queue": "PRIORITY_2_MODEL_NOT_SPECIFIED",
+      "deadline": "2026-09-15T06:00:00",
+      "exact_models": [
+        "FASTON F2"
+      ]
+    }
+  },
+  {
+    "fixture": "/Users/lubov/Documents/TENDER_AI/data/priority1_batch_fixtures/100920440126100773.json",
+    "id": "9a9f34bf-9eee-44e7-8961-d743c35e8e0c",
+    "trade_number": "100920440126100773",
+    "deadline": "2026-09-14T11:09:00.12829",
+    "items_count": 10,
+    "documents_processed": 2,
+    "audit_status": "analyzed",
+    "exact_items": [
+      {
+        "item_number": 2,
+        "model": "Optimus NVR-5362",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 3,
+        "model": "Optimus U1IC-16F/2G/1S",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 4,
+        "model": "Optimus IP-S015.0",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 5,
+        "model": "Optimus IP-S015.0",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 6,
+        "model": "Optimus IP-S025.0",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 7,
+        "model": "Optimus IP-S015.0",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 8,
+        "model": "FTR SE Eletec 4х2хAWG24",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      }
+    ],
+    "queue": {
+      "priority": 2,
+      "queue": "PRIORITY_2_MODEL_NOT_SPECIFIED",
+      "deadline": "2026-09-14T11:09:00.12829",
+      "exact_models": []
+    }
+  },
+  {
+    "fixture": "/Users/lubov/Documents/TENDER_AI/data/priority1_batch_fixtures/100920440126100774.json",
+    "id": "f85e62bb-5bc6-4591-8c6d-189b91c3242d",
+    "trade_number": "100920440126100774",
+    "deadline": "2026-09-14T11:18:00.64881",
+    "items_count": 10,
+    "documents_processed": 2,
+    "audit_status": "analyzed",
+    "exact_items": [
+      {
+        "item_number": 2,
+        "model": "Optimus NVR-5362",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 3,
+        "model": "Optimus U1IC-16F/2G/1S",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 4,
+        "model": "Optimus IP-S015.0",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 5,
+        "model": "Optimus IP-S015.0",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 6,
+        "model": "Optimus IP-S025.0",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 7,
+        "model": "Optimus IP-S015.0",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      },
+      {
+        "item_number": 8,
+        "model": "FTR SE Eletec 4х2хAWG24",
+        "mode": "MODEL_MODE_REVIEW_REQUIRED",
+        "requirements": 0
+      }
+    ],
+    "queue": {
+      "priority": 2,
+      "queue": "PRIORITY_2_MODEL_NOT_SPECIFIED",
+      "deadline": "2026-09-14T11:18:00.64881",
+      "exact_models": []
+    }
+  }
+]

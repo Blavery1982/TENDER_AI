@@ -1,0 +1,8 @@
+{
+  "ai_mode": "AUTO",
+  "fallback_to_core": true,
+  "explicit_mode_fallback_to_other_ai": false,
+  "request_timeout_seconds": 20,
+  "ai_daily_limit": null,
+  "ai_monthly_limit": null
+}

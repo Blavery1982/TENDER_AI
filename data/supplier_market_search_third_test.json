@@ -1,0 +1,5197 @@
+{
+  "procurement": {
+    "trade_number": "100205573126100053",
+    "model": "RC-TWN28HN",
+    "quantity": 3,
+    "customer_unit_price": 25400,
+    "nmck": 76200,
+    "delivery_city_region": "Москва, ул. Матросская Тишина, д. 18",
+    "supplier_target_discount_percent": 15,
+    "supplier_target_price": 21590.0
+  },
+  "search": {
+    "searched_at": "2026-09-09T09:07:57.304338+00:00",
+    "fresh_price_check_date": "2026-09-09",
+    "marketplaces": [
+      {
+        "name": "Ozon",
+        "status": "Карточка точной модели не найдена в доступной выдаче"
+      },
+      {
+        "name": "Wildberries",
+        "status": "Карточка точной модели не найдена в доступной выдаче"
+      },
+      {
+        "name": "Яндекс Маркет",
+        "status": "Карточка точной модели не найдена в доступной выдаче"
+      }
+    ],
+    "federal": [
+      {
+        "name": "ВсеИнструменты",
+        "status": "Найдена инструкция с моделью, товарная карточка не найдена"
+      },
+      {
+        "name": "Citilink",
+        "status": "Карточка точной модели не найдена"
+      },
+      {
+        "name": "Xcom",
+        "status": "Карточка точной модели не найдена"
+      },
+      {
+        "name": "Komus",
+        "status": "Карточка точной модели не найдена"
+      }
+    ]
+  },
+  "offers": [
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://stroyklim.com/product/konditsioner-royal-clima-rc-twn28hn",
+      "domain": "stroyklim.com",
+      "supplier_name": "СтройКлим",
+      "public_price": 23850,
+      "old_price": 26500,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": 1,
+      "delivery_price": 699,
+      "delivery_terms": "Доставка; самовывоз бесплатно, товар со склада в Чебоксарах",
+      "delivery_city_region": "Чебоксары",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "stroyklim.com",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "stroyklim.com",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        }
+      ],
+      "price_priority": "🟢 ВЫСОКИЙ ПРИОРИТЕТ ДЛЯ ЗАПРОСА ЦЕНЫ",
+      "target_price_difference": 2260.0,
+      "target_price_difference_percent": 10.47,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.045960+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://climaart.ru/triumph/konditsioner-royal-clima-rc-twn28hn",
+      "domain": "climaart.ru",
+      "supplier_name": "ClimaArt",
+      "public_price": 23900,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Россия",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "climaart.ru",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "climaart.ru",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        }
+      ],
+      "price_priority": "🟢 ВЫСОКИЙ ПРИОРИТЕТ ДЛЯ ЗАПРОСА ЦЕНЫ",
+      "target_price_difference": 2310.0,
+      "target_price_difference_percent": 10.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046038+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://royal-rus.ru/bytovye-konditsionery/seriya-triumph/nastennyy-konditsioner-royal-clima-rc-twn28hn",
+      "domain": "royal-rus.ru",
+      "supplier_name": "Royal-Rus",
+      "public_price": 26490,
+      "old_price": 33890,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Бесплатно по Москве от 10 000 ₽; доставка по России",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "royal-rus.ru",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "royal-rus.ru",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046041+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://tochkaholoda.ru/catalog/kondicioner-royal-clima-rc-twn28hn",
+      "domain": "tochkaholoda.ru",
+      "supplier_name": "Точка Холода",
+      "public_price": 26490,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": "Цена доставки зависит от расстояния и объёма",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Реквизиты сайта согласованы",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+      "verification_comment": "Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Компания действует; Реквизиты сайта согласованы; Есть участие в государственных закупках; Не удалось автоматически проверить изменения руководства; wayback",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "tochkaholoda.ru",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 17.4 лет",
+          "source": "https://whoistory.com/2009/04/14/",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "confirmed_positive",
+          "evidence": "ООО «Точка Холода»; ИНН 7701097787; действует",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "requisites_consistency",
+          "status": "confirmed_positive",
+          "evidence": "На страницах сайта используется ИНН 7701097787",
+          "source": [
+            "https://tochkaholoda.ru/contacts",
+            "https://tochkaholoda.ru/company",
+            "https://tochkaholoda.ru/privacy-policy",
+            "https://tochkaholoda.ru/delivery",
+            "https://tochkaholoda.ru"
+          ],
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "government_procurement",
+          "status": "confirmed_positive",
+          "evidence": "Подтверждено участие в государственных закупках",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "confirmed_positive",
+          "evidence": "CMS: WordPress",
+          "source": "tochkaholoda.ru",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "92.255.110.161"
+            ],
+            "reverse_dns": [
+              "1056115-makhotinvds.tmweb.ru"
+            ],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046043+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://cityclimat.ru/shop/byt/nastennye-konditsionery/royal-clima/rc-twn28hn",
+      "domain": "cityclimat.ru",
+      "supplier_name": "CityClimat",
+      "public_price": 26490,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Бесплатная доставка по Москве; самовывоз со склада",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "cityclimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "cityclimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046044+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://sdk-climat.ru/kondicionery/split-sistemy-nastennye/royal-clima-1/triumph/rc-twn28hn",
+      "domain": "sdk-climat.ru",
+      "supplier_name": "SDK-Climat",
+      "public_price": 26990,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Новосибирск",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "sdk-climat.ru",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "sdk-climat.ru",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 5400.0,
+      "target_price_difference_percent": 25.01,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046078+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://kondicionery-royal-clima.ru/nastennye-split-sistemy-royal-clima/nastennye-split-sistemy-royal-clima-triumph/rc-twn28hn",
+      "domain": "kondicionery-royal-clima.ru",
+      "supplier_name": "Royal Clima — специализированный магазин",
+      "public_price": 29390,
+      "old_price": 29890,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка и самовывоз заявлены бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "kondicionery-royal-clima.ru",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "kondicionery-royal-clima.ru",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 7800.0,
+      "target_price_difference_percent": 36.13,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046079+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://ess-holod.ru/kondicionery/nastennye-kondicionery-dlya-doma/rc-twn28hn",
+      "domain": "ess-holod.ru",
+      "supplier_name": "ЕСС Холод",
+      "public_price": 29890,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Саратов",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "ess-holod.ru",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "ess-holod.ru",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 8300.0,
+      "target_price_difference_percent": 38.44,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046085+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://ziwo.ru/Royal-Clima-RC-TWN28HN",
+      "domain": "ziwo.ru",
+      "supplier_name": "ZIWO",
+      "public_price": 32700,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 390,
+      "delivery_terms": "Доставка по Москве; индивидуальная скидка от 3 шт.",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "ziwo.ru",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "ziwo.ru",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 11110.0,
+      "target_price_difference_percent": 51.46,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046087+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://promklimat.ru/Royal-Clima-RC-TWN28HN.htm",
+      "domain": "promklimat.ru",
+      "supplier_name": "PromKlimat",
+      "public_price": 43810,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка по Москве бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "promklimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "promklimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 22220.0,
+      "target_price_difference_percent": 102.92,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046089+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://stoking.ru/products/klassicheskie-split-sistemy-royal-clima-serii-triumph-upgrade-rc-twn28hn",
+      "domain": "stoking.ru",
+      "supplier_name": "Stoking",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "price_on_request",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": "Доставка по РФ; специальные условия для юрлиц",
+      "delivery_city_region": "Пермь",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "Реквизиты сайта противоречат друг другу"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "wayback"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "Реквизиты сайта противоречат друг другу; Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Компания действует; Есть участие в государственных закупках; wayback",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "stoking.ru",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 9.56 лет",
+          "source": "https://whoistory.com/2017/02/14/stoking.ru.html",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "confirmed_positive",
+          "evidence": "ООО «Стокинг»; ИНН 5904993922; действует",
+          "source": "https://www.elec.ru/org/5904993922/",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "requisites_consistency",
+          "status": "red_flag",
+          "evidence": {
+            "inn": [
+              "5904993921",
+              "5904993922"
+            ],
+            "ogrn": [
+              "1145958010010"
+            ]
+          },
+          "source": [
+            "https://stoking.ru/contacts",
+            "https://stoking.ru/about",
+            "https://stoking.ru/privacy-policy",
+            "https://stoking.ru/data-processing",
+            "https://stoking.ru/delivery",
+            "https://stoking.ru/payment",
+            "https://stoking.ru"
+          ],
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "government_procurement",
+          "status": "confirmed_positive",
+          "evidence": "Подтверждено участие в государственных закупках",
+          "source": "https://www.elec.ru/org/5904993922/",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS: unknown",
+          "source": "stoking.ru",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "5.252.32.110"
+            ],
+            "reverse_dns": [],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046090+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://climstore.ru/product/royal-clima-rc-twn28hn-split-sistema",
+      "domain": "climstore.ru",
+      "supplier_name": "CLIMSTORE",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка по Москве, самовывоз и доставка до ТК бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "climstore.ru",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "climstore.ru",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046092+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://sdmclimate.ru/kondicionery/nastennye-kondicionery/nastennaya-split-sistema-royal-clima-rc-twn28hn",
+      "domain": "sdmclimate.ru",
+      "supplier_name": "СДМ Климат",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "price_on_request",
+      "available_quantity": null,
+      "delivery_price": 700,
+      "delivery_terms": "Москва в пределах МКАД, 1–3 дня",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "sdmclimate.ru",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "sdmclimate.ru",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046093+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://vozduhoff.ru/catalog/rasprodazha/royal-clima-rc-twn28hn-triumph-new",
+      "domain": "vozduhoff.ru",
+      "supplier_name": "Vozduhoff",
+      "public_price": 26490,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Карточка одновременно сообщает, что модель снята с производства",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": true,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "vozduhoff.ru",
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "vozduhoff.ru",
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046094+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    }
+  ],
+  "active_exact_offers": 13,
+  "unique_suppliers": 13,
+  "minimum_confirmed_public_price": 23850,
+  "offers_passing_target": 0,
+  "suppliers_for_best_price_request": [
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://tochkaholoda.ru/catalog/kondicioner-royal-clima-rc-twn28hn",
+      "domain": "tochkaholoda.ru",
+      "supplier_name": "Точка Холода",
+      "public_price": 26490,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": "Цена доставки зависит от расстояния и объёма",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Реквизиты сайта согласованы",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+      "verification_comment": "Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Компания действует; Реквизиты сайта согласованы; Есть участие в государственных закупках; Не удалось автоматически проверить изменения руководства; wayback",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "tochkaholoda.ru",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 17.4 лет",
+          "source": "https://whoistory.com/2009/04/14/",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "confirmed_positive",
+          "evidence": "ООО «Точка Холода»; ИНН 7701097787; действует",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "requisites_consistency",
+          "status": "confirmed_positive",
+          "evidence": "На страницах сайта используется ИНН 7701097787",
+          "source": [
+            "https://tochkaholoda.ru/contacts",
+            "https://tochkaholoda.ru/company",
+            "https://tochkaholoda.ru/privacy-policy",
+            "https://tochkaholoda.ru/delivery",
+            "https://tochkaholoda.ru"
+          ],
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "government_procurement",
+          "status": "confirmed_positive",
+          "evidence": "Подтверждено участие в государственных закупках",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "confirmed_positive",
+          "evidence": "CMS: WordPress",
+          "source": "tochkaholoda.ru",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "92.255.110.161"
+            ],
+            "reverse_dns": [
+              "1056115-makhotinvds.tmweb.ru"
+            ],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046043+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    }
+  ],
+  "requires_verification_before_work": [
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://stroyklim.com/product/konditsioner-royal-clima-rc-twn28hn",
+      "domain": "stroyklim.com",
+      "supplier_name": "СтройКлим",
+      "public_price": 23850,
+      "old_price": 26500,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": 1,
+      "delivery_price": 699,
+      "delivery_terms": "Доставка; самовывоз бесплатно, товар со склада в Чебоксарах",
+      "delivery_city_region": "Чебоксары",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "stroyklim.com",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "stroyklim.com",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        }
+      ],
+      "price_priority": "🟢 ВЫСОКИЙ ПРИОРИТЕТ ДЛЯ ЗАПРОСА ЦЕНЫ",
+      "target_price_difference": 2260.0,
+      "target_price_difference_percent": 10.47,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.045960+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://climaart.ru/triumph/konditsioner-royal-clima-rc-twn28hn",
+      "domain": "climaart.ru",
+      "supplier_name": "ClimaArt",
+      "public_price": 23900,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Россия",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "climaart.ru",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "climaart.ru",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        }
+      ],
+      "price_priority": "🟢 ВЫСОКИЙ ПРИОРИТЕТ ДЛЯ ЗАПРОСА ЦЕНЫ",
+      "target_price_difference": 2310.0,
+      "target_price_difference_percent": 10.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046038+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://climstore.ru/product/royal-clima-rc-twn28hn-split-sistema",
+      "domain": "climstore.ru",
+      "supplier_name": "CLIMSTORE",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка по Москве, самовывоз и доставка до ТК бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "climstore.ru",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "climstore.ru",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046092+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://stoking.ru/products/klassicheskie-split-sistemy-royal-clima-serii-triumph-upgrade-rc-twn28hn",
+      "domain": "stoking.ru",
+      "supplier_name": "Stoking",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "price_on_request",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": "Доставка по РФ; специальные условия для юрлиц",
+      "delivery_city_region": "Пермь",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "Реквизиты сайта противоречат друг другу"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "wayback"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "Реквизиты сайта противоречат друг другу; Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Компания действует; Есть участие в государственных закупках; wayback",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "stoking.ru",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 9.56 лет",
+          "source": "https://whoistory.com/2017/02/14/stoking.ru.html",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "confirmed_positive",
+          "evidence": "ООО «Стокинг»; ИНН 5904993922; действует",
+          "source": "https://www.elec.ru/org/5904993922/",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "requisites_consistency",
+          "status": "red_flag",
+          "evidence": {
+            "inn": [
+              "5904993921",
+              "5904993922"
+            ],
+            "ogrn": [
+              "1145958010010"
+            ]
+          },
+          "source": [
+            "https://stoking.ru/contacts",
+            "https://stoking.ru/about",
+            "https://stoking.ru/privacy-policy",
+            "https://stoking.ru/data-processing",
+            "https://stoking.ru/delivery",
+            "https://stoking.ru/payment",
+            "https://stoking.ru"
+          ],
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "government_procurement",
+          "status": "confirmed_positive",
+          "evidence": "Подтверждено участие в государственных закупках",
+          "source": "https://www.elec.ru/org/5904993922/",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS: unknown",
+          "source": "stoking.ru",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "5.252.32.110"
+            ],
+            "reverse_dns": [],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046090+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://sdmclimate.ru/kondicionery/nastennye-kondicionery/nastennaya-split-sistema-royal-clima-rc-twn28hn",
+      "domain": "sdmclimate.ru",
+      "supplier_name": "СДМ Климат",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "price_on_request",
+      "available_quantity": null,
+      "delivery_price": 700,
+      "delivery_terms": "Москва в пределах МКАД, 1–3 дня",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "sdmclimate.ru",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "sdmclimate.ru",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046093+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://sdk-climat.ru/kondicionery/split-sistemy-nastennye/royal-clima-1/triumph/rc-twn28hn",
+      "domain": "sdk-climat.ru",
+      "supplier_name": "SDK-Climat",
+      "public_price": 26990,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Новосибирск",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "sdk-climat.ru",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "sdk-climat.ru",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 5400.0,
+      "target_price_difference_percent": 25.01,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046078+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://kondicionery-royal-clima.ru/nastennye-split-sistemy-royal-clima/nastennye-split-sistemy-royal-clima-triumph/rc-twn28hn",
+      "domain": "kondicionery-royal-clima.ru",
+      "supplier_name": "Royal Clima — специализированный магазин",
+      "public_price": 29390,
+      "old_price": 29890,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка и самовывоз заявлены бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "kondicionery-royal-clima.ru",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "kondicionery-royal-clima.ru",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 7800.0,
+      "target_price_difference_percent": 36.13,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046079+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://ess-holod.ru/kondicionery/nastennye-kondicionery-dlya-doma/rc-twn28hn",
+      "domain": "ess-holod.ru",
+      "supplier_name": "ЕСС Холод",
+      "public_price": 29890,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Саратов",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "ess-holod.ru",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "ess-holod.ru",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 8300.0,
+      "target_price_difference_percent": 38.44,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046085+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://ziwo.ru/Royal-Clima-RC-TWN28HN",
+      "domain": "ziwo.ru",
+      "supplier_name": "ZIWO",
+      "public_price": 32700,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 390,
+      "delivery_terms": "Доставка по Москве; индивидуальная скидка от 3 шт.",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "ziwo.ru",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "ziwo.ru",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 11110.0,
+      "target_price_difference_percent": 51.46,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046087+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://royal-rus.ru/bytovye-konditsionery/seriya-triumph/nastennyy-konditsioner-royal-clima-rc-twn28hn",
+      "domain": "royal-rus.ru",
+      "supplier_name": "Royal-Rus",
+      "public_price": 26490,
+      "old_price": 33890,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Бесплатно по Москве от 10 000 ₽; доставка по России",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "royal-rus.ru",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "royal-rus.ru",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046041+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://cityclimat.ru/shop/byt/nastennye-konditsionery/royal-clima/rc-twn28hn",
+      "domain": "cityclimat.ru",
+      "supplier_name": "CityClimat",
+      "public_price": 26490,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Бесплатная доставка по Москве; самовывоз со склада",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "cityclimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "cityclimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046044+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://promklimat.ru/Royal-Clima-RC-TWN28HN.htm",
+      "domain": "promklimat.ru",
+      "supplier_name": "PromKlimat",
+      "public_price": 43810,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка по Москве бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "promklimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "promklimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 22220.0,
+      "target_price_difference_percent": 102.92,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046089+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    }
+  ],
+  "excluded_high_risk": [],
+  "excluded_stale_or_wrong": [
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://vozduhoff.ru/catalog/rasprodazha/royal-clima-rc-twn28hn-triumph-new",
+      "domain": "vozduhoff.ru",
+      "supplier_name": "Vozduhoff",
+      "public_price": 26490,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Карточка одновременно сообщает, что модель снята с производства",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": true,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "vozduhoff.ru",
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "vozduhoff.ru",
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303688+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК"
+    }
+  ],
+  "automatic_access_limitations": [
+    "Маркетплейсы могут ограничивать выдачу по региону, авторизации и CAPTCHA; защита не обходилась.",
+    "Остаток 3 шт. почти нигде не опубликован: у одной карточки указан только 1 шт.",
+    "Большинство профильных сайтов не публикует проверяемые юридические реквизиты прямо в карточке; им присвоена ручная проверка перед оплатой.",
+    "Цена по запросу не является публичной ценой; запросы поставщикам не отправлялись.",
+    "Публичная цена не является закупочной ценой и во всех записях purchase_price оставлена пустой."
+  ],
+  "suppliers_for_call": [
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://tochkaholoda.ru/catalog/kondicioner-royal-clima-rc-twn28hn",
+      "domain": "tochkaholoda.ru",
+      "supplier_name": "Точка Холода",
+      "public_price": 26490,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": "Цена доставки зависит от расстояния и объёма",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Реквизиты сайта согласованы",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+      "verification_comment": "Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Компания действует; Реквизиты сайта согласованы; Есть участие в государственных закупках; Не удалось автоматически проверить изменения руководства; wayback",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "tochkaholoda.ru",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 17.4 лет",
+          "source": "https://whoistory.com/2009/04/14/",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "confirmed_positive",
+          "evidence": "ООО «Точка Холода»; ИНН 7701097787; действует",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "requisites_consistency",
+          "status": "confirmed_positive",
+          "evidence": "На страницах сайта используется ИНН 7701097787",
+          "source": [
+            "https://tochkaholoda.ru/contacts",
+            "https://tochkaholoda.ru/company",
+            "https://tochkaholoda.ru/privacy-policy",
+            "https://tochkaholoda.ru/delivery",
+            "https://tochkaholoda.ru"
+          ],
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "government_procurement",
+          "status": "confirmed_positive",
+          "evidence": "Подтверждено участие в государственных закупках",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": "https://companium.ru/id/1157746298104-tochka-holoda",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "confirmed_positive",
+          "evidence": "CMS: WordPress",
+          "source": "tochkaholoda.ru",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "92.255.110.161"
+            ],
+            "reverse_dns": [
+              "1056115-makhotinvds.tmweb.ru"
+            ],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:31:01.706948+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046043+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://stroyklim.com/product/konditsioner-royal-clima-rc-twn28hn",
+      "domain": "stroyklim.com",
+      "supplier_name": "СтройКлим",
+      "public_price": 23850,
+      "old_price": 26500,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": 1,
+      "delivery_price": 699,
+      "delivery_terms": "Доставка; самовывоз бесплатно, товар со склада в Чебоксарах",
+      "delivery_city_region": "Чебоксары",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "stroyklim.com",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "stroyklim.com",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303480+00:00"
+        }
+      ],
+      "price_priority": "🟢 ВЫСОКИЙ ПРИОРИТЕТ ДЛЯ ЗАПРОСА ЦЕНЫ",
+      "target_price_difference": 2260.0,
+      "target_price_difference_percent": 10.47,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.045960+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://climaart.ru/triumph/konditsioner-royal-clima-rc-twn28hn",
+      "domain": "climaart.ru",
+      "supplier_name": "ClimaArt",
+      "public_price": 23900,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Россия",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "climaart.ru",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "climaart.ru",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303584+00:00"
+        }
+      ],
+      "price_priority": "🟢 ВЫСОКИЙ ПРИОРИТЕТ ДЛЯ ЗАПРОСА ЦЕНЫ",
+      "target_price_difference": 2310.0,
+      "target_price_difference_percent": 10.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046038+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://climstore.ru/product/royal-clima-rc-twn28hn-split-sistema",
+      "domain": "climstore.ru",
+      "supplier_name": "CLIMSTORE",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка по Москве, самовывоз и доставка до ТК бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "climstore.ru",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "climstore.ru",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303674+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046092+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://stoking.ru/products/klassicheskie-split-sistemy-royal-clima-serii-triumph-upgrade-rc-twn28hn",
+      "domain": "stoking.ru",
+      "supplier_name": "Stoking",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "price_on_request",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": "Доставка по РФ; специальные условия для юрлиц",
+      "delivery_city_region": "Пермь",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "Реквизиты сайта противоречат друг другу"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "wayback"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "Реквизиты сайта противоречат друг другу; Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Компания действует; Есть участие в государственных закупках; wayback",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступны карточка точной модели, контакты и профильный каталог климатической техники.",
+          "source": "stoking.ru",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 9.56 лет",
+          "source": "https://whoistory.com/2017/02/14/stoking.ru.html",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "confirmed_positive",
+          "evidence": "ООО «Стокинг»; ИНН 5904993922; действует",
+          "source": "https://www.elec.ru/org/5904993922/",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "requisites_consistency",
+          "status": "red_flag",
+          "evidence": {
+            "inn": [
+              "5904993921",
+              "5904993922"
+            ],
+            "ogrn": [
+              "1145958010010"
+            ]
+          },
+          "source": [
+            "https://stoking.ru/contacts",
+            "https://stoking.ru/about",
+            "https://stoking.ru/privacy-policy",
+            "https://stoking.ru/data-processing",
+            "https://stoking.ru/delivery",
+            "https://stoking.ru/payment",
+            "https://stoking.ru"
+          ],
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "government_procurement",
+          "status": "confirmed_positive",
+          "evidence": "Подтверждено участие в государственных закупках",
+          "source": "https://www.elec.ru/org/5904993922/",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS: unknown",
+          "source": "stoking.ru",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "confirmed_positive",
+          "evidence": {
+            "addresses": [
+              "5.252.32.110"
+            ],
+            "reverse_dns": [],
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-08T14:29:44.909530+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046090+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://sdmclimate.ru/kondicionery/nastennye-kondicionery/nastennaya-split-sistema-royal-clima-rc-twn28hn",
+      "domain": "sdmclimate.ru",
+      "supplier_name": "СДМ Климат",
+      "public_price": null,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "price_on_request",
+      "available_quantity": null,
+      "delivery_price": 700,
+      "delivery_terms": "Москва в пределах МКАД, 1–3 дня",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "sdmclimate.ru",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "sdmclimate.ru",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303680+00:00"
+        }
+      ],
+      "price_priority": "🟡 ЗАПРОСИТЬ СКИДКУ НА ОБЪЁМ",
+      "target_price_difference": null,
+      "target_price_difference_percent": null,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046093+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://sdk-climat.ru/kondicionery/split-sistemy-nastennye/royal-clima-1/triumph/rc-twn28hn",
+      "domain": "sdk-climat.ru",
+      "supplier_name": "SDK-Climat",
+      "public_price": 26990,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Новосибирск",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "sdk-climat.ru",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "sdk-climat.ru",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303629+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 5400.0,
+      "target_price_difference_percent": 25.01,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046078+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://kondicionery-royal-clima.ru/nastennye-split-sistemy-royal-clima/nastennye-split-sistemy-royal-clima-triumph/rc-twn28hn",
+      "domain": "kondicionery-royal-clima.ru",
+      "supplier_name": "Royal Clima — специализированный магазин",
+      "public_price": 29390,
+      "old_price": 29890,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка и самовывоз заявлены бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "kondicionery-royal-clima.ru",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "kondicionery-royal-clima.ru",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303636+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 7800.0,
+      "target_price_difference_percent": 36.13,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046079+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://ess-holod.ru/kondicionery/nastennye-kondicionery-dlya-doma/rc-twn28hn",
+      "domain": "ess-holod.ru",
+      "supplier_name": "ЕСС Холод",
+      "public_price": 29890,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": null,
+      "delivery_terms": null,
+      "delivery_city_region": "Саратов",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "professional",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "ess-holod.ru",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "ess-holod.ru",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303645+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 8300.0,
+      "target_price_difference_percent": 38.44,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046085+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://ziwo.ru/Royal-Clima-RC-TWN28HN",
+      "domain": "ziwo.ru",
+      "supplier_name": "ZIWO",
+      "public_price": 32700,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "in_stock",
+      "available_quantity": null,
+      "delivery_price": 390,
+      "delivery_terms": "Доставка по Москве; индивидуальная скидка от 3 шт.",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "ziwo.ru",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "ziwo.ru",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303652+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 11110.0,
+      "target_price_difference_percent": 51.46,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046087+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://royal-rus.ru/bytovye-konditsionery/seriya-triumph/nastennyy-konditsioner-royal-clima-rc-twn28hn",
+      "domain": "royal-rus.ru",
+      "supplier_name": "Royal-Rus",
+      "public_price": 26490,
+      "old_price": 33890,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Бесплатно по Москве от 10 000 ₽; доставка по России",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "royal-rus.ru",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "royal-rus.ru",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303603+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046041+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://cityclimat.ru/shop/byt/nastennye-konditsionery/royal-clima/rc-twn28hn",
+      "domain": "cityclimat.ru",
+      "supplier_name": "CityClimat",
+      "public_price": 26490,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Бесплатная доставка по Москве; самовывоз со склада",
+      "delivery_city_region": "Москва",
+      "pickup_available": true,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "cityclimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "cityclimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303621+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 4900.0,
+      "target_price_difference_percent": 22.7,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046044+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    },
+    {
+      "exact_model": true,
+      "model": "RC-TWN28HN",
+      "product_name": "Royal Clima RC-TWN28HN",
+      "product_url": "https://promklimat.ru/Royal-Clima-RC-TWN28HN.htm",
+      "domain": "promklimat.ru",
+      "supplier_name": "PromKlimat",
+      "public_price": 43810,
+      "old_price": null,
+      "price_currency": "RUB",
+      "purchase_price": null,
+      "availability": "card_available",
+      "available_quantity": null,
+      "delivery_price": 0,
+      "delivery_terms": "Доставка по Москве бесплатно",
+      "delivery_city_region": "Москва",
+      "pickup_available": null,
+      "checked_at": "2026-09-09T00:00:00+03:00",
+      "date_checked": "2026-09-09",
+      "source_type": "local",
+      "card_status": "Карточка подтверждена",
+      "stale_or_wrong": false,
+      "verification_checks": {
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Доступна карточка точной модели с условиями продажи",
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {},
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; wayback; cms; ip",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Доступна карточка точной модели с условиями продажи",
+          "source": "promklimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "promklimat.ru",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-09T09:07:57.303659+00:00"
+        }
+      ],
+      "price_priority": "⚪ РЕЗЕРВНЫЙ ПОСТАВЩИК",
+      "target_price_difference": 22220.0,
+      "target_price_difference_percent": 102.92,
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "checked_at": "2026-09-09T09:21:02.046089+00:00",
+        "searched_inn": null,
+        "cases_found": null,
+        "cases_count": null,
+        "plaintiff_cases_count": null,
+        "defendant_cases_count": null,
+        "bankruptcy_cases_count": null,
+        "other_cases_count": null,
+        "recent_cases_count": null,
+        "case_numbers": [],
+        "case_roles": [],
+        "case_dates": [],
+        "case_categories": [],
+        "kad_url": "https://kad.arbitr.ru",
+        "evidence": null,
+        "warnings": [
+          "Текущий ИНН поставщика не подтверждён"
+        ],
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка"
+    }
+  ],
+  "summary": {
+    "active_exact_offers": 13,
+    "unique_suppliers": 13,
+    "supplier_target_discount_percent": 15,
+    "supplier_target_price": 21590.0,
+    "offers_passing_target": 0,
+    "minimum_confirmed_public_price": 23850,
+    "internet_search_repeated": false,
+    "supplier_verification_repeated": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "model": "CyberPower PR1500ELCD",
+  "discovery_note": "Кандидаты найдены бесплатным публичным web-поиском и внутренним поиском российских магазинов; цены подтверждаются только на карточках продавцов.",
+  "offers": [
+    {
+      "model": "PR1500ELCD",
+      "supplier_name": "KNS",
+      "product_url": "https://www.kns.ru/product/ups-cyberpower-pr1500elcd/",
+      "source_discovery": "публичный web-поиск"
+    },
+    {
+      "model": "PR1500ELCD",
+      "supplier_name": "XCOM-SHOP",
+      "product_url": "https://www.xcom-shop.ru/cyberpower_pr1500elcd_313778.html",
+      "source_discovery": "публичный web-поиск"
+    },
+    {
+      "model": "PR1500ELCD",
+      "supplier_name": "Регард",
+      "product_url": "https://www.regard.ru/product/131501/ibp-cyberpower-pr1500elcd",
+      "source_discovery": "публичный web-поиск"
+    },
+    {
+      "model": "PR1500ELCD",
+      "supplier_name": "АСА",
+      "product_url": "https://asa.ru/catalog/istochniki_bespereboynogo_pitaniya_ibp/108534/",
+      "source_discovery": "внутренний поиск магазина"
+    },
+    {
+      "model": "PR1500ELCD",
+      "supplier_name": "ТехноСити",
+      "product_url": "https://www.technocity.ru/catalog/detail/1212231/",
+      "source_discovery": "публичный web-поиск"
+    }
+  ]
+}

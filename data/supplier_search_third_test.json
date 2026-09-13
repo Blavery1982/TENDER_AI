@@ -1,0 +1,261 @@
+{
+  "procurement_number": "100205573126100053",
+  "model": "Royal Clima RC-TWN28HN",
+  "delivery_city": "Москва",
+  "quantity": 3,
+  "customer_unit_price": 25400.0,
+  "price_threshold_80_percent": 20320.0,
+  "searched_at": "2026-09-08T13:37:43.971426+00:00",
+  "checked_named_sources": {
+    "marketplaces": [
+      "Ozon",
+      "Wildberries",
+      "Яндекс Маркет"
+    ],
+    "federal": [
+      "ВсеИнструменты",
+      "Citilink",
+      "Xcom",
+      "Komus"
+    ]
+  },
+  "supplier_candidates": [
+    {
+      "supplier_name": "Royal-Clima.com.ru",
+      "product_url": "https://royal-clima.com.ru/royal-clima-rc-twn28hn-triumph",
+      "source_category": "local",
+      "model": "Royal Clima RC-TWN28HN",
+      "exact_model": true,
+      "product_page_available": true,
+      "public_price": 19900,
+      "purchase_price": null,
+      "availability": "card_available",
+      "city": "Москва",
+      "contacts": {
+        "phone": "+7 (800) 100-46-08",
+        "email": "info@royal-clima.com.ru"
+      },
+      "verification_checks": {
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {
+          "inn": null
+        },
+        "cms": "OpenCart",
+        "ip_status": "unavailable"
+      },
+      "price_request_reason": "Проходная публичная цена, но до оплаты нужно установить и проверить юридическое лицо",
+      "domain": "royal-clima.com.ru",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "ip",
+        "wayback"
+      ],
+      "verification_status": "⚪ НЕДОСТАТОЧНО ДАННЫХ",
+      "verification_comment": "На сайте не найден ИНН; WHOIS/RDAP; wayback; ip"
+    },
+    {
+      "supplier_name": "ООО Стокинг",
+      "product_url": "https://stoking.ru/products/klassicheskie-split-sistemy-royal-clima-serii-triumph-upgrade-rc-twn28hn",
+      "source_category": "federal_or_specialist",
+      "model": "Royal Clima RC-TWN28HN",
+      "exact_model": true,
+      "product_page_available": true,
+      "public_price": null,
+      "purchase_price": null,
+      "availability": "price_on_request",
+      "city": "Пермь",
+      "contacts": {
+        "phone": "8 (800) 600-90-16",
+        "email": "sale@stoking.ru"
+      },
+      "verification_checks": {
+        "domain_age_years": 3,
+        "wayback_status": "unavailable",
+        "company": {
+          "inn": "5904993922",
+          "ogrn": "1145958010010",
+          "active": true,
+          "registered_at": "2014-03-14",
+          "director_changed_within_6_months": false,
+          "site_company_mismatch": false,
+          "government_procurement": true
+        },
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "domain": "stoking.ru",
+      "risk_flags": [],
+      "positive_signals": [
+        "Домен старше 3 лет",
+        "Компания действует",
+        "Есть участие в государственных закупках"
+      ],
+      "unavailable_checks": [
+        "cms",
+        "ip",
+        "wayback"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "Домен старше 3 лет; Компания действует; Есть участие в государственных закупках; wayback; cms; ip"
+    },
+    {
+      "supplier_name": "СДМ Климат",
+      "product_url": "https://sdmclimate.ru/kondicionery/nastennye-kondicionery/nastennaya-split-sistema-royal-clima-rc-twn28hn",
+      "source_category": "local",
+      "model": "Royal Clima RC-TWN28HN",
+      "exact_model": true,
+      "product_page_available": true,
+      "public_price": null,
+      "purchase_price": null,
+      "availability": "price_on_request",
+      "city": "Москва",
+      "contacts": {},
+      "verification_checks": {
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {
+          "inn": null
+        },
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "domain": "sdmclimate.ru",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback"
+      ],
+      "verification_status": "⚪ НЕДОСТАТОЧНО ДАННЫХ",
+      "verification_comment": "На сайте не найден ИНН; WHOIS/RDAP; wayback; cms; ip"
+    },
+    {
+      "supplier_name": "Точка Холода",
+      "product_url": "https://tochkaholoda.ru/catalog/kondicioner-royal-clima-rc-twn28hn",
+      "source_category": "local",
+      "model": "Royal Clima RC-TWN28HN",
+      "exact_model": true,
+      "product_page_available": true,
+      "public_price": 26490,
+      "purchase_price": null,
+      "availability": "in_stock",
+      "city": "Москва",
+      "contacts": {},
+      "verification_checks": {
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {
+          "inn": null
+        },
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "price_request_reason": "Цена зависит от объёма; запросить скидку на 3 шт.",
+      "domain": "tochkaholoda.ru",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback"
+      ],
+      "verification_status": "⚪ НЕДОСТАТОЧНО ДАННЫХ",
+      "verification_comment": "На сайте не найден ИНН; WHOIS/RDAP; wayback; cms; ip"
+    },
+    {
+      "supplier_name": "Royal-Rus",
+      "product_url": "https://royal-rus.ru/bytovye-konditsionery/seriya-triumph/nastennyy-konditsioner-royal-clima-rc-twn28hn/",
+      "source_category": "federal_or_specialist",
+      "model": "Royal Clima RC-TWN28HN",
+      "exact_model": true,
+      "product_page_available": true,
+      "public_price": 26490,
+      "purchase_price": null,
+      "availability": "card_available",
+      "city": null,
+      "contacts": {},
+      "verification_checks": {
+        "domain_age_years": null,
+        "wayback_status": "unavailable",
+        "company": {
+          "inn": null
+        },
+        "cms_status": "unavailable",
+        "ip_status": "unavailable"
+      },
+      "domain": "royal-rus.ru",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "cms",
+        "ip",
+        "wayback"
+      ],
+      "verification_status": "⚪ НЕДОСТАТОЧНО ДАННЫХ",
+      "verification_comment": "На сайте не найден ИНН; WHOIS/RDAP; wayback; cms; ip"
+    }
+  ],
+  "quotes": {
+    "kp1": null,
+    "kp2": null,
+    "kp3": null
+  },
+  "price_request_candidates": [
+    {
+      "supplier_name": "ООО Стокинг",
+      "product_url": "https://stoking.ru/products/klassicheskie-split-sistemy-royal-clima-serii-triumph-upgrade-rc-twn28hn",
+      "public_price": null,
+      "purchase_price": null,
+      "reason": "Цена не опубликована; запросить предложение на 3 шт.; ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПОСТАВЩИКА ПЕРЕД ОПЛАТОЙ",
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ"
+    },
+    {
+      "supplier_name": "Royal-Clima.com.ru",
+      "product_url": "https://royal-clima.com.ru/royal-clima-rc-twn28hn-triumph",
+      "public_price": 19900,
+      "purchase_price": null,
+      "reason": "Проходная публичная цена, но до оплаты нужно установить и проверить юридическое лицо",
+      "verification_status": "⚪ НЕДОСТАТОЧНО ДАННЫХ"
+    },
+    {
+      "supplier_name": "Точка Холода",
+      "product_url": "https://tochkaholoda.ru/catalog/kondicioner-royal-clima-rc-twn28hn",
+      "public_price": 26490,
+      "purchase_price": null,
+      "reason": "Цена зависит от объёма; запросить скидку на 3 шт.",
+      "verification_status": "⚪ НЕДОСТАТОЧНО ДАННЫХ"
+    }
+  ],
+  "search_report": {
+    "marketplaces_checked": 3,
+    "federal_named_sources_checked": 4,
+    "specialist_sites_found": 2,
+    "local_stores_found": 3,
+    "prices_passing_threshold": 1,
+    "suppliers_passed": 0,
+    "manual_review": 1,
+    "high_risk": 0,
+    "insufficient_data": 4,
+    "price_request_candidates": 3
+  },
+  "limitations": [
+    "Маркетплейсы не дали подтверждаемой публичной карточки точной модели в доступной выдаче.",
+    "Rusprofile, WHOIS/RDAP, Wayback, CMS и reverse-IP доступны не для всех сайтов; отсутствующие данные не выдумывались.",
+    "Публичные цены не подтверждены счётом и не являются purchase_price."
+  ]
+}

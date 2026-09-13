@@ -1,0 +1,346 @@
+{
+  "test": "local_pdf_ocr",
+  "procurement_number": "100250237126100180",
+  "created_at": "2026-09-08T10:17:36.253335+00:00",
+  "engine": "Tesseract rus+eng",
+  "rendering": "PyMuPDF 300 DPI grayscale",
+  "low_confidence_threshold": 70.0,
+  "original_pdf_modified": false,
+  "documents": [
+    {
+      "document_name": "кп.pdf",
+      "page_count": 1,
+      "pages": [
+        {
+          "document_name": "кп.pdf",
+          "page_number": 1,
+          "read_method": "ocr",
+          "text_layer_quality": {
+            "non_whitespace_characters": 0,
+            "printable_characters": 0,
+            "alphanumeric_ratio": 0.0,
+            "replacement_characters": 0
+          },
+          "recognized_text": "07.09.2026, 15:39 Регистрационный штамп\n\nОбщество с ограниченной ответственностью\n\nКОМПАНИЯ «ЭТК»\nЮр.адрес : 394055, Воронежская область, г.о. Город Воронеж, ИНН/КПП 3662284938/366501001\nг. Воронеж, ул. Летчика Колесниченко, дом 65A, помещение 1/127 Р/с 40702810513000040206\nПочтовый адрес : 394026, г. Воронеж, К/с 30101810600000000681\nул. 45 стрелковой дивизии 234 д, оф. 32 БИК 042007681\n| Ten. +7 (473) 280-29-09 Банк ЦЕНТРАЛЬНО-ЧЕРНОЗЕМНЫЙ БАНК\nE-mail: kes-opt@mail.ru | СБЕРБАНКА РОССИИ Г. ВОРОНЕЖ\n\nКОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ № 08/20-1 от 20.08.2026 г.\n\nВ ответ на Ваш запрос ООО Компания «ЭТК» готова поставить товар по следующим\n\nценам:\nЦена за | | Общая\n№ един стоимость,\n| Наименование изделия MANY Кол-во Ед. изм\n1/1 руб., © руб.,\nНДС 22% С НДС 22%\nТелевизор 32\" LED Full HD без 13 750,00 2 ШТ | 27 500,00\n| смарт General Electronics\nGE32LFNO\n|\n43\" (108 cm) Телевизор DEXP 26 600,00 1 LUT 26 600,00\nA3UCY3 черный\n2\n|\n\nИтого: 54 100,00 (Пятьдесят четыре тысячи сто рублей 00 копеек), в т.ч. НДС (22%)\n\nРуководитель В Бизяев А.В.\n\nОбо ИКД Пе ЕК!\n\nБухгалтер\n\nPe НИР РА aon = sitll\n\nPACE OCEKG LOINC\n\n|\n\nвх-4246\n\n10.48.98.11 .8080/portal/jsp/RegistrationStamp jsp?namespace=jbpnsCardPortletWindowsnpbj&position=®\n\nUL\n\n07.09.2026\n\n1/1\n\n",
+          "average_confidence": 84.72,
+          "minimum_confidence": 0.0,
+          "recognized_word_count": 183,
+          "low_confidence_word_count": 24,
+          "uncertain_fragments": [
+            {
+              "word": "07.09.2026,",
+              "confidence": 40.96,
+              "text_fragment": "07.09.2026, 15:39 Регистрационный"
+            },
+            {
+              "word": "15:39",
+              "confidence": 40.96,
+              "text_fragment": "07.09.2026, 15:39 Регистрационный штамп"
+            },
+            {
+              "word": "Юр.адрес",
+              "confidence": 46.43,
+              "text_fragment": "КОМПАНИЯ «ЭТК» Юр.адрес : 394055,"
+            },
+            {
+              "word": "|",
+              "confidence": 60.06,
+              "text_fragment": "E-mail: kes-opt@mail.ru | СБЕРБАНКА РОССИИ"
+            },
+            {
+              "word": "MANY",
+              "confidence": 51.6,
+              "text_fragment": "Наименование изделия MANY Кол-во Ед."
+            },
+            {
+              "word": "1/1",
+              "confidence": 0.0,
+              "text_fragment": "Ед. изм 1/1 руб., ©"
+            },
+            {
+              "word": "(22%)",
+              "confidence": 63.27,
+              "text_fragment": "т.ч. НДС (22%) Руководитель В"
+            },
+            {
+              "word": "В",
+              "confidence": 12.0,
+              "text_fragment": "(22%) Руководитель В Бизяев А.В."
+            },
+            {
+              "word": "Обо",
+              "confidence": 0.0,
+              "text_fragment": "Бизяев А.В. Обо ИКД Пе"
+            },
+            {
+              "word": "ИКД",
+              "confidence": 0.0,
+              "text_fragment": "А.В. Обо ИКД Пе ЕК!"
+            },
+            {
+              "word": "Пе",
+              "confidence": 54.29,
+              "text_fragment": "Обо ИКД Пе ЕК! Бухгалтер"
+            },
+            {
+              "word": "ЕК!",
+              "confidence": 43.74,
+              "text_fragment": "ИКД Пе ЕК! Бухгалтер Pe"
+            },
+            {
+              "word": "Pe",
+              "confidence": 28.92,
+              "text_fragment": "ЕК! Бухгалтер Pe НИР РА"
+            },
+            {
+              "word": "НИР",
+              "confidence": 0.0,
+              "text_fragment": "Бухгалтер Pe НИР РА aon"
+            },
+            {
+              "word": "РА",
+              "confidence": 13.67,
+              "text_fragment": "Pe НИР РА aon ="
+            },
+            {
+              "word": "aon",
+              "confidence": 46.86,
+              "text_fragment": "НИР РА aon = sitll"
+            },
+            {
+              "word": "=",
+              "confidence": 64.32,
+              "text_fragment": "РА aon = sitll PACE"
+            },
+            {
+              "word": "sitll",
+              "confidence": 7.44,
+              "text_fragment": "aon = sitll PACE OCEKG"
+            },
+            {
+              "word": "PACE",
+              "confidence": 10.75,
+              "text_fragment": "= sitll PACE OCEKG LOINC"
+            },
+            {
+              "word": "OCEKG",
+              "confidence": 6.22,
+              "text_fragment": "sitll PACE OCEKG LOINC |"
+            },
+            {
+              "word": "LOINC",
+              "confidence": 1.94,
+              "text_fragment": "PACE OCEKG LOINC | вх-4246"
+            },
+            {
+              "word": ".8080/portal/jsp/RegistrationStamp",
+              "confidence": 57.95,
+              "text_fragment": "вх-4246 10.48.98.11 .8080/portal/jsp/RegistrationStamp jsp?namespace=jbpnsCardPortletWindowsnpbj&position=® UL"
+            },
+            {
+              "word": "jsp?namespace=jbpnsCardPortletWindowsnpbj&position=®",
+              "confidence": 43.54,
+              "text_fragment": "10.48.98.11 .8080/portal/jsp/RegistrationStamp jsp?namespace=jbpnsCardPortletWindowsnpbj&position=® UL 07.09.2026"
+            },
+            {
+              "word": "UL",
+              "confidence": 22.61,
+              "text_fragment": ".8080/portal/jsp/RegistrationStamp jsp?namespace=jbpnsCardPortletWindowsnpbj&position=® UL 07.09.2026 1/1"
+            }
+          ]
+        }
+      ],
+      "key_value_checks": {
+        "GE32LFN0": {
+          "recognized": false,
+          "pattern": "\\bGE32LFN0\\b"
+        },
+        "DEXP 43UCY3": {
+          "recognized": false,
+          "pattern": "\\bDEXP\\s+43UCY3\\b"
+        },
+        "LED": {
+          "recognized": true,
+          "pattern": "\\bLED\\b"
+        },
+        "Full HD": {
+          "recognized": true,
+          "pattern": "\\bFull\\s+HD\\b"
+        },
+        "13 750": {
+          "recognized": true,
+          "pattern": "\\b13\\s*750(?:[,.]00)?\\b"
+        },
+        "26 600": {
+          "recognized": true,
+          "pattern": "\\b26\\s*600(?:[,.]00)?\\b"
+        },
+        "54 100": {
+          "recognized": true,
+          "pattern": "\\b54\\s*100(?:[,.]00)?\\b"
+        },
+        "количество 2": {
+          "recognized": true,
+          "pattern": "(?:\\b2\\b|\\b2\\s*шт\\b)"
+        },
+        "количество 1": {
+          "recognized": true,
+          "pattern": "(?:\\b1\\b|\\b1\\s*шт\\b)"
+        }
+      }
+    },
+    {
+      "document_name": "рап.pdf",
+      "page_count": 1,
+      "pages": [
+        {
+          "document_name": "рап.pdf",
+          "page_number": 1,
+          "read_method": "ocr",
+          "text_layer_quality": {
+            "non_whitespace_characters": 0,
+            "printable_characters": 0,
+            "alphanumeric_ratio": 0.0,
+            "replacement_characters": 0
+          },
+          "recognized_text": "Врио начальника ФКУ ИК-/\nУФСИН России по Липецкой области\n\nподполковнику внутренней службы\nЕ.В. Качану\n\nРапорт\n\nВ соотвётствии с п. 4 4. 1 ст. 93 Федерального закона oT 05.04.2013 N 44-03\n\"О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения\nгосударственных и муниципальных нужд\", прошу Вашего разэешения на размещение\n\nинформации о закупке телевизоров в\n\nконтракта на поставку телевизоров:\n\n_ товара\n\nГелевизор\n\n26.40.20.122-\n00000002\n\nEAT «Березка» и заключение государственного\n\ne| —————— Характеристики товара\n\nДиагональ экрана: > 30 их 35 Дюйм\nРазрешение экрана: 4K LHD\n\nТип экрана: OLED\n\nТелевизор\n\n26.40.20.122/ |\n26.40.20.122-\n00000002\n\n2 шт\n\nДиагональ экрана: > 40 и < 45 Дюйм\nРазрешение экрана: 4К LHD\n\nTun экрана: OLED\n\na о i д де о од де д о д од\n\nАдрес поставки товара: ФКУ ИК-7 УФСИН России по Липецкой области, 399360, Липецкая\nобл., Усманский р-н, Новоуглянка с, ул. Дзержинского, д. 30.\nСрок поставки товара с даты заключения контракта до 21.09.2026 г.\n\nИсточник финансирования — Дополнительное бюджетное финансирование\nКБК 320 0305 4230190048 244\n\nЗаместитель начальника ОКБИиХО\nстарший лейтенант внутренней службы\n\n#7 ; | А.М. Матыцина\n\n|\n\n",
+          "average_confidence": 85.67,
+          "minimum_confidence": 0.0,
+          "recognized_word_count": 162,
+          "low_confidence_word_count": 23,
+          "uncertain_fragments": [
+            {
+              "word": "ИК-/",
+              "confidence": 63.62,
+              "text_fragment": "начальника ФКУ ИК-/ УФСИН России"
+            },
+            {
+              "word": "разэешения",
+              "confidence": 37.32,
+              "text_fragment": "прошу Вашего разэешения на размещение"
+            },
+            {
+              "word": "_",
+              "confidence": 18.1,
+              "text_fragment": "поставку телевизоров: _ товара Гелевизор"
+            },
+            {
+              "word": "товара",
+              "confidence": 51.52,
+              "text_fragment": "телевизоров: _ товара Гелевизор 26.40.20.122-"
+            },
+            {
+              "word": "——————",
+              "confidence": 13.9,
+              "text_fragment": "государственного e| —————— Характеристики товара"
+            },
+            {
+              "word": "товара",
+              "confidence": 0.0,
+              "text_fragment": "—————— Характеристики товара Диагональ экрана:"
+            },
+            {
+              "word": "их",
+              "confidence": 27.43,
+              "text_fragment": "> 30 их 35 Дюйм"
+            },
+            {
+              "word": "Телевизор",
+              "confidence": 62.85,
+              "text_fragment": "экрана: OLED Телевизор 26.40.20.122/ |"
+            },
+            {
+              "word": "a",
+              "confidence": 27.48,
+              "text_fragment": "экрана: OLED a о i"
+            },
+            {
+              "word": "о",
+              "confidence": 16.76,
+              "text_fragment": "OLED a о i д"
+            },
+            {
+              "word": "i",
+              "confidence": 4.78,
+              "text_fragment": "a о i д де"
+            },
+            {
+              "word": "д",
+              "confidence": 41.15,
+              "text_fragment": "о i д де о"
+            },
+            {
+              "word": "де",
+              "confidence": 23.88,
+              "text_fragment": "i д де о од"
+            },
+            {
+              "word": "о",
+              "confidence": 26.92,
+              "text_fragment": "д де о од де"
+            },
+            {
+              "word": "од",
+              "confidence": 38.08,
+              "text_fragment": "де о од де д"
+            },
+            {
+              "word": "де",
+              "confidence": 37.16,
+              "text_fragment": "о од де д о"
+            },
+            {
+              "word": "д",
+              "confidence": 42.96,
+              "text_fragment": "од де д о д"
+            },
+            {
+              "word": "о",
+              "confidence": 36.7,
+              "text_fragment": "де д о д од"
+            },
+            {
+              "word": "д",
+              "confidence": 37.65,
+              "text_fragment": "д о д од Адрес"
+            },
+            {
+              "word": "од",
+              "confidence": 37.41,
+              "text_fragment": "о д од Адрес поставки"
+            },
+            {
+              "word": "ОКБИиХО",
+              "confidence": 47.98,
+              "text_fragment": "Заместитель начальника ОКБИиХО старший лейтенант"
+            },
+            {
+              "word": "#7",
+              "confidence": 57.39,
+              "text_fragment": "внутренней службы #7 ; |"
+            },
+            {
+              "word": ";",
+              "confidence": 54.53,
+              "text_fragment": "службы #7 ; | А.М."
+            }
+          ]
+        }
+      ],
+      "key_value_checks": {
+        "OLED": {
+          "recognized": true,
+          "pattern": "\\bOLED\\b"
+        },
+        "4K UHD": {
+          "recognized": false,
+          "pattern": "\\b4K\\s+UHD\\b"
+        },
+        "количество 2 шт": {
+          "recognized": true,
+          "pattern": "\\b2\\s*шт\\b"
+        }
+      }
+    }
+  ]
+}

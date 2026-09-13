@@ -1,0 +1,1514 @@
+{
+  "run_type": "LIVE_MVP_EXACT_MODEL_BATCH",
+  "started_at": "2026-09-12T07:49:02.461025+00:00",
+  "finished_at": "2026-09-12T07:55:41.387736+00:00",
+  "elapsed_seconds": 398.93,
+  "deadline_window": {
+    "from": "2026-09-12T10:49:02.461215+03:00",
+    "to": "2026-09-15T23:59:59.999999+03:00",
+    "rule": "deadline > now Moscow; deadline <= end of second workday Moscow"
+  },
+  "supplier_search_cap": 10,
+  "pagination": {
+    "status": "completed",
+    "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+    "page_size": 10,
+    "totalCount": 117,
+    "pages_read": 12,
+    "requests_made": 12,
+    "raw_count": 117,
+    "unique_count": 117,
+    "duplicate_count": 0,
+    "end_proven": true,
+    "stop_reason": "total_count_reached",
+    "diagnostic_error": null,
+    "page_diagnostics": [
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 1,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 10,
+        "cumulative_unique_count": 10,
+        "timestamp": "2026-09-12T07:49:45.736591+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 2,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 20,
+        "cumulative_unique_count": 20,
+        "timestamp": "2026-09-12T07:49:46.099311+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 3,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 30,
+        "cumulative_unique_count": 30,
+        "timestamp": "2026-09-12T07:49:46.460384+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 4,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 40,
+        "cumulative_unique_count": 40,
+        "timestamp": "2026-09-12T07:49:46.826270+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 5,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 50,
+        "cumulative_unique_count": 50,
+        "timestamp": "2026-09-12T07:49:47.205963+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 6,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 60,
+        "cumulative_unique_count": 60,
+        "timestamp": "2026-09-12T07:49:47.566949+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 7,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 70,
+        "cumulative_unique_count": 70,
+        "timestamp": "2026-09-12T07:49:47.928186+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 8,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 80,
+        "cumulative_unique_count": 80,
+        "timestamp": "2026-09-12T07:49:48.310242+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 9,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 90,
+        "cumulative_unique_count": 90,
+        "timestamp": "2026-09-12T07:49:48.664303+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 10,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 100,
+        "cumulative_unique_count": 100,
+        "timestamp": "2026-09-12T07:49:49.054689+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 11,
+        "size": 10,
+        "returned_count": 10,
+        "new_unique_count": 10,
+        "totalCount": 117,
+        "cumulative_raw_count": 110,
+        "cumulative_unique_count": 110,
+        "timestamp": "2026-09-12T07:49:49.406482+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 12,
+        "size": 10,
+        "returned_count": 7,
+        "new_unique_count": 7,
+        "totalCount": 117,
+        "cumulative_raw_count": 117,
+        "cumulative_unique_count": 117,
+        "timestamp": "2026-09-12T07:49:49.761220+00:00",
+        "stop_reason": "total_count_reached"
+      }
+    ],
+    "observed_total_counts": [
+      117,
+      117,
+      117,
+      117,
+      117,
+      117,
+      117,
+      117,
+      117,
+      117,
+      117,
+      117
+    ],
+    "server_prefilter": {
+      "applicationFillingStartDate": "2026-09-12T10:49:02.461215+03:00",
+      "applicationFillingEndDate": "2026-09-15T23:59:59.999999+03:00",
+      "semantics": "предварительный диапазон UI; точный deadline проверен локально"
+    }
+  },
+  "filter_audit": [
+    {
+      "purchase_id": "ca820945-e0be-47c6-8270-c99063f4be07",
+      "trade_number": "200909066126100137",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "c9fce225-7d41-4d39-9521-1230b26b0a3c",
+      "trade_number": "200909066126100136",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "d1dfcd4a-ff20-4f3f-bb17-ed4dabacf007",
+      "trade_number": "200909066126100135",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "e9502e9f-7b3d-40c6-81fc-eef529ef0eb7",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "f07013ea-4f01-4089-ba0b-1481ddea25e8",
+      "trade_number": "200909066126100134",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed",
+        "procurement_kind_services",
+        "hard_exclusion: программное обеспечение / программы для ЭВМ",
+        "hard_exclusion: лицензия"
+      ]
+    },
+    {
+      "purchase_id": "7a0862a1-7eb1-4dc6-af6f-cd192e46e32b",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "f0284781-9889-4b62-84f2-142f26c2acb0",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "95409141-e73a-4d71-8db8-08087212d5f2",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "694e7223-1adb-4b57-a7be-97f9d4d2a903",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "0893aef1-3aaf-4ac7-b769-2c72f3713953",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "7010cdb7-6739-4fb3-85e8-c3ef7ee27d51",
+      "trade_number": "200909805126100158",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "2e81218c-c83a-450d-ba26-29554a4205ff",
+      "trade_number": "403000378126100002",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "law_not_determined"
+      ]
+    },
+    {
+      "purchase_id": "f13a2dac-171a-4af4-acb5-6a3f0490c159",
+      "trade_number": "100920003126100162",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "hard_exclusion: программное обеспечение / программы для ЭВМ",
+        "hard_exclusion: право использования"
+      ]
+    },
+    {
+      "purchase_id": "b6789226-49ad-41f2-905c-8030242d12b7",
+      "trade_number": "403000378126100001",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_above_max",
+        "law_not_determined"
+      ]
+    },
+    {
+      "purchase_id": "a8ae5e1c-4266-41e2-b961-fc88140bf58f",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "794667e2-e8bc-4e63-be3c-0eb2d857de11",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "2bccded0-baa1-4c3f-8c30-ea1d1edbcda9",
+      "trade_number": "100009585126100170",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "law_not_determined"
+      ]
+    },
+    {
+      "purchase_id": "26e7b6f8-6c24-456c-a888-66bcafeba207",
+      "trade_number": "100274110126100144",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed",
+        "hard_exclusion: строительные материалы"
+      ]
+    },
+    {
+      "purchase_id": "5c24584f-d052-42d4-8743-5e6a6f696ca3",
+      "trade_number": "100032348126100111",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "state_defense_order_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "e65bae41-4ef6-4cd6-8453-b5ea39717bfa",
+      "trade_number": "100110512126100720",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_mixed"
+      ]
+    },
+    {
+      "purchase_id": "e99cf804-1805-453e-a69f-6e446b41d419",
+      "trade_number": "100032348126100110",
+      "filter_result": "passed",
+      "reasons": []
+    },
+    {
+      "purchase_id": "82d82d27-6f04-4466-81ad-2adcf2598e47",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "918a2826-290c-47c2-ad8f-e54df0422149",
+      "trade_number": "100032348126100109",
+      "filter_result": "passed",
+      "reasons": []
+    },
+    {
+      "purchase_id": "a3292612-6a8c-44b2-8e15-97174e246e1f",
+      "trade_number": "100088347126100202",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "b1432dd4-09e0-4445-904d-6cc9373275fd",
+      "trade_number": "100110512126100701",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "too_many_items"
+      ]
+    },
+    {
+      "purchase_id": "bb98f36b-2c40-4d47-9c27-2b6a66e77c99",
+      "trade_number": "100133180126100054",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "contextual_exclusion: ремонт"
+      ]
+    },
+    {
+      "purchase_id": "82498e23-2975-4abc-bef5-291a6c3de1a3",
+      "trade_number": "100187963126100048",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "contextual_exclusion: услуг",
+        "contextual_exclusion: оказание"
+      ]
+    },
+    {
+      "purchase_id": "294c4cec-16b5-458d-944e-5d16b60ca744",
+      "trade_number": "100032348126100108",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_above_max"
+      ]
+    },
+    {
+      "purchase_id": "89df50bc-852a-4348-aa9c-e39fecebaaba",
+      "trade_number": "100266359126100159",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "hard_exclusion: лекарственные препараты"
+      ]
+    },
+    {
+      "purchase_id": "991ac4c9-53cc-4b1a-ad5f-537c372c2c98",
+      "trade_number": "100246259126100132",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "0f4c7343-ca31-4a92-a201-82aea4772d2c",
+      "trade_number": "100275246126100835",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "6cb0d4f8-ea8b-4e9b-a6f4-44ba94cf0c6c",
+      "trade_number": "200909906126100398",
+      "filter_result": "rejected",
+      "reasons": [
+        "too_many_items"
+      ]
+    },
+    {
+      "purchase_id": "76f7361c-7d5d-476e-84f3-cc95a1bf8f54",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "8c624fd0-62f8-4f43-8e3f-6a969889fe9d",
+      "trade_number": "100133180126100053",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "98f129c0-f31f-4b76-ad48-2d6f78edb717",
+      "trade_number": "200910353126100105",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_above_max",
+        "too_many_items",
+        "hard_exclusion: строительные материалы"
+      ]
+    },
+    {
+      "purchase_id": "b9709fb7-4ebf-4db6-9eff-c2703d8ed887",
+      "trade_number": "200906204126100791",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "d83a47c3-d070-44a6-ae81-e2dc580903ee",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "trade_number": "100110512126100716",
+      "filter_result": "passed",
+      "reasons": []
+    },
+    {
+      "purchase_id": "d11c7348-0579-4812-8a80-f6852417ab35",
+      "trade_number": "100123884126100068",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "c356e9ff-3105-42ff-8712-3a574a6ef93d",
+      "trade_number": "100243163126100167",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed",
+        "hard_exclusion: шины"
+      ]
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "filter_result": "passed",
+      "reasons": []
+    },
+    {
+      "purchase_id": "b0ddd403-bc5f-44bf-a5bc-9774aafdfeba",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "77945f1c-9e11-46ed-8959-3853359bec34",
+      "trade_number": "100303496126100044",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "c3e5e053-2eef-487a-afbc-d6a14fb6914b",
+      "trade_number": "100048679126100309",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "d274fda7-0c5a-419c-9f36-57448d751e11",
+      "trade_number": "100088532126100061",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_mixed"
+      ]
+    },
+    {
+      "purchase_id": "94603e29-25c5-416d-a029-d2da3252c4e2",
+      "trade_number": "200907558126100109",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_above_max",
+        "procurement_kind_works"
+      ]
+    },
+    {
+      "purchase_id": "05227b12-c9cf-4cc9-9ad5-ef271d5eeace",
+      "trade_number": "100099468126100097",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "880c9b6e-e4ff-4e10-a831-ecf86e25aa21",
+      "trade_number": "100099468126100096",
+      "filter_result": "passed",
+      "reasons": []
+    },
+    {
+      "purchase_id": "78418127-b824-4fc5-8b53-cbade37d6360",
+      "trade_number": "100133381126100016",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "87dfa863-8f80-4bbc-a450-485dfad2ec1b",
+      "trade_number": "200910480126100038",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "c2179e99-779c-4043-834a-e0aab530cee1",
+      "trade_number": "100088347126100201",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_works"
+      ]
+    },
+    {
+      "purchase_id": "f9fe80e9-d7de-40ea-af7c-ccae1ad2d694",
+      "trade_number": "200906204126100789",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "1bcb84c1-7b6b-484d-97df-553400d1e10f",
+      "trade_number": "100158854126100039",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "943365f2-bf8b-47c2-a124-d9e245a3ee65",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "3e5b55f1-bc4c-46dc-9f45-86f20ee7ba9b",
+      "trade_number": "100158854126100038",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "d323ce42-ee6d-44f2-8628-b50ddbc5cd67",
+      "trade_number": "200906538126100031",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "f3f2b264-5769-41d7-a83a-71a485ad6e56",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "1fce301c-848b-4475-8ecc-32e897b62ff6",
+      "trade_number": "200762822126100387",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "e8c646eb-7da8-416f-986b-919ba6b08a3d",
+      "trade_number": "100277384126100139",
+      "filter_result": "manual_check",
+      "reasons": [
+        "law_not_determined"
+      ]
+    },
+    {
+      "purchase_id": "e3f7ba17-8dc2-4c8f-bd6b-f66d68749dcb",
+      "trade_number": "200906204126100787",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed",
+        "hard_exclusion: продукты"
+      ]
+    },
+    {
+      "purchase_id": "f5699b03-26b2-4fc8-a12b-8e6e7312a61b",
+      "trade_number": "200910353126100104",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_above_max"
+      ]
+    },
+    {
+      "purchase_id": "dd37993c-d820-4a24-a22e-df8c6ef37438",
+      "trade_number": "100292002126100382",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "f5f5325d-ad20-465c-adb9-28bb8a2a0fbc",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "3bb1ce66-037a-4a7b-82a8-18902be36f48",
+      "trade_number": "100292002126100381",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "5d98e767-f058-40f7-ab40-08ec631548ef",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "5fbf99fa-fcc2-4527-be38-e74c350f9dd7",
+      "trade_number": "100291492126100075",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services",
+        "hard_exclusion: лекарственные препараты"
+      ]
+    },
+    {
+      "purchase_id": "9fc7af2d-10f7-4939-9dbb-bdb50902a1d9",
+      "trade_number": "200908228126100081",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "law_not_determined"
+      ]
+    },
+    {
+      "purchase_id": "137e17c5-9e1b-42de-bf84-fc8405dbcefd",
+      "trade_number": "100292002126100380",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "a9f3de2c-752a-4809-aefd-f732bfd2edc8",
+      "trade_number": "100275449126100047",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_determined"
+      ]
+    },
+    {
+      "purchase_id": "9f85060b-81eb-4dbb-aaed-48fda5a2a974",
+      "trade_number": "200762822126100386",
+      "filter_result": "rejected",
+      "reasons": [
+        "too_many_items"
+      ]
+    },
+    {
+      "purchase_id": "ba868f53-d74b-495e-a044-29095c83fea5",
+      "trade_number": "100107624126100037",
+      "filter_result": "rejected",
+      "reasons": [
+        "region_not_allowed",
+        "procurement_kind_services",
+        "hard_exclusion: строительные материалы"
+      ]
+    },
+    {
+      "purchase_id": "079d8e18-7cc2-47a2-b95c-815c46036720",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "8066d293-b6e2-4223-96b0-efadb17cb62f",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "1fb48007-87ef-4b2d-ae55-290a25b34d6d",
+      "trade_number": "100178266126100076",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "state_defense_order_not_allowed",
+        "region_not_allowed",
+        "hard_exclusion: овощи"
+      ]
+    },
+    {
+      "purchase_id": "eafdf8b7-3d66-4339-b09f-64c83e9fc03c",
+      "trade_number": "100099468126100095",
+      "filter_result": "rejected",
+      "reasons": [
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "11003974-6598-4e43-bd7b-9ef890e4c6da",
+      "trade_number": "100178266126100075",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "state_defense_order_not_allowed",
+        "region_not_allowed",
+        "hard_exclusion: овощи"
+      ]
+    },
+    {
+      "purchase_id": "44aba67d-a70b-4dc0-b4bb-45eb21b3edec",
+      "trade_number": "100919986126100400",
+      "filter_result": "rejected",
+      "reasons": [
+        "region_not_allowed",
+        "procurement_kind_mixed",
+        "hard_exclusion: лицензия",
+        "hard_exclusion: право использования",
+        "hard_exclusion: программное обеспечение / программы для ЭВМ",
+        "hard_exclusion: продукты"
+      ]
+    },
+    {
+      "purchase_id": "8375eed4-533c-484f-b9ed-3043c02bb738",
+      "trade_number": "100178266126100074",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "state_defense_order_not_allowed",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "566bfe7d-188b-4f49-8866-76327e154f94",
+      "trade_number": "100099468126100093",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "3acad706-2cdf-4a7a-b85e-ef27404101f0",
+      "trade_number": "100182129126100070",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "29218079-8f20-4f9e-b8e0-af48647b43f8",
+      "trade_number": "200909032126100064",
+      "filter_result": "rejected",
+      "reasons": [
+        "region_not_determined",
+        "hard_exclusion: программное обеспечение / программы для ЭВМ",
+        "hard_exclusion: лицензия",
+        "hard_exclusion: продукты"
+      ]
+    },
+    {
+      "purchase_id": "7d21bdb9-e8dd-4100-a204-b446486bd247",
+      "trade_number": "100275246126100839",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "region_not_allowed"
+      ]
+    },
+    {
+      "purchase_id": "4e446ca9-5507-45c9-9f0a-f73f7b8e9d14",
+      "trade_number": "200762822126100385",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min"
+      ]
+    },
+    {
+      "purchase_id": "077e5da1-fca4-48b7-b37e-b8c28ac60769",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "481b7cb7-9c07-47db-b8a0-17800704d76f",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "cd7996ae-1a7f-4084-bb81-094505248b7f",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "fb229a9c-e778-423e-86d9-f91123ed3204",
+      "trade_number": "100017489126100157",
+      "filter_result": "rejected",
+      "reasons": [
+        "procurement_kind_services",
+        "hard_exclusion: лицензия",
+        "hard_exclusion: программное обеспечение / программы для ЭВМ",
+        "hard_exclusion: право использования"
+      ]
+    },
+    {
+      "purchase_id": "6a1daa51-665f-4b6e-be9e-0bc9a9062397",
+      "trade_number": "200737732126100141",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_above_max",
+        "law_not_determined",
+        "contextual_exclusion: работ",
+        "contextual_exclusion: выполнение",
+        "contextual_exclusion: монтаж"
+      ]
+    },
+    {
+      "purchase_id": "c9f6e7fc-903b-401f-b0c5-9cd26090353b",
+      "trade_number": "100115239126100144",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "106dfb7e-f55a-4fae-b06a-4182ab0d7dd0",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "15f315a7-c5df-4753-8bf1-5043660073e1",
+      "trade_number": "200737732126100140",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_above_max",
+        "too_many_items",
+        "law_not_determined",
+        "contextual_exclusion: монтаж"
+      ]
+    },
+    {
+      "purchase_id": "45d8809d-6156-495e-9c56-a75641017c1e",
+      "trade_number": "100107624126100036",
+      "filter_result": "rejected",
+      "reasons": [
+        "region_not_allowed",
+        "procurement_kind_services",
+        "hard_exclusion: строительные материалы"
+      ]
+    },
+    {
+      "purchase_id": "f83d1e98-1065-4130-8f5f-45aec11efc42",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "e36d509d-157c-4e99-a96a-7fce48ebc13e",
+      "trade_number": "100032711126100061",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "770db58a-d883-4628-93cd-fd6f7e52472b",
+      "trade_number": "100032711126100060",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "procurement_kind_services"
+      ]
+    },
+    {
+      "purchase_id": "a380f6d7-97d3-4ffc-bbb7-75fc184bfe65",
+      "trade_number": "100920370126100077",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_below_min",
+        "law_not_determined"
+      ]
+    },
+    {
+      "purchase_id": "c79c4f00-5ba9-42e7-8093-80e59311343f",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "df070041-975f-41f1-8b57-75329dfa7ba5",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "e13cfffd-eb84-44a2-a0d6-bc662c725a3a",
+      "trade_number": "200737732126100139",
+      "filter_result": "rejected",
+      "reasons": [
+        "price_above_max",
+        "law_not_determined",
+        "procurement_kind_works"
+      ]
+    },
+    {
+      "purchase_id": "92b72f11-986a-4388-9e0e-88d45f2c5549",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "78a20c00-f3b0-48cb-9d4c-0e7318e5b714",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "a930af66-7927-470d-9970-c5b7e6cd36fb",
+      "trade_number": null,
+      "filter_result": "confidential_locked",
+      "reasons": [
+        "confidentiality_agreement_required"
+      ]
+    },
+    {
+      "purchase_id": "d394c6a0-8e59-44e9-ae4f-81447022aada",
+      "trade_number": "100290130126100433",
+      "filter_result": "rejected",
+      "reasons": [
+        "region_not_allowed",
+        "procurement_kind_services"
+      ]
+    }
+  ],
+  "summary": {
+    "A. Получено от ЕАТ (raw)": 117,
+    "B. Осталось после точного deadline": 103,
+    "C. Прошло бизнес-фильтры": 5,
+    "D. Товарных позиций": 17,
+    "E. Позиции с точной моделью": 0,
+    "F. Требуют model discovery": 1,
+    "G. Требуют ручной проверки": 16,
+    "H. Exact-model позиций просчитано": 0,
+    "I. Поставщиков найдено": 0,
+    "J. ✅": 0,
+    "J. 🟡": 0,
+    "J. ⚪": 0,
+    "J. 🔴": 0,
+    "Закрытых закупок сохранено отдельно": 28,
+    "Ошибок этапов": 0
+  },
+  "below_target_positions": [],
+  "items": [
+    {
+      "purchase_id": "e99cf804-1805-453e-a69f-6e446b41d419",
+      "trade_number": "100032348126100110",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e99cf804-1805-453e-a69f-6e446b41d419/info",
+      "subject": "Закупка оборудования продовольственной службы: Шкаф холодильный",
+      "deadline": null,
+      "item_number": 1,
+      "item_name": "Согласно техническому заданию (Приложение №3)",
+      "quantity": 3.0,
+      "unit": "шт",
+      "customer_unit_price": 60000.0,
+      "customer_sum": 180000.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "CONTRACT_DOCUMENT",
+        "reason": "Значение не является одним однозначным exact SKU"
+      },
+      "requirements_count": 1,
+      "special_conditions": "Нужно заранее передать марку и госномер автомобиля",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e99cf804-1805-453e-a69f-6e446b41d419",
+      "trade_number": "100032348126100110",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e99cf804-1805-453e-a69f-6e446b41d419/info",
+      "subject": "Закупка оборудования продовольственной службы: Шкаф холодильный",
+      "deadline": null,
+      "item_number": 2,
+      "item_name": "Согласно техническому заданию (Приложение №3)",
+      "quantity": 1.0,
+      "unit": "шт",
+      "customer_unit_price": 100000.0,
+      "customer_sum": 100000.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Режим модели неоднозначен"
+      },
+      "requirements_count": 1,
+      "special_conditions": "Нужно заранее передать марку и госномер автомобиля",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "918a2826-290c-47c2-ad8f-e54df0422149",
+      "trade_number": "100032348126100109",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/918a2826-290c-47c2-ad8f-e54df0422149/info",
+      "subject": "Закупка оборудования продовольственной службы: Камера холодильная среднетемпературная",
+      "deadline": null,
+      "item_number": 1,
+      "item_name": "Согласно техническому заданию (Приложение №3)",
+      "quantity": 1.0,
+      "unit": "шт",
+      "customer_unit_price": 200000.0,
+      "customer_sum": 200000.0,
+      "model": {
+        "route": "discovery",
+        "status_ru": "ТРЕБУЕТСЯ ПОДБОР МОДЕЛИ",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "mode": "MODEL_DISCOVERY_REQUIRED",
+        "reason": "Конкретная модель/SKU не указана"
+      },
+      "requirements_count": 1,
+      "special_conditions": "Нужно заранее передать марку и госномер автомобиля",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "trade_number": "100110512126100716",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/1219e37d-4823-499b-97bc-006e9c338180/info",
+      "subject": "Поставка запасных частей к вычислительной технике.",
+      "deadline": null,
+      "item_number": 1,
+      "item_name": "Блок питания монитора или телевизора - внешний; входит в комплект поставки\nПотребление энергии - 36 Вт\nДиагональ - 27\" (68.6 см)\nРазрешение экрана - 1920 x 1080\nТип LCD-матрицы - VA\nЧастота обновления кадров - 75 Гц\nФормат матрицы - 16: 9\nПоверхность экрана - матовая\nЯркость матрицы - 200 кд/ м2\nКонтрастность LCD-матрицы - 3000: 1 \nВремя отклика - 5 мс\nУгол обзора LCD-матрицы - 178° по горизонтали, 178° по вертикали\nЦвета, использованные в оформлении - черный\nРегулировка положения экрана - только наклон\nУглы наклона монитора - -5° ~ 20°\n\n",
+      "quantity": 16.0,
+      "unit": "шт",
+      "customer_unit_price": 0.0,
+      "customer_sum": 0.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции; Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 15,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "trade_number": "100110512126100716",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/1219e37d-4823-499b-97bc-006e9c338180/info",
+      "subject": "Поставка запасных частей к вычислительной технике.",
+      "deadline": null,
+      "item_number": 2,
+      "item_name": "Напряжение, В:12\nЕмкость, Ач:5\nТехнология:AGM\nСрок службы АКБ, лет:10\nТип клеммы:FASTON F2 (зажим) 6,35 мм\nТип аккумулятора: Стационарный\nДлина, мм.:90\nШирина, мм.:70\nВысота, мм.:102\nПолная высота, мм.:106\nВес, кг.:1.8\n",
+      "quantity": 8.0,
+      "unit": "шт",
+      "customer_unit_price": 0.0,
+      "customer_sum": 0.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "CUSTOMER_SPECIFICATION",
+        "reason": "Значение не является одним однозначным exact SKU"
+      },
+      "requirements_count": 11,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "trade_number": "100110512126100716",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/1219e37d-4823-499b-97bc-006e9c338180/info",
+      "subject": "Поставка запасных частей к вычислительной технике.",
+      "deadline": null,
+      "item_number": 3,
+      "item_name": "Цвет:\tчерный\nТип оборудования:\tВидеокабели и переходники\nНазначение:\tДля соединения периферийных устройств\nРазъём с одной стороны:\tDisplayPort (male)\nРазъём с другой стороны:\tDisplayPort (male)\nВерсия:\t1.4\nДлина кабеля (м):\t2\nПропускная способность интерфейса:\t21,6 до 80 Гбит/с\n\n",
+      "quantity": 14.0,
+      "unit": "шт",
+      "customer_unit_price": 0.0,
+      "customer_sum": 0.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции; Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 8,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "trade_number": "100110512126100716",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/1219e37d-4823-499b-97bc-006e9c338180/info",
+      "subject": "Поставка запасных частей к вычислительной технике.",
+      "deadline": null,
+      "item_number": 4,
+      "item_name": "Модель коннектор rj-45: 100 шт/уп\nРазъем: RJ-45 (LAN)\nКоличество пар: 4 пары\n",
+      "quantity": 1.0,
+      "unit": "шт",
+      "customer_unit_price": 0.0,
+      "customer_sum": 0.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "CONTRACT_DOCUMENT",
+        "reason": "Неоднозначная привязка документа к позиции; Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 1,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "1219e37d-4823-499b-97bc-006e9c338180",
+      "trade_number": "100110512126100716",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/1219e37d-4823-499b-97bc-006e9c338180/info",
+      "subject": "Поставка запасных частей к вычислительной технике.",
+      "deadline": null,
+      "item_number": 5,
+      "item_name": "Категория – 5E\nТип кабеля – UTP\nКоличество пар – 4\nВнешний диаметр кабеля, мм-5,5±0,2\nМатериал оболочки кабеля – полиэтилен (LDPE)\nДиаметp токопроводящих жил, мм – 0,48\nМатериал изоляции проводника – полиэтилен высокой плотности (HDPE)\nТолщина изоляции, мм – 0,21\nЧастота сигнала, МГц – 100\nВолновое сопротивление, Ом - 100±15\nТип упаковки: Бухта\nДлина кабеля: 305 м\n",
+      "quantity": 1.0,
+      "unit": "шт",
+      "customer_unit_price": 0.0,
+      "customer_sum": 0.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "CUSTOMER_SPECIFICATION",
+        "reason": "Режим модели неоднозначен"
+      },
+      "requirements_count": 10,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/info",
+      "subject": "403-26-МЗ Стоматология",
+      "deadline": null,
+      "item_number": 1,
+      "item_name": "Абатмент UCLA CCM под литье\nдиаметр 4.0, десна 1,0 мм, с\nшестигранником, для\nстандартной линейки.",
+      "quantity": 20.0,
+      "unit": "шт",
+      "customer_unit_price": 2945.0,
+      "customer_sum": 58900.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 0,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется утилизация",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/info",
+      "subject": "403-26-МЗ Стоматология",
+      "deadline": null,
+      "item_number": 2,
+      "item_name": "Абатмент UCLA CCM под литье\nдиаметр 4.5, десна 1,0 мм, с\nшестигранником, для широкой\nлинейки",
+      "quantity": 30.0,
+      "unit": "шт",
+      "customer_unit_price": 2945.0,
+      "customer_sum": 88350.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 0,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется утилизация",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/info",
+      "subject": "403-26-МЗ Стоматология",
+      "deadline": null,
+      "item_number": 3,
+      "item_name": "Гидрогум 5 - Альгинатная\nслепочная масса 453г",
+      "quantity": 50.0,
+      "unit": "шт",
+      "customer_unit_price": 1040.05,
+      "customer_sum": 52002.5,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 1,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется утилизация",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/info",
+      "subject": "403-26-МЗ Стоматология",
+      "deadline": null,
+      "item_number": 4,
+      "item_name": "Перфит / PERFIT Putty Асиликон основа 400 г,\nкатализатор 400 г",
+      "quantity": 5.0,
+      "unit": "шт",
+      "customer_unit_price": 3022.5,
+      "customer_sum": 15112.5,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 0,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется утилизация",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/info",
+      "subject": "403-26-МЗ Стоматология",
+      "deadline": null,
+      "item_number": 5,
+      "item_name": "Перфит /PERFIT Light Body Асиликон 2х50мл картриджи",
+      "quantity": 5.0,
+      "unit": "шт",
+      "customer_unit_price": 1937.5,
+      "customer_sum": 9687.5,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 0,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется утилизация",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/info",
+      "subject": "403-26-МЗ Стоматология",
+      "deadline": null,
+      "item_number": 6,
+      "item_name": "Фуджи 1 Fuji 1 -\nстеклоиномерный цемент\nхимического отверждения,\nуп./35г+25г",
+      "quantity": 5.0,
+      "unit": "шт",
+      "customer_unit_price": 13950.0,
+      "customer_sum": 69750.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 0,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется утилизация",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/info",
+      "subject": "403-26-МЗ Стоматология",
+      "deadline": null,
+      "item_number": 7,
+      "item_name": "Наконечник прямой НПМ-40 для\nмикромоторов с охлаждением",
+      "quantity": 5.0,
+      "unit": "шт",
+      "customer_unit_price": 4185.0,
+      "customer_sum": 20925.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 0,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется утилизация",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "e53ff30e-065c-4a77-a73a-2b1fb4d8bc53",
+      "trade_number": "200909143126100577",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/info",
+      "subject": "403-26-МЗ Стоматология",
+      "deadline": null,
+      "item_number": 8,
+      "item_name": "Наконечник турбинный НСТк\n300-01 М4 кнопочный",
+      "quantity": 5.0,
+      "unit": "шт",
+      "customer_unit_price": 4262.5,
+      "customer_sum": 21312.5,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "Неоднозначная привязка документа к позиции"
+      },
+      "requirements_count": 0,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется утилизация",
+      "supplier_search": null
+    },
+    {
+      "purchase_id": "880c9b6e-e4ff-4e10-a831-ecf86e25aa21",
+      "trade_number": "100099468126100096",
+      "purchase_url": "https://agregatoreat.ru/purchases/announcement/880c9b6e-e4ff-4e10-a831-ecf86e25aa21/info",
+      "subject": "Поставка системы видеонаблюдения",
+      "deadline": null,
+      "item_number": 1,
+      "item_name": "Количество игл -2\nКоличество нитей -4\nТип стежка- цепной\nТип строчки- стачивающе-обметочная\nРасстояние между иглами – 2 мм\nMax cкорость шитья – не менее 7000 об/мин\nМощность  -не более 550 Вт\nДлина стежка - ≥ 4 и < 6  мм\nВысота подъема лапки -  ≥ 5 и < 10 мм\nПродвижение материала – нижняя рейка\nТип материалов – легкие, средние\nТип подачи смазки - автоматическая \nАвтоматический подъем лапки –Да\nАвтоматическая обрезка нити-Да\nТип привода – встроенный ",
+      "quantity": 3.0,
+      "unit": "шт",
+      "customer_unit_price": 73500.0,
+      "customer_sum": 220500.0,
+      "model": {
+        "route": "manual_review",
+        "status_ru": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
+        "model": null,
+        "model_source": "NOT_FOUND",
+        "reason": "тип материалов; тип привода"
+      },
+      "requirements_count": 31,
+      "special_conditions": "Требуется разгрузка силами поставщика; Требуется погрузка",
+      "supplier_search": null
+    }
+  ],
+  "errors": [],
+  "artifacts": {
+    "confidential": "/Users/lubov/Documents/TENDER_AI/data/mvp_confidential_window.json",
+    "report": "/Users/lubov/Documents/TENDER_AI/reports/mvp_exact_batch_latest.md",
+    "csv": "/Users/lubov/Documents/TENDER_AI/reports/mvp_exact_batch_latest.csv",
+    "checkpoint": "/Users/lubov/Documents/TENDER_AI/data/checkpoints/mvp_exact_batch.json"
+  },
+  "google_sheets_written": false,
+  "old_parser_used": false,
+  "documents_downloaded": 7
+}

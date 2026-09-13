@@ -1,0 +1,499 @@
+{
+  "purchases": [
+    {
+      "tradeNumber": "200909258126100549",
+      "filter_result": "passed",
+      "special_conditions_short": "",
+      "special_conditions_evidence": [],
+      "extra_costs_estimate": null,
+      "traceability_items": [
+        {
+          "item_index": 0,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.433678+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": null,
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 1,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434007+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": null,
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 2,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434051+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": null,
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 3,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434122+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": null,
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        }
+      ]
+    },
+    {
+      "tradeNumber": "200909247126100282",
+      "filter_result": "passed",
+      "special_conditions_short": "Требуется сборка товара на месте; Требуется разгрузка силами поставщика; Требуется погрузка; Требуется подъём на этаж",
+      "special_conditions_evidence": [
+        {
+          "type": "assembly",
+          "matched_root": "сборк",
+          "matched_text": "своими силами подъем на этаж (при необходимости), разгрузку в соответствие с указаниями Заказчика и сборку. 3.9. При приемке Товара для проверки предоставленных Поставщиком Товаров, предусмотренных Контрактом, в части их соответствия условиям Ко",
+          "source_document": "Проект контракта Д-15622.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "unloading",
+          "matched_root": "разгруз",
+          "matched_text": "текста., и включает в себя стоимость доставки по адресу, указанному в п. 3.2. Контракта, стоимость разгрузочно-погрузочных работ, тары, упаковки и иные затраты Поставщика, связанные с исполнением настоящего Контракта. 2.2. Цена Контракта является",
+          "source_document": "Проект контракта Д-15622.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "unloading",
+          "matched_root": "разгруз",
+          "matched_text": "нной с момента подписания обеими сторонами товарной накладной (ТОРГ-12)/УПД. 3.8. Доставка Товара и разгрузочно-погрузочные работы осуществляются силами Поставщика, в рабочее время (понедельник – четверг с 09.00 часов до 12.00. часов и с 13.00 час",
+          "source_document": "Проект контракта Д-15622.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "unloading",
+          "matched_root": "разгруз",
+          "matched_text": "сов до 16.45 часов). Поставщик обязан произвести своими силами подъем на этаж (при необходимости), разгрузку в соответствие с указаниями Заказчика и сборку. 3.9. При приемке Товара для проверки предоставленных Поставщиком Товаров, предусмотренных",
+          "source_document": "Проект контракта Д-15622.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "loading",
+          "matched_root": "погруз",
+          "matched_text": "включает в себя стоимость доставки по адресу, указанному в п. 3.2. Контракта, стоимость разгрузочно-погрузочных работ, тары, упаковки и иные затраты Поставщика, связанные с исполнением настоящего Контракта. 2.2. Цена Контракта является твердой и",
+          "source_document": "Проект контракта Д-15622.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "loading",
+          "matched_root": "погруз",
+          "matched_text": "та подписания обеими сторонами товарной накладной (ТОРГ-12)/УПД. 3.8. Доставка Товара и разгрузочно-погрузочные работы осуществляются силами Поставщика, в рабочее время (понедельник – четверг с 09.00 часов до 12.00. часов и с 13.00 часов до 18.00",
+          "source_document": "Проект контракта Д-15622.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "floor_delivery",
+          "matched_root": "подъем",
+          "matched_text": "0 часов до 12.00. часов и с 13.00 часов до 16.45 часов). Поставщик обязан произвести своими силами подъем на этаж (при необходимости), разгрузку в соответствие с указаниями Заказчика и сборку. 3.9. При приемке Товара для проверки предоставленных",
+          "source_document": "Проект контракта Д-15622.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "floor_delivery",
+          "matched_root": "этаж",
+          "matched_text": "12.00. часов и с 13.00 часов до 16.45 часов). Поставщик обязан произвести своими силами подъем на этаж (при необходимости), разгрузку в соответствие с указаниями Заказчика и сборку. 3.9. При приемке Товара для проверки предоставленных Поставщ",
+          "source_document": "Проект контракта Д-15622.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "unloading",
+          "matched_root": "разгруз",
+          "matched_text": "ству Товара. 9 Дополнительные условия Цена контракта включает в себя стоимость доставки, стоимость разгрузочно-погрузочных работ, тары, упаковки и иные затраты Поставщика, связанные с исполнением настоящего контракта. 10 Участником закупочной се",
+          "source_document": "Объект закупки Д-15622.DOCX",
+          "confidence": "high"
+        },
+        {
+          "type": "loading",
+          "matched_root": "погруз",
+          "matched_text": "9 Дополнительные условия Цена контракта включает в себя стоимость доставки, стоимость разгрузочно-погрузочных работ, тары, упаковки и иные затраты Поставщика, связанные с исполнением настоящего контракта. 10 Участником закупочной сессии не мож",
+          "source_document": "Объект закупки Д-15622.DOCX",
+          "confidence": "high"
+        }
+      ],
+      "extra_costs_estimate": null,
+      "traceability_items": [
+        {
+          "item_index": 0,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434163+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Россия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 1,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434194+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Россия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 2,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434222+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Россия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        }
+      ]
+    },
+    {
+      "tradeNumber": "200906738126100454",
+      "filter_result": "passed",
+      "special_conditions_short": "Требуется разгрузка силами поставщика; Требуется погрузка; Требуется вывоз упаковки",
+      "special_conditions_evidence": [
+        {
+          "type": "unloading",
+          "matched_root": "разгруз",
+          "matched_text": "собственным транспортом или с привлечением транспорта третьих лиц за свой счет. Все виды погрузочно-разгрузочных работ, включая работы с применением грузоподъемных средств, осуществляются Поставщиком собственными техническими средствами или за сво",
+          "source_document": "Контракт_проект.doc",
+          "confidence": "high"
+        },
+        {
+          "type": "unloading",
+          "matched_root": "разгруз",
+          "matched_text": "назначения. Упаковка Товара должна обеспечивать его сохранность во время транспортировки и погрузо-разгрузочных работах. Поставщик несет ответственность за повреждение Товара вследствие его ненадлежащей упаковки. 4.5. Маркировка товара должна со",
+          "source_document": "Контракт_проект.doc",
+          "confidence": "high"
+        },
+        {
+          "type": "loading",
+          "matched_root": "погруз",
+          "matched_text": "Контракта включает в себя непосредственно стоимость товара, тары, упаковки и маркировки, расходы на погрузку, доставку, страхование, сопутствующие услуги и иные расходы Поставщика связанные с исполнением настоящего Контракта, а также уплату всех",
+          "source_document": "Контракт_проект.doc",
+          "confidence": "high"
+        },
+        {
+          "type": "loading",
+          "matched_root": "погруз",
+          "matched_text": "Заказчику собственным транспортом или с привлечением транспорта третьих лиц за свой счет. Все виды погрузочно-разгрузочных работ, включая работы с применением грузоподъемных средств, осуществляются Поставщиком собственными техническими средствам",
+          "source_document": "Контракт_проект.doc",
+          "confidence": "high"
+        },
+        {
+          "type": "loading",
+          "matched_root": "погруз",
+          "matched_text": "о пункта назначения. Упаковка Товара должна обеспечивать его сохранность во время транспортировки и погрузо-разгрузочных работах. Поставщик несет ответственность за повреждение Товара вследствие его ненадлежащей упаковки. 4.5. Маркировка товара",
+          "source_document": "Контракт_проект.doc",
+          "confidence": "high"
+        },
+        {
+          "type": "packaging_removal",
+          "matched_root": "вывоз",
+          "matched_text": "срок службы 4.6. Маркировка упаковки должна строго соответствовать маркировке товара. 4.7. Уборка и вывоз упаковки производятся силами Поставщика или за счет Поставщика в день поставки товара. 4.8. В день поставки товаров, Поставщик представляе",
+          "source_document": "Контракт_проект.doc",
+          "confidence": "high"
+        }
+      ],
+      "extra_costs_estimate": null,
+      "traceability_items": [
+        {
+          "item_index": 0,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434255+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Россия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 1,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434286+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Венгрия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 2,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434317+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Россия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 3,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434343+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Китай",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 4,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434369+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Россия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 5,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434394+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Россия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 6,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434419+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": "Россия",
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        }
+      ]
+    },
+    {
+      "tradeNumber": "100309200126100271",
+      "filter_result": "passed",
+      "special_conditions_short": "СУБСИДИИ; Требуется разгрузка силами поставщика; Требуется погрузка",
+      "special_conditions_evidence": [
+        {
+          "type": "unloading",
+          "matched_root": "разгруз",
+          "matched_text": "3. Цена Контракта включает в себя стоимость Товара, все подлежащие уплате налоги, сборы, погрузочно-разгрузочные работы, стоимость упаковки (тары), маркировки, страхование, пошлины, НДС, и другие обязательные платежи, которые Поставщик должен выпл",
+          "source_document": "проект контракта фильтр мембранн.doc",
+          "confidence": "high"
+        },
+        {
+          "type": "loading",
+          "matched_root": "погруз",
+          "matched_text": "азчиком. 2.3. Цена Контракта включает в себя стоимость Товара, все подлежащие уплате налоги, сборы, погрузочно-разгрузочные работы, стоимость упаковки (тары), маркировки, страхование, пошлины, НДС, и другие обязательные платежи, которые Поставщик",
+          "source_document": "проект контракта фильтр мембранн.doc",
+          "confidence": "high"
+        }
+      ],
+      "extra_costs_estimate": null,
+      "traceability_items": [
+        {
+          "item_index": 0,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434447+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": null,
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        },
+        {
+          "item_index": 1,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434475+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": null,
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        }
+      ]
+    },
+    {
+      "tradeNumber": "200909096126100404",
+      "filter_result": "passed",
+      "special_conditions_short": "Требуется разгрузка силами поставщика; Требуется погрузка",
+      "special_conditions_evidence": [
+        {
+          "type": "unloading",
+          "matched_root": "разгруз",
+          "matched_text": "оимость Товара, транспортные расходы, затраты Поставщика по подготовке Товара к погрузке, доставке, разгрузке и передаче Заказчику (стоимость тары, упаковки Товара), таможенные пошлины, налоги, другие обязательные платежи, а также все прочие расх",
+          "source_document": "Договор поставки товара Поли Спайк.docx",
+          "confidence": "high"
+        },
+        {
+          "type": "loading",
+          "matched_root": "погруз",
+          "matched_text": "ения, в том числе стоимость Товара, транспортные расходы, затраты Поставщика по подготовке Товара к погрузке, доставке, разгрузке и передаче Заказчику (стоимость тары, упаковки Товара), таможенные пошлины, налоги, другие обязательные платежи, а",
+          "source_document": "Договор поставки товара Поли Спайк.docx",
+          "confidence": "high"
+        }
+      ],
+      "extra_costs_estimate": null,
+      "traceability_items": [
+        {
+          "item_index": 0,
+          "traceability_status": "Требуется проверка при выборе поставщика",
+          "traceability_reason": "ОКПД2 не дал прямого сигнала, но окончательный вывод без ТН ВЭД и страны происхождения конкретной партии невозможен",
+          "traceability_attention": false,
+          "traceability_checked_at": "2026-09-04T13:12:12.434509+03:00",
+          "traceability_source_date": "2026-09-04",
+          "traceability_rules_version": "Постановление Правительства РФ №1110, редакция от 04.03.2023",
+          "traceability_rules_stale": false,
+          "matched_okpd2": null,
+          "matched_tnved": null,
+          "supplier_verification": {
+            "country_of_origin": null,
+            "tnved": null,
+            "specific_batch_traceable": null,
+            "supplier_can_provide_upd_traceability_details": null
+          }
+        }
+      ]
+    }
+  ]
+}
