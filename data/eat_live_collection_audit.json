@@ -1,21 +1,21 @@
 {
   "run": {
     "started_at": "2026-09-13T15:41:03.406948+00:00",
-    "status": "running",
+    "status": "completed",
     "access_mode": "public_playwright_api_request_context"
   },
   "pagination": {
-    "status": "running",
+    "status": "completed",
     "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
     "page_size": 100,
     "totalCount": 10000,
-    "pages_read": 97,
-    "requests_made": 97,
-    "raw_count": 9700,
-    "unique_count": 9700,
+    "pages_read": 100,
+    "requests_made": 100,
+    "raw_count": 10000,
+    "unique_count": 10000,
     "duplicate_count": 0,
-    "end_proven": false,
-    "stop_reason": null,
+    "end_proven": true,
+    "stop_reason": "total_count_reached",
     "diagnostic_error": null,
     "page_diagnostics": [
       {
@@ -1181,6 +1181,42 @@
         "cumulative_unique_count": 9700,
         "timestamp": "2026-09-13T15:42:20.778509+00:00",
         "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 98,
+        "size": 100,
+        "returned_count": 100,
+        "new_unique_count": 100,
+        "totalCount": 10000,
+        "cumulative_raw_count": 9800,
+        "cumulative_unique_count": 9800,
+        "timestamp": "2026-09-13T15:42:21.545350+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 99,
+        "size": 100,
+        "returned_count": 100,
+        "new_unique_count": 100,
+        "totalCount": 10000,
+        "cumulative_raw_count": 9900,
+        "cumulative_unique_count": 9900,
+        "timestamp": "2026-09-13T15:42:22.438504+00:00",
+        "stop_reason": null
+      },
+      {
+        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
+        "page": 100,
+        "size": 100,
+        "returned_count": 100,
+        "new_unique_count": 100,
+        "totalCount": 10000,
+        "cumulative_raw_count": 10000,
+        "cumulative_unique_count": 10000,
+        "timestamp": "2026-09-13T15:42:23.477722+00:00",
+        "stop_reason": "total_count_reached"
       }
     ]
   },
