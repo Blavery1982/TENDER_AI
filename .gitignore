@@ -12,3 +12,9 @@ token*.json
 
 # Large local data export; GitHub rejects files over 100 MB.
 data/eat_live_full_collection.json
+
+# Локальные рабочие результаты live-сборов и архив документов тендеров.
+data/tenders/
+data/eat_api_google_sheets_export.json
+data/eat_live_collection_audit.json
+data/eat_single_*.json
