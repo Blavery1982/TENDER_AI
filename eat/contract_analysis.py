@@ -15,13 +15,15 @@ from eat.browser_policy import open_authorized_eat_browser
 from pypdf import PdfReader
 
 from filters.eat_filters import load_config
+from documents.tender_archive import TENDERS_ROOT
 
 ROOT = Path(__file__).resolve().parent.parent
 GREEN_PATH = ROOT / "data/eat_green_semantic_v2.json"
 OUTPUT_PATH = ROOT / "data/eat_contract_test.json"
-CONTRACTS_ROOT = ROOT / "data/contracts"
+# Единый архив: отдельная папка на каждый тендер.
+CONTRACTS_ROOT = TENDERS_ROOT
 DOC_WORDS = ("договор", "контракт", "техническ", "задани", "приложен", "спецификац")
-SUPPORTED = {".pdf", ".docx", ".doc"}
+SUPPORTED = {".pdf", ".docx", ".doc", ".docm", ".xlsx", ".xls", ".xlsm", ".csv", ".rtf", ".txt", ".odt", ".ods", ".zip", ".rar", ".7z", ".png", ".jpg", ".jpeg"}
 SECRET_KEYS = ("authorization", "cookie", "token", "csrf", "password")
 TYPE_MAP = {
     "сборк": "assembly", "монтаж": "installation", "пусконалад": "commissioning",
@@ -233,7 +235,7 @@ def run_contract_test() -> int:
             for doc in captured:
                 key = doc.get("file_id") or doc.get("download_url") or doc["file_name"]
                 unique[str(key)] = doc
-            folder = CONTRACTS_ROOT / str(number)
+            folder = CONTRACTS_ROOT / str(purchase_id)
             files, all_hard, all_extras, statuses = [], [], [], []
             for doc in unique.values():
                 if not doc.get("download_url") and doc.get("file_id") and doc.get("document_type") is not None:
@@ -293,7 +295,7 @@ def complete_saved_contract_test() -> dict[str, Any]:
             url = doc.get("download_url")
             if not url:
                 doc["document_parse_status"] = "unsupported"; statuses.append("unsupported"); continue
-            folder = CONTRACTS_ROOT / str(number); folder.mkdir(parents=True, exist_ok=True)
+            folder = CONTRACTS_ROOT / str(purchase_id); folder.mkdir(parents=True, exist_ok=True)
             path = folder / _safe_name(doc["file_name"])
             try:
                 if not path.exists():

@@ -10,32 +10,47 @@ from eat.browser_session import _sanitize
 from eat.browser_policy import open_authorized_eat_browser
 from eat.card_payload import card_purchase_payloads, fullest_card_purchase
 from eat.contract_analysis import _documents, _file_url, _safe_name
+from documents.brand_detector import detect_brands, save_brand_audit
+from documents.pipeline import process_procurement_documents
+from documents.tender_archive import (TENDERS_ROOT, archive_metadata,
+                                       sha256_file, write_json)
 
 ROOT=Path(__file__).resolve().parent.parent
 DEFAULT_PURCHASE_ID="31f18b8a-d3b9-4cd8-890c-5d11824fc635"
-SUPPORTED={".pdf",".docx",".doc",".xlsx"}
+SUPPORTED={".pdf",".docx",".doc",".docm",".xlsx",".xls",".xlsm",".csv",".rtf",".txt",".odt",".ods",".zip",".rar",".7z",".png",".jpg",".jpeg"}
 
 def fetch_purchase_card(context: Any, page: Any, purchase_id: str,
-                        *, wait_ms: int = 8000) -> dict[str, Any]:
+                        *, wait_ms: int = 8000,
+                        analyze_documents: bool = True) -> dict[str, Any]:
     """Получить карточку и документы через уже открытую общую EAT-сессию."""
     card=f"https://agregatoreat.ru/purchases/announcement/{purchase_id}/info"
     output=ROOT/f"data/eat_single_{purchase_id}.json"
-    folder=ROOT/f"data/contracts/{purchase_id}"
+    folder=TENDERS_ROOT / str(purchase_id)
     payloads=[]; docs=[]
     def response_seen(response):
         ctype=response.headers.get("content-type","").casefold()
-        if "json" not in ctype:return
-        try:
-            value=response.json(); payloads.extend(card_purchase_payloads(value, purchase_id)); docs.extend(_documents(value,response.url))
-        except Exception:pass
+        if "json" in ctype:
+            try:
+                value=response.json(); payloads.extend(card_purchase_payloads(value, purchase_id)); docs.extend(_documents(value,response.url))
+            except Exception:pass
+        elif (response.headers.get("content-disposition") or
+              Path(urlsplit(response.url).path).suffix.casefold() in SUPPORTED):
+            docs.append({"file_name":Path(urlsplit(response.url).path).name or "document",
+                         "document_type":None,"file_id":None,"download_url":response.url})
     page.on("response",response_seen)
     try:
         page.goto(card,wait_until="domcontentloaded",timeout=60000)
-        page.goto(card,wait_until="domcontentloaded",timeout=60000); page.wait_for_timeout(wait_ms)
+        page.wait_for_timeout(wait_ms)
         for anchor in page.locator("a[href]").all():
             try:
                 href=anchor.get_attribute("href"); label=anchor.inner_text(timeout=500).strip()
-                if href and Path(urlsplit(href).path).suffix.casefold() in SUPPORTED:
+                download_attr=anchor.get_attribute("download")
+                label_probe = label.casefold()
+                is_document_label = any(token in label_probe for token in (
+                    "тз", "техническ", "документ", "приложен", "контракт", "договор",
+                    "коммерческ", "обоснован", "спецификац", "файл", "кп",
+                ))
+                if href and (Path(urlsplit(href).path).suffix.casefold() in SUPPORTED or download_attr or is_document_label):
                     docs.append({"file_name":label or Path(urlsplit(href).path).name,"document_type":None,"file_id":None,"download_url":urljoin(page.url,href)})
             except Exception:pass
         unique={str(d.get("file_id") or d.get("download_url") or d.get("file_name")):d for d in docs}
@@ -49,10 +64,23 @@ def fetch_purchase_card(context: Any, page: Any, purchase_id: str,
             if not response.ok: files.append({**doc,"local_path":None,"download_status":f"http_{response.status}"}); continue
             name=_safe_name(doc.get("file_name") or Path(urlsplit(url).path).name)
             path=folder/name; body=response.body()
-            if not path.exists() or hashlib.sha256(path.read_bytes()).digest()!=hashlib.sha256(body).digest():path.write_bytes(body)
-            files.append({**doc,"local_path":str(path),"download_status":"downloaded"})
+            digest=hashlib.sha256(body).hexdigest()
+            if not path.exists() or sha256_file(path) != digest:
+                path.write_bytes(body)
+            files.append({**doc,"file_name":name,"local_path":str(path),"sha256":digest,
+                          "size_bytes":len(body),"download_status":"downloaded"})
         raw=fullest_card_purchase(payloads)
         result={"purchase_id":purchase_id,"card_url":card,"raw":_sanitize(raw),"documents":_sanitize(files)}
+        archive_metadata(purchase_id, tender_number=(raw or {}).get("tradeNumber"),
+                         title=(raw or {}).get("subject") or (raw or {}).get("title"),
+                         card_url=card, documents=result["documents"], raw=result["raw"])
+        if analyze_documents:
+            extraction=process_procurement_documents(result, result["documents"])
+            write_json(folder / "document_extraction.json", extraction)
+            brand_audit=detect_brands(result, extraction)
+            save_brand_audit(result, brand_audit)
+            result["document_extraction"]={k:v for k,v in extraction.items() if k != "combined_text"}
+            result["brand_audit"]=brand_audit
         output.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
         print(f"Карточка сохранена: {output}; документов: {len(files)}",flush=True)
         return result

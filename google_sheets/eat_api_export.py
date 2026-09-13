@@ -21,6 +21,8 @@ from google_sheets.client import (
 from google_sheets.workbook import (
     ACTIVE,
     ACTIVE_HEADERS,
+    LOCKED,
+    LOCKED_HEADERS,
     MANUAL,
     MANUAL_HEADERS,
     REPORT,
@@ -66,6 +68,17 @@ def _customer(raw: dict[str, Any]) -> tuple[str, str, str]:
     )
 
 
+def _purchase_url(raw: dict[str, Any]) -> str:
+    if raw.get("url"):
+        return str(raw["url"])
+    if raw.get("id"):
+        return (
+            "https://agregatoreat.ru/purchases/announcement/"
+            f"{raw['id']}/info"
+        )
+    return NO
+
+
 def _active_row(audited: dict[str, Any]) -> list[Any]:
     raw = audited["raw"]
     items = raw.get("lotItems") or [{}]
@@ -87,13 +100,7 @@ def _active_row(audited: dict[str, Any]) -> list[Any]:
         put("Крайний срок подачи заявки", date(raw.get("applicationFillingEndDate")))
         put("Номер закупки", val(raw.get("tradeNumber")))
         put("ID закупки", val(raw.get("id")))
-        purchase_url = raw.get("url")
-        if not purchase_url and raw.get("id"):
-            purchase_url = (
-                "https://agregatoreat.ru/purchases/announcement/"
-                f"{raw['id']}/info"
-            )
-        put("Ссылка на закупку", link(purchase_url))
+        put("Ссылка на закупку", link(_purchase_url(raw)))
         put("Источник закупки", "ЕАТ «Берёзка» (официальный API)")
         put("Наименование закупки в извещении", val(raw.get("subject")))
         put("Место поставки", address)
@@ -127,13 +134,45 @@ def _manual_row(audited: dict[str, Any]) -> list[Any]:
         "Крайний срок подачи заявки": date(raw.get("applicationFillingEndDate")),
         "Номер закупки": val(raw.get("tradeNumber")),
         "ID закупки": val(raw.get("id")),
-        "Ссылка на закупку": link(raw.get("url")),
+        "Ссылка на закупку": link(_purchase_url(raw)),
         "Наименование закупки": val(raw.get("subject")),
         "НМЦК, ₽": raw.get("price") if raw.get("price") is not None else NO,
         "Регион": region,
         "Причина ручной проверки": reason,
     }
     return [values.get(header, "") for header in MANUAL_HEADERS]
+
+
+def _locked_row(audited: dict[str, Any]) -> list[Any]:
+    raw = audited["raw"]
+    values = {
+        "Крайний срок подачи заявки": date(raw.get("applicationFillingEndDate")),
+        "Осталось времени": NO,
+        "ID закупки": val(raw.get("id")),
+        "Ссылка на закупку": link(_purchase_url(raw)),
+        "Источник закупки": "ЕАТ «Берёзка» (официальный API)",
+        "Статус": "Детали скрыты соглашением о конфиденциальности",
+    }
+    return [values.get(header, "") for header in LOCKED_HEADERS]
+
+
+def _export_rows(
+    purchases: list[dict[str, Any]],
+) -> tuple[list[list[Any]], list[list[Any]], list[list[Any]]]:
+    """Сформировать строки только для непросроченных опубликованных закупок."""
+    active_rows = [ACTIVE_HEADERS]
+    manual_rows = [MANUAL_HEADERS]
+    locked_rows = [LOCKED_HEADERS]
+    for audited in purchases:
+        if audited.get("deadline_status") != "active":
+            continue
+        if audited["filter_result"] == "passed":
+            active_rows.extend(_active_row(audited))
+        elif audited["filter_result"] == "manual_check":
+            manual_rows.append(_manual_row(audited))
+        elif audited["filter_result"] == "confidential_locked":
+            locked_rows.append(_locked_row(audited))
+    return active_rows, manual_rows, locked_rows
 
 
 def run_api_google_sheets_export(*, detail_limit: int | None = None, refresh: bool = True) -> dict[str, Any]:
@@ -147,29 +186,45 @@ def run_api_google_sheets_export(*, detail_limit: int | None = None, refresh: bo
     audited_purchases = collection.get("purchases") or []
     selected = audited_purchases[:detail_limit] if detail_limit is not None else audited_purchases
     audit = {"purchases": selected, "counts": collection_report["filter_audit"]}
-    active_rows = [ACTIVE_HEADERS]
-    manual_rows = [MANUAL_HEADERS]
-    for audited in audit["purchases"]:
-        if audited["filter_result"] == "passed":
-            active_rows.extend(_active_row(audited))
-        elif audited["filter_result"] == "manual_check":
-            manual_rows.append(_manual_row(audited))
+    active_rows, manual_rows, locked_rows = _export_rows(audit["purchases"])
 
     spreadsheet_url, _ = setup_structure()
     gclient, service_account_email = authorize_service_account()
     book = gclient.open_by_key(_env("GOOGLE_SPREADSHEET_ID"))
     _upsert(book.worksheet(ACTIVE), active_rows, ("ID закупки", "№ позиции"), PRESERVED_ACTIVE_HEADERS)
     _upsert(book.worksheet(MANUAL), manual_rows, ("ID закупки",))
+    _upsert(book.worksheet(LOCKED), locked_rows, ("ID закупки",))
 
     now = datetime.now(ZoneInfo("Europe/Moscow"))
     counts = audit["counts"]
     references_count = collection_report["pagination"]["unique_count"]
+    current_count = sum(
+        purchase.get("deadline_status") == "active"
+        for purchase in audit["purchases"]
+    )
+    expired_count = sum(
+        purchase.get("deadline_status") == "expired"
+        for purchase in audit["purchases"]
+    )
+    active_purchase_count = len({
+        str(purchase.get("id"))
+        for purchase in audit["purchases"]
+        if purchase.get("deadline_status") == "active"
+        and purchase.get("filter_result") == "passed"
+        and purchase.get("id")
+    })
     report_row = [
         now.strftime("%d.%m.%Y"), now.strftime("%H:%M:%S"), references_count,
-        references_count, 0, NO, NO, NO, NO, NO, NO,
-        counts["deadline_unknown"], counts["passed_filter_v2"],
-        counts["rejected_filter_v2"], counts["priority_1"] + counts["priority_2"],
-        0, 0, counts["passed_filter_v2"], 0, 0, 0, 0, 0, 0, 0, 0,
+        current_count, expired_count, NO, NO, NO, NO, NO, NO,
+        len(manual_rows) - 1, active_purchase_count,
+        sum(
+            purchase.get("deadline_status") == "active"
+            and purchase.get("filter_result") == "rejected"
+            for purchase in audit["purchases"]
+        ),
+        counts["priority_1"] + counts["priority_2"],
+        0, 0, counts["priority_1"] + counts["priority_2"],
+        0, 0, 0, 0, 0, 0, 0, 0,
     ]
     report = book.worksheet(REPORT)
     if report.col_count < len(REPORT_HEADERS):
@@ -185,6 +240,8 @@ def run_api_google_sheets_export(*, detail_limit: int | None = None, refresh: bo
         "details_requested": len(selected),
         "active_rows_written": len(active_rows) - 1,
         "manual_rows_written": len(manual_rows) - 1,
+        "locked_rows_written": len(locked_rows) - 1,
+        "expired_rows_skipped": expired_count,
         "filter_counts": counts,
         "endpoint_mode": "playwright_api_request_context",
         "elapsed_seconds": round(time.monotonic() - started, 3),

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from google_sheets.eat_api_export import _active_row
+from google_sheets.eat_api_export import _active_row, _export_rows
 from google_sheets.workbook import ACTIVE_HEADERS
 
 
@@ -22,6 +22,31 @@ class EatApiExportTests(unittest.TestCase):
             rows[0][link_column],
             f"https://agregatoreat.ru/purchases/announcement/{purchase_id}/info",
         )
+
+    def test_export_rows_skips_expired_and_routes_current_groups(self):
+        def purchase(identifier, result, deadline):
+            return {
+                "id": identifier,
+                "filter_result": result,
+                "deadline_status": deadline,
+                "filter": {},
+                "raw": {
+                    "id": identifier,
+                    "subject": identifier,
+                    "price": 200000,
+                    "lotItems": [{}],
+                },
+            }
+
+        active, manual, locked = _export_rows([
+            purchase("active", "passed", "active"),
+            purchase("manual", "manual_check", "active"),
+            purchase("locked", "confidential_locked", "active"),
+            purchase("expired", "passed", "expired"),
+        ])
+        self.assertEqual(len(active), 2)
+        self.assertEqual(len(manual), 2)
+        self.assertEqual(len(locked), 2)
 
 
 if __name__ == "__main__":

@@ -127,6 +127,26 @@ def run_procurement_audit_test() -> int:
     print(result["pre_supplier_check_status_ru"])
     return 0
 
+
+def run_tender_archive_audit() -> int:
+    from documents.audit_tender_archive import audit_archive
+    result = audit_archive()
+    print(f"Архив тендеров проверен: всего {result['tenders']}; "
+          f"марка найдена {result['brands_found']}; "
+          f"не найдена {result['brands_not_found']}; "
+          f"ручная проверка {result['review_required']}")
+    print(f"Списки: {result['output_dir']}")
+    return 0
+
+
+def run_active_tender_download() -> int:
+    from eat.batch_tender_archive import download_active_tenders
+    result = download_active_tenders()
+    print(f"Скачивание завершено: запрошено {result['requested']}; "
+          f"успешно {result['downloaded']}; ошибок {result['failed']}")
+    print(f"Архив: {result['archive_root']}")
+    return 0
+
 def run_model_search_test() -> int:
     from model_search.search import run_test
     result = run_test()
@@ -201,6 +221,8 @@ def main() -> int:
     parser.add_argument("--google-sheets-test-export", action="store_true", help="тестовый upsert сохранённых 200 закупок")
     parser.add_argument("--google-sheets-fix-text", action="store_true", help="исправить текстовый формат кодов, ссылок и контактов")
     parser.add_argument("--procurement-audit-test", action="store_true", help="предаудит документов одной сохранённой закупки")
+    parser.add_argument("--audit-tender-archive", action="store_true", help="проверить локальный архив тендеров на марки и бренды")
+    parser.add_argument("--download-active-tenders", action="store_true", help="скачать документы 139 актуальных тендеров из листа ACTIVE")
     parser.add_argument("--model-search-test", action="store_true", help="технический поиск моделей для одной контрольной закупки")
     parser.add_argument("--price-search-test", metavar="MODEL", help="ограниченный live-поиск цен точной модели")
     parser.add_argument("--production-dry-run", action="store_true", help="безопасный batch только на локальных fixtures")
@@ -257,6 +279,10 @@ def main() -> int:
         return run_google_sheets_fix_text()
     if args.procurement_audit_test:
         return run_procurement_audit_test()
+    if args.audit_tender_archive:
+        return run_tender_archive_audit()
+    if args.download_active_tenders:
+        return run_active_tender_download()
     if args.model_search_test:
         return run_model_search_test()
     if args.price_search_test:
