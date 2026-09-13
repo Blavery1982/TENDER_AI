@@ -1,21 +1,21 @@
 {
   "run": {
-    "started_at": "2026-09-13T15:35:09.019690+00:00",
-    "status": "completed",
+    "started_at": "2026-09-13T15:41:03.406948+00:00",
+    "status": "running",
     "access_mode": "public_playwright_api_request_context"
   },
   "pagination": {
-    "status": "completed",
+    "status": "running",
     "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
     "page_size": 100,
     "totalCount": 10000,
-    "pages_read": 100,
-    "requests_made": 100,
-    "raw_count": 10000,
-    "unique_count": 10000,
+    "pages_read": 97,
+    "requests_made": 97,
+    "raw_count": 9700,
+    "unique_count": 9700,
     "duplicate_count": 0,
-    "end_proven": true,
-    "stop_reason": "total_count_reached",
+    "end_proven": false,
+    "stop_reason": null,
     "diagnostic_error": null,
     "page_diagnostics": [
       {
@@ -27,7 +27,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 100,
         "cumulative_unique_count": 100,
-        "timestamp": "2026-09-13T15:35:17.006621+00:00",
+        "timestamp": "2026-09-13T15:41:10.948091+00:00",
         "stop_reason": null
       },
       {
@@ -39,7 +39,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 200,
         "cumulative_unique_count": 200,
-        "timestamp": "2026-09-13T15:35:17.535809+00:00",
+        "timestamp": "2026-09-13T15:41:11.367799+00:00",
         "stop_reason": null
       },
       {
@@ -51,7 +51,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 300,
         "cumulative_unique_count": 300,
-        "timestamp": "2026-09-13T15:35:18.208674+00:00",
+        "timestamp": "2026-09-13T15:41:11.883707+00:00",
         "stop_reason": null
       },
       {
@@ -63,7 +63,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 400,
         "cumulative_unique_count": 400,
-        "timestamp": "2026-09-13T15:35:18.761953+00:00",
+        "timestamp": "2026-09-13T15:41:12.361171+00:00",
         "stop_reason": null
       },
       {
@@ -75,7 +75,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 500,
         "cumulative_unique_count": 500,
-        "timestamp": "2026-09-13T15:35:19.447671+00:00",
+        "timestamp": "2026-09-13T15:41:12.895877+00:00",
         "stop_reason": null
       },
       {
@@ -87,7 +87,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 600,
         "cumulative_unique_count": 600,
-        "timestamp": "2026-09-13T15:35:20.082220+00:00",
+        "timestamp": "2026-09-13T15:41:13.411003+00:00",
         "stop_reason": null
       },
       {
@@ -99,7 +99,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 700,
         "cumulative_unique_count": 700,
-        "timestamp": "2026-09-13T15:35:20.634586+00:00",
+        "timestamp": "2026-09-13T15:41:13.873539+00:00",
         "stop_reason": null
       },
       {
@@ -111,7 +111,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 800,
         "cumulative_unique_count": 800,
-        "timestamp": "2026-09-13T15:35:21.639185+00:00",
+        "timestamp": "2026-09-13T15:41:14.371443+00:00",
         "stop_reason": null
       },
       {
@@ -123,7 +123,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 900,
         "cumulative_unique_count": 900,
-        "timestamp": "2026-09-13T15:35:22.366859+00:00",
+        "timestamp": "2026-09-13T15:41:14.932686+00:00",
         "stop_reason": null
       },
       {
@@ -135,7 +135,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1000,
         "cumulative_unique_count": 1000,
-        "timestamp": "2026-09-13T15:35:23.223164+00:00",
+        "timestamp": "2026-09-13T15:41:15.417677+00:00",
         "stop_reason": null
       },
       {
@@ -147,7 +147,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1100,
         "cumulative_unique_count": 1100,
-        "timestamp": "2026-09-13T15:35:24.242695+00:00",
+        "timestamp": "2026-09-13T15:41:15.987344+00:00",
         "stop_reason": null
       },
       {
@@ -159,7 +159,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1200,
         "cumulative_unique_count": 1200,
-        "timestamp": "2026-09-13T15:35:24.960866+00:00",
+        "timestamp": "2026-09-13T15:41:16.583447+00:00",
         "stop_reason": null
       },
       {
@@ -171,7 +171,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1300,
         "cumulative_unique_count": 1300,
-        "timestamp": "2026-09-13T15:35:25.657602+00:00",
+        "timestamp": "2026-09-13T15:41:17.178980+00:00",
         "stop_reason": null
       },
       {
@@ -183,7 +183,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1400,
         "cumulative_unique_count": 1400,
-        "timestamp": "2026-09-13T15:35:26.421168+00:00",
+        "timestamp": "2026-09-13T15:41:18.027586+00:00",
         "stop_reason": null
       },
       {
@@ -195,7 +195,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1500,
         "cumulative_unique_count": 1500,
-        "timestamp": "2026-09-13T15:35:27.123883+00:00",
+        "timestamp": "2026-09-13T15:41:18.773812+00:00",
         "stop_reason": null
       },
       {
@@ -207,7 +207,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1600,
         "cumulative_unique_count": 1600,
-        "timestamp": "2026-09-13T15:35:27.944511+00:00",
+        "timestamp": "2026-09-13T15:41:19.449819+00:00",
         "stop_reason": null
       },
       {
@@ -219,7 +219,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1700,
         "cumulative_unique_count": 1700,
-        "timestamp": "2026-09-13T15:35:28.744550+00:00",
+        "timestamp": "2026-09-13T15:41:19.946968+00:00",
         "stop_reason": null
       },
       {
@@ -231,7 +231,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1800,
         "cumulative_unique_count": 1800,
-        "timestamp": "2026-09-13T15:35:29.483476+00:00",
+        "timestamp": "2026-09-13T15:41:20.595000+00:00",
         "stop_reason": null
       },
       {
@@ -243,7 +243,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 1900,
         "cumulative_unique_count": 1900,
-        "timestamp": "2026-09-13T15:35:30.391008+00:00",
+        "timestamp": "2026-09-13T15:41:21.045359+00:00",
         "stop_reason": null
       },
       {
@@ -255,7 +255,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2000,
         "cumulative_unique_count": 2000,
-        "timestamp": "2026-09-13T15:35:31.119790+00:00",
+        "timestamp": "2026-09-13T15:41:21.540589+00:00",
         "stop_reason": null
       },
       {
@@ -267,7 +267,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2100,
         "cumulative_unique_count": 2100,
-        "timestamp": "2026-09-13T15:35:31.972068+00:00",
+        "timestamp": "2026-09-13T15:41:22.112936+00:00",
         "stop_reason": null
       },
       {
@@ -279,7 +279,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2200,
         "cumulative_unique_count": 2200,
-        "timestamp": "2026-09-13T15:35:32.726991+00:00",
+        "timestamp": "2026-09-13T15:41:22.553988+00:00",
         "stop_reason": null
       },
       {
@@ -291,7 +291,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2300,
         "cumulative_unique_count": 2300,
-        "timestamp": "2026-09-13T15:35:33.333451+00:00",
+        "timestamp": "2026-09-13T15:41:23.033434+00:00",
         "stop_reason": null
       },
       {
@@ -303,7 +303,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2400,
         "cumulative_unique_count": 2400,
-        "timestamp": "2026-09-13T15:35:34.202923+00:00",
+        "timestamp": "2026-09-13T15:41:23.527043+00:00",
         "stop_reason": null
       },
       {
@@ -315,7 +315,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2500,
         "cumulative_unique_count": 2500,
-        "timestamp": "2026-09-13T15:35:34.878053+00:00",
+        "timestamp": "2026-09-13T15:41:23.958610+00:00",
         "stop_reason": null
       },
       {
@@ -327,7 +327,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2600,
         "cumulative_unique_count": 2600,
-        "timestamp": "2026-09-13T15:35:35.698052+00:00",
+        "timestamp": "2026-09-13T15:41:24.512285+00:00",
         "stop_reason": null
       },
       {
@@ -339,7 +339,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2700,
         "cumulative_unique_count": 2700,
-        "timestamp": "2026-09-13T15:35:36.470856+00:00",
+        "timestamp": "2026-09-13T15:41:24.965992+00:00",
         "stop_reason": null
       },
       {
@@ -351,7 +351,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2800,
         "cumulative_unique_count": 2800,
-        "timestamp": "2026-09-13T15:35:37.145609+00:00",
+        "timestamp": "2026-09-13T15:41:25.422481+00:00",
         "stop_reason": null
       },
       {
@@ -363,7 +363,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 2900,
         "cumulative_unique_count": 2900,
-        "timestamp": "2026-09-13T15:35:37.862458+00:00",
+        "timestamp": "2026-09-13T15:41:25.863955+00:00",
         "stop_reason": null
       },
       {
@@ -375,7 +375,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3000,
         "cumulative_unique_count": 3000,
-        "timestamp": "2026-09-13T15:35:38.893964+00:00",
+        "timestamp": "2026-09-13T15:41:26.346850+00:00",
         "stop_reason": null
       },
       {
@@ -387,7 +387,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3100,
         "cumulative_unique_count": 3100,
-        "timestamp": "2026-09-13T15:35:39.686011+00:00",
+        "timestamp": "2026-09-13T15:41:26.837846+00:00",
         "stop_reason": null
       },
       {
@@ -399,7 +399,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3200,
         "cumulative_unique_count": 3200,
-        "timestamp": "2026-09-13T15:35:40.456283+00:00",
+        "timestamp": "2026-09-13T15:41:27.282266+00:00",
         "stop_reason": null
       },
       {
@@ -411,7 +411,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3300,
         "cumulative_unique_count": 3300,
-        "timestamp": "2026-09-13T15:35:41.155847+00:00",
+        "timestamp": "2026-09-13T15:41:27.728047+00:00",
         "stop_reason": null
       },
       {
@@ -423,7 +423,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3400,
         "cumulative_unique_count": 3400,
-        "timestamp": "2026-09-13T15:35:42.320204+00:00",
+        "timestamp": "2026-09-13T15:41:28.302523+00:00",
         "stop_reason": null
       },
       {
@@ -435,7 +435,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3500,
         "cumulative_unique_count": 3500,
-        "timestamp": "2026-09-13T15:35:43.335392+00:00",
+        "timestamp": "2026-09-13T15:41:28.777221+00:00",
         "stop_reason": null
       },
       {
@@ -447,7 +447,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3600,
         "cumulative_unique_count": 3600,
-        "timestamp": "2026-09-13T15:35:44.174520+00:00",
+        "timestamp": "2026-09-13T15:41:29.246609+00:00",
         "stop_reason": null
       },
       {
@@ -459,7 +459,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3700,
         "cumulative_unique_count": 3700,
-        "timestamp": "2026-09-13T15:35:44.877138+00:00",
+        "timestamp": "2026-09-13T15:41:29.695117+00:00",
         "stop_reason": null
       },
       {
@@ -471,7 +471,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3800,
         "cumulative_unique_count": 3800,
-        "timestamp": "2026-09-13T15:35:45.699245+00:00",
+        "timestamp": "2026-09-13T15:41:30.119521+00:00",
         "stop_reason": null
       },
       {
@@ -483,7 +483,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 3900,
         "cumulative_unique_count": 3900,
-        "timestamp": "2026-09-13T15:35:46.571762+00:00",
+        "timestamp": "2026-09-13T15:41:30.719468+00:00",
         "stop_reason": null
       },
       {
@@ -495,7 +495,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4000,
         "cumulative_unique_count": 4000,
-        "timestamp": "2026-09-13T15:35:47.595324+00:00",
+        "timestamp": "2026-09-13T15:41:31.189858+00:00",
         "stop_reason": null
       },
       {
@@ -507,7 +507,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4100,
         "cumulative_unique_count": 4100,
-        "timestamp": "2026-09-13T15:35:48.497729+00:00",
+        "timestamp": "2026-09-13T15:41:31.598923+00:00",
         "stop_reason": null
       },
       {
@@ -519,7 +519,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4200,
         "cumulative_unique_count": 4200,
-        "timestamp": "2026-09-13T15:35:49.364225+00:00",
+        "timestamp": "2026-09-13T15:41:32.043914+00:00",
         "stop_reason": null
       },
       {
@@ -531,7 +531,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4300,
         "cumulative_unique_count": 4300,
-        "timestamp": "2026-09-13T15:35:50.411828+00:00",
+        "timestamp": "2026-09-13T15:41:32.532075+00:00",
         "stop_reason": null
       },
       {
@@ -543,7 +543,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4400,
         "cumulative_unique_count": 4400,
-        "timestamp": "2026-09-13T15:35:51.067677+00:00",
+        "timestamp": "2026-09-13T15:41:32.995337+00:00",
         "stop_reason": null
       },
       {
@@ -555,7 +555,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4500,
         "cumulative_unique_count": 4500,
-        "timestamp": "2026-09-13T15:35:51.762748+00:00",
+        "timestamp": "2026-09-13T15:41:33.568779+00:00",
         "stop_reason": null
       },
       {
@@ -567,7 +567,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4600,
         "cumulative_unique_count": 4600,
-        "timestamp": "2026-09-13T15:35:52.612873+00:00",
+        "timestamp": "2026-09-13T15:41:34.032631+00:00",
         "stop_reason": null
       },
       {
@@ -579,7 +579,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4700,
         "cumulative_unique_count": 4700,
-        "timestamp": "2026-09-13T15:35:53.201895+00:00",
+        "timestamp": "2026-09-13T15:41:34.539524+00:00",
         "stop_reason": null
       },
       {
@@ -591,7 +591,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4800,
         "cumulative_unique_count": 4800,
-        "timestamp": "2026-09-13T15:35:53.879746+00:00",
+        "timestamp": "2026-09-13T15:41:35.133664+00:00",
         "stop_reason": null
       },
       {
@@ -603,7 +603,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 4900,
         "cumulative_unique_count": 4900,
-        "timestamp": "2026-09-13T15:35:55.040903+00:00",
+        "timestamp": "2026-09-13T15:41:35.631293+00:00",
         "stop_reason": null
       },
       {
@@ -615,7 +615,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5000,
         "cumulative_unique_count": 5000,
-        "timestamp": "2026-09-13T15:35:56.259297+00:00",
+        "timestamp": "2026-09-13T15:41:36.258551+00:00",
         "stop_reason": null
       },
       {
@@ -627,7 +627,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5100,
         "cumulative_unique_count": 5100,
-        "timestamp": "2026-09-13T15:35:57.164991+00:00",
+        "timestamp": "2026-09-13T15:41:36.693186+00:00",
         "stop_reason": null
       },
       {
@@ -639,7 +639,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5200,
         "cumulative_unique_count": 5200,
-        "timestamp": "2026-09-13T15:35:58.097033+00:00",
+        "timestamp": "2026-09-13T15:41:37.261708+00:00",
         "stop_reason": null
       },
       {
@@ -651,7 +651,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5300,
         "cumulative_unique_count": 5300,
-        "timestamp": "2026-09-13T15:35:58.796095+00:00",
+        "timestamp": "2026-09-13T15:41:37.788007+00:00",
         "stop_reason": null
       },
       {
@@ -663,7 +663,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5400,
         "cumulative_unique_count": 5400,
-        "timestamp": "2026-09-13T15:35:59.529098+00:00",
+        "timestamp": "2026-09-13T15:41:38.284513+00:00",
         "stop_reason": null
       },
       {
@@ -675,7 +675,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5500,
         "cumulative_unique_count": 5500,
-        "timestamp": "2026-09-13T15:36:00.292472+00:00",
+        "timestamp": "2026-09-13T15:41:38.891281+00:00",
         "stop_reason": null
       },
       {
@@ -687,7 +687,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5600,
         "cumulative_unique_count": 5600,
-        "timestamp": "2026-09-13T15:36:00.961853+00:00",
+        "timestamp": "2026-09-13T15:41:39.563366+00:00",
         "stop_reason": null
       },
       {
@@ -699,7 +699,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5700,
         "cumulative_unique_count": 5700,
-        "timestamp": "2026-09-13T15:36:01.715975+00:00",
+        "timestamp": "2026-09-13T15:41:40.263585+00:00",
         "stop_reason": null
       },
       {
@@ -711,7 +711,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5800,
         "cumulative_unique_count": 5800,
-        "timestamp": "2026-09-13T15:36:02.451105+00:00",
+        "timestamp": "2026-09-13T15:41:40.866776+00:00",
         "stop_reason": null
       },
       {
@@ -723,7 +723,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 5900,
         "cumulative_unique_count": 5900,
-        "timestamp": "2026-09-13T15:36:03.126000+00:00",
+        "timestamp": "2026-09-13T15:41:41.634616+00:00",
         "stop_reason": null
       },
       {
@@ -735,7 +735,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6000,
         "cumulative_unique_count": 6000,
-        "timestamp": "2026-09-13T15:36:03.897725+00:00",
+        "timestamp": "2026-09-13T15:41:42.476218+00:00",
         "stop_reason": null
       },
       {
@@ -747,7 +747,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6100,
         "cumulative_unique_count": 6100,
-        "timestamp": "2026-09-13T15:36:04.621915+00:00",
+        "timestamp": "2026-09-13T15:41:43.177157+00:00",
         "stop_reason": null
       },
       {
@@ -759,7 +759,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6200,
         "cumulative_unique_count": 6200,
-        "timestamp": "2026-09-13T15:36:05.401090+00:00",
+        "timestamp": "2026-09-13T15:41:43.755399+00:00",
         "stop_reason": null
       },
       {
@@ -771,7 +771,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6300,
         "cumulative_unique_count": 6300,
-        "timestamp": "2026-09-13T15:36:06.202770+00:00",
+        "timestamp": "2026-09-13T15:41:44.494238+00:00",
         "stop_reason": null
       },
       {
@@ -783,7 +783,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6400,
         "cumulative_unique_count": 6400,
-        "timestamp": "2026-09-13T15:36:06.924652+00:00",
+        "timestamp": "2026-09-13T15:41:45.251227+00:00",
         "stop_reason": null
       },
       {
@@ -795,7 +795,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6500,
         "cumulative_unique_count": 6500,
-        "timestamp": "2026-09-13T15:36:07.690521+00:00",
+        "timestamp": "2026-09-13T15:41:46.054534+00:00",
         "stop_reason": null
       },
       {
@@ -807,7 +807,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6600,
         "cumulative_unique_count": 6600,
-        "timestamp": "2026-09-13T15:36:08.429647+00:00",
+        "timestamp": "2026-09-13T15:41:46.726322+00:00",
         "stop_reason": null
       },
       {
@@ -819,7 +819,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6700,
         "cumulative_unique_count": 6700,
-        "timestamp": "2026-09-13T15:36:09.142140+00:00",
+        "timestamp": "2026-09-13T15:41:49.382764+00:00",
         "stop_reason": null
       },
       {
@@ -831,7 +831,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6800,
         "cumulative_unique_count": 6800,
-        "timestamp": "2026-09-13T15:36:10.012017+00:00",
+        "timestamp": "2026-09-13T15:41:51.513413+00:00",
         "stop_reason": null
       },
       {
@@ -843,7 +843,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 6900,
         "cumulative_unique_count": 6900,
-        "timestamp": "2026-09-13T15:36:10.824540+00:00",
+        "timestamp": "2026-09-13T15:41:52.812756+00:00",
         "stop_reason": null
       },
       {
@@ -855,7 +855,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7000,
         "cumulative_unique_count": 7000,
-        "timestamp": "2026-09-13T15:36:11.701493+00:00",
+        "timestamp": "2026-09-13T15:41:54.037672+00:00",
         "stop_reason": null
       },
       {
@@ -867,7 +867,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7100,
         "cumulative_unique_count": 7100,
-        "timestamp": "2026-09-13T15:36:12.471186+00:00",
+        "timestamp": "2026-09-13T15:41:54.850482+00:00",
         "stop_reason": null
       },
       {
@@ -879,7 +879,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7200,
         "cumulative_unique_count": 7200,
-        "timestamp": "2026-09-13T15:36:13.282483+00:00",
+        "timestamp": "2026-09-13T15:41:55.725266+00:00",
         "stop_reason": null
       },
       {
@@ -891,7 +891,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7300,
         "cumulative_unique_count": 7300,
-        "timestamp": "2026-09-13T15:36:14.051978+00:00",
+        "timestamp": "2026-09-13T15:41:56.526438+00:00",
         "stop_reason": null
       },
       {
@@ -903,7 +903,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7400,
         "cumulative_unique_count": 7400,
-        "timestamp": "2026-09-13T15:36:14.956762+00:00",
+        "timestamp": "2026-09-13T15:41:57.614373+00:00",
         "stop_reason": null
       },
       {
@@ -915,7 +915,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7500,
         "cumulative_unique_count": 7500,
-        "timestamp": "2026-09-13T15:36:16.307346+00:00",
+        "timestamp": "2026-09-13T15:41:59.274714+00:00",
         "stop_reason": null
       },
       {
@@ -927,7 +927,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7600,
         "cumulative_unique_count": 7600,
-        "timestamp": "2026-09-13T15:36:17.250109+00:00",
+        "timestamp": "2026-09-13T15:42:00.379988+00:00",
         "stop_reason": null
       },
       {
@@ -939,7 +939,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7700,
         "cumulative_unique_count": 7700,
-        "timestamp": "2026-09-13T15:36:18.041064+00:00",
+        "timestamp": "2026-09-13T15:42:01.806283+00:00",
         "stop_reason": null
       },
       {
@@ -951,7 +951,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7800,
         "cumulative_unique_count": 7800,
-        "timestamp": "2026-09-13T15:36:18.783517+00:00",
+        "timestamp": "2026-09-13T15:42:02.899049+00:00",
         "stop_reason": null
       },
       {
@@ -963,7 +963,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 7900,
         "cumulative_unique_count": 7900,
-        "timestamp": "2026-09-13T15:36:19.703703+00:00",
+        "timestamp": "2026-09-13T15:42:03.912816+00:00",
         "stop_reason": null
       },
       {
@@ -975,7 +975,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8000,
         "cumulative_unique_count": 8000,
-        "timestamp": "2026-09-13T15:36:21.106404+00:00",
+        "timestamp": "2026-09-13T15:42:04.858653+00:00",
         "stop_reason": null
       },
       {
@@ -987,7 +987,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8100,
         "cumulative_unique_count": 8100,
-        "timestamp": "2026-09-13T15:36:21.812523+00:00",
+        "timestamp": "2026-09-13T15:42:05.699325+00:00",
         "stop_reason": null
       },
       {
@@ -999,7 +999,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8200,
         "cumulative_unique_count": 8200,
-        "timestamp": "2026-09-13T15:36:22.480398+00:00",
+        "timestamp": "2026-09-13T15:42:06.654369+00:00",
         "stop_reason": null
       },
       {
@@ -1011,7 +1011,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8300,
         "cumulative_unique_count": 8300,
-        "timestamp": "2026-09-13T15:36:23.298958+00:00",
+        "timestamp": "2026-09-13T15:42:08.295580+00:00",
         "stop_reason": null
       },
       {
@@ -1023,7 +1023,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8400,
         "cumulative_unique_count": 8400,
-        "timestamp": "2026-09-13T15:36:24.001766+00:00",
+        "timestamp": "2026-09-13T15:42:09.101939+00:00",
         "stop_reason": null
       },
       {
@@ -1035,7 +1035,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8500,
         "cumulative_unique_count": 8500,
-        "timestamp": "2026-09-13T15:36:25.030162+00:00",
+        "timestamp": "2026-09-13T15:42:09.889905+00:00",
         "stop_reason": null
       },
       {
@@ -1047,7 +1047,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8600,
         "cumulative_unique_count": 8600,
-        "timestamp": "2026-09-13T15:36:25.981046+00:00",
+        "timestamp": "2026-09-13T15:42:11.067375+00:00",
         "stop_reason": null
       },
       {
@@ -1059,7 +1059,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8700,
         "cumulative_unique_count": 8700,
-        "timestamp": "2026-09-13T15:36:26.695280+00:00",
+        "timestamp": "2026-09-13T15:42:11.760091+00:00",
         "stop_reason": null
       },
       {
@@ -1071,7 +1071,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8800,
         "cumulative_unique_count": 8800,
-        "timestamp": "2026-09-13T15:36:27.752809+00:00",
+        "timestamp": "2026-09-13T15:42:13.170375+00:00",
         "stop_reason": null
       },
       {
@@ -1083,7 +1083,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 8900,
         "cumulative_unique_count": 8900,
-        "timestamp": "2026-09-13T15:36:28.487909+00:00",
+        "timestamp": "2026-09-13T15:42:13.953780+00:00",
         "stop_reason": null
       },
       {
@@ -1095,7 +1095,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 9000,
         "cumulative_unique_count": 9000,
-        "timestamp": "2026-09-13T15:36:29.457231+00:00",
+        "timestamp": "2026-09-13T15:42:15.145932+00:00",
         "stop_reason": null
       },
       {
@@ -1107,7 +1107,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 9100,
         "cumulative_unique_count": 9100,
-        "timestamp": "2026-09-13T15:36:30.306309+00:00",
+        "timestamp": "2026-09-13T15:42:16.090130+00:00",
         "stop_reason": null
       },
       {
@@ -1119,7 +1119,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 9200,
         "cumulative_unique_count": 9200,
-        "timestamp": "2026-09-13T15:36:31.137381+00:00",
+        "timestamp": "2026-09-13T15:42:17.020314+00:00",
         "stop_reason": null
       },
       {
@@ -1131,7 +1131,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 9300,
         "cumulative_unique_count": 9300,
-        "timestamp": "2026-09-13T15:36:31.979039+00:00",
+        "timestamp": "2026-09-13T15:42:17.724966+00:00",
         "stop_reason": null
       },
       {
@@ -1143,7 +1143,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 9400,
         "cumulative_unique_count": 9400,
-        "timestamp": "2026-09-13T15:36:32.762424+00:00",
+        "timestamp": "2026-09-13T15:42:18.570533+00:00",
         "stop_reason": null
       },
       {
@@ -1155,7 +1155,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 9500,
         "cumulative_unique_count": 9500,
-        "timestamp": "2026-09-13T15:36:33.528922+00:00",
+        "timestamp": "2026-09-13T15:42:19.308793+00:00",
         "stop_reason": null
       },
       {
@@ -1167,7 +1167,7 @@
         "totalCount": 10000,
         "cumulative_raw_count": 9600,
         "cumulative_unique_count": 9600,
-        "timestamp": "2026-09-13T15:36:34.375717+00:00",
+        "timestamp": "2026-09-13T15:42:19.964816+00:00",
         "stop_reason": null
       },
       {
@@ -1179,44 +1179,8 @@
         "totalCount": 10000,
         "cumulative_raw_count": 9700,
         "cumulative_unique_count": 9700,
-        "timestamp": "2026-09-13T15:36:35.634426+00:00",
+        "timestamp": "2026-09-13T15:42:20.778509+00:00",
         "stop_reason": null
-      },
-      {
-        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
-        "page": 98,
-        "size": 100,
-        "returned_count": 100,
-        "new_unique_count": 100,
-        "totalCount": 10000,
-        "cumulative_raw_count": 9800,
-        "cumulative_unique_count": 9800,
-        "timestamp": "2026-09-13T15:36:36.713480+00:00",
-        "stop_reason": null
-      },
-      {
-        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
-        "page": 99,
-        "size": 100,
-        "returned_count": 100,
-        "new_unique_count": 100,
-        "totalCount": 10000,
-        "cumulative_raw_count": 9900,
-        "cumulative_unique_count": 9900,
-        "timestamp": "2026-09-13T15:36:37.525370+00:00",
-        "stop_reason": null
-      },
-      {
-        "endpoint": "https://tender-cache-api.agregatoreat.ru/api/TradeLot/list-published-trade-lots",
-        "page": 100,
-        "size": 100,
-        "returned_count": 100,
-        "new_unique_count": 100,
-        "totalCount": 10000,
-        "cumulative_raw_count": 10000,
-        "cumulative_unique_count": 10000,
-        "timestamp": "2026-09-13T15:36:38.267052+00:00",
-        "stop_reason": "total_count_reached"
       }
     ]
   },

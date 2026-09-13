@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import re
 from collections import Counter
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -64,6 +65,7 @@ HARD_GROUPS = {
 }
 
 
+@lru_cache(maxsize=16_384)
 def _normal_form(word: str) -> str:
     return MORPH.parse(word)[0].normal_form.replace("ё", "е")
 
