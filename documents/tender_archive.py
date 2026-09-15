@@ -24,8 +24,40 @@ def safe_filename(value: Any) -> str:
     return cleaned.strip(" .")[:180] or "document"
 
 
-def tender_folder(purchase_id: Any, *, root: Path = TENDERS_ROOT) -> Path:
-    return root / safe_identifier(purchase_id)
+def tender_folder(purchase_id: Any, *, tender_number: Any = None,
+                  root: Path = TENDERS_ROOT) -> Path:
+    """Старый архив остаётся на месте; новый получает номер закупки ЕАТ.
+
+    UUID нужен для API и хранится в manifest, но не служит именем новой папки.
+    Без подтверждённого номера новый архив не создаём.
+    """
+    root = Path(root)
+    existing = root / safe_identifier(purchase_id)
+    if existing.is_dir():
+        return existing
+    if root.is_dir():
+        for folder in sorted(root.iterdir()):
+            if not folder.is_dir() or folder.name.startswith("_"):
+                continue
+            try:
+                metadata = json.loads((folder / "tender.json").read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            if isinstance(metadata, dict) and str(metadata.get("purchase_id")) == str(purchase_id):
+                return folder
+    number = str(tender_number if tender_number is not None else purchase_id).strip()
+    if not re.fullmatch(r"[0-9]+", number):
+        raise ValueError("Для нового архива нужен номер закупки ЕАТ (tradeNumber)")
+    folder = root / number
+    if folder.exists():
+        try:
+            metadata = json.loads((folder / "tender.json").read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            metadata = {}
+        owner = metadata.get("purchase_id") if isinstance(metadata, dict) else None
+        if not folder.is_dir() or owner not in (None, number, str(purchase_id)):
+            raise ValueError(f"Папка закупки {number} принадлежит другому purchase_id")
+    return folder
 
 
 def sha256_bytes(body: bytes) -> str:
@@ -54,12 +86,13 @@ def _next_path(folder: Path, filename: str, digest: str) -> Path:
 
 
 def save_document(body: bytes, filename: str, purchase_id: Any, *,
+                  tender_number: Any = None,
                   root: Path = TENDERS_ROOT) -> tuple[Path, str, bool]:
     """Сохраняет оригинал, не затирая другой файл с тем же именем.
 
     Возвращает путь, SHA-256 и признак фактической записи нового содержимого.
     """
-    folder = tender_folder(purchase_id, root=root)
+    folder = tender_folder(purchase_id, tender_number=tender_number, root=root)
     folder.mkdir(parents=True, exist_ok=True)
     digest = sha256_bytes(body)
     path = _next_path(folder, filename, digest)
@@ -84,6 +117,8 @@ def migrate_legacy_tender(purchase_id: Any, *, root: Path = TENDERS_ROOT,
     source = legacy_root / str(purchase_id)
     if not source.is_dir():
         return []
+    # Историческая миграция сохраняет прежнее имя, а не применяет правило новых закупок.
+    (root / safe_identifier(purchase_id)).mkdir(parents=True, exist_ok=True)
     copied: list[Path] = []
     for path in sorted(source.iterdir()):
         if not path.is_file():
@@ -100,7 +135,8 @@ def archive_metadata(purchase_id: Any, *, tender_number: Any = None,
                      raw: dict[str, Any] | None = None,
                      root: Path = TENDERS_ROOT) -> dict[str, Any]:
     """Создаёт/обновляет manifest тендера и возвращает его содержимое."""
-    folder = tender_folder(purchase_id, root=root)
+    tender_number = tender_number if tender_number is not None else (raw or {}).get("tradeNumber")
+    folder = tender_folder(purchase_id, tender_number=tender_number, root=root)
     path = folder / "tender.json"
     current: dict[str, Any] = {}
     if path.exists():

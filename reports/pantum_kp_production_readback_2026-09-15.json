@@ -1,0 +1,576 @@
+{
+  "row": 141,
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1iMas8iLqWuAECZQ7mQOM-ZDJFWzO0kulevFlEwX9w2w#gid=955424503&range=AK141:BB141",
+  "blocks": {
+    "КП1": {
+      "Поставщик КП 1": {
+        "formula_or_value": "i-teh.com",
+        "formatted_value": "i-teh.com",
+        "effective_cell": {
+          "userEnteredValue": {
+            "stringValue": "i-teh.com"
+          },
+          "effectiveValue": {
+            "stringValue": "i-teh.com"
+          },
+          "formattedValue": "i-teh.com",
+          "userEnteredFormat": {
+            "textFormat": {
+              "link": {
+                "uri": "http://i-teh.com"
+              }
+            }
+          },
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              },
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": true,
+              "foregroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.06666667,
+                  "green": 0.33333334,
+                  "blue": 0.8
+                }
+              },
+              "link": {
+                "uri": "http://i-teh.com"
+              }
+            }
+          },
+          "hyperlink": "http://i-teh.com"
+        }
+      },
+      "Цена КП 1": {
+        "formula_or_value": 24554,
+        "formatted_value": "24554",
+        "effective_cell": {
+          "userEnteredValue": {
+            "numberValue": 24554
+          },
+          "effectiveValue": {
+            "numberValue": 24554
+          },
+          "formattedValue": "24554",
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Рентабельность КП 1, %": {
+        "formula_or_value": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AL$2:$AL$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))",
+        "formatted_value": "",
+        "effective_cell": {
+          "userEnteredValue": {
+            "formulaValue": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AL$2:$AL$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+          },
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Ссылка на товар КП 1": {
+        "formula_or_value": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+        "formatted_value": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+        "effective_cell": {
+          "userEnteredValue": {
+            "stringValue": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe"
+          },
+          "effectiveValue": {
+            "stringValue": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe"
+          },
+          "formattedValue": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+          "userEnteredFormat": {
+            "textFormat": {
+              "link": {
+                "uri": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe"
+              }
+            }
+          },
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              },
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": true,
+              "foregroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.06666667,
+                  "green": 0.33333334,
+                  "blue": 0.8
+                }
+              },
+              "link": {
+                "uri": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe"
+              }
+            }
+          },
+          "hyperlink": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe"
+        }
+      },
+      "Ссылка на счёт КП 1": {
+        "formula_or_value": "",
+        "formatted_value": "",
+        "effective_cell": {
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Проверка поставщика КП 1": {
+        "formula_or_value": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте",
+        "formatted_value": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте",
+        "effective_cell": {
+          "userEnteredValue": {
+            "stringValue": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте"
+          },
+          "effectiveValue": {
+            "stringValue": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте"
+          },
+          "formattedValue": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте",
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "КП2": {
+      "Поставщик КП 2": {
+        "formula_or_value": "micro-line.ru",
+        "formatted_value": "micro-line.ru",
+        "effective_cell": {
+          "userEnteredValue": {
+            "stringValue": "micro-line.ru"
+          },
+          "effectiveValue": {
+            "stringValue": "micro-line.ru"
+          },
+          "formattedValue": "micro-line.ru",
+          "userEnteredFormat": {
+            "textFormat": {
+              "link": {
+                "uri": "http://micro-line.ru"
+              }
+            }
+          },
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              },
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": true,
+              "foregroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.06666667,
+                  "green": 0.33333334,
+                  "blue": 0.8
+                }
+              },
+              "link": {
+                "uri": "http://micro-line.ru"
+              }
+            }
+          },
+          "hyperlink": "http://micro-line.ru"
+        }
+      },
+      "Цена КП 2": {
+        "formula_or_value": 25635,
+        "formatted_value": "25635",
+        "effective_cell": {
+          "userEnteredValue": {
+            "numberValue": 25635
+          },
+          "effectiveValue": {
+            "numberValue": 25635
+          },
+          "formattedValue": "25635",
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Рентабельность КП 2, %": {
+        "formula_or_value": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AR$2:$AR$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))",
+        "formatted_value": "",
+        "effective_cell": {
+          "userEnteredValue": {
+            "formulaValue": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AR$2:$AR$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+          },
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Ссылка на товар КП 2": {
+        "formula_or_value": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+        "formatted_value": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+        "effective_cell": {
+          "userEnteredValue": {
+            "stringValue": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+          },
+          "effectiveValue": {
+            "stringValue": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+          },
+          "formattedValue": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+          "userEnteredFormat": {
+            "textFormat": {
+              "link": {
+                "uri": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+              }
+            }
+          },
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              },
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": true,
+              "foregroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.06666667,
+                  "green": 0.33333334,
+                  "blue": 0.8
+                }
+              },
+              "link": {
+                "uri": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+              }
+            }
+          },
+          "hyperlink": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+        }
+      },
+      "Ссылка на счёт КП 2": {
+        "formula_or_value": "",
+        "formatted_value": "",
+        "effective_cell": {
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Проверка поставщика КП 2": {
+        "formula_or_value": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте",
+        "formatted_value": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте",
+        "effective_cell": {
+          "userEnteredValue": {
+            "stringValue": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте"
+          },
+          "effectiveValue": {
+            "stringValue": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте"
+          },
+          "formattedValue": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте",
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "КП3": {
+      "Поставщик КП 3": {
+        "formula_or_value": "",
+        "formatted_value": "",
+        "effective_cell": {
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Цена КП 3": {
+        "formula_or_value": "",
+        "formatted_value": "",
+        "effective_cell": {
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Рентабельность КП 3, %": {
+        "formula_or_value": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AX$2:$AX$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))",
+        "formatted_value": "",
+        "effective_cell": {
+          "userEnteredValue": {
+            "formulaValue": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AX$2:$AX$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+          },
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Ссылка на товар КП 3": {
+        "formula_or_value": "",
+        "formatted_value": "",
+        "effective_cell": {
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Ссылка на счёт КП 3": {
+        "formula_or_value": "",
+        "formatted_value": "",
+        "effective_cell": {
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      },
+      "Проверка поставщика КП 3": {
+        "formula_or_value": "",
+        "formatted_value": "",
+        "effective_cell": {
+          "effectiveFormat": {
+            "textFormat": {
+              "foregroundColor": {},
+              "fontFamily": "Arial",
+              "fontSize": 10,
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "foregroundColorStyle": {
+                "rgbColor": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "ID закупки": "bc152af1-ef03-4f39-a194-a01b798589e6",
+    "Количество": 3,
+    "НМЦК, ₽": 87390,
+    "Комиссия площадки, ₽": 2665.4,
+    "Дополнительные расходы, ₽": "",
+    "Цена КП 1": 24554,
+    "Цена КП 2": 25635,
+    "Цена КП 3": ""
+  },
+  "link_checks": [
+    {
+      "supplier": "i-teh.com",
+      "url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+      "native_hyperlink": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+      "product_name": "Pantum M6607NW МФУ лазерное",
+      "price": 24554.0,
+      "http_status": 200
+    },
+    {
+      "supplier": "micro-line.ru",
+      "url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+      "native_hyperlink": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+      "product_name": "МФУ лазерный Pantum M6607NW",
+      "price": 25635.0,
+      "http_status": 200
+    }
+  ],
+  "other_rows_unchanged": 139,
+  "hyperlink_formatting_same_row": [],
+  "native_engine_profitability_results": {
+    "КП1": {
+      "unformatted_value": "",
+      "formatted_value": "",
+      "effectiveValue_field": null,
+      "native_formula": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AL$2:$AL$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+    },
+    "КП2": {
+      "unformatted_value": "",
+      "formatted_value": "",
+      "effectiveValue_field": null,
+      "native_formula": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AR$2:$AR$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+    },
+    "КП3": {
+      "unformatted_value": "",
+      "formatted_value": "",
+      "effectiveValue_field": null,
+      "native_formula": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AX$2:$AX$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+    }
+  },
+  "missing_inputs": {
+    "КП1": [
+      "Дополнительные расходы, ₽"
+    ],
+    "КП2": [
+      "Дополнительные расходы, ₽"
+    ],
+    "КП3": [
+      "Цена КП 3",
+      "Дополнительные расходы, ₽"
+    ]
+  },
+  "blocking_function": "google_sheets.workbook.quote_formulas → complete → IF(NOT(ready); \"\"; ...)"
+}

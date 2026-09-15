@@ -138,8 +138,8 @@ def run_test() -> dict:
         "analyzed_at": datetime.now(timezone.utc).isoformat(),
         "documents": source.get("documents", []),
         "downloaded_documents": [
-            "data/contracts/31f18b8a-d3b9-4cd8-890c-5d11824fc635/рап.pdf",
-            "data/contracts/31f18b8a-d3b9-4cd8-890c-5d11824fc635/кп.pdf",
+            "data/tenders/31f18b8a-d3b9-4cd8-890c-5d11824fc635/рап.pdf",
+            "data/tenders/31f18b8a-d3b9-4cd8-890c-5d11824fc635/кп.pdf",
         ],
         "nmck_analysis": {
             "quote_models": ["General Electronics GE32LFN0", "DEXP 43UCY3"],

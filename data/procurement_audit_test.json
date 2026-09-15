@@ -6,7 +6,7 @@
     {
       "file_name": "проект контракта фильтр мембранн.doc",
       "format": "DOC",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/100309200126100271/проект контракта фильтр мембранн.doc",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/100309200126100271/проект контракта фильтр мембранн.doc",
       "document_parse_status": "analyzed",
       "document_kinds": [
         "contract_draft",
@@ -20,7 +20,7 @@
     {
       "file_name": "Приложение №2 обоснование НМЦК.xlsx",
       "format": "XLSX",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/100309200126100271/Приложение _2 обоснование НМЦК.xlsx",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/100309200126100271/Приложение _2 обоснование НМЦК.xlsx",
       "document_parse_status": "analyzed",
       "document_kinds": [
         "price_justification"

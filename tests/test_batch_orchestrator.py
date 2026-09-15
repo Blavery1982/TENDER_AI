@@ -111,7 +111,7 @@ class BatchOrchestratorTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d); doc=root/"x.pdf"; doc.write_bytes(b"x"); f=fixture(); f["documents"]=[{"local_path":str(doc),"file_name":"x.pdf"}]
             x=run_batch([f,fixture("p2","2")],**paths(root))
-            self.assertEqual(x["summary"]["completed_procurements"],2)
+            self.assertEqual((x["summary"]["blocked_procurements"], x["summary"]["completed_procurements"]),(1,1))
     def test_25_secrets_redacted_in_log_text(self):
         text=_safe_text("Authorization=abc Cookie:xyz token=q password=p private_key=k")
         for value in ("abc","xyz","=q","=p","=k"): self.assertNotIn(value,text)

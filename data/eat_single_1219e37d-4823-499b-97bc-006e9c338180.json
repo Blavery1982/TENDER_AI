@@ -579,15 +579,19 @@
       "document_type": 14,
       "file_id": "d5915657-36a9-4118-93d4-d3ec5821481a",
       "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/1219e37d-4823-499b-97bc-006e9c338180/14/d5915657-36a9-4118-93d4-d3ec5821481a",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/1219e37d-4823-499b-97bc-006e9c338180/КП.pdf",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/1219e37d-4823-499b-97bc-006e9c338180/КП.pdf",
+      "sha256": "626cfa656bdf32d3f04f007dc63efec7305875f33b09ecc1ac55886662aee2f7",
+      "size_bytes": 159984,
       "download_status": "downloaded"
     },
     {
-      "file_name": "Приложение № 3 (Форма Акта 0510452).XLSX",
+      "file_name": "Приложение _ 3 (Форма Акта 0510452).XLSX",
       "document_type": 4,
       "file_id": "ae580586-80b9-47c2-9211-034df1ad1594",
       "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/1219e37d-4823-499b-97bc-006e9c338180/4/ae580586-80b9-47c2-9211-034df1ad1594",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/1219e37d-4823-499b-97bc-006e9c338180/Приложение _ 3 (Форма Акта 0510452).XLSX",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/1219e37d-4823-499b-97bc-006e9c338180/Приложение _ 3 (Форма Акта 0510452).XLSX",
+      "sha256": "24ab8cff82e88b2a6d951e507e8bd27f3cbf53e9d78c4beecb6c2b4b138f1006",
+      "size_bytes": 88218,
       "download_status": "downloaded"
     },
     {
@@ -595,7 +599,9 @@
       "document_type": 4,
       "file_id": "cbcdddc0-3cb6-4653-9d71-886ffe105e49",
       "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/1219e37d-4823-499b-97bc-006e9c338180/4/cbcdddc0-3cb6-4653-9d71-886ffe105e49",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/1219e37d-4823-499b-97bc-006e9c338180/Приложения к контракту.doc",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/1219e37d-4823-499b-97bc-006e9c338180/Приложения к контракту.doc",
+      "sha256": "9ba4824e6529fbc5ac0c415a5e9747127f9d24e23f9cec354f156afb2f40163c",
+      "size_bytes": 110080,
       "download_status": "downloaded"
     }
   ]

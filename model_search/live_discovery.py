@@ -21,7 +21,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Protocol
 
-from model_search.search_mode import determine_model_search_mode, blocked_discovery_result
+from model_search.search_mode import (determine_model_search_mode, blocked_discovery_result,
+                                      EXACT_MODEL_OR_EQUIVALENT)
 from model_search.query_planning import generate_queries, plausible_candidates
 from model_search.product_evidence import (exact_model_key, same_exact_model, extract_skus,
     candidates_from_results, html_page, document_pages, source_priority, page_matches, public_offer)
@@ -124,8 +125,21 @@ def _source_priority(url: str, text: str = "") -> int:
     return 4
 
 
-def _candidate_models(results, justification=None):
+def _candidate_models(results, justification=None, product_name=None):
     candidates=candidates_from_results(results)
+    # Реальное коммерческое имя из открытой карточки не обязано содержать SKU.
+    # Заголовок выдачи/сниппет не считается таким подтверждением.
+    noun_tokens=re.findall(r'[A-Za-zА-Яа-яЁё0-9]+',str(product_name or ''))
+    for row in results:
+        heading=row.get('verified_product_heading') or ''
+        if (not heading or len(heading)>240 or not noun_tokens
+                or not all(re.search(r'(?i)(?<!\w)'+re.escape(t)+r'(?!\w)',heading) for t in noun_tokens)
+                or extract_skus(heading)):
+            continue
+        if any(same_exact_model(c['sku'],heading) for c in candidates):continue
+        candidates.append({'brand':None,'model':heading,'sku':heading,'exact_model':heading,
+                           'model_name':heading,'source_url':row['url'],'source_title':heading,
+                           'candidate_source':'opened_product_heading','sources':[row['url']]})
     if justification:
         skus=extract_skus(justification);sku=skus[0] if len(skus)==1 else justification
         found=next((c for c in candidates if same_exact_model(c['sku'],sku)),None)
@@ -154,12 +168,25 @@ def _fresh(data: dict[str,Any], now: datetime) -> bool:
     except (KeyError,TypeError,ValueError): return False
 
 
+def select_cheapest_compliant_model(candidates):
+    eligible = [c for c in candidates if c.get('status') == 'fully_compliant'
+                and c.get('production_status') != 'discontinued'
+                and c.get('public_price') is not None
+                and c.get('russia_availability') == 'available']
+    return min(eligible, key=lambda c: c['public_price'], default=None)
+
+
 def discover_models(item_requirements: dict[str,Any], *, provider: SearchProvider | None = None,
                     query_limit: int = 3, results_per_query: int = 6, candidate_limit: int = 8,
                     cache_dir: Path = CACHE_DIR, use_cache: bool = True,
                     logger: logging.Logger | None = None) -> dict[str,Any]:
     decision=determine_model_search_mode(item_requirements)
     if not decision['model_discovery_allowed']: return blocked_discovery_result(decision)
+    # Для exact-or-equivalent сначала ищем исходную модель даже без таблицы
+    # характеристик: эквивалент будет допущен только после отдельной проверки.
+    if (decision['model_search_mode'] != EXACT_MODEL_OR_EQUIVALENT
+            and not (item_requirements.get('structured_requirements') or item_requirements.get('requirements'))):
+        return {**blocked_discovery_result(decision), 'warnings': ['Нет обязательных требований из разрешённых источников']}
     provider=provider or WebProvider();now=datetime.now(timezone.utc);checked=now.isoformat()
     cache_path=cache_dir/f"{_cache_key(item_requirements)}.json"
     if use_cache and cache_path.exists():
@@ -189,10 +216,11 @@ def discover_models(item_requirements: dict[str,Any], *, provider: SearchProvide
                 for page in pages:page.setdefault('url',url)
                 pages_by_url[url]=pages
                 row['page_title']=' '.join(p.get('title','')+' '+p.get('heading','') for p in pages)
+                row['verified_product_heading']=next((p.get('heading') for p in pages if p.get('heading') and p.get('content_kind')=='product_page'),None)
                 row['page_text']='\n'.join(p.get('text','') for p in pages)
             except Exception as exc:
                 warnings.append(f'Источник кандидата недоступен: {type(exc).__name__}')
-    candidates=_candidate_models(list(results.values()),justification)
+    candidates=_candidate_models(list(results.values()),justification,item_requirements.get('product_name'))
     original=decision.get('original_model')
     if original:
         skus=extract_skus(original);sku=skus[0] if len(skus)==1 else original
@@ -227,13 +255,11 @@ def discover_models(item_requirements: dict[str,Any], *, provider: SearchProvide
             'production_status':'discontinued' if discontinued else 'production_not_confirmed',
             'russia_availability':'available' if available else 'not_confirmed','checked_at':checked,'warnings':[]})
     compliant=[c for c in checked_candidates if c['status']=='fully_compliant' and c['production_status']!='discontinued']
-    eligible=[c for c in compliant if c['public_price'] is not None and c['russia_availability']=='available']
-    eligible.sort(key=lambda c:(c['public_price'],not bool(c['official_sources'])))
-    selected=eligible[0] if eligible else None
+    selected=select_cheapest_compliant_model(checked_candidates)
     result={**decision,'search_status':'completed' if candidates and not warnings else 'partial','queries_planned':plan,
         'queries_used':queries,'live_queries_count':len(queries),'candidates_found':len(candidates),
         'candidates_checked':len(checked_candidates),'fully_compliant_count':len(compliant),'candidates':checked_candidates,
-        'selected_model':({**selected,'selection_reason':'Одна из наиболее бюджетных полностью подтверждённых моделей среди проверенных кандидатов'} if selected else None),
+        'selected_model':({**selected,'selection_reason':'Самая дешёвая полностью соответствующая доступная модель среди проверенных кандидатов'} if selected else None),
         'selected_model_public_price':selected['public_price'] if selected else None,'purchase_price':None,
         'requirements_confirmed':sum(c['result']==CORRESPONDS for x in checked_candidates for c in x['requirements_check']),
         'requirements_unconfirmed':sum(c['result']==UNKNOWN for x in checked_candidates for c in x['requirements_check']),

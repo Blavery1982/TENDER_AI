@@ -5,6 +5,7 @@ from suppliers.verification import (HIGH_RISK, INSUFFICIENT, MANUAL, PASSED,
                                     normalize_domain, verify_invoice_recipient,
                                     verify_supplier)
 from suppliers.site_requisites import extract_requisites
+from suppliers.arbitration import defendant_kad_result
 
 
 def offer(name="A", price=100, category="federal_or_specialist", status=PASSED):
@@ -90,6 +91,7 @@ class SupplierSearchTest(unittest.TestCase):
 
     def test_consistent_legal_entity_and_old_domain_can_pass_without_cms_ip(self):
         x=verify_supplier({"product_url":"https://shop.ru/x","verification_checks":{
+            "kad_check":defendant_kad_result("7701097787",0),
             "domain_age_years":8,"requisites_consistent":True,"cms_status":"unavailable",
             "ip_status":"unavailable","wayback_status":"unavailable",
             "company":{"inn":"7701097787","active":True,"director_changed_within_6_months":False}}})
@@ -113,6 +115,7 @@ class SupplierSearchTest(unittest.TestCase):
 
     def test_new_current_inn_registered_long_ago_can_pass(self):
         x=verify_supplier({"product_url":"https://shop.ru/x","verification_checks":{
+            "kad_check":defendant_kad_result("7701097787",0),
             "domain_age_years":8,"requisites_consistent":False,"current_seller_determined":True,
             "current_company":{"inn":"7701097787","active":True,"registered_at":"2014-01-01",
                                "registered_recently":False},"historical_companies":[{"inn":"1"}]}})

@@ -9,9 +9,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
-from calculator.decision import calculator_decision
+from calculator.result_decision import attach_business_decision
 from documents.item_sources import resolve_item_sources, VERSION as SOURCE_VERSION
-from documents.pipeline import audit_from_extraction, process_procurement_documents
+from documents.pipeline import (audit_from_extraction, document_processing_stop_reason,
+                                process_procurement_documents)
 from filters.semantic_bad_words import filter_purchase_v2
 from security.customer_check import build_customer_check
 from security.traceability import analyze_item
@@ -140,7 +141,8 @@ def process_item(raw_item: dict, item_number: int, trade_number: str,
                  customer_check: dict, requirements: list[dict] | None = None,
                  fault: str | None = None, *, model_live: bool = False,
                  model_provider: Any = None, logger: logging.Logger | None = None,
-                 source_resolution: dict | None = None) -> dict:
+                 source_resolution: dict | None = None,
+                 procurement: dict | None = None) -> dict:
     if fault == "item":
         raise RuntimeError("synthetic item failure")
     quantity = raw_item.get("quantity")
@@ -179,20 +181,32 @@ def process_item(raw_item: dict, item_number: int, trade_number: str,
     target = supplier_target_price(unit_price) if unit_price is not None else None
     purchase_price = None
     model_available = model.get("status") != MODEL_NOT_LIVE if "status" in model else bool(model.get("selected_model"))
-    calculation = calculator_decision(model_available,
-                                      bool(supplier.get("offers")), purchase_price, ["delivery_cost"])
-    return {"item_number": item_number,
+    result = {"item_number": item_number,
             "item_name": raw_item.get("description") or raw_item.get("name") or raw_item.get("eatTitle"),
             "quantity": quantity, "unit": raw_item.get("okeiTitle") or (raw_item.get("okei") or {}).get("title"),
             "customer_unit_price": unit_price, "requirements": resolved["requirements"], "source_resolution": resolved, "customer_check": customer_check,
             "traceability": traceability, "price_readiness": readiness,
             "model_search": model, "supplier_market_search": supplier,
             "supplier_target_discount_percent": SUPPLIER_TARGET_DISCOUNT_PERCENT,
-            "supplier_target_price": target, "calculator": {**calculation, "purchase_price": purchase_price},
+            "supplier_target_price": target, "calculator": {"status": "🟡 РУЧНАЯ ПРОВЕРКА",
+                                                               "purchase_price": purchase_price,
+                                                               "unknown_costs": ["delivery_cost"]},
             "warnings": [x for x in (traceability.get("traceability_reason"),
                          MODEL_NOT_LIVE if model.get("status") == MODEL_NOT_LIVE else None,
                          SUPPLIER_NOT_LIVE if supplier["status"] == SUPPLIER_NOT_LIVE else None) if x],
-            "status": "completed"}
+            "status": "completed",
+            "procurement": procurement or {"id": trade_number, "trade_number": trade_number,
+                                            "nmck": None, "commission_fee": None,
+                                            "commission_source": "raw.lot.commissionFee"},
+            "item": {"position_number": item_number, "quantity": quantity,
+                     "customer_unit_price": unit_price, "item_name": model_input.get("item_name")},
+            "supplier_search": {"ranked_offers": supplier.get("offers") or []},
+            "audit": {"additional_expense_state": {"ready": False, "reason": "Дополнительные расходы не проверены"}},
+            "calculation_complete": False}
+    business = attach_business_decision(result)
+    result["business_decision"] = business
+    result["calculator"]["status"] = business["label"]
+    return result
 
 
 def run_batch(fixtures: list[dict], *, resume: bool = False, checkpoint_path: Path = CHECKPOINT,
@@ -212,6 +226,7 @@ def run_batch(fixtures: list[dict], *, resume: bool = False, checkpoint_path: Pa
         if resume and old.get("status") == "completed" and all(
             x.get("source_resolution", {}).get("source_resolution_version") == SOURCE_VERSION
             and x.get("price_readiness", {}).get("price_readiness_version") == PRICE_READINESS_VERSION
+            and isinstance(x.get("business_decision"), dict)
             for x in old.get("result", {}).get("items", [])):
             skipped += 1; results.append(old["result"]); logger.info("procurement=%s stage=batch status=skipped_completed",pid); continue
         state={"procurement_id":pid,"status":"processing","started_at":old.get("started_at") or _now(),
@@ -228,6 +243,25 @@ def run_batch(fixtures: list[dict], *, resume: bool = False, checkpoint_path: Pa
             else:
                 extraction=process_procurement_documents(fixture,fixture.get("documents") or [],logger=logger)
                 state["stage_results"]["document_processing"]=extraction
+            document_stop = document_processing_stop_reason(extraction)
+            if document_stop:
+                state["stage_statuses"]["documents"]="blocked"
+                state["stage_statuses"]["text_extraction"]="blocked"
+                state["stage_statuses"]["ocr"]="blocked" if extraction["extraction_summary"]["ocr_documents"] else "not_required"
+                state["current_stage"]="stopped_manual_review"
+                result={"procurement_id":pid,"procurement_number":trade,
+                        "filter":decision,"document_processing":extraction,
+                        "items":[],"total_items":0,"completed_items":0,
+                        "partial_items":0,"failed_items":0,
+                        "warnings":list(dict.fromkeys([*state["warnings"], document_stop])),
+                        "final_status":"blocked","manual_stop_reason":document_stop,
+                        "started_at":state["started_at"],"completed_at":_now()}
+                state.update({"status":"blocked","completed_at":result["completed_at"],
+                              "last_error":document_stop,"result":result})
+                results.append(result)
+                logger.error("procurement=%s stage=documents status=blocked reason=%s",pid,document_stop)
+                _atomic_json(checkpoint_path,checkpoint)
+                continue
             state["stage_statuses"]["documents"]="completed"
             state["stage_statuses"]["text_extraction"]="completed"
             state["stage_statuses"]["ocr"]="completed" if extraction["extraction_summary"]["ocr_documents"] else "not_required"
@@ -255,7 +289,12 @@ def run_batch(fixtures: list[dict], *, resume: bool = False, checkpoint_path: Pa
                                         (audit_items.get(number) or {}).get("requirements") or [],
                                         "item" if faults.get(f"{pid}:{number}")=="item" else None,
                                         model_live=model_live_test, model_provider=model_provider, logger=logger,
-                                        source_resolution=audit_items.get(number))
+                                        source_resolution=audit_items.get(number),
+                                        procurement={"id": pid, "trade_number": trade,
+                                                     "nmck": lot.get("price"),
+                                                     "commission_fee": lot.get("commissionFee"),
+                                                     "commission_source": "raw.lot.commissionFee",
+                                                     "commission_verified": lot.get("commissionFee") is not None})
                     state["stage_statuses"]["model_discovery"]=(
                         "completed" if result["model_search"].get("model_discovery_called")
                         else "not_required" if result["price_readiness"]["classification"] == PRICE_SEARCH_READY
@@ -290,6 +329,7 @@ def run_batch(fixtures: list[dict], *, resume: bool = False, checkpoint_path: Pa
              "completed_procurements":sum(x.get("final_status")=="completed" for x in results),
              "partial_procurements":sum(x.get("final_status")=="partial" for x in results),
              "failed_procurements":sum(x.get("final_status")=="failed" for x in results),
+             "blocked_procurements":sum(x.get("final_status")=="blocked" for x in results),
              "total_items":sum(x.get("total_items",0) for x in results),
              "completed_items":sum(x.get("completed_items",0) for x in results),
              "failed_items":sum(x.get("failed_items",0) for x in results),
@@ -311,17 +351,21 @@ def run_batch(fixtures: list[dict], *, resume: bool = False, checkpoint_path: Pa
     for result in results:
         doc=result.get("document_processing") or {}; ext=doc.get("extraction_summary") or {}; audit=result.get("procurement_audit") or {}
         procurement_lines.append(
-            f"- {result.get('procurement_number')}: документов {doc.get('documents_found',0)}, "
+            f"- {result.get('procurement_number')}: статус {result.get('final_status')}, "
+            f"документов {doc.get('documents_found',0)}, "
             f"обработано {doc.get('documents_processed',0)}, OCR {ext.get('ocr_documents',0)}, "
             f"failed {doc.get('documents_failed',0)}, audit {audit.get('audit_status','Нет данных')}, "
             f"позиций {result.get('total_items',0)}, requirements {sum(bool(i.get('requirements')) for i in result.get('items',[]))}, "
             f"warnings {len((audit.get('document_warnings') or []))}"
+            + (f", комментарий: {result.get('manual_stop_reason')}"
+               if result.get('manual_stop_reason') else "")
         )
     summary_path.write_text("# Production dry-run\n\n"+"\n".join([
         f"- Закупок: {summary['total_procurements']}",f"- Позиций: {summary['total_items']}",
         f"- Документов: {summary['documents_found']}; обработано: {summary['documents_processed']}; OCR: {summary['ocr_documents']}; mixed: {summary['mixed_documents']}; failed: {summary['documents_failed']}",
         f"- Позиций с requirements: {summary['items_with_requirements']}",
         f"- Завершено закупок: {summary['completed_procurements']}",f"- Частично: {summary['partial_procurements']}",
+        f"- Остановлено для ручной обработки: {summary['blocked_procurements']}",
         f"- Ошибок закупок: {summary['failed_procurements']}",f"- Пропущено при resume: {summary['skipped_completed_on_resume']}",
         "- Live ЕАТ: не запускался",f"- Live model search: {'ограниченный контрольный запуск' if model_live_test else 'не запускался'}",
         "- Live supplier search: не запускался","- Google Sheets: запись не выполнялась",

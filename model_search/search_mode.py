@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import re
 from typing import Any
+from filters.position_kind import goods_position, blocked_position
 
 EXACT_MODEL_ONLY = "EXACT_MODEL_ONLY"
 EXACT_MODEL_OR_EQUIVALENT = "EXACT_MODEL_OR_EQUIVALENT"
@@ -26,43 +27,18 @@ def determine_model_search_mode(item: dict[str, Any]) -> dict[str, Any]:
     Unlabelled mixed letter/digit tokens need a recognisable brand context;
     unresolved tokens and conditional wording are sent for review.
     """
-    if isinstance(item.get("source_resolution_version"), int) and item["source_resolution_version"] >= 2:
+    if not goods_position(item):
+        return blocked_position(item)
+    if isinstance(item.get("source_resolution_version"), int) and item["source_resolution_version"] >= 6:
         keys = ("model_search_mode", "original_model", "model_mode_reason", "model_discovery_allowed",
                 "customer_required_model", "price_justification_model", "model_source", "model_evidence",
                 "price_model_evidence", "supplier_baseline_model", "supplier_baseline_status",
                 "supplier_prices_required", "distinct_suppliers_required", "alternative_policy",
                 "pricing_reference_model", "source_resolution_version", "source_warnings", "source_conflicts")
         return {key: item.get(key) for key in keys}
-    texts = [str(item[k]) for k in ("item_name", "name", "eatTitle", "description", "specification", "technical_description") if item.get(k)]
-    for row in item.get("structured_requirements") or item.get("requirements") or []:
-        texts.append(f"{row.get('parameter') or row.get('requirement_name') or ''}: {row.get('required_value', row.get('value', ''))}")
-    text = "\n".join(dict.fromkeys(texts))
-    clean = CODE.sub("", text)
-    models = list(dict.fromkeys(m.group(0).strip() for m in MODEL.finditer(clean)))
-    for match in LABEL.finditer(clean):
-        value = match.group(1).strip()
-        if not any(value.casefold() in model.casefold() for model in models):
-            models.append(value)
-    denied = bool(DENIAL.search(clean))
-    permission_text = DENIAL.sub("", clean)
-    allowed = bool(PERMISSION.search(permission_text))
-    remainder = clean
-    for model in models:
-        remainder = remainder.replace(model, "")
-    # Technical standards and units are not product identities.
-    remainder = re.sub(r"(?i)\b(?:IP\d+|\d+[.,]?\d*\s*(?:кВт|Вт|В|Гц|мм|см|м|дБ)|(?:ГОСТ|ISO|DIN)\s*[\d.-]+)\b", "", remainder)
-    ambiguous = bool(UNCERTAIN.search(clean) or (denied and allowed) or len(models) > 1)
-    ambiguous = ambiguous or bool(re.search(r"\b" + TOKEN + r"\b", remainder))
-    ambiguous = ambiguous or bool(re.search(r"(?i)\bмодель\b", remainder) and not models)
-    if ambiguous:
-        mode, reason = MODEL_MODE_REVIEW_REQUIRED, "Модель или условия замены требуют проверки"
-    elif models:
-        mode = EXACT_MODEL_OR_EQUIVALENT if allowed else EXACT_MODEL_ONLY
-        reason = "Замена явно разрешена" if allowed else "Указана модель без разрешения замены"
-    else:
-        mode, reason = MODEL_DISCOVERY_REQUIRED, "Конкретная модель не указана"
-    return {"model_search_mode": mode, "original_model": models[0] if len(models) == 1 else None,
-            "model_mode_reason": reason, "model_discovery_allowed": mode in (EXACT_MODEL_OR_EQUIVALENT, MODEL_DISCOVERY_REQUIRED)}
+    # Единый сбор требований и контекст обозначения, без второго детектора формата.
+    from documents.item_sources import resolve_item_sources
+    return resolve_item_sources(item)
 
 
 def blocked_discovery_result(decision: dict[str, Any]) -> dict[str, Any]:
@@ -84,6 +60,9 @@ def customer_exact_model_policy(decision: dict[str, Any], *, exact_model_match: 
     product identity itself.  A seller page must still independently confirm
     the exact SKU; similar models never qualify for this fast path.
     """
+    if decision.get('source_resolution_version', 0) >= 6:
+        return {"compliance_required": True, "compliance_code": None,
+                "compliance_status": None, "reason": "Проверить явные характеристики собранного товара"}
     customer_model = decision.get("original_model") or decision.get("customer_required_model")
     specification = str(decision.get("customer_specification_text") or "")
     model_lines = [line for line in specification.splitlines()
@@ -100,14 +79,14 @@ def customer_exact_model_policy(decision: dict[str, Any], *, exact_model_match: 
         and clear_model_evidence
     )
     fast_path = bool(customer_model and exact_model_match is True and (
-        decision.get("model_search_mode") == EXACT_MODEL_ONLY or source_resolved_exact
+        decision.get("model_search_mode") in (EXACT_MODEL_ONLY, "EXACT_MODEL") or source_resolved_exact
     ))
     if fast_path:
         return {
             "compliance_required": False,
             "compliance_code": CUSTOMER_EXACT_MODEL,
             "compliance_status": CUSTOMER_EXACT_MODEL_RU,
-            "reason": "Заказчик указал точную модель без права замены; карточка продавца подтвердила exact-model match",
+            "reason": "Первичный просчёт указанной заказчиком модели; карточка продавца подтвердила exact-model match",
         }
     return {
         "compliance_required": True,

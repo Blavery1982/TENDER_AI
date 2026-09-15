@@ -11,6 +11,7 @@ from typing import Any
 import pymorphy3
 from eat.normalization import normalize_lot_item
 from filters.eat_filters import filter_purchase, load_config
+from filters.position_kind import classify_position, ANCILLARY
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data/eat_filtered_test.json"
@@ -21,24 +22,7 @@ GREEN_V2 = ROOT / "data/eat_green_semantic_v2.json"
 MORPH = pymorphy3.MorphAnalyzer()
 WORD_RE = re.compile(r"[А-Яа-яЁё-]+")
 ADJECTIVE_POS = {"ADJF", "ADJS", "PRTF", "PRTS"}
-GOODS_RE = re.compile(r"\b(?:поставк\w*|приобретен\w*|закупк\w*|товар\w*)\b")
-SERVICES_RE = re.compile(r"\b(?:оказани\w*\s+услуг\w*|услуг\w*(?:\s+по)?|обслуживани\w*|обучени\w*|страховани\w*|экспертиз\w*|диагностик\w*)\b")
-WORKS_RE = re.compile(r"\b(?:выполнени\w*\s+работ\w*|работ\w*\s+по|ремонт\w*|монтаж\w*|демонтаж\w*|строительств\w*|изготовлени\w*)\b")
 ACTION_RE = re.compile(r"\b(?:оказани\w*\s+услуг\w*|выполнени\w*\s+работ\w*|услуг\w+\s+по|работ\w+\s+по|монтаж\w*\s+|ремонт\w*\s+|обслуживани\w*\s+|проведени\w*\s+|разработк\w*\s+)")
-POSITION_SERVICE_RE = re.compile(
-    r"\b(?:оказани\w*\s+услуг\w*|предоставлени\w*\s+услуг\w*|"
-    r"услуг(?:а|и|у|ой|е|ам|ами|ах)?(?:\s+по)?)\b"
-)
-POSITION_WORK_RE = re.compile(
-    r"\b(?:выполнени\w*\s+работ\w*|работ\w*\s+по)\b"
-)
-POSITION_PLACEHOLDER_RE = re.compile(
-    r"^(?:в\s+соответствии\s+с\s+(?:условиями\s+)?(?:техническ\w+\s+задани\w+|"
-    r"проект\w+\s+контракт\w+)|согласно\s+(?:техническ\w+\s+задани\w+|"
-    r"проект\w+\s+контракт\w+)|см\.\s*(?:техническ\w+\s+задани\w+|"
-    r"проект\w+\s+контракт\w+))\.?$",
-    re.I,
-)
 
 # Канонические причины объединяют только явно заданные пользователем синонимы.
 HARD_GROUPS = {
@@ -55,6 +39,8 @@ HARD_GROUPS = {
     "овощи": ["овощи"], "овощные культуры": ["овощные культуры"],
     "корма для животных": ["корма для животных"], "комбикорм": ["комбикорм"],
     "лекарственные препараты": ["лекарственные препараты"],
+    "препараты": ["препараты"],
+    "анестетики": ["анестетики"],
     "наркотические средства": ["наркотические средства"],
     "психотропные вещества": ["психотропные вещества"],
     "стройка": ["стройка"], "строительные материалы": ["строительные материалы"],
@@ -130,59 +116,24 @@ def analyze_hard_exclusions(raw: dict[str, Any]) -> list[dict[str, Any]]:
 
 def _position_kind(item: dict[str, Any]) -> str:
     """Классифицировать позицию, соблюдая приоритет полей спецификации."""
-    has_concrete_text = False
-    for field in ("description", "name", "eatTitle"):
-        value = item.get(field)
-        if not isinstance(value, str) or not value.strip() or value.strip() == "-":
-            continue
-        if POSITION_PLACEHOLDER_RE.fullmatch(value.strip()):
-            continue
-        has_concrete_text = True
-        text = value.casefold().replace("ё", "е")
-        if POSITION_SERVICE_RE.search(text):
-            return "services"
-        if POSITION_WORK_RE.search(text):
-            return "works"
-    # Реальная именованная позиция без формулы услуги/работы — физический товар.
-    return "goods" if has_concrete_text else "uncertain"
+    return classify_position(item)["position_kind"]
 
 
 def procurement_kind(raw_or_subject: Any) -> str:
     raw = raw_or_subject if isinstance(raw_or_subject, dict) else {}
     subject = raw.get("subject") if raw else raw_or_subject
     if raw:
+        raw = raw.get("lot") or raw
+        subject = raw.get("subject")
         item_kinds = [
             _position_kind(item) for item in (raw.get("lotItems") or [])
             if isinstance(item, dict)
         ]
-        determined = [kind for kind in item_kinds if kind != "uncertain"]
-        if determined:
-            counts = Counter(determined)
-            goods = counts["goods"]
-            non_goods = counts["services"] + counts["works"]
-            if goods > non_goods:
-                return "goods"
-            if goods and non_goods:
-                return "mixed"
-            if counts["services"] and counts["works"]:
-                return "mixed"
-            if counts["services"]:
-                return "services"
-            if counts["works"]:
-                return "works"
+        if item_kinds:
+            return item_kinds[0] if len(set(item_kinds)) == 1 else "mixed"
     if not isinstance(subject, str) or not subject.strip():
         return "uncertain"
-    text = subject.casefold().replace("ё", "е")
-    goods, services, works = bool(GOODS_RE.search(text)), bool(SERVICES_RE.search(text)), bool(WORKS_RE.search(text))
-    if sum((goods, services, works)) > 1:
-        return "mixed"
-    if services:
-        return "services"
-    if works:
-        return "works"
-    if goods:
-        return "goods"
-    return "uncertain"
+    return classify_position({"name": subject})["position_kind"]
 
 
 def _actual_word(text: str, start: int, end: int) -> str:
@@ -193,11 +144,17 @@ def _actual_word(text: str, start: int, end: int) -> str:
 def _role(text: str, field: str, actual: str, pos: str | None, kind: str, start: int) -> str:
     lowered = text.casefold().replace("ё", "е")
     around = lowered[max(0, start - 40):start + len(actual) + 50]
+    if kind in {"services", "works"}:
+        return "service_or_work"
+    if kind == "goods" and ANCILLARY.fullmatch(actual):
+        return "delivery_obligation"
+    if kind == "goods" and re.search(r"\bдля\s*$", lowered[:start]):
+        return "product_property"
     if pos in ADJECTIVE_POS:
         return "product_property"
     if re.search(r"\bдля\s+(?:[а-яё-]+\s+){0,4}работ\w*\b", around):
         return "product_property"
-    if ACTION_RE.search(around) or kind in {"services", "works"}:
+    if ACTION_RE.search(around):
         return "service_or_work"
     if kind == "goods":
         return "product_name" if field != "lotItems[].description" else "technical_context"
@@ -217,6 +174,7 @@ def analyze_bad_words(raw: dict[str, Any], bad_words: list[str]) -> dict[str, An
                     sources.append((f"lotItems[].{key}", index, item[key]))
     matches, seen = [], set()
     for field, index, text in sources:
+        role_kind = _position_kind(raw["lotItems"][index]) if index is not None else kind
         lowered = text.casefold()
         for bad in dict.fromkeys(word.casefold() for word in bad_words):
             for found in re.finditer(re.escape(bad), lowered):
@@ -227,7 +185,7 @@ def analyze_bad_words(raw: dict[str, Any], bad_words: list[str]) -> dict[str, An
                 actual = _actual_word(text, found.start(), found.end())
                 token = WORD_RE.search(actual)
                 pos = MORPH.parse(token.group(0))[0].tag.POS if token else None
-                role = _role(text, field, actual, pos, kind, found.start())
+                role = _role(text, field, actual, pos, role_kind, found.start())
                 matches.append({
                     "matched_word": bad, "actual_word": actual,
                     "part_of_speech": pos, "source_field": field,
@@ -308,7 +266,11 @@ def _filter_v2(raw: dict[str, Any], title: str | None, config: dict[str, Any]) -
 def filter_purchase_v2(raw: dict[str, Any], title: str | None,
                        config: dict[str, Any] | None = None) -> dict[str, Any]:
     """Публичная production-oriented точка актуального semantic v2 фильтра."""
-    return _filter_v2(raw, title, config or load_config())
+    normalized = {**raw, **(raw.get("lot") or {})}
+    result = _filter_v2(normalized, title, config or load_config())
+    result["position_kinds"] = [classify_position(item) for item in normalized.get("lotItems") or []
+                                if isinstance(item, dict)]
+    return result
 
 
 def recalculate_saved_purchases_v2() -> dict[str, Any]:

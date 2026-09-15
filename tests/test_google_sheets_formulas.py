@@ -56,6 +56,10 @@ class GoogleSheetsCalculationFormulaTest(unittest.TestCase):
         self.assertIn("ISNUMBER($AS$2:$AS$10000)", combined)
         self.assertNotIn('COUNTIFS($C$2:$C$10000;$C2;$AK$2:$AK$10000;">0")', combined)
         self.assertNotIn("LET(", sheet_formulas[26])
+        self.assertIn("1,18", combined)
+        self.assertIn("MAX(0;", combined)
+        self.assertNotIn("1,10", combined)
+        self.assertIn("Z2*1,18", sheet_formulas[28])
 
     def test_real_zero_is_not_treated_as_missing(self):
         combined = "\n".join(formulas(2).values())
@@ -66,9 +70,9 @@ class GoogleSheetsCalculationFormulaTest(unittest.TestCase):
 
     def test_dependent_formulas_stop_when_previous_result_is_empty(self):
         sheet_formulas = formulas(2)
-        self.assertIn("ISNUMBER(AB2)", sheet_formulas[28])
+        self.assertIn("ISNUMBER(Z2)", sheet_formulas[28])
         self.assertIn("ISNUMBER(AC2)", sheet_formulas[29])
-        self.assertIn("ISNUMBER(AD2)", sheet_formulas[30])
+        self.assertIn("ISNUMBER(AB2)", sheet_formulas[30])
         self.assertIn("ISNUMBER(AE2)", sheet_formulas[34])
 
     def test_formulas_follow_reordered_headers(self):

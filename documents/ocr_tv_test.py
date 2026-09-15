@@ -18,7 +18,7 @@ import pymupdf
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parent.parent
-PDF_DIR = ROOT / "data/contracts/31f18b8a-d3b9-4cd8-890c-5d11824fc635"
+PDF_DIR = ROOT / "data/tenders/31f18b8a-d3b9-4cd8-890c-5d11824fc635"
 OUTPUT = ROOT / "data/ocr_tv_test.json"
 TESSERACT = Path("/opt/homebrew/bin/tesseract")
 LOW_CONFIDENCE = 70.0

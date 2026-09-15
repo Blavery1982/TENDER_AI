@@ -1,19 +1,28 @@
 import copy
 import unittest
+from unittest.mock import patch
 
 from pipeline.orchestrator import AUDIT_MODEL, CARD, SUPPLIERS, VERIFICATION, build_pipeline, load_json
-from security.customer_check import (STATUS_CASES, STATUS_MANUAL, STATUS_SERIOUS,
+from security.customer_check import (STATUS_CASES, STATUS_CLEAR, STATUS_MANUAL, STATUS_SERIOUS,
                                      build_customer_check, extract_customer)
-from suppliers.arbitration import assess_kad_cases
+from suppliers.arbitration import defendant_kad_result, unavailable_kad_result, check_kad
 from suppliers.verification import verify_supplier
 
 NOW="2026-09-09T00:00:00+00:00"
 def case(role="Истец",category="Гражданское",date="2026-01-01",number="А40-1/2026"):
     return {"role":role,"category":category,"date":date,"number":number}
-def fetch(cases): return lambda _inn: cases
+def fetch(cases): return lambda inn: defendant_kad_result(inn, sum("ответчик" in c["role"].casefold() for c in cases))
 
 
 class CustomerCheckTests(unittest.TestCase):
+    def setUp(self):
+        # Ни один UNIT, включая pipeline без адаптера, не обращается в LIVE-КАД.
+        def local_check(inn, fetcher=None):
+            return check_kad(inn, fetcher) if fetcher is not None else unavailable_kad_result(inn, "UNIT: LIVE не запускается")
+        mock = patch("security.customer_check.check_kad", side_effect=local_check)
+        mock.start()
+        self.addCleanup(mock.stop)
+
     @classmethod
     def setUpClass(cls):
         cls.card=load_json(CARD); cls.audit=load_json(AUDIT_MODEL)
@@ -28,42 +37,42 @@ class CustomerCheckTests(unittest.TestCase):
     def test_03_inn_absent(self): self.assertIsNone(extract_customer({},[])["customer_inn"])
     def test_04_shared_arbitration_shape(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([]))
-        self.assertIn("arbitration_evidence",x); self.assertTrue(x["arbitration_evidence"]["checked_in_kad"])
+        self.assertIn("arbitration_evidence",x); self.assertEqual(x["arbitration_evidence"]["technical_status"],"KAD_CHECKED")
     def test_05_only_plaintiff(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([case()]))
-        self.assertEqual(x["arbitration_status"],STATUS_CASES); self.assertNotIn("неплат",x["payment_risk_status"].lower())
+        self.assertEqual(x["arbitration_status"],STATUS_CLEAR); self.assertNotIn("неплат",x["payment_risk_status"].lower())
     def test_06_defendant(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([case("Ответчик")]))
         self.assertIn("риск оплаты",x["payment_risk_status"])
     def test_07_several_recent_defendant(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([case("Ответчик",number=str(i)) for i in range(3)]))
-        self.assertEqual(x["recent_cases_count"],3)
+        self.assertEqual(x["defendant_cases_count"],3); self.assertIsNone(x["recent_cases_count"])
     def test_08_mixed_roles(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([case(),case("Ответчик")]))
-        self.assertEqual((x["plaintiff_cases_count"],x["defendant_cases_count"]),(1,1))
+        self.assertEqual((x["plaintiff_cases_count"],x["defendant_cases_count"]),(None,1))
     def test_09_bankruptcy(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([case(category="Банкротное")]))
-        self.assertEqual(x["arbitration_status"],STATUS_SERIOUS)
+        self.assertEqual(x["arbitration_status"],STATUS_CLEAR)
     def test_10_kad_unavailable(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],lambda _: (_ for _ in ()).throw(ConnectionError()))
         self.assertEqual(x["arbitration_status"],STATUS_MANUAL)
     def test_11_captcha_not_bypassed(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],lambda _: (_ for _ in ()).throw(PermissionError()))
-        self.assertIn("CAPTCHA",str(x["warnings"]))
+        self.assertEqual(x["arbitration_status"],STATUS_MANUAL); self.assertIn("PermissionError",str(x["warnings"]))
     def test_12_unavailable_not_no_cases(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[]); self.assertIsNone(x["cases_count"])
     def test_13_ordinary_case_not_rejection(self):
         x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([case("Ответчик")]))
         self.assertNotIn("НЕ УЧАСТВОВАТЬ",x["payment_risk_status"])
     def test_14_cases_label(self):
-        x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([case()])); self.assertIn("ЕСТЬ СУДЫ!",x["arbitration_status"])
+        x=build_customer_check({"raw":{"customer":{"inn":"7701097787"}}},[],fetch([case("Ответчик")])); self.assertIn("ЕСТЬ СУДЫ!",x["arbitration_status"])
     def test_15_customer_check_in_pipeline(self): self.assertIn("customer_check",build_pipeline(copy.deepcopy(self.card),copy.deepcopy(self.audit),copy.deepcopy(self.supplier),copy.deepcopy(self.deep)))
     def test_16_pipeline_continues_without_kad(self):
         x=build_pipeline(copy.deepcopy(self.card),copy.deepcopy(self.audit),copy.deepcopy(self.supplier),copy.deepcopy(self.deep)); self.assertIn("technical_audit",x)
     def test_17_manual_action_has_inn(self):
         x=build_customer_check({},[{"text":"ИНН 7718115635"}]); self.assertEqual(x["manual_actions_required"][0]["customer_inn"],"7718115635")
     def test_18_supplier_arbitration_still_works(self):
-        kad=assess_kad_cases("1",[case()],checked_at=NOW)
+        kad=defendant_kad_result("1",0,checked_at=NOW)
         x=verify_supplier({"product_url":"https://shop.ru","verification_checks":{"kad_check":kad}})
         self.assertIn("arbitration_cases",x)
     def test_19_full_card_customer_fields_have_priority(self):
@@ -84,7 +93,7 @@ class CustomerCheckTests(unittest.TestCase):
         received=[]
         def kad_fetcher(inn):
             received.append(inn)
-            return []
+            return defendant_kad_result(inn,0)
         x=build_customer_check({"raw":{"customer":{"inn":"7703255580"}}},[],kad_fetcher)
         self.assertEqual(received,["7703255580"])
         self.assertEqual(x["arbitration_evidence"]["searched_inn"],"7703255580")

@@ -703,7 +703,9 @@
       "document_type": 15,
       "file_id": "38faec68-8027-4705-9a1f-6b0f4e4659e5",
       "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/15/38faec68-8027-4705-9a1f-6b0f4e4659e5",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/Договор пример по п.4 стом.docx",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/e53ff30e-065c-4a77-a73a-2b1fb4d8bc53/Договор пример по п.4 стом.docx",
+      "sha256": "94278269d4569305b3eabef781867e185cba5db5da7573ad4e4584ab9cf63c9d",
+      "size_bytes": 116736,
       "download_status": "downloaded"
     }
   ]

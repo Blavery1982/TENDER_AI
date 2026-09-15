@@ -34,7 +34,7 @@ class ItemSourcesTests(unittest.TestCase):
         self.assertIn(r['customer_required_model'],generate_queries(r)[0])
 
     def test_03_characteristics_and_negation(self):
-        r=self.resolve('Мощность ≥ 2.6 кВт\nWi-Fi: не требуется')
+        r=self.resolve('', structured_requirements=[{'parameter':'Мощность','value':'≥ 2.6 кВт'}, {'parameter':'Wi-Fi','value':'не требуется'}])
         self.assertEqual(r['model_search_mode'],'MODEL_DISCOVERY_REQUIRED')
         self.assertEqual(r['requirements'][0]['unit'],'кВт')
         self.assertEqual(r['requirements'][0]['operator'],'minimum')
@@ -42,7 +42,7 @@ class ItemSourcesTests(unittest.TestCase):
         self.assertTrue(all(x['requirement_source']=='EAT_SPECIFICATION' for x in r['requirements']))
 
     def test_04_contract_model(self):
-        r=self.resolve('В соответствии с техническим заданием', [doc('Модель: Royal Clima RC-TWN28HN\nМощность: 2.8 кВт')])
+        r=self.resolve('В соответствии с техническим заданием', [doc('Спецификация\nМодель: Royal Clima RC-TWN28HN\nМощность: 2.8 кВт')])
         self.assertEqual(r['model_search_mode'],'EXACT_MODEL_ONLY')
         self.assertEqual(r['model_source'],'CONTRACT_DOCUMENT')
         self.assertEqual(r['model_evidence'][0]['source_page'],2)
@@ -57,7 +57,7 @@ class ItemSourcesTests(unittest.TestCase):
         self.assertIn('Royal Clima RC-TWN28HN', generate_queries(r)[0])
 
     def test_06_price_conflict_never_compliant(self):
-        r=self.resolve('Мощность: 5 кВт', [doc('Модель: Royal Clima RC-TWN28HN\nМощность: 2.8 кВт','commercial_offer')])
+        r=self.resolve('', [doc('Модель: Royal Clima RC-TWN28HN\nМощность: 2.8 кВт','commercial_offer')], structured_requirements=[{'parameter':'Мощность','value':'5 кВт'}])
         self.assertEqual(r['requirements'][0]['value'],'5 кВт')
         self.assertEqual(r['price_justification_requirements'][0]['value'],'2.8 кВт')
         self.assertIsNone(r['supplier_baseline_model'])
@@ -68,7 +68,7 @@ class ItemSourcesTests(unittest.TestCase):
         self.assertEqual(result['fully_compliant_count'],0)
 
     def test_07_no_model_contract_characteristics(self):
-        r=self.resolve('',[doc('Мощность: 2.8 кВт\nЦвет: белый')])
+        r=self.resolve('',[doc('Спецификация\nМощность: 2.8 кВт\nЦвет: белый')])
         self.assertEqual(r['model_search_mode'],'MODEL_DISCOVERY_REQUIRED')
         self.assertEqual(r['model_source'],'NOT_FOUND')
 
@@ -77,26 +77,26 @@ class ItemSourcesTests(unittest.TestCase):
         self.assertEqual(self.resolve()['model_search_mode'],'MODEL_MODE_REVIEW_REQUIRED')
 
     def test_09_expanded_offer(self):
-        r=self.resolve(offerDescription='Модель: Royal Clima RC-TWN28HN\nМощность: 2.8 кВт')
+        r=self.resolve('', structured_requirements=[{'parameter':'Мощность','value':'2.8 кВт'}], offerDescription='Модель: Royal Clima RC-TWN28HN')
         self.assertEqual(r['model_search_mode'],'EXACT_MODEL_ONLY')
         self.assertEqual(len(r['requirements']),1)
 
     def test_10_position_isolation(self):
         items=[{'name':'Кондиционер'},{'name':'Телевизор'}]
-        documents=[doc('Позиция 1\nМодель: Royal Clima RC-TWN28HN\nПозиция 2\nМодель: Samsung UE32T5300')]
+        documents=[doc('Спецификация\nПозиция 1\nМодель: Royal Clima RC-TWN28HN\nПозиция 2\nМодель: Samsung UE32T5300')]
         a=resolve_item_sources(items[0],documents,item_number=1,items=items)
         b=resolve_item_sources(items[1],documents,item_number=2,items=items)
         self.assertEqual(a['customer_required_model'],'Royal Clima RC-TWN28HN')
         self.assertEqual(b['customer_required_model'],'Samsung UE32T5300')
 
     def test_11_unassigned_document_review(self):
-        items=[{'name':'Товар'},{'name':'Товар'}]
-        r=resolve_item_sources(items[0],[doc('Модель: Royal Clima RC-TWN28HN')],items=items)
+        items=[{'name':'Кондиционер'},{'name':'Кондиционер'}]
+        r=resolve_item_sources(items[0],[doc('Спецификация\nМодель: Royal Clima RC-TWN28HN')],items=items)
         self.assertEqual(r['model_search_mode'],'MODEL_MODE_REVIEW_REQUIRED')
         self.assertIsNone(r['customer_required_model'])
 
     def test_12_customer_conflict_review(self):
-        r=self.resolve('Мощность: 5 кВт',[doc('Мощность: 2.8 кВт')])
+        r=self.resolve('',[doc('Спецификация\nМощность: 2.8 кВт')], structured_requirements=[{'parameter':'Мощность','value':'5 кВт'}])
         self.assertEqual(r['model_search_mode'],'MODEL_MODE_REVIEW_REQUIRED')
         self.assertEqual(r['requirements'][0]['value'],'5 кВт')
 
@@ -107,7 +107,7 @@ class ItemSourcesTests(unittest.TestCase):
 
     def test_14_audit_to_orchestrator(self):
         item={'name':'Кондиционер'}
-        docs=[doc('Модель: Royal Clima RC-TWN28HN')]
+        docs=[doc('Спецификация\nМодель: Royal Clima RC-TWN28HN')]
         extraction={'document_results':docs,'combined_text':docs[0]['text'],'warnings':[],
             'documents_found':1,'documents_processed':1,'documents_failed':0,
             'extraction_summary':{'partial_documents':0},'procurement_id':'p'}
@@ -124,9 +124,9 @@ class ItemSourcesTests(unittest.TestCase):
         saved=json.loads((root/'data/production_dry_run/run_20260909_162735_772653.json').read_text())
         r=resolve_item_sources(card['raw']['lot']['lotItems'][0],saved['procurements'][0]['document_processing']['document_results'])
         self.assertEqual(r['model_search_mode'],'MODEL_DISCOVERY_REQUIRED')
-        self.assertEqual(len(r['requirements']),13)
+        self.assertEqual(len(r['requirements']),23)
         self.assertIsNone(r['customer_required_model'])
-        self.assertTrue(all(x['requirement_source']=='EAT_SPECIFICATION' for x in r['requirements']))
+        self.assertTrue({x['requirement_source'] for x in r['requirements']} <= {'CONTRACT_DOCUMENT', 'PRICE_JUSTIFICATION'})
 
     def test_16_unreadable_contract_review(self):
         r=self.resolve('',[doc('',status='missing')])
@@ -147,7 +147,7 @@ class ItemSourcesTests(unittest.TestCase):
     def test_19_model_in_other_document_is_price_ready_without_customer_claim(self):
         other = doc('Сведения о товаре\nМодель: RC-TWN28HN', 'other',
                     document_name='Информационный лист.pdf')
-        resolved = self.resolve('', [other])
+        resolved = self.resolve('', [other], name='Кондиционер')
         readiness = classify_price_search_readiness({'name': 'Кондиционер'}, resolved)
         self.assertEqual(readiness['classification'], PRICE_SEARCH_READY)
         self.assertEqual(readiness['model_value'], 'RC-TWN28HN')
@@ -171,7 +171,7 @@ class ItemSourcesTests(unittest.TestCase):
     def test_21_multiple_models_in_other_document_require_review(self):
         other = doc('Модель: RC-TWN28HN\nМодель: UE32T5300', 'other')
         resolved = self.resolve('', [other])
-        readiness = classify_price_search_readiness({'name': 'Товар'}, resolved)
+        readiness = classify_price_search_readiness({'name': 'Кондиционер'}, resolved)
         self.assertEqual(readiness['classification'], MODEL_IDENTIFIER_REVIEW_REQUIRED)
         self.assertFalse(readiness['price_search_ready'])
         self.assertIn('разные модели', readiness['reason'])

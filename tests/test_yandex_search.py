@@ -46,6 +46,14 @@ class ProviderTests(unittest.TestCase):
         with self.assertRaises(SearchAPIError):self.p.search('кондиционер')
         self.assertEqual(self.sender.call_count,3)
 
+    def test_deep_search_can_use_eight_explicitly_configured_queries(self):
+        provider = YandexSearchProvider(allow_paid=True, max_requests=8,
+                                        sender=self.sender, credentials_provider=self.keys,
+                                        fetcher=self.fetcher, sleep=Mock())
+        for _ in range(8):
+            provider.search('Pantum M6607NW')
+        self.assertEqual(self.sender.call_count, 8)
+
     def test_no_retry_after_error(self):
         self.sender.side_effect=RuntimeError('mock-key-not-a-real-secret')
         for _ in range(2):
@@ -139,7 +147,7 @@ class ControlTests(unittest.TestCase):
     def test_preview_no_credentials(self):
         with patch('security.yandex_credentials.YandexKeychain',side_effect=AssertionError('No Keychain')):
             p=preview()
-        self.assertEqual(p['requirements_count'],13);self.assertEqual(len(p['query_plan']),3)
+        self.assertEqual(p['requirements_count'],23);self.assertEqual(len(p['query_plan']),3)
         self.assertNotIn('RC-TWN28HN',' '.join(p['query_plan']))
 
     def test_control_requires_approval(self):
@@ -153,6 +161,6 @@ class ControlTests(unittest.TestCase):
             saved=path.read_text()
         self.assertEqual(r['api_calls'],3)
         self.assertLessEqual(r['result']['candidates_found'],8)
-        self.assertEqual(len(r['result']['candidates'][0]['requirements_check']),13)
+        self.assertEqual(len(r['result']['candidates'][0]['requirements_check']),23)
         self.assertIsNone(r['result']['selected_model'])
         self.assertNotIn('mock-key',saved);self.assertNotIn('mock-folder',saved)

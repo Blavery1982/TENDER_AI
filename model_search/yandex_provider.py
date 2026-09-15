@@ -68,7 +68,7 @@ def parse_response(envelope,limit):
 class YandexSearchProvider:
     def __init__(self,*,allow_paid=False,credentials_provider=None,sender=None,fetcher=None,
                  max_requests=3,clock=time.monotonic,sleep=time.sleep):
-        if not 1<=max_requests<=3:raise ValueError('Лимит контрольного теста: 1–3 запроса')
+        if not 1<=max_requests<=100:raise ValueError('Лимит запросов: 1–100')
         self.allow_paid=allow_paid;self.credentials_provider=credentials_provider or get_yandex_credentials
         self.sender=sender or post_json;self.fetcher=fetcher or WebProvider(retries=0)
         self.max_requests=max_requests;self.api_calls=0;self.search_log=[];self.clock=clock;self.sleep=sleep

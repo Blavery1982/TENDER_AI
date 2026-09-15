@@ -16,7 +16,7 @@ from documents.text_extraction import identify_model_from_catalog
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data/model_search_tv_test.json"
 CARD_SOURCE = ROOT / "data/eat_single_31f18b8a-d3b9-4cd8-890c-5d11824fc635.json"
-PDF_DIR = ROOT / "data/contracts/31f18b8a-d3b9-4cd8-890c-5d11824fc635"
+PDF_DIR = ROOT / "data/tenders/31f18b8a-d3b9-4cd8-890c-5d11824fc635"
 OUTPUT = ROOT / "data/procurement_audit_tv_ocr_test.json"
 
 

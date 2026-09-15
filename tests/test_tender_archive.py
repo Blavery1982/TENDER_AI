@@ -1,24 +1,88 @@
 import tempfile
 import unittest
+import json
 from pathlib import Path
 
-from documents.brand_detector import build_brand_lists, detect_brands
-from documents.tender_archive import archive_metadata, migrate_legacy_tender, save_document
+from documents.brand_detector import build_brand_lists, detect_brands, save_brand_audit
+from documents.tender_archive import archive_metadata, migrate_legacy_tender, save_document, tender_folder
 
 
 class TenderArchiveTests(unittest.TestCase):
     def test_each_tender_has_own_folder_and_duplicate_names_are_preserved(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            first, digest, created = save_document(b"one", "ТЗ.pdf", "tender-1", root=root)
-            second, _, created_second = save_document(b"two", "ТЗ.pdf", "tender-1", root=root)
-            other, _, _ = save_document(b"one", "ТЗ.pdf", "tender-2", root=root)
+            first, digest, created = save_document(b"one", "ТЗ.pdf", "tender-1", tender_number="123", root=root)
+            second, _, created_second = save_document(b"two", "ТЗ.pdf", "tender-1", tender_number="123", root=root)
+            other, _, _ = save_document(b"one", "ТЗ.pdf", "tender-2", tender_number="456", root=root)
             self.assertTrue(created)
             self.assertTrue(created_second)
             self.assertEqual(first.parent, second.parent)
             self.assertNotEqual(first, second)
             self.assertNotEqual(first.parent, other.parent)
             self.assertEqual(len(digest), 64)
+            self.assertEqual(first.parent.name, "123")
+            self.assertEqual(other.parent.name, "456")
+
+    def test_new_archive_uses_number_and_retains_uuid_in_metadata(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            metadata = archive_metadata("uuid-1", raw={"tradeNumber": "200908050126100191"}, root=root)
+            folder = root / "200908050126100191"
+            self.assertEqual(metadata["purchase_id"], "uuid-1")
+            self.assertEqual(tender_folder("uuid-1", root=root), folder)
+            path, _, _ = save_document(b"original", "ТЗ.pdf", "uuid-1", root=root)
+            audit_path = save_brand_audit({"purchase_id": "uuid-1"}, {"status": "review_required"}, root=root)
+            self.assertEqual(path.parent, folder)
+            self.assertEqual(audit_path.parent, folder)
+            self.assertFalse((root / "uuid-1").exists())
+
+    def test_existing_uuid_archive_has_priority_over_numbered_duplicate(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            old = root / "uuid-1"
+            old.mkdir()
+            original = old / "original.pdf"
+            original.write_bytes(b"old")
+            numbered = root / "123"
+            numbered.mkdir()
+            (numbered / "tender.json").write_text(json.dumps({"purchase_id": "uuid-1"}))
+            self.assertEqual(tender_folder("uuid-1", tender_number="123", root=root), old)
+            self.assertEqual(tender_folder("uuid-1", root=root), old)
+            archive_metadata("uuid-1", tender_number="123", root=root)
+            audit_path = save_brand_audit({"purchase_id": "uuid-1", "raw": {"tradeNumber": "123"}}, {}, root=root)
+            self.assertEqual(audit_path.parent, old)
+            self.assertEqual(original.read_bytes(), b"old")
+            self.assertTrue((old / "tender.json").exists())
+            self.assertEqual(json.loads((numbered / "tender.json").read_text()), {"purchase_id": "uuid-1"})
+
+    def test_new_archive_without_valid_number_fails_without_writes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "tenders"
+            for number in (None, "", "../123", "uuid-1", "12/34"):
+                with self.subTest(number=number), self.assertRaises(ValueError):
+                    save_document(b"original", "ТЗ.pdf", "uuid-1", tender_number=number, root=root)
+                with self.assertRaises(ValueError):
+                    archive_metadata("uuid-1", tender_number=number, root=root)
+            self.assertFalse(root.exists())
+
+    def test_number_collision_with_other_uuid_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            archive_metadata("uuid-1", tender_number="123", root=root)
+            before = (root / "123" / "tender.json").read_bytes()
+            with self.assertRaises(ValueError):
+                archive_metadata("uuid-2", tender_number="123", root=root)
+            self.assertEqual((root / "123" / "tender.json").read_bytes(), before)
+
+    def test_existing_numeric_legacy_archive_is_reused(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            old = root / "123"
+            old.mkdir()
+            (old / "original.pdf").write_bytes(b"old")
+            archive_metadata("123", root=root)
+            self.assertEqual(tender_folder("uuid-1", tender_number="123", root=root), old)
+            self.assertEqual(tender_folder("123", root=root), old)
 
     def test_manifest_and_legacy_migration(self):
         with tempfile.TemporaryDirectory() as tmp:

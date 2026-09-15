@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 class ProcurementAuditTest(unittest.TestCase):
     def test_saved_xlsx_is_price_justification_only(self):
-        path = ROOT / "data/contracts/100309200126100271/Приложение _2 обоснование НМЦК.xlsx"
+        path = ROOT / "data/tenders/100309200126100271/Приложение _2 обоснование НМЦК.xlsx"
         text, status, rows = extract_document(path)
         self.assertEqual(status, "analyzed")
         self.assertTrue(rows)

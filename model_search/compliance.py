@@ -15,6 +15,13 @@ UNITS={'btu/h':('power',Decimal('0.29307107')), 'квт':('power',Decimal(1000))
        'мм':('length',Decimal('.001')), 'см':('length',Decimal('.01')), 'м':('length',Decimal(1)),
        'м²':('area',Decimal(1)), 'дб':('sound',Decimal(1)), 'гц':('frequency',Decimal(1)),
        'дюйм':('inches',Decimal(1)), 'стр/мин':('ppm',Decimal(1)), '%':('percent',Decimal(1))}
+UNITS.update({'в':('voltage',Decimal(1)), 'v':('voltage',Decimal(1)),
+              'ач':('charge_capacity',Decimal(1)), 'ah':('charge_capacity',Decimal(1)),
+              'л':('volume',Decimal(1)), 'l':('volume',Decimal(1)),
+              'лет':('years',Decimal(1)), 'год':('years',Decimal(1)), 'года':('years',Decimal(1))})
+UNITS.update({'г/м²':('areal_density',Decimal(1)), 'гр/м²':('areal_density',Decimal(1)),
+              'кг/м²':('areal_density',Decimal(1000)), 'бар':('pressure',Decimal(100000)),
+              'мпа':('pressure',Decimal(1000000)), '°с':('temperature_celsius',Decimal(1))})
 NUM=r'[-+]?\d+(?:[.,]\d+)?'
 UNIT_PATTERN='|'.join(re.escape(k) for k in sorted(UNITS,key=len,reverse=True))
 UNIT_RE=re.compile(r'(?<![а-яa-z])('+UNIT_PATTERN+r')(?![а-яa-z²])',re.I)
@@ -30,6 +37,8 @@ def parameter_key(value):
     p=norm(value)
     p=re.split(r'≥|≤|>=|<=|>|<',p)[0].strip()
     p=re.sub(r'(?:\s*[,(/]\s*|\s+)('+UNIT_PATTERN+r')\s*[)]?$', '',p)
+    from model_search.customer_model import CONTEXT
+    p=CONTEXT.get('requirement_name_aliases',{}).get(p,p)
     p=re.sub(r'^наличие\s+','',p)
     if p in FIELD_ALIASES:return FIELD_ALIASES[p]
     if p in ('power consumption','power input','input power'):return 'input_power'

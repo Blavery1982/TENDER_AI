@@ -137,7 +137,10 @@ def detect_brands(procurement: dict[str, Any], extraction: dict[str, Any] | None
 
 
 def save_brand_audit(procurement: dict[str, Any], audit: dict[str, Any], *, root: Path = TENDERS_ROOT) -> Path:
-    path = tender_folder(procurement.get("purchase_id") or (procurement.get("raw") or {}).get("id"), root=root) / "brand_audit.json"
+    raw = procurement.get("raw") or {}
+    path = tender_folder(procurement.get("purchase_id") or raw.get("id"),
+                         tender_number=procurement.get("tender_number") or raw.get("tradeNumber"),
+                         root=root) / "brand_audit.json"
     write_json(path, audit)
     return path
 

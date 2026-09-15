@@ -1,15 +1,12 @@
-"""Urgent live MVP: EAT window -> exact model -> suppliers -> Google Sheets.
-
-Model discovery is still intentionally skipped. Expensive supplier discovery
-is capped at ten exact-model items, while every analyzed position is written
-to the production Google Sheet.
-"""
+"""ЕАТ → выбранная модель → две цены → TOP-3 → поставщики → контракт → экономика."""
 from __future__ import annotations
 
 import copy
 import csv
 import json
 import logging
+import math
+import signal
 import time
 from collections import Counter
 from datetime import date, datetime, time as day_time, timedelta, timezone
@@ -20,9 +17,10 @@ from zoneinfo import ZoneInfo
 
 from playwright.sync_api import Request, Response, sync_playwright
 
-from calculator.formulas import platform_commission
-from documents.pipeline import audit_from_extraction, process_procurement_documents
-from eat.browser_auth import PURCHASES_URL
+from documents.pipeline import (PDF_UNREADABLE_COMMENT, audit_from_extraction,
+                                document_processing_stop_reason,
+                                process_procurement_documents)
+from eat.browser_auth import PURCHASES_URL, BrowserAuthError
 from eat.browser_policy import open_authorized_eat_browser
 from eat.browser_session import PROJECT_ROOT
 from eat.filter_pipeline import PURCHASE_TYPES_URL, _purchase_type_map
@@ -33,8 +31,10 @@ from eat.pagination_test import (ENDPOINT_PART, PAGE_KEYS, SIZE_KEYS,
 from eat.single_purchase import fetch_purchase_card
 from filters.eat_filters import load_config
 from filters.semantic_bad_words import filter_purchase_v2
+from filters.position_kind import classify_position
 from google_sheets.production_upsert import upsert_live_payload
 from model_search.live_price_search import search_exact_model_prices
+from model_search.purchase_category import CATEGORY_NO_MODEL, classify_purchase_category
 from model_search.price_readiness import (MODEL_DISCOVERY_REQUIRED,
                                           MODEL_IDENTIFIER_REVIEW_REQUIRED,
                                           PRICE_READINESS_VERSION,
@@ -51,6 +51,7 @@ from security.traceability import analyze_item
 
 MOSCOW = ZoneInfo("Europe/Moscow")
 MAX_SUPPLIER_SEARCHES = 10
+SHEETS_WRITE_TIMEOUT_SECONDS = 20
 CALENDAR_PATH = PROJECT_ROOT / "config" / "russian_work_calendar.json"
 CHECKPOINT_PATH = PROJECT_ROOT / "data" / "checkpoints" / "mvp_exact_batch.json"
 RESULT_PATH = PROJECT_ROOT / "data" / "mvp_exact_batch_latest.json"
@@ -169,11 +170,14 @@ def _merge_card_list_raw(card: dict[str, Any], list_raw: dict[str, Any]) -> dict
 def _classify_model(item: dict[str, Any], raw_item: dict[str, Any] | None = None) -> dict[str, Any]:
     readiness = classify_price_search_readiness(raw_item or {}, item)
     classification = readiness["classification"]
+    if readiness.get("price_search_allowed") is False:
+        return {**readiness, "route": "manual_review" if readiness["position_kind"] == "uncertain" else "blocked",
+                "status_ru": readiness["reason"], "model": None, "mode": readiness["model_search_mode"]}
     if classification == PRICE_SEARCH_READY:
-        from_price = readiness.get("model_source") == "PRICE_JUSTIFICATION"
+        from_price = readiness.get("model_source") == "PRICE_JUSTIFICATION" and item.get("model_search_mode") != "EXACT_MODEL"
         mode = ("PRICE_JUSTIFICATION_MODEL" if from_price else
                 item.get("model_search_mode") if item.get("model_search_mode") in
-                {"EXACT_MODEL_ONLY", "EXACT_MODEL_OR_EQUIVALENT"} else "EXACT_MODEL_ONLY")
+                {"EXACT_MODEL", "EXACT_MODEL_ONLY", "EXACT_MODEL_OR_EQUIVALENT"} else "EXACT_MODEL_ONLY")
         return {**readiness, "route": "exact",
                 "status_ru": "МОДЕЛЬ ИЗ ОБОСНОВАНИЯ ЦЕНЫ" if from_price else "PRICE_SEARCH_READY",
                 "model": readiness["identifier"], "mode": mode}
@@ -221,7 +225,7 @@ def _supplier_row(offer: dict[str, Any], model: str, target: float) -> dict[str,
 
 
 def _preliminary_economics(item: dict[str, Any], best: dict[str, Any] | None,
-                           commission_rate: float) -> dict[str, Any]:
+                           commission: float | None) -> dict[str, Any]:
     quantity = item.get("quantity")
     unit_price = item.get("customer_unit_price")
     try:
@@ -231,17 +235,42 @@ def _preliminary_economics(item: dict[str, Any], best: dict[str, Any] | None,
         return {"status": "Недостаточно данных", "calculation_basis":
                 "РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ — ТРЕБУЕТ ПОДТВЕРЖДЕНИЯ ПОСТАВЩИКА",
                 "purchase_price": None}
-    commission = platform_commission(customer_total, commission_rate)
+    try:
+        commission_value = float(commission) if commission is not None else None
+    except (TypeError, ValueError):
+        commission_value = None
+    if (commission_value is None or not math.isfinite(commission_value)
+            or commission_value < 0):
+        return {"status": "Недостаточно данных", "calculation_basis":
+                "РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ — ТРЕБУЕТ ПОДТВЕРЖДЕНИЯ ПОСТАВЩИКА",
+                "purchase_price": None, "eat_commission": None,
+                "commission_source": "raw.lot.commissionFee",
+                "missing_data": ["commissionFee"]}
+    procurement_total = item.get("nmck")
+    if procurement_total is not None:
+        try:
+            if abs(float(customer_total) - float(procurement_total)) >= 0.005:
+                return {"status": "Недостаточно данных", "calculation_basis":
+                        "РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ — ТРЕБУЕТ ПОДТВЕРЖДЕНИЯ ПОСТАВЩИКА",
+                        "purchase_price": None, "eat_commission": None,
+                        "commission_source": "raw.lot.commissionFee",
+                        "missing_data": ["commissionFee_scope"]}
+        except (TypeError, ValueError):
+            return {"status": "Недостаточно данных", "calculation_basis":
+                    "РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ — ТРЕБУЕТ ПОДТВЕРЖДЕНИЯ ПОСТАВЩИКА",
+                    "purchase_price": None, "eat_commission": None,
+                    "commission_source": "raw.lot.commissionFee",
+                    "missing_data": ["commissionFee_scope"]}
     public_total = (round(float(best["public_price"]) * quantity_value, 2)
                     if best and best.get("public_price") is not None else None)
-    reserve = (round(customer_total - commission - public_total, 2)
+    reserve = (round(customer_total - commission_value - public_total, 2)
                if public_total is not None else None)
     return {
         "status": "Предварительно рассчитано" if reserve is not None else "Нет публичной цены",
         "calculation_basis": "РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ — ТРЕБУЕТ ПОДТВЕРЖДЕНИЯ ПОСТАВЩИКА",
         "customer_position_total": round(customer_total, 2),
-        "eat_commission_rate": commission_rate,
-        "eat_commission": commission,
+        "eat_commission": commission_value,
+        "commission_source": "raw.lot.commissionFee",
         "public_unit_price": best.get("public_price") if best else None,
         "public_total_for_quantity": public_total,
         "preliminary_reserve_before_logistics_and_taxes": reserve,
@@ -250,7 +279,71 @@ def _preliminary_economics(item: dict[str, Any], best: dict[str, Any] | None,
     }
 
 
-def _process_suppliers(item: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
+def _customer_exact_supplier_result(item, config, *, price_search, verifier):
+    """Общий price-first поток и прежний формат результата live-MVP."""
+    from filters.position_kind import goods_position
+    if not goods_position(item):
+        raise ValueError("Товарный поиск запрещён: тип позиции не goods")
+    from suppliers.exact_model_flow import exact_supplier_flow
+    model = item["model"]["model"]
+    trade = item["trade_number"] or item["purchase_id"]
+    path = PROJECT_ROOT / "data/mvp_price_search" / f"{trade}_{item['item_number']}.json"
+    prices = price_search(model, output_path=path)
+    total = float(item.get("customer_sum") or float(item["customer_unit_price"]) * float(item["quantity"]))
+    lot = {"price": total, "commissionFee": item.get("commission_fee")}
+    flow = exact_supplier_flow(lot, [{"position_number": item["item_number"], "quantity": item["quantity"],
+        "customer_unit_price": item["customer_unit_price"], "source_offers": prices.get("offers") or []}],
+        verifier=verifier,
+        reserve_percent=float(config["calculator"].get("economic_precheck_margin_percent", 18)))
+    candidate = flow["candidates"][0]
+    public = flow["public_economics_before_supplier_approval"]
+    top = candidate["selected_offers"]
+    best = top[0] if top else None
+    economics = {"status": "Предварительно рассчитано" if public.get("minimum_purchase_cost") is not None else "Нет публичной цены",
+        "calculation_basis": "РАСЧЁТ ПО ПУБЛИЧНОЙ ЦЕНЕ — ТРЕБУЕТ ПОДТВЕРЖДЕНИЯ ПОСТАВЩИКА",
+        "customer_position_total": total, "eat_commission": flow["commission"],
+        "commission_source": flow.get("commission_source", "raw.lot.commissionFee"),
+        "public_unit_price": best.get("public_price") if best else None,
+        "public_total_for_quantity": public.get("minimum_purchase_cost"),
+        "preliminary_reserve_before_logistics_and_taxes": flow["economics"].get("preliminary_reserve_rub"),
+        "purchase_price": None, "logistics_included": False}
+    return {"model_search_mode": "EXACT_MODEL", "price_search_path": str(path),
+        "target_unit_price": candidate["maximum_unit_price"], "candidate_urls_found": prices.get("candidate_urls_found", 0),
+        "offers_found": len(prices.get("offers") or []), "all_verified_offers": flow["antifraud_history"],
+        "top_offers": top, "audit_history_high_risk": [r for r in flow["antifraud_history"] if r["verification_status"] == HIGH_RISK],
+        "suppliers_for_price_request": candidate["eligible_offers"],
+        "public_price_below_target": any(r["public_price"] <= candidate["maximum_unit_price"] for r in top),
+        "minimum_public_price": best.get("public_price") if best else None,
+        "minimum_public_price_supplier": best.get("supplier_name") if best else None,
+        "verification_counts": dict(Counter(r["verification_status"] for r in flow["antifraud_history"])),
+        "source_errors": prices.get("source_errors") or [], "summary": "ТРЕБУЕТСЯ ПОДТВЕРЖДЕНИЕ ЦЕНЫ И РАСХОДОВ",
+        "preliminary_economics": economics, "exact_supplier_flow": flow,
+        "queries_used": prices.get("queries_used") or []}
+
+
+def _process_customer_exact_suppliers(item, config, context):
+    from model_search.playwright_provider import PlaywrightResearch
+    from model_search.playwright_provider import YandexBrowserSearch
+    from suppliers.live_verification import verify_live_supplier
+    if context is None or context.browser is None:
+        raise ValueError("EXACT_MODEL требует браузерного контекста для проверки реальных цен")
+    public_context = context.browser.new_context(locale="ru-RU")
+    try:
+        research = PlaywrightResearch(public_context)
+        provider = YandexBrowserSearch(research, max_requests=3)
+        return _customer_exact_supplier_result(item, config,
+            price_search=lambda model, output_path: research.prices_exact(model, provider, output_path),
+            verifier=lambda row: verify_live_supplier(row, reader=research.read))
+    finally:
+        public_context.close()
+
+
+def _process_suppliers(item: dict[str, Any], config: dict[str, Any], *, exact_context=None) -> dict[str, Any]:
+    from filters.position_kind import goods_position
+    if not goods_position(item):
+        raise ValueError("Товарный поиск запрещён: тип позиции не goods")
+    if item["model"].get("mode") == "EXACT_MODEL":
+        return _process_customer_exact_suppliers(item, config, exact_context)
     model = item["model"]["model"]
     trade = item["trade_number"] or item["purchase_id"]
     number = item["item_number"]
@@ -300,9 +393,7 @@ def _process_suppliers(item: dict[str, Any], config: dict[str, Any]) -> dict[str
         "verification_counts": dict(Counter(row.get("verification_status") for row in verified)),
         "source_errors": prices.get("source_errors") or [],
         "summary": comment,
-        "preliminary_economics": _preliminary_economics(
-            item, best, float((config.get("calculator") or {}).get("eat_commission_rate", 0.03))
-        ),
+        "preliminary_economics": _preliminary_economics(item, best, item.get("commission_fee")),
     }
 
 
@@ -384,8 +475,11 @@ def _safe_item(raw_item: dict[str, Any], resolved: dict[str, Any], model: dict[s
             unit_price = round(float(raw_item["sum"]) / float(quantity), 2)
         except (TypeError, ValueError, ZeroDivisionError):
             pass
+    position_decision = classify_position(raw_item)
     return {
         "purchase_id": identity.get("id") or card.get("purchase_id"),
+        **position_decision, "name": raw_item.get("name"),
+        "eatTitle": position_decision.get("official_eat_category") or raw_item.get("eatTitle"),
         "trade_number": identity.get("tradeNumber") or raw.get("tradeNumber"),
         "purchase_url": card.get("card_url"),
         "subject": raw.get("subject"),
@@ -398,6 +492,7 @@ def _safe_item(raw_item: dict[str, Any], resolved: dict[str, Any], model: dict[s
         "customer_sum": raw_item.get("sum"),
         "nmck": raw.get("price"),
         "commission_fee": raw.get("commissionFee"),
+        "commission_source": "raw.lot.commissionFee",
         "delivery_address": ((raw.get("deliveryInfos") or [{}])[0].get("deliveryAddress") or {}).get("formattedFullInfo"),
         "delivery_period": raw.get("deliveryPeriod"),
         "delivery_working_days": raw.get("isDeliveryDaysWorking"),
@@ -411,6 +506,7 @@ def _safe_item(raw_item: dict[str, Any], resolved: dict[str, Any], model: dict[s
         "model": model,
         "requirements_count": len(resolved.get("requirements") or []),
         "special_conditions": audit.get("special_conditions") or "",
+        "contract_analysis": audit.get("contract_analysis"),
         "audit_status": audit.get("audit_status"),
         "documents_found": len(card.get("documents") or []),
         "documents_processed": audit.get("documents_analyzed", 0),
@@ -429,6 +525,33 @@ def _safe_item(raw_item: dict[str, Any], resolved: dict[str, Any], model: dict[s
     }
 
 
+def _blocked_item(raw_item: dict[str, Any], raw: dict[str, Any], card: dict[str, Any],
+                  audit: dict[str, Any], extraction: dict[str, Any], number: int,
+                  reason: str, stage: str) -> dict[str, Any]:
+    """Сформировать строку для ручной работы без запуска следующих этапов."""
+    model = {"route": "manual_review", "status_ru": reason, "model": None,
+             "mode": "MANUAL_REVIEW", "source_warnings": [reason],
+             "reason": reason}
+    resolved = {"requirements": [], "source_warnings": [reason]}
+    item = _safe_item(raw_item, resolved, model, raw, card, audit, number)
+    item.update({"processing_blocked": True, "processing_stop_reason": reason,
+                 "processing_stop_stage": stage,
+                 "documents_found": extraction.get("documents_found", 0),
+                 "documents_processed": extraction.get("documents_processed", 0),
+                 "audit_status": "blocked"})
+    return item
+
+
+def _blocked_items(card: dict[str, Any], extraction: dict[str, Any], reason: str,
+                   stage: str) -> list[dict[str, Any]]:
+    raw = card.get("raw") or card
+    lot = _lot(card)
+    audit = {"special_conditions": "", "contract_analysis": f"Анализ документов остановлен: {reason}",
+             "audit_status": "blocked"}
+    return [_blocked_item(item, raw, card, audit, extraction, number, reason, stage)
+            for number, item in enumerate(lot.get("lotItems") or [], 1)]
+
+
 def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
     """Адаптировать результат MVP к общему production-upsert payload."""
     model = item.get("model") or {}
@@ -437,7 +560,10 @@ def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
               if offer.get("public_price") is not None][:3]
     preliminary = search.get("preliminary_economics") or {}
     customer_total = preliminary.get("customer_position_total")
-    commission = preliminary.get("eat_commission")
+    # Каноническое поле позиции — копия raw.lot.commissionFee; сохранённый
+    # предварительный результат не может подменить его старым значением.
+    commission = (item["commission_fee"] if "commission_fee" in item
+                  else preliminary.get("eat_commission"))
     nmck_after_commission = (
         round(float(customer_total) - float(commission), 2)
         if customer_total is not None and commission is not None else None
@@ -446,11 +572,14 @@ def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
     audit_status = item.get("audit_status")
     model_status = model.get("status_ru") or "Требуется подбор модели"
     warnings = list(model.get("source_warnings") or [])
+    manual_stop_comment = item.get("processing_stop_reason") if item.get("processing_blocked") else None
+    if manual_stop_comment:
+        warnings.append(manual_stop_comment)
     if model.get("route") != "exact":
         warnings.append(model_status)
     if search.get("summary") and search.get("summary") != "ХОРОШИЙ КАНДИДАТ ДЛЯ ПРОСЧЁТА":
         warnings.append(search["summary"])
-    return {
+    payload = {
         "procurement": {
             "id": item.get("purchase_id"),
             "trade_number": item.get("trade_number"),
@@ -463,6 +592,7 @@ def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
             "delivery_working_days": item.get("delivery_working_days"),
             "payment_type": item.get("payment_type"),
             "commission_fee": item.get("commission_fee"),
+            "commission_source": "raw.lot.commissionFee",
             "contact": {
                 "phone": customer.get("customer_phone"),
                 "email": customer.get("customer_email"),
@@ -485,10 +615,7 @@ def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
         "audit": {
             "status": audit_status,
             "special_conditions": item.get("special_conditions"),
-            "contract_analysis": (
-                "Документы проанализированы" if audit_status == "analyzed"
-                else "Требуется проверка документов"
-            ),
+            "contract_analysis": item.get("contract_analysis") or "Анализ документов не завершён",
             "requirements_count": item.get("requirements_count", 0),
             "customer_check": customer,
         },
@@ -508,6 +635,8 @@ def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
         },
         "supplier_search": {
             "confirmed_offers": offers,
+            "all_verified_offers": search.get("all_verified_offers") or [],
+            "price_run_id": offers[0].get('price_run_id') if offers else None,
             "minimum_confirmed_price": search.get("minimum_public_price"),
             "suppliers_for_call": search.get("suppliers_for_price_request") or [],
         },
@@ -517,9 +646,49 @@ def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
                 "preliminary_reserve_before_logistics_and_taxes"
             ),
         },
-        "current_analysis_result": search.get("summary") or model_status,
+        "current_analysis_result": ("Алгоритм просчета не доработан"
+                                     if item.get("purchase_category") == CATEGORY_NO_MODEL
+                                     else manual_stop_comment or search.get("summary") or model_status),
+        "purchase_category": item.get("purchase_category"),
+        "manual_stop_comment": manual_stop_comment,
         "warnings": list(dict.fromkeys(warnings)),
     }
+    if item.get("business_order_result"):
+        computed = item["business_order_result"]
+        for key in ("audit", "exact_supplier_flow", "price_gate", "final_economics",
+                    "additional_expenses", "mandatory_expenses_included", "calculation_complete",
+                    "business_decision", "current_analysis_result", "positions"):
+            if key in computed:
+                payload[key] = copy.deepcopy(computed[key])
+        item["business_decision"] = computed.get("business_decision")
+        if item.get("purchase_category") == CATEGORY_NO_MODEL:
+            payload["current_analysis_result"] = "Алгоритм просчета не доработан"
+            payload["manual_stop_comment"] = "Алгоритм просчета не доработан"
+        return payload
+    if search.get("exact_supplier_flow"):
+        payload["exact_supplier_flow"] = search["exact_supplier_flow"]
+    from calculator.result_decision import attach_business_decision
+    item["business_decision"] = attach_business_decision(payload)
+    payload["business_decision"] = item["business_decision"]
+    return payload
+
+
+def _sheet_write_with_timeout(sheet_writer, payload: dict[str, Any]) -> dict[str, Any]:
+    """Не позволить внешнему Sheets-вызову остановить весь production batch."""
+    if not hasattr(signal, "SIGALRM"):
+        return sheet_writer(payload)
+    previous_handler = signal.getsignal(signal.SIGALRM)
+
+    def alarm_handler(_signum, _frame):
+        raise TimeoutError("Google Sheets write timeout")
+
+    signal.signal(signal.SIGALRM, alarm_handler)
+    signal.setitimer(signal.ITIMER_REAL, SHEETS_WRITE_TIMEOUT_SECONDS)
+    try:
+        return sheet_writer(payload)
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous_handler)
 
 
 def _write_reports(result: dict[str, Any]) -> None:
@@ -538,10 +707,13 @@ def _write_reports(result: dict[str, Any]) -> None:
                       f"- Источник модели: {_source_label(item['model'].get('model_source'))}",
                       f"- Режим: {item['model'].get('mode')}"])
         search = item.get("supplier_search")
+        if item.get("business_decision"):
+            from calculator.business_decision import decision_markdown
+            lines.extend(["", decision_markdown(item["business_decision"]).replace("# Бизнес-решение", "### Бизнес-решение", 1)])
         if not search:
             lines.append(f"- Статус: {item['model']['status_ru']}")
             continue
-        lines.extend([f"- Целевая цена −15%: {search.get('target_unit_price', 'не рассчитана')}", "", "### TOP предложений", ""])
+        lines.extend([f"- Предварительный порог −18%: {search.get('target_unit_price', 'не рассчитана')}", "", "### TOP предложений", ""])
         for number, offer in enumerate(search["top_offers"], 1):
             lines.extend([f"{number}. {offer.get('supplier_name')} — {offer.get('public_price') or 'цена не указана'} ₽",
                           f"   - Наличие: {offer.get('availability_display')}",
@@ -554,7 +726,7 @@ def _write_reports(result: dict[str, Any]) -> None:
     with CSV_PATH.open("w", encoding="utf-8-sig", newline="") as stream:
         writer = csv.writer(stream, delimiter=";")
         writer.writerow(["Номер закупки", "Позиция", "Модель", "Режим", "Цена заказчика",
-                         "Цель -15%", "Минимальная публичная цена", "Поставщик", "Итог"])
+                         "Порог -18%", "Минимальная публичная цена", "Поставщик", "Итог"])
         for item in result["items"]:
             search = item.get("supplier_search") or {}
             writer.writerow([item.get("trade_number"), item.get("item_number"), item["model"].get("model"),
@@ -564,21 +736,23 @@ def _write_reports(result: dict[str, Any]) -> None:
                              search.get("summary") or item["model"].get("status_ru")])
 
 
-def run(*, resume: bool = False,
+class LocalBatchJournal:
+    """Batch сохраняет этапы локально; рабочие строки экспортируются после расчёта."""
+    def write_many(self, result):
+        pass
+
+    def verify(self, result):
+        return {"status": "LOCAL_ONLY", "events_saved": len(result.get("events") or [])}
+
+
+def run(*, resume: bool = False, limit: int | None = None,
         sheet_writer=upsert_live_payload) -> dict[str, Any]:
     started = time.monotonic()
     started_at = _now_utc()
     logger = _logger()
     config = load_config()
     lower, upper = deadline_window()
-    previous = {}
-    if resume and CHECKPOINT_PATH.exists():
-        previous = json.loads(CHECKPOINT_PATH.read_text(encoding="utf-8"))
-    # Результаты старой маршрутизации не должны возвращать compliance-gate
-    # после resume. Сохраняем только checkpoint текущей версии правила.
-    completed = (previous.get("completed_supplier_searches") or {}
-                 if previous.get("price_readiness_version") == PRICE_READINESS_VERSION
-                 else {})
+    # Resume повторяет расчёт по текущим входам; старые КП/экономика не актуальны автоматически.
     errors: list[dict[str, Any]] = []
     analyzed_items: list[dict[str, Any]] = []
     documents_count = 0
@@ -600,8 +774,18 @@ def run(*, resume: bool = False,
                         raw, purchase_types.get(str(raw.get("purchaseTypeId"))), config
                     )
                 except Exception as exc:
+                    stop_reason = (
+                        "работа с закупкой НЕ автоматизирована - ошибка этапа filter - "
+                        "просчет делать в ручную!"
+                    )
+                    analyzed_items.extend(
+                        _blocked_items({"raw": raw}, {"documents_found": 0,
+                                                       "documents_processed": 0},
+                                       stop_reason, "filter")
+                    )
                     errors.append({"purchase_id": raw.get("id"), "stage": "filter",
-                                   "error": f"{type(exc).__name__}: {exc}"})
+                                   "status": "blocked",
+                                   "error": f"{type(exc).__name__}: обработка закупки остановлена"})
                     continue
                 filtered.append({"purchase_id": raw.get("id"), "trade_number": raw.get("tradeNumber"),
                                  "filter_result": decision.get("filter_result"),
@@ -612,59 +796,94 @@ def run(*, resume: bool = False,
                     passed.append(raw)
             passed.sort(key=lambda row: _parse_eat_datetime(row.get("applicationFillingEndDate"))
                         or datetime.max.replace(tzinfo=MOSCOW))
+            if limit is not None:
+                if limit <= 0:
+                    raise ValueError("Лимит LIVE-закупок должен быть положительным")
+                passed = passed[:limit]
             _atomic_json(CONFIDENTIAL_PATH, {"generated_at": _now_utc(),
                                              "deadline_window": {"from": lower.isoformat(), "to": upper.isoformat()},
                                              "count": len(confidential), "purchases": confidential})
 
+            from pipeline.single_purchase_test import run_check
+            from eat.single_purchase import download_purchase_documents
+            from model_search.playwright_provider import PlaywrightResearch
+            from model_search.live_discovery import discover_models
+            from model_search.playwright_provider import YandexBrowserSearch
+            from suppliers.live_verification import verify_live_supplier
+            research = PlaywrightResearch(session.context)
+            # Batch использует тот же обработчик закупки, что контроль одного тендера.
+            # Старую экономику checkpoint не используем: все её входы могли измениться.
             for raw in passed:
                 purchase_id = str(raw.get("id") or "")
+                card = {"raw": raw}
                 try:
-                    card = _merge_card_list_raw(
-                        fetch_purchase_card(session.context, session.page, purchase_id), raw
-                    )
-                    documents_count += len(card.get("documents") or [])
-                    extraction = process_procurement_documents(card, card.get("documents") or [], logger=logger)
-                    audit = audit_from_extraction(card, extraction)
+                    card = _merge_card_list_raw(fetch_purchase_card(
+                        session.context, session.page, purchase_id,
+                        analyze_documents=False, download_documents=False), raw)
+                    provider = YandexBrowserSearch(research, max_requests=24)
+                    result = run_check(
+                        purchase_id, journal=LocalBatchJournal(), card_loader=lambda _: card,
+                        mode="LIVE — batch", model_discovery=lambda item: discover_models(
+                            item, provider=provider, query_limit=2, use_cache=False),
+                        exact_price_search=lambda model, output_path, **kwargs: research.prices_exact(
+                            model, provider, output_path, price_gate_source_limit=3, **kwargs),
+                        exact_supplier_verifier=lambda row: verify_live_supplier(row, reader=research.read),
+                        document_loader=lambda card, purpose: download_purchase_documents(
+                            session.context, card, purpose=purpose))
                     lot = _lot(card)
-                    raw_items = lot.get("lotItems") or []
-                    for number, resolved in enumerate(audit.get("items") or [], 1):
-                        raw_item = raw_items[number - 1] if number <= len(raw_items) else {}
+                    documents_count += sum(d.get("download_status") == "downloaded" for d in card.get("documents") or [])
+                    resolved_items = (result.get("audit") or {}).get("items") or []
+                    for n, raw_item in enumerate(lot.get("lotItems") or [], 1):
+                        resolved = resolved_items[n-1] if n <= len(resolved_items) else {}
+                        position = next((row for row in result.get("positions") or []
+                                         if row["position_number"] == n), {})
+                        category = classify_purchase_category(raw_item, resolved)
+                        selected = position.get("selected_model") if category != CATEGORY_NO_MODEL else None
                         model = _classify_model(resolved, raw_item)
-                        analyzed_items.append(_safe_item(raw_item, resolved, model, lot, card, audit, number))
+                        if selected:
+                            model.update({"route": "exact", "mode": result.get("model_search_mode"),
+                                          "model": selected, "status_ru": "Выбранная модель"})
+                        item = _safe_item(raw_item, resolved, model, lot, card, result.get("audit") or {}, n)
+                        item["purchase_category"] = category
+                        if category == CATEGORY_NO_MODEL:
+                            item["processing_blocked"] = True
+                            item["processing_stop_stage"] = "Определение модели"
+                            item["processing_stop_reason"] = "Алгоритм просчета не доработан"
+                            item["model"] = {**item.get("model", {}), "route": "blocked",
+                                             "model": None, "status_ru": "Алгоритм просчета не доработан"}
+                        flow = result.get("exact_supplier_flow") or {}
+                        candidate = next((c for c in flow.get("candidates") or [] if c["position_number"] == n), {})
+                        top = candidate.get("selected_offers") or []
+                        item["supplier_search"] = {"top_offers": top,
+                            "all_verified_offers": [r for r in flow.get("antifraud_history") or [] if r["position_number"] == n],
+                            "summary": result.get("current_analysis_result") or result["status"],
+                            "minimum_public_price": min((r["public_price"] for r in top), default=None),
+                            "minimum_public_price_supplier": top[0].get("supplier_name") if top else None,
+                            "verification_counts": dict(Counter(r.get("verification_status") for r in
+                                flow.get("antifraud_history") or [] if r["position_number"] == n)),
+                            "public_price_below_target": flow.get("price_gate", {}).get("passes", False),
+                            "target_unit_price": candidate.get("maximum_unit_price"),
+                            "exact_supplier_flow": flow}
+                        item["business_order_result"] = result
+                        analyzed_items.append(item)
+                    if result["status"] in {"RUN_ERROR", "CARD_NOT_RECEIVED"}:
+                        errors.append({"purchase_id": purchase_id, "stage": "business_order",
+                                       "status": result["status"]})
+                    _atomic_json(CHECKPOINT_PATH, {"updated_at": _now_utc(),
+                        "business_order_version": 1, "last_purchase_id": purchase_id,
+                        "local_result_status": result["status"]})
+                except BrowserAuthError:
+                    raise
                 except Exception as exc:
-                    logger.exception("purchase=%s stage=card_documents", purchase_id)
-                    errors.append({"purchase_id": purchase_id, "stage": "card_documents",
-                                   "error": f"{type(exc).__name__}: {exc}"})
-
-            exact_items = [item for item in analyzed_items if item["model"]["route"] == "exact"
-                           and item.get("customer_unit_price") is not None]
-            exact_items.sort(key=lambda item: (item.get("deadline") or "9999", item["purchase_id"],
-                                                item["item_number"]))
-            for item in exact_items[:MAX_SUPPLIER_SEARCHES]:
-                key = f"{item['purchase_id']}:{item['item_number']}"
-                if key in completed:
-                    item["supplier_search"] = completed[key]
-                    continue
-                try:
-                    item["supplier_search"] = _process_suppliers(item, config)
-                    completed[key] = item["supplier_search"]
-                except Exception as exc:
-                    logger.exception("purchase=%s item=%s stage=supplier_search",
-                                     item["purchase_id"], item["item_number"])
-                    errors.append({"purchase_id": item["purchase_id"], "item_number": item["item_number"],
-                                   "stage": "supplier_search", "error": f"{type(exc).__name__}: {exc}"})
-                    item["supplier_search"] = {"summary": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
-                                               "error": f"{type(exc).__name__}: {exc}",
-                                               "top_offers": [], "all_verified_offers": [],
-                                               "verification_counts": {}}
-                    completed[key] = item["supplier_search"]
-                _atomic_json(CHECKPOINT_PATH, {"updated_at": _now_utc(),
-                                               "price_readiness_version": PRICE_READINESS_VERSION,
-                                               "completed_supplier_searches": completed,
-                                               "supplier_search_cap": MAX_SUPPLIER_SEARCHES})
+                    error_text = f"{type(exc).__name__}: обработка закупки остановлена"
+                    analyzed_items.extend(_blocked_items(card, {"documents_found": 0, "documents_processed": 0},
+                        "Ошибка обработки закупки; требуется ручная проверка", "business_order"))
+                    errors.append({"purchase_id": purchase_id, "stage": "business_order",
+                                   "status": "blocked", "error": error_text})
         finally:
             session.close()
 
+    exact_items = [item for item in analyzed_items if item["model"]["route"] == "exact"]
     searched = [item for item in analyzed_items if item.get("supplier_search")]
     verification = Counter()
     supplier_total = 0
@@ -676,10 +895,19 @@ def run(*, resume: bool = False,
         if search.get("public_price_below_target"):
             below_target.append(f"{item.get('trade_number')} / позиция {item['item_number']}")
 
+    blocked_items = [item for item in analyzed_items if item.get("processing_blocked")]
+
     sheet_receipts: list[dict[str, Any]] = []
+    sheets_available = True
     for item in analyzed_items:
+        if not sheets_available:
+            errors.append({"purchase_id": item.get("purchase_id"),
+                           "item_number": item.get("item_number"),
+                           "stage": "google_sheets",
+                           "error": "Google Sheets недоступен; запись пропущена после timeout"})
+            continue
         try:
-            sheet_receipts.append(sheet_writer(_sheet_payload(item)))
+            sheet_receipts.append(_sheet_write_with_timeout(sheet_writer, _sheet_payload(item)))
         except Exception as exc:
             logger.exception("purchase=%s item=%s stage=google_sheets", item.get("purchase_id"),
                              item.get("item_number"))
@@ -687,6 +915,7 @@ def run(*, resume: bool = False,
                            "item_number": item.get("item_number"),
                            "stage": "google_sheets",
                            "error": f"{type(exc).__name__}: {exc}"})
+            sheets_available = False
 
     summary = {
         "A. Получено от ЕАТ (raw)": pagination["raw_count"],
@@ -704,6 +933,8 @@ def run(*, resume: bool = False,
         "J. 🔴": verification[HIGH_RISK],
         "Закрытых закупок сохранено отдельно": len(confidential),
         "Ошибок этапов": len(errors),
+        "Закупок остановлено для ручной обработки": len({item.get("purchase_id") for item in blocked_items}),
+        "Позиций остановлено для ручной обработки": len(blocked_items),
         "Google Sheets записано": len(sheet_receipts),
     }
     result = {
@@ -713,7 +944,7 @@ def run(*, resume: bool = False,
         "elapsed_seconds": round(time.monotonic() - started, 2),
         "deadline_window": {"from": lower.isoformat(), "to": upper.isoformat(),
                             "rule": "deadline > now Moscow; deadline <= end of second workday Moscow"},
-        "supplier_search_cap": MAX_SUPPLIER_SEARCHES,
+        "supplier_search_cap": None,
         "pagination": {key: value for key, value in pagination.items()
                        if key not in {"raw_records", "unique_records"}},
         "filter_audit": filtered,

@@ -48,6 +48,32 @@ class EatApiExportTests(unittest.TestCase):
         self.assertEqual(len(manual), 2)
         self.assertEqual(len(locked), 2)
 
+    def test_active_row_uses_only_nested_eat_commission_fee(self):
+        rows = _active_row({
+            "raw": {
+                "id": "purchase",
+                "subject": "Тестовая закупка",
+                "price": 200000,
+                "lotItems": [{}],
+                "lot": {"commissionFee": 2531.50},
+            }
+        })
+        commission_column = ACTIVE_HEADERS.index("Комиссия площадки, ₽")
+        self.assertEqual(rows[0][commission_column], 2531.50)
+
+    def test_active_row_does_not_calculate_commission_without_nested_fee(self):
+        rows = _active_row({
+            "raw": {
+                "id": "purchase",
+                "subject": "Тестовая закупка",
+                "price": 200000,
+                "lotItems": [{}],
+                "commissionFee": 9999,
+            }
+        })
+        commission_column = ACTIVE_HEADERS.index("Комиссия площадки, ₽")
+        self.assertEqual(rows[0][commission_column], "Нет данных")
+
 
 if __name__ == "__main__":
     unittest.main()

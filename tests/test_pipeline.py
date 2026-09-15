@@ -40,7 +40,7 @@ class PipelineTest(unittest.TestCase):
         self.assertIsNone(x["calculator"]["purchase_price"])
 
     def test_07_missing_purchase_price_reaches_final(self):
-        self.assertIn("АКТУАЛЬНЫЕ ЦЕНЫ",self.result()["final_decision"]["final_status"])
+        self.assertEqual(self.result()["final_decision"]["final_status"], "🟡 РУЧНАЯ ПРОВЕРКА")
 
     def test_08_unknown_delivery_is_not_zero(self):
         x=self.result(); self.assertIn("delivery_cost",x["calculator"]["unknown_costs"])
@@ -60,7 +60,7 @@ class PipelineTest(unittest.TestCase):
 
     def test_11_empty_quotes_are_not_automatic_rejection(self):
         x=self.result(); self.assertFalse(any(x["supplier_search"][k] for k in ("kp1","kp2","kp3")))
-        self.assertIn("АКТУАЛЬНЫЕ ЦЕНЫ",x["final_decision"]["final_status"])
+        self.assertEqual(x["final_decision"]["final_status"], "🟡 РУЧНАЯ ПРОВЕРКА")
 
     def test_12_warnings_are_collected(self):
         self.assertIn("Стоимость доставки неизвестна",self.result()["warnings"])
@@ -74,7 +74,7 @@ class PipelineTest(unittest.TestCase):
         self.assertIn("final_status",x["final_decision"])
 
     def test_15_user_statuses_are_russian(self):
-        x=self.result(); self.assertIn("ТРЕБУЕТСЯ",x["user_summary"]["status"])
+        x=self.result(); self.assertEqual(x["user_summary"]["status"], "🟡 РУЧНАЯ ПРОВЕРКА")
 
     def test_16_user_output_has_no_null_none_nan(self):
         text=json.dumps(self.result()["user_summary"],ensure_ascii=False)
@@ -86,8 +86,7 @@ class PipelineTest(unittest.TestCase):
         self.assertIsInstance(x["scenario_results_reference"],str)
 
     def test_18_final_status_matches_missing_purchase_price(self):
-        self.assertEqual(self.result()["final_decision"]["final_status"],
-                         "ТРЕБУЕТСЯ ПОЛУЧИТЬ АКТУАЛЬНЫЕ ЦЕНЫ ПОСТАВЩИКОВ")
+        self.assertEqual(self.result()["final_decision"]["final_status"], "🟡 РУЧНАЯ ПРОВЕРКА")
 
     def test_19_procurement_model_bypasses_compliance_in_legacy_orchestrator(self):
         card=copy.deepcopy(self.card)

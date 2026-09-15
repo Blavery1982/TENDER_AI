@@ -110,9 +110,9 @@ def build_call_lists(offers: list[dict]) -> dict:
     green = [x for x in eligible if x.get("verification_status") == PASSED]
     priority_order = {PRICE_FIRE: 0, PRICE_HIGH: 1, PRICE_VOLUME: 2, PRICE_RESERVE: 3}
     def key(x):
-        kad_risk = {"informational": 0, "attention": 1, "unknown": 2,
-                    "elevated": 3, "bankruptcy": 4}.get(
-                        (x.get("arbitration_cases") or {}).get("risk_level"), 2)
+        kad = x.get("arbitration_cases") or {}
+        kad_risk = (0 if kad.get("kad_status") == "GREEN" else
+                    1 if kad.get("technical_status") == "KAD_CHECKED" else 2)
         return (kad_risk, priority_order.get(x.get("price_priority"), 9),
                 x.get("availability") not in {"in_stock", "available"},
                 x.get("public_price") is None,

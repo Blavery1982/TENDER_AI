@@ -1,0 +1,48 @@
+{
+  "purchase": "200909955126100205",
+  "row": 141,
+  "contract_analysis": "Упомянута разгрузка на складе заказчика; кто выполняет — не уточнено",
+  "manual_expenses_actual": "ТРЕБУЕТ РАСЧЁТА: доставка, разгрузка, страхование",
+  "manual_expenses_native_before": {
+    "userEnteredValue": {
+      "stringValue": "ТРЕБУЕТ РАСЧЁТА: доставка, разгрузка, страхование"
+    },
+    "effectiveValue": {
+      "stringValue": "ТРЕБУЕТ РАСЧЁТА: доставка, разгрузка, страхование"
+    },
+    "formattedValue": "ТРЕБУЕТ РАСЧЁТА: доставка, разгрузка, страхование"
+  },
+  "manual_expenses_native_after": {
+    "userEnteredValue": {
+      "stringValue": "ТРЕБУЕТ РАСЧЁТА: доставка, разгрузка, страхование"
+    },
+    "effectiveValue": {
+      "stringValue": "ТРЕБУЕТ РАСЧЁТА: доставка, разгрузка, страхование"
+    },
+    "formattedValue": "ТРЕБУЕТ РАСЧЁТА: доставка, разгрузка, страхование"
+  },
+  "manual_expenses_unchanged": true,
+  "production_upsert_ranges_exclude_manual_cell": [
+    "A141:X141",
+    "Z141:CB141"
+  ],
+  "actual_mutated_cells": [
+    "BK141"
+  ],
+  "all_other_cells_rows_headers_unchanged": true,
+  "formulas_unchanged": true,
+  "profile_tests": {
+    "count": 24,
+    "result": "OK"
+  },
+  "contract_evidence": [
+    {
+      "type": "unloading",
+      "matched_root": "разгруз",
+      "matched_text": "льным видом транспорта, чтобы обеспечить его сохранность при транспортировке, до места назначения и разгрузки, на складе Заказчика. 4.4. Тара и упаковка возврату не подлежат, стоимость залога за упаковочные материалы не взыскиваются и эти материа",
+      "source_document": "Проект контракта на ЕАТ.docx",
+      "confidence": "medium"
+    }
+  ],
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1iMas8iLqWuAECZQ7mQOM-ZDJFWzO0kulevFlEwX9w2w#gid=955424503&range=BK141"
+}

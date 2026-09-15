@@ -93,6 +93,37 @@ def _column_letter(index: int) -> str:
     return result
 
 
+def _tax_expression(base: str, bid: str) -> str:
+    """УСН 15% от положительной налоговой базы цены подачи."""
+    return f'MAX(0;({bid}-{base})*0,15)'
+
+
+def quote_formulas(r: int, headers: list[str]) -> dict[int, str]:
+    """Каждый КП — отдельный расчёт корзины по своей цене, без усреднения КП."""
+    def cell(name):
+        return f'{_column_letter(headers.index(name))}{r}'
+    def span(name):
+        col = _column_letter(headers.index(name))
+        return f'${col}$2:${col}$10000'
+    lot_id, ids = cell('ID закупки'), span('ID закупки')
+    nmck, fee, qty = cell('НМЦК, ₽'), cell('Комиссия площадки, ₽'), span('Количество')
+    extras = span('Дополнительные расходы, ₽')
+    count = f'COUNTIF({ids};{lot_id})'
+    def complete(name):
+        return f'SUMPRODUCT(({ids}={lot_id})*N(ISNUMBER({span(name)})))={count}'
+    result = {}
+    for number in range(1, 4):
+        price_name = f'Цена КП {number}'
+        base = f'(SUMPRODUCT(({ids}={lot_id})*{qty}*{span(price_name)})+{fee}+SUMIF({ids};{lot_id};{extras}))'
+        bid = f'({base}*1,18)'
+        total = f'({base}+{_tax_expression(base, bid)})'
+        ready = f'AND({lot_id}<>"";ISNUMBER({nmck});ISNUMBER({fee});{complete("Количество")};{complete(price_name)};{complete("Дополнительные расходы, ₽")})'
+        # Доля, как в общей «Рентабельность, %»; ячейка форматируется PERCENT.
+        result[headers.index(f'Рентабельность КП {number}, %')] = (
+            f'=IF(NOT({ready});"";IF({base}=0;"";({bid}-{total})/{base}))')
+    return result
+
+
 def formulas(r:int, headers:list[str] | None = None)->dict[int,str]:
     """Формулы по точным заголовкам — порядок колонок может быть любым."""
     headers = headers or ACTIVE_HEADERS
@@ -139,23 +170,22 @@ def formulas(r:int, headers:list[str] | None = None)->dict[int,str]:
     maximum=cell("Максимальная цена закупа, ₽")
     base=(f'({average}+{commission}+SUMIF({full_column("ID закупки")};{id_cell};'
           f'{full_column("Дополнительные расходы, ₽")}))')
-    initial_tax=f'({base}*0,015/0,835)'
     base_ready=f'AND(ISNUMBER({average});ISNUMBER({commission});ISNUMBER({nmck});{extras_ready})'
+    bid=f'({average}*1,18)'
     return {
         index("Средняя цена закупа, ₽"):f'={avg}',
         index("Налоги, ₽"):(f'=IF(NOT({base_ready});"";'
-            f'IF(({base}+{initial_tax})*1,1<={nmck};'
-            f'{initial_tax};MAX(0;({nmck}-{base})*0,15)))'),
+            f'{_tax_expression(base, bid)})'),
         index("Все итоговые затраты, ₽"):f'=IF(OR(NOT({base_ready});NOT(ISNUMBER({tax})));"";{base}+{tax})',
-        index("Расчётная цена подачи, ₽"):f'=IF(NOT(ISNUMBER({total}));"";{total}*1,10)',
-        index("Цена подачи, ₽"):f'=IF(OR(NOT(ISNUMBER({calculated}));NOT(ISNUMBER({nmck})));"";MIN({calculated};{nmck}))',
+        index("Расчётная цена подачи, ₽"):f'=IF(OR(NOT(ISNUMBER({average}));NOT({base_ready}));"";{bid})',
+        index("Цена подачи, ₽"):f'=IF(OR(NOT(ISNUMBER({calculated}));NOT(ISNUMBER({nmck})));"";{calculated})',
         index("Чистая прибыль, ₽"):f'=IF(OR(NOT(ISNUMBER({submission}));NOT(ISNUMBER({total})));"";{submission}-{total})',
         index("Запас на снижение, ₽"):f'=IF(OR(NOT(ISNUMBER({submission}));NOT({base_ready}));"";{submission}-{base})',
         index("Запас на снижение, %"):f'=IF(OR(NOT(ISNUMBER({submission}));NOT(ISNUMBER({reserve}));{submission}=0);"";{reserve}/{submission})',
-        index("Рентабельность, %"):f'=IF(OR(NOT(ISNUMBER({total}));NOT(ISNUMBER({profit}));{total}=0);"";{profit}/{total})',
+        index("Рентабельность, %"):f'=IF(OR(NOT(ISNUMBER({total}));NOT(ISNUMBER({profit}));{average}=0);"";{profit}/{average})',
         index("Маржа с закупки, ₽"):f'=IF(NOT(ISNUMBER({profit}));"";{profit})',
         index("Максимальная цена закупа, ₽"):(f'=IF(OR(NOT(ISNUMBER({nmck}));NOT({extras_ready}));"";'
-            f'{nmck}/1,18-SUMIF({full_column("ID закупки")};{id_cell};{full_column("Дополнительные расходы, ₽")}))'),
+            f'{nmck}/1,18-{commission}-SUMIF({full_column("ID закупки")};{id_cell};{full_column("Дополнительные расходы, ₽")}))'),
         index("Качество просчёта"):(f'=IF(OR(NOT({quotes_ready});NOT(ISNUMBER({average}));'
             f'NOT(ISNUMBER({maximum})));"";IF({average}>{maximum};'
             f'"Продолжить поиск — цена закупа слишком высокая";"Просчёт принят"))'),
@@ -173,7 +203,7 @@ def build()->dict[str,list[list[Any]]]:
         title=it.get('description') or it.get('name') or it.get('eatTitle') or NO
         period=raw.get('deliveryPeriod'); delivery=(f"{period} рабочих дней" if period and raw.get('isDeliveryDaysWorking') else f"{period} календарных дней" if period else raw.get('deliveryDate'))
         item_trace=trace_items.get(i-1,{})
-        row=[date(raw.get('applicationFillingEndDate')),val(num),val(raw.get('id')),link(n.get('url')),'ЕАТ «Берёзка»',val(raw.get('subject')),addresses,val(delivery),NO,val(raw.get('price')),val(org.get('name')),val(org.get('inn')),val('; '.join(filter(None,[org.get('phoneNumber'),org.get('email')]))),round((raw.get('price') or 0)*.03,2),i,title,val(it.get('okpd2Code')),val(it.get('eatCode')),val(it.get('quantity')),val(it.get('okeiTitle')),val(it.get('unitPrice')),val(it.get('sum')),e.get('special_conditions_short') or 'Нет',item_trace.get('traceability_status') or t.get('traceability_status') or NO,""]+[""]*29
+        row=[date(raw.get('applicationFillingEndDate')),val(num),val(raw.get('id')),link(n.get('url')),'ЕАТ «Берёзка»',val(raw.get('subject')),addresses,val(delivery),NO,val(raw.get('price')),val(org.get('name')),val(org.get('inn')),val('; '.join(filter(None,[org.get('phoneNumber'),org.get('email')]))),raw.get('commissionFee'),i,title,val(it.get('okpd2Code')),val(it.get('eatCode')),val(it.get('quantity')),val(it.get('okeiTitle')),val(it.get('unitPrice')),val(it.get('sum')),e.get('special_conditions_short') or 'Нет',item_trace.get('traceability_status') or t.get('traceability_status') or NO,""]+[""]*29
         for col in CALCULATION_COLUMNS:
             row[col]=""
         for col,f in formulas(len(active)+1).items():row[col]=f

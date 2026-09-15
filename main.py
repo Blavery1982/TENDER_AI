@@ -147,6 +147,16 @@ def run_active_tender_download() -> int:
     print(f"Архив: {result['archive_root']}")
     return 0
 
+
+def run_tender_passports() -> int:
+    from documents.tender_passport import build_all_passports
+    result = build_all_passports()
+    print(f"Паспорта созданы: тендеров {result['tenders']}; "
+          f"полных {result['complete']}; без документов {result['no_documents']}; "
+          f"неполных {result['partial']}")
+    print(f"Архив: {result['archive_root']}")
+    return 0
+
 def run_model_search_test() -> int:
     from model_search.search import run_test
     result = run_test()
@@ -171,9 +181,9 @@ def run_production_dry_run(resume: bool = False, model_live_test: bool = False) 
     return 0
 
 
-def run_mvp_exact_batch(resume: bool = False) -> int:
+def run_mvp_exact_batch(resume: bool = False, limit: int | None = None) -> int:
     from pipeline.mvp_exact_batch import run
-    result = run(resume=resume)
+    result = run(resume=resume, limit=limit)
     summary = result["summary"]
     print(f"MVP завершён: exact-model позиций {summary['E. Позиции с точной моделью']}; "
           f"просчитано {summary['H. Exact-model позиций просчитано']}")
@@ -223,12 +233,15 @@ def main() -> int:
     parser.add_argument("--procurement-audit-test", action="store_true", help="предаудит документов одной сохранённой закупки")
     parser.add_argument("--audit-tender-archive", action="store_true", help="проверить локальный архив тендеров на марки и бренды")
     parser.add_argument("--download-active-tenders", action="store_true", help="скачать документы 139 актуальных тендеров из листа ACTIVE")
+    parser.add_argument("--build-tender-passports", action="store_true", help="создать паспорт состава файлов каждого тендера")
     parser.add_argument("--model-search-test", action="store_true", help="технический поиск моделей для одной контрольной закупки")
     parser.add_argument("--price-search-test", metavar="MODEL", help="ограниченный live-поиск цен точной модели")
     parser.add_argument("--production-dry-run", action="store_true", help="безопасный batch только на локальных fixtures")
     parser.add_argument("--resume", action="store_true", help="продолжить локальный dry-run с checkpoint")
     parser.add_argument("--model-live-test", action="store_true", help="ограниченный live-поиск моделей только для контрольных fixtures")
-    parser.add_argument("--mvp-exact-batch", action="store_true", help="live MVP точных моделей, без Google Sheets; supplier search максимум 10 позиций")
+    parser.add_argument("--mvp-exact-batch", action="store_true", help="live MVP точных моделей с записью в Google Sheets; supplier search максимум 10 позиций")
+    parser.add_argument("--mvp-exact-batch-limit", type=int, default=None,
+                        help="ограничить LIVE batch числом свежих закупок после действующих фильтров")
     parser.add_argument("--batch-procurement-search", action="store_true", help="полный production-сбор ЕАТ и аудит filter_purchase_v2")
     parser.add_argument("--eat-live-collection-audit", action="store_true", help="полный production-сбор ЕАТ без документов, цен и Google Sheets")
     parser.add_argument("--eat-api-smoke-test", action="store_true", help="проверить публичный API сайта ЕАТ через Playwright-сессию")
@@ -237,7 +250,20 @@ def main() -> int:
     parser.add_argument("--eat-api-google-sheets", action="store_true", help="получить список через API ЕАТ и выгрузить его в Google Sheets")
     parser.add_argument("--eat-login-check", action="store_true", help="только браузерный вход ЕАТ, без массового поиска")
     parser.add_argument("--eat-save-session", action="store_true", help="вручную подтвердить и безопасно сохранить сессию ЕАТ")
+    parser.add_argument("--single-purchase-test", metavar="PURCHASE_ID", help="контроль одной закупки с результатом каждого этапа в Google Sheets")
+    parser.add_argument("--tests-google-sheets", action="store_true", help="устаревшее имя: полный unittest только по прямому указанию владельца, отчёт локально без UNIT в Google Sheets")
     args = parser.parse_args()
+
+    if args.tests_google_sheets:
+        from pipeline.test_suite_report import run
+        return 0 if run()["successful"] else 1
+
+    if args.single_purchase_test:
+        from pipeline.single_purchase_test import run
+        result = run(args.single_purchase_test)
+        export = result.get("google_sheets") or {}
+        print(f"Результаты этапов: {export.get('url') or export.get('local_result') or 'сохранены локально'}")
+        return 1 if result["status"] in {"CARD_NOT_RECEIVED", "RUN_ERROR"} or export.get("status") == "EXPORT_ERROR" else 0
 
     if args.eat_save_session:
         from eat.session_state import run_manual_session_save
@@ -254,7 +280,7 @@ def main() -> int:
     if args.eat_api_google_sheets:
         return run_eat_api_google_sheets_export(detail_limit=args.eat_api_detail_limit)
     if args.mvp_exact_batch:
-        return run_mvp_exact_batch(resume=args.resume)
+        return run_mvp_exact_batch(resume=args.resume, limit=args.mvp_exact_batch_limit)
 
 
     if args.eat_test:
@@ -283,6 +309,8 @@ def main() -> int:
         return run_tender_archive_audit()
     if args.download_active_tenders:
         return run_active_tender_download()
+    if args.build_tender_passports:
+        return run_tender_passports()
     if args.model_search_test:
         return run_model_search_test()
     if args.price_search_test:

@@ -174,6 +174,28 @@ def _extract_xlsx(path: Path) -> tuple[str, list[dict[str, Any]]]:
     return text, rows
 
 
+def _extract_xls(path: Path) -> tuple[str, list[dict[str, Any]]]:
+    """Обычные BIFF-таблицы: только значения ячеек, без запуска макросов."""
+    import xlrd
+    rows = []
+    with xlrd.open_workbook(str(path), on_demand=True) as book:
+        for sheet in book.sheets():
+            for index in range(sheet.nrows):
+                cells = {}
+                for column, cell in enumerate(sheet.row(index)):
+                    value = cell.value
+                    if cell.ctype == xlrd.XL_CELL_NUMBER and float(value).is_integer():
+                        value = int(value)
+                    label, number = '', column + 1
+                    while number:
+                        number, remainder = divmod(number - 1, 26)
+                        label = chr(65 + remainder) + label
+                    cells[label] = value
+                if any(v not in ('', None) for v in cells.values()):
+                    rows.append({'sheet': sheet.name, 'row': index + 1, 'cells': cells})
+    return '\n'.join(' | '.join(str(v) for v in row['cells'].values() if v not in ('', None)) for row in rows), rows
+
+
 def extract_document(path: Path) -> tuple[str, str, list[dict[str, Any]]]:
     """Возвращает текст, статус и табличные строки (для XLSX)."""
     try:
@@ -189,6 +211,9 @@ def extract_document(path: Path) -> tuple[str, str, list[dict[str, Any]]]:
             return result.stdout.decode("utf-8", errors="replace"), "analyzed", []
         if suffix == ".xlsx":
             text, rows = _extract_xlsx(path)
+            return text, "analyzed", rows
+        if suffix == ".xls":
+            text, rows = _extract_xls(path)
             return text, "analyzed", rows
         return "", "unsupported", []
     except Exception:
@@ -420,6 +445,10 @@ def run_test() -> dict[str, Any]:
     all_rows: list[dict[str, Any]] = []
     for file_info in metadata["contract_files"]:
         path = Path(file_info["local_path"])
+        # Старые сохранённые отчёты могут содержать прежний путь; архив теперь
+        # канонически находится в data/tenders/<purchase_id>/.
+        if not path.is_file() and "data/contracts/" in str(path):
+            path = ROOT / "data/tenders" / Path(str(path).split("data/contracts/", 1)[1])
         text, status, rows = extract_document(path)
         all_rows.extend(rows)
         kinds = classify_document(file_info["file_name"], text)

@@ -4,6 +4,8 @@ from __future__ import annotations
 from urllib.parse import urlparse
 from datetime import datetime, timezone
 
+from suppliers.arbitration import minimal_kad_result
+
 PASSED = "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ"
 MANUAL = "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ"
 HIGH_RISK = "🔴 ПРИЗНАКИ ВЫСОКОГО РИСКА — НЕ ОПЛАЧИВАТЬ"
@@ -26,15 +28,16 @@ def verify_supplier(supplier: dict) -> dict:
     domain = normalize_domain(result.get("product_url") or result.get("domain") or "")
     result["domain"] = domain
     checks = result.get("verification_checks") or {}
+    explicit_kad = bool(checks.get("kad_check"))
     risks, positives, unavailable, evidence_checks = [], [], [], []
     checked_at = datetime.now(timezone.utc).isoformat()
-    kad = checks.get("kad_check") or {
-        "checked_in_kad": False, "cases_found": None, "bankruptcy_cases_count": None,
-        "defendant_cases_count": None, "recent_cases_count": None,
-        "user_summary": "Арбитражные дела: требуется ручная проверка",
-        "warnings": ["Проверка связанных физических лиц по ИНН не выполнена"],
-        "risk_level": "unknown",
-    }
+    kad = minimal_kad_result(checks.get("kad_check"))
+    checks = {**checks, "kad_check": kad}
+    result["verification_checks"] = checks
+    kad_checked = kad["technical_status"] == "KAD_CHECKED"
+    company = checks.get("current_company") or checks.get("company") or {}
+    kad_matches = bool(company.get("inn") and kad.get("searched_inn") == company.get("inn")
+                       and checks.get("current_seller_determined") is not False)
     def evidence(name, status, value, source=None):
         evidence_checks.append({"check_name":name,"status":status,"evidence":value,
                                 "source":source,"checked_at":checked_at})
@@ -74,7 +77,6 @@ def verify_supplier(supplier: dict) -> dict:
             unavailable.append("Требуется ручная проверка истории сайта")
             evidence("wayback_history","inconclusive","Снимки найдены, тематика автоматически не доказана","Wayback CDX")
 
-        company = checks.get("current_company") or checks.get("company") or {}
         historical_companies = checks.get("historical_companies") or []
         current_seller_determined = bool(company.get("inn") and checks.get("current_seller_determined", True))
         if not company.get("inn"):
@@ -120,24 +122,6 @@ def verify_supplier(supplier: dict) -> dict:
         if company.get("site_company_mismatch") is True:
             risks.append("Реквизиты сайта не соответствуют проверенной компании")
 
-        if kad.get("checked_in_kad") is False:
-            unavailable.append("Картотека арбитражных дел")
-            evidence("arbitration_cases", "unavailable", kad.get("warnings"), kad.get("kad_url"))
-        elif kad.get("bankruptcy_cases_count", 0):
-            risks.append("Обнаружено дело о банкротстве")
-            evidence("arbitration_cases", "red_flag", kad.get("user_summary"), kad.get("kad_url"))
-        elif kad.get("risk_level") == "elevated":
-            risks.append("Несколько свежих арбитражных дел, где поставщик является ответчиком")
-            evidence("arbitration_cases", "warning", kad.get("user_summary"), kad.get("kad_url"))
-        elif kad.get("defendant_cases_count", 0):
-            risks.append("Есть арбитражные дела, где поставщик является ответчиком")
-            evidence("arbitration_cases", "warning", kad.get("user_summary"), kad.get("kad_url"))
-        elif kad.get("cases_found"):
-            positives.append("Арбитражные дела найдены только без доказанного негативного контекста")
-            evidence("arbitration_cases", "informational", kad.get("user_summary"), kad.get("kad_url"))
-        else:
-            evidence("arbitration_cases", "confirmed_positive", kad.get("user_summary"), kad.get("kad_url"))
-
         for service in ("whois", "wayback", "company_registry", "cms", "ip"):
             if checks.get(f"{service}_status") == "unavailable":
                 unavailable.append(service)
@@ -151,10 +135,8 @@ def verify_supplier(supplier: dict) -> dict:
 
         strong = {"Реквизиты сайта не соответствуют проверенной компании", "Резкая смена тематики сайта",
                   "Сайт одновременно предлагает оплату разным юрлицам без объяснения",
-                  "Компания ликвидирована или не действует", "Обнаружено дело о банкротстве"}
-        if "Обнаружено дело о банкротстве" in risks:
-            status = HIGH_RISK
-        elif strong.intersection(risks) and (len(risks) >= 2 or "Реквизиты сайта не соответствуют проверенной компании" in risks):
+                  "Компания ликвидирована или не действует"}
+        if strong.intersection(risks) and (len(risks) >= 2 or "Реквизиты сайта не соответствуют проверенной компании" in risks):
             status = HIGH_RISK
         elif not positives and unavailable:
             status = INSUFFICIENT
@@ -169,13 +151,42 @@ def verify_supplier(supplier: dict) -> dict:
         else:
             status = INSUFFICIENT
 
+    # КАД даёт только предупреждение человеку, без анализа исков и красных оценок.
+    if kad_matches and kad_checked:
+        if kad["defendant_cases_count"] > 0:
+            risks.append(kad["reason"])
+            evidence("arbitration_cases", "warning", kad["reason"])
+            if status != HIGH_RISK:
+                status = MANUAL
+        else:
+            evidence("arbitration_cases", "confirmed_positive", kad["reason"])
+    elif domain not in TRUSTED_DOMAINS or company.get("inn") or checks.get("current_seller_determined") is not None:
+        evidence("arbitration_cases", "unavailable", kad["reason"])
+
+    if (checks.get("current_seller_determined") is False
+            or (domain not in TRUSTED_DOMAINS and not company.get("inn"))):
+        status = MANUAL
+        message = "Актуальный продавец не установлен однозначно — требуется ручная проверка"
+        unavailable.append(message)
+        evidence("current_seller_admission", "inconclusive", message, checks.get("legal_source"))
+    elif (status != HIGH_RISK
+          and (domain not in TRUSTED_DOMAINS or explicit_kad
+               or company.get("inn") or checks.get("current_seller_determined") is True)
+          and (not kad_checked or not kad_matches)):
+        status = MANUAL
+        message = "КАД не проверен: " + kad["reason"]
+        if kad_checked and not kad_matches:
+            message = "КАД проверен по другому ИНН; текущий поставщик не проверен"
+        unavailable.append(message)
+        evidence("kad_admission", "inconclusive", message)
+
     result["risk_flags"] = risks
     result["positive_signals"] = positives
     result["unavailable_checks"] = sorted(set(unavailable))
     result["verification_status"] = status
     result["verification_comment"] = "; ".join(risks + positives + unavailable) or "Нет данных"
     result["arbitration_cases"] = kad
-    result["arbitration_cases_display"] = kad.get("user_summary", "Арбитражные дела: требуется ручная проверка")
+    result["arbitration_cases_display"] = kad["reason"]
     result["purchase_price"] = None
     result["verification_evidence"] = evidence_checks
     return result

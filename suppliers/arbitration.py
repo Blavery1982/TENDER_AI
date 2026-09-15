@@ -1,109 +1,56 @@
-"""Безопасная оценка сведений КАД без обхода CAPTCHA и антибот-защиты."""
-from __future__ import annotations
+"""КАД: только количество дел ответчика по актуальному ИНН, без судебного анализа."""
+from datetime import datetime, timezone
 
-from datetime import datetime, timedelta, timezone
-from typing import Callable
-
-KAD_URL = "https://kad.arbitr.ru"
+RESULT_FIELDS = ("searched_inn", "checked_at", "technical_status", "defendant_cases_count", "kad_status", "reason")
 
 
-def unavailable_kad_result(inn: str | None, warning: str) -> dict:
-    return {
-        "checked_in_kad": False,
-        "checked_at": datetime.now(timezone.utc).isoformat(),
-        "searched_inn": inn,
-        "cases_found": None,
-        "cases_count": None,
-        "plaintiff_cases_count": None,
-        "defendant_cases_count": None,
-        "bankruptcy_cases_count": None,
-        "other_cases_count": None,
-        "recent_cases_count": None,
-        "case_numbers": [], "case_roles": [], "case_dates": [],
-        "case_categories": [], "kad_url": KAD_URL,
-        "evidence": None, "warnings": [warning],
-        "user_summary": "Арбитражные дела: требуется ручная проверка",
-        "risk_level": "unknown",
-    }
+def defendant_kad_result(inn, count, *, checked_at=None):
+    if type(count) is not int or count < 0:
+        return unavailable_kad_result(inn, "Количество дел ответчика не подтверждено")
+    reason = (f"Есть судебные дела в качестве ответчика: {count}. Требуется вручную проверить "
+              "судебные иски и добросовестность поставщика." if count else
+              "КАД проверен: дел в качестве ответчика не найдено.")
+    return {"searched_inn": inn, "checked_at": checked_at or datetime.now(timezone.utc).isoformat(),
+            "technical_status": "KAD_CHECKED", "defendant_cases_count": count,
+            "kad_status": "YELLOW" if count else "GREEN", "reason": reason}
 
 
-def assess_kad_cases(inn: str, cases: list[dict], *, checked_at: str | None = None) -> dict:
-    """Нормализует уже достоверно полученный ответ поиска КАД."""
-    now = datetime.fromisoformat(checked_at) if checked_at else datetime.now(timezone.utc)
-    if now.tzinfo is None:
-        now = now.replace(tzinfo=timezone.utc)
-    plaintiff = defendant = bankruptcy = other = recent = 0
-    numbers, roles, dates, categories = [], [], [], []
-    for case in cases:
-        role = str(case.get("role") or "иная роль").casefold()
-        category = str(case.get("category") or "не определена")
-        if "истец" in role:
-            plaintiff += 1
-        elif "ответчик" in role:
-            defendant += 1
-        else:
-            other += 1
-        if "банкрот" in category.casefold() or case.get("is_bankruptcy") is True:
-            bankruptcy += 1
-        raw_date = case.get("date")
-        if raw_date:
-            try:
-                date = datetime.fromisoformat(str(raw_date).replace("Z", "+00:00"))
-                if date.tzinfo is None:
-                    date = date.replace(tzinfo=timezone.utc)
-                if date >= now - timedelta(days=365 * 2):
-                    recent += 1
-            except ValueError:
-                pass
-        numbers.append(case.get("number"))
-        roles.append(case.get("role"))
-        dates.append(raw_date)
-        categories.append(case.get("category"))
-    count = len(cases)
-    if bankruptcy:
-        risk = "bankruptcy"
-    elif defendant >= 3 and recent >= 2:
-        risk = "elevated"
-    elif defendant:
-        risk = "attention"
+def unavailable_kad_result(inn, warning, *, status="KAD_REQUIRES_MANUAL_CHECK"):
+    return {"searched_inn": inn, "checked_at": datetime.now(timezone.utc).isoformat(),
+            "technical_status": status, "defendant_cases_count": None,
+            "kad_status": "YELLOW", "reason": str(warning)[:1000]}
+
+
+def minimal_kad_result(value, inn=None):
+    """Старые подробные результаты не подтверждают новую проверку и не переносятся дальше."""
+    if not isinstance(value, dict):
+        return unavailable_kad_result(inn, "КАД не проверен")
+    searched = value.get("searched_inn", inn)
+    if value.get("technical_status") == "KAD_CHECKED":
+        result = defendant_kad_result(searched, value.get("defendant_cases_count"),
+                                      checked_at=value.get("checked_at"))
     else:
-        risk = "informational"
-    if count:
-        summary = (f"Арбитражные дела: ⚠️ ЕСТЬ СУДЫ! Найдено {count}: "
-                   f"истец — {plaintiff}, ответчик — {defendant}, иная роль — {other}.")
-        if bankruptcy:
-            summary += f" 🔴 ОБНАРУЖЕНО ДЕЛО О БАНКРОТСТВЕ: {bankruptcy}."
-    else:
-        summary = "Арбитражные дела: не обнаружены по результатам доступной проверки"
-    return {
-        "checked_in_kad": True, "checked_at": now.isoformat(), "searched_inn": inn,
-        "cases_found": bool(count), "cases_count": count,
-        "plaintiff_cases_count": plaintiff, "defendant_cases_count": defendant,
-        "bankruptcy_cases_count": bankruptcy, "other_cases_count": other,
-        "recent_cases_count": recent, "case_numbers": numbers, "case_roles": roles,
-        "case_dates": dates, "case_categories": categories, "kad_url": KAD_URL,
-        "evidence": cases, "warnings": [], "user_summary": summary, "risk_level": risk,
-    }
+        status = value.get("technical_status")
+        if status not in {"KAD_REQUIRES_MANUAL_CHECK", "KAD_CURRENT_SELLER_UNDETERMINED"}:
+            status = "KAD_REQUIRES_MANUAL_CHECK"
+        result = unavailable_kad_result(searched, value.get("reason") or "КАД не проверен по новой схеме", status=status)
+        if value.get("checked_at"):
+            result["checked_at"] = value["checked_at"]
+    return result
 
 
-def check_kad(inn: str | None, fetcher: Callable[[str], list[dict]] | None = None) -> dict:
-    """Точка интеграции.
-
-    КАД не предоставляет проекту документированный стабильный API. Без переданного
-    законного адаптера результат остаётся ручным; CAPTCHA никогда не обходится.
-    """
+def check_kad(inn, fetcher=None):
     if not inn:
-        return unavailable_kad_result(None, "Текущий ИНН поставщика не подтверждён")
+        return unavailable_kad_result(None, "Текущий ИНН поставщика не подтверждён",
+                                      status="KAD_CURRENT_SELLER_UNDETERMINED")
     if fetcher is None:
-        return unavailable_kad_result(
-            inn, "Проверка арбитражных дел автоматически не выполнена: "
-                 "документированный публичный API КАД не подтверждён")
+        from suppliers.kad_client import KADClient
+        return KADClient().check(inn)
     try:
-        response = fetcher(inn)
-        if response is None:
-            return unavailable_kad_result(inn, "КАД вернул пустой или неоднозначный ответ")
-        return assess_kad_cases(inn, response)
-    except PermissionError:
-        return unavailable_kad_result(inn, "КАД требует CAPTCHA/ручного доступа; защита не обходилась")
-    except (ConnectionError, TimeoutError, OSError) as exc:
-        return unavailable_kad_result(inn, f"КАД недоступен: {type(exc).__name__}")
+        result = minimal_kad_result(fetcher(inn), inn)
+        if result["searched_inn"] != inn:
+            return unavailable_kad_result(inn, "КАД вернул результат по другому ИНН")
+        return result
+    except Exception as exc:
+        # Техническая непроверенность никогда не превращается в нулевой счётчик.
+        return unavailable_kad_result(inn, f"КАД не проверен: {type(exc).__name__}: {str(exc)[:800]}")

@@ -18,3 +18,8 @@ data/tenders/
 data/eat_api_google_sheets_export.json
 data/eat_live_collection_audit.json
 data/eat_single_*.json
+
+# Локальные доказательства и кэш проверки поставщиков в КАД.
+data/cache/kad/
+data/suppliers/_kad/
+data/kad_diagnostics/

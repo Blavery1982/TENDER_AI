@@ -7,8 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
-from calculator.decision import calculator_decision
-from calculator.formulas import platform_commission
+from calculator.result_decision import attach_business_decision
 from calculator.schemas import analyze_costs
 from pipeline.schemas import stage, user_value
 from model_search.price_readiness import (PRICE_SEARCH_READY,
@@ -94,6 +93,8 @@ def build_pipeline(card: dict, audit_model: dict, supplier: dict, deep: dict,
         "procurement_number":raw.get("tradeNumber"),"procurement_id":raw.get("id") or card.get("purchase_id"),
         "procurement_name":lot.get("subject"),"procurement_url":card.get("card_url"),
         "nmck":lot.get("price"),"deadline":lot.get("applicationFillingEndDate"),
+        "commission_fee":lot.get("commissionFee"),
+        "commission_source":"raw.lot.commissionFee",
         "delivery_place":((lot.get("deliveryInfos") or [{}])[0].get("deliveryAddress") or {}).get("formattedFullInfo"),
     },{})
     source_documents=audit_model.get("documents") or []
@@ -187,16 +188,14 @@ def build_pipeline(card: dict, audit_model: dict, supplier: dict, deep: dict,
     real_costs={"delivery_cost":None,"logistics_cost":0,"unloading_cost":0,
                 "assembly_cost":0,"installation_cost":0,"packaging_removal_cost":0,"other_costs":0}
     costs=analyze_costs(real_costs)
-    decision=calculator_decision(bool(model_search.get("selected_model")),
-                                 bool(supplier.get("supplier_candidates")),purchase_price,
-                                 costs["unknown_costs"])
     calculator=_safe(logs,"calculator",lambda:{
         "purchase_price":purchase_price,"purchase_price_status":"Подтверждена" if purchase_price is not None else "Не подтверждена",
         "known_costs":costs["known_costs"],"unknown_costs":costs["unknown_costs"],
-        "commission":platform_commission(procurement.get("nmck")) if procurement.get("nmck") is not None else None,
+        "commission":procurement.get("commission_fee"),
+        "commission_source":"raw.lot.commissionFee",
         "tax_logic":"max(цена подачи − закупочная стоимость − логистика − дополнительные расходы, 0) × 15%; комиссия не уменьшает налоговую базу",
         "net_profit":None,"break_even_price":None,"reserve_to_zero_percent":None,
-        "status":decision["status"],
+        "status":"🟡 РУЧНАЯ ПРОВЕРКА",
     },{"status":"Этап не завершён"})
     logs[-1]["status"]="incomplete" if purchase_price is None and logs[-1]["stage"]=="calculator" else logs[-1]["status"]
     if purchase_price is None: warnings.append("Подтверждённая закупочная цена отсутствует")
@@ -216,8 +215,8 @@ def build_pipeline(card: dict, audit_model: dict, supplier: dict, deep: dict,
     warnings.extend(customer_check.get("warnings") or [])
     manual[0:0]=[x.get("action") for x in customer_check.get("manual_actions_required") or [] if x.get("action")]
     warnings=list(dict.fromkeys(warnings)); manual=list(dict.fromkeys(manual))
-    final={"final_status":decision["status"],
-           "final_reason":"Полностью соответствующая модель найдена, но для окончательного расчёта экономики требуется подтверждённая закупочная цена и условия доставки.",
+    final={"final_status":"🟡 РУЧНАЯ ПРОВЕРКА",
+           "final_reason":"Для окончательного расчёта экономики требуется подтверждённая закупочная цена и условия доставки.",
            "next_action":"Запросить актуальные цены и условия поставки минимум у нескольких поставщиков."}
     logs.append(stage("final_decision","completed"))
     result={"procurement":procurement,"customer_check":customer_check,
@@ -234,6 +233,18 @@ def build_pipeline(card: dict, audit_model: dict, supplier: dict, deep: dict,
                                        "kp2":quotes.get("kp2"),"kp3":quotes.get("kp3"),
                                        "net_profit":calculator.get("net_profit"),
                                        "break_even_price":calculator.get("break_even_price")})}
+    ranked = [quotes[key] for key in ("kp1", "kp2", "kp3") if isinstance(quotes.get(key), dict)]
+    result["supplier_search"]["ranked_offers"] = ranked
+    business = attach_business_decision(result)
+    result["calculator"]["status"] = business["label"]
+    result["final_decision"] = {"final_status": business["label"],
+                                 "final_reason": "; ".join(business["decision_reasons"]),
+                                 "next_action": "Продолжить расчёт" if business["status"] == "bid" else "Требуется ручная проверка"}
+    result["user_summary"] = user_value({"status": result["final_decision"]["final_status"],
+                                          "reason": result["final_decision"]["final_reason"],
+                                          "next_action": result["final_decision"]["next_action"],
+                                          "kp1": quotes.get("kp1"), "kp2": quotes.get("kp2"), "kp3": quotes.get("kp3"),
+                                          "net_profit": (result.get("final_economics") or {}).get("net_profit")})
     return result
 
 

@@ -15,7 +15,7 @@ from eat.browser_policy import open_authorized_eat_browser
 from pypdf import PdfReader
 
 from filters.eat_filters import load_config
-from documents.tender_archive import TENDERS_ROOT
+from documents.tender_archive import TENDERS_ROOT, tender_folder
 
 ROOT = Path(__file__).resolve().parent.parent
 GREEN_PATH = ROOT / "data/eat_green_semantic_v2.json"
@@ -34,15 +34,16 @@ TYPE_MAP = {
     "вывоз": "packaging_removal", "доставк": "other",
 }
 ACCESS_PATTERNS = {
-    "access_pass": re.compile(r"пропускн\w*\s+режим|(?:оформ|заказ)\w*\s+пропуск", re.I),
+    "access_pass": re.compile(r"пропускн\w*\s+режим|(?:оформ|заказ|нужен|требуется)\w*\s+пропуск", re.I),
     "advance_personal_data": re.compile(r"(?:заранее|за\s+\d+\s+(?:рабоч\w*\s+)?дн\w*).{0,100}(?:ФИО|паспортн\w*\s+данн)", re.I | re.S),
     "passport_details": re.compile(r"паспортн\w*\s+данн\w*.{0,80}(?:водител|грузчик|представител)", re.I | re.S),
     "russian_access": re.compile(r"паспорт\w*\s+РФ|гражданств\w*\s+(?:РФ|Российск\w*\s+Федерац)", re.I),
-    "vehicle_details": re.compile(r"марк\w*.{0,50}(?:автомоб|транспорт)|государственн\w*\s+номер|госномер", re.I | re.S),
+    "vehicle_details": re.compile(r"\bмарк(?:а|у|и|е|ой)\s+(?:автомобил\w*|транспортн\w*\s+средств\w*)|государственн\w*\s+номер|госномер|(?:данн\w*|сведени\w*)\s+(?:об\s+)?(?:автомобил\w*|транспортн\w*\s+средств\w*)", re.I),
     "entry_time_restriction": re.compile(r"(?:въезд|доступ).{0,100}(?:с\s+\d{1,2}[.:]\d{2}|до\s+\d{1,2}[.:]\d{2}|рабоч\w*\s+врем)", re.I | re.S),
     "vehicle_restriction": re.compile(r"(?:габарит|грузоподъ[её]мност|тип)\w*.{0,70}(?:автомоб|транспорт)", re.I | re.S),
     "restricted_site": re.compile(r"(?:режимн|закрыт)\w*\s+(?:объект|территори)", re.I),
     "customer_escort": re.compile(r"сопровожд\w*.{0,80}представител\w*\s+заказчик", re.I | re.S),
+    "paid_access": re.compile(r"платн\w*\s+(?:въезд|пропуск)|(?:оплат|стоимост)\w*\s+(?:въезд|пропуск)", re.I),
 }
 OBLIGATION_RE = re.compile(
     r"(?:поставщик|исполнитель|подрядчик).{0,180}(?:обязан|должен|осуществл|выполня|"
@@ -115,6 +116,15 @@ def analyze_text(text: str, source: str, config: dict[str, Any]) -> tuple[list[s
         for match in re.finditer(re.escape(root), lowered):
             context = _fragment(text, match.start(), match.end())
             local = lowered[max(0, match.start()-55):min(len(lowered), match.end()+100)]
+            # Характеристики и комплект документации не являются работами поставщика.
+            if root in {"установк", "подключ"} and re.search(
+                r"руководств\w*.{0,30}установк|тип\s+подключ|(?:кабел|шнур)\w*.{0,25}подключ",
+                local,
+            ):
+                continue
+            # Ответственность за повреждение не устанавливает обязанность разгрузки.
+            if root in {"погруз", "разгруз"} and re.search(r"получивш\w*.{0,90}поврежден", context, re.I):
+                continue
             if re.search(
                 r"(?:не\s+требу\w*|не\s+предусмотр\w*|не\s+осуществл\w*|"
                 r"не\s+вход\w*|не\s+производ\w*|не\s+выполня\w*|"
@@ -132,6 +142,7 @@ def analyze_text(text: str, source: str, config: dict[str, Any]) -> tuple[list[s
                 OBLIGATION_RE.search(context)
                 or re.search(r"своими\s+силами", context, re.I)
                 or re.search(r"(?:затрат|расход)\w*\s+поставщик\w*", context, re.I)
+                or re.search(r"\b(?:требу\w*|необходим\w*|обязател\w*)", context, re.I)
             ) else "medium"
             kind = TYPE_MAP[root]
             key = (kind, context)
@@ -139,6 +150,12 @@ def analyze_text(text: str, source: str, config: dict[str, Any]) -> tuple[list[s
                 continue
             seen.add(key)
             extras.append({"type": kind, "matched_root": root, "matched_text": context, "source_document": source, "confidence": confidence})
+    for match in re.finditer(r"\bПНР\b", text, re.I):
+        context = _fragment(text, match.start(), match.end())
+        if not OBLIGATION_RE.search(context) or re.search(r"не\s+(?:требу|предусмотр)\w*", context, re.I):
+            continue
+        extras.append({"type": "commissioning", "matched_text": context,
+                       "source_document": source, "confidence": "high"})
     return hard, extras
 
 
@@ -153,8 +170,51 @@ def analyze_access_conditions(text: str, source: str) -> list[dict[str, Any]]:
     return evidence
 
 
+def contract_summary(extras: list[dict[str, Any]], *, analyzed: bool = True) -> str:
+    """Краткое резюме отдельных обязанностей, без оценки денежных расходов."""
+    labels = {
+        "assembly": "Сборка на месте", "installation": "Монтаж",
+        "commissioning": "ПНР", "connection": "Подключение",
+        "unloading": "Разгрузка", "loading": "Погрузка",
+        "floor_delivery": "Подъём на этаж", "carrying_inside": "Занос",
+        "training": "Обучение", "dismantling": "Демонтаж",
+        "disposal": "Вывоз старого оборудования",
+        "packaging_removal": "Вывоз упаковки", "access_pass": "Нужен пропуск",
+        "paid_access": "Платный въезд/пропуск", "advance_personal_data": "Передать ФИО и паспортные данные заранее",
+        "passport_details": "Паспортные данные", "russian_access": "Допуск с паспортом РФ",
+        "vehicle_details": "Данные автомобиля", "entry_time_restriction": "Ограничения времени въезда",
+        "vehicle_restriction": "Ограничения транспорта", "restricted_site": "Режимный объект",
+        "customer_escort": "Сопровождение заказчиком",
+    }
+    result = []
+    for extra in extras:
+        kind, text = extra.get('type'), extra.get('matched_text') or ''
+        if kind not in labels:
+            continue
+        if extra.get('confidence') != 'high':
+            if kind == 'unloading' and re.search(r'до\s+места\s+назначения\s+и\s+разгруз', text, re.I):
+                label = 'Упомянута разгрузка на складе заказчика; кто выполняет — не уточнено'
+            else:
+                continue
+        else:
+            label = labels[kind]
+            if kind == 'floor_delivery':
+                floor = re.search(r'подъ[её]м\w*\s+на\s+(\d+)\s*(?:-?[а-я]+\s+)?этаж', text, re.I)
+                if floor:
+                    label = f'Подъём на {floor[1]} этаж'
+        if (str(extra.get('source_document') or '').startswith('Позиция ЕАТ')
+                and text and len(text) < 80 and text.casefold() not in label.casefold()):
+            label = f'{label} ({text})'
+        if label not in result:
+            result.append(label)
+    if not analyzed:
+        result.append('Анализ документов не завершён')
+    return ', '.join(result) if result else 'Нет специальных условий'
+
+
 def _note(extras: list[dict[str, Any]]) -> str:
     labels = {"assembly":"Сборка", "installation":"Монтаж/установка", "commissioning":"Пусконаладка", "connection":"Подключение", "unloading":"Разгрузка", "loading":"Погрузка", "floor_delivery":"Подъём на этаж", "carrying_inside":"Занос", "training":"Обучение", "dismantling":"Демонтаж", "disposal":"Утилизация", "packaging_removal":"Вывоз", "other":"Доставка", "access_pass":"Пропуск", "advance_personal_data":"Предварительная передача данных", "passport_details":"Паспортные данные", "russian_access":"Допуск только с паспортом РФ", "vehicle_details":"Данные автомобиля", "entry_time_restriction":"Ограничение времени въезда", "vehicle_restriction":"Ограничение транспорта", "restricted_site":"Режимный объект", "customer_escort":"Сопровождение заказчиком"}
+    labels.update(delivery="Доставка", paid_access="Платный въезд/пропуск", insurance="Страхование")
     return "; ".join(dict.fromkeys(labels[x["type"]] for x in extras))
 
 
@@ -165,6 +225,9 @@ def _special_conditions(hard: list[str], extras: list[dict[str, Any]]) -> str:
     if "defense" in hard:
         conditions.append("ОБОРОННЫЕ УСЛОВИЯ")
     labels = {
+        "delivery": "Требуется доставка",
+        "paid_access": "Требуется платный въезд/пропуск",
+        "insurance": "Предусмотрены расходы на страхование",
         "assembly": "Требуется сборка товара на месте",
         "commissioning": "Требуется пусконаладка",
         "connection": "Требуется подключение",
@@ -194,6 +257,10 @@ def _special_conditions(hard: list[str], extras: list[dict[str, Any]]) -> str:
             label = "Требуется установка" if extra.get("matched_root") == "установк" else "Требуется монтаж"
         else:
             label = labels[kind]
+        if (str(extra.get("source_document") or "").startswith("Позиция ЕАТ")
+                and extra.get("matched_text")
+                and str(extra["matched_text"]).casefold() not in label.casefold()):
+            label = f"{label} ({extra['matched_text']})"
         if label not in conditions:
             conditions.append(label)
     return "; ".join(conditions)
@@ -235,7 +302,7 @@ def run_contract_test() -> int:
             for doc in captured:
                 key = doc.get("file_id") or doc.get("download_url") or doc["file_name"]
                 unique[str(key)] = doc
-            folder = CONTRACTS_ROOT / str(purchase_id)
+            folder = tender_folder(purchase_id, tender_number=number, root=CONTRACTS_ROOT)
             files, all_hard, all_extras, statuses = [], [], [], []
             for doc in unique.values():
                 if not doc.get("download_url") and doc.get("file_id") and doc.get("document_type") is not None:
@@ -295,7 +362,7 @@ def complete_saved_contract_test() -> dict[str, Any]:
             url = doc.get("download_url")
             if not url:
                 doc["document_parse_status"] = "unsupported"; statuses.append("unsupported"); continue
-            folder = CONTRACTS_ROOT / str(purchase_id); folder.mkdir(parents=True, exist_ok=True)
+            folder = tender_folder(purchase_id, tender_number=number, root=CONTRACTS_ROOT); folder.mkdir(parents=True, exist_ok=True)
             path = folder / _safe_name(doc["file_name"])
             try:
                 if not path.exists():

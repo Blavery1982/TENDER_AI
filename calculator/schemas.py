@@ -18,4 +18,3 @@ def analyze_costs(costs: dict) -> dict:
     return {"known_costs": known, "unknown_costs": unknown,
             "additional_costs_total": round(sum(known.values()), 2),
             "all_costs_known": not unknown}
-

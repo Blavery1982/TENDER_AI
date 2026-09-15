@@ -21,6 +21,8 @@ from security.traceability import analyze_item
 from suppliers.market_search import (build_call_lists, price_priority,
                                      supplier_target_price)
 from suppliers.verification import verify_supplier
+from calculator.result_decision import attach_business_decision
+from suppliers.price_search_flow import confirmed_price_ranking, select_verified_top3
 from suppliers.economic_precheck import (current_analysis_recommendation,
                                          evaluate_price_request_candidate,
                                          economic_precheck,
@@ -64,16 +66,13 @@ def _model_evidence(audit_item: dict[str, Any]) -> str | None:
 def _offer_for_verification(offer: dict[str, Any], model: str) -> dict[str, Any]:
     host = (urlsplit(offer["url"]).hostname or "").removeprefix("www.")
     name = offer.get("seller") or host
-    # Карточка Market в текущем evidence называет фактический магазин.
-    if host == "market.yandex.ru":
-        name = "ОНЛАЙНТРЕЙД.РУ (через Яндекс Маркет)"
-    return {"supplier_name": name, "product_url": offer["url"], "domain": host,
+    return {**offer, "supplier_name": name, "product_url": offer["url"], "domain": host,
             "source_category": "marketplace" if host == "market.yandex.ru" else "professional",
             "model": model, "product_name": offer.get("exact_product_name"),
-            "exact_model": True, "product_page_available": True,
+            "exact_model": offer.get('exact_model_match') is True,
             "public_price": offer.get("price"), "purchase_price": None,
             "availability": {"В наличии": "in_stock", "Под заказ": "to_order",
-                             "Нет в наличии": "out_of_stock"}.get(offer.get("availability"), "unknown"),
+                             "Нет в наличии": "out_of_stock"}.get(offer.get("availability"), offer.get('availability') or "unknown"),
             "checked_at": offer.get("checked_at"), "source": offer.get("source")}
 
 
@@ -145,19 +144,20 @@ def build_payload(card: dict[str, Any], analysis: dict[str, Any],
         supplier["target_price_difference"] = (round(float(supplier["public_price"]) - target, 2)
                                                 if supplier.get("public_price") is not None else None)
         supplier_rows.append(supplier)
+    eat_commission = lot.get("commissionFee")
     precheck = economic_precheck(
-        lot.get("price"), float(calculator_config.get("eat_commission_rate", 0.03)),
+        lot.get("price"), eat_commission,
         [{"position_number": 1, "quantity": item.get("quantity"), "offers": supplier_rows}],
         float(calculator_config.get("economic_precheck_margin_percent", 18)),
     )
     verification_executed = precheck["supplier_verification_required"]
-    verified = _apply_supplier_verification(
-        supplier_rows, verification_executed, supplier_verifier
-    )
-    verified.sort(key=lambda row: (row.get("public_price") is None,
-                                   row.get("public_price") or float("inf")))
-    priced_verified = [row for row in verified if row.get("public_price") is not None
-                       and is_confirmed_available(row)]
+    ranked = confirmed_price_ranking(supplier_rows)
+    if verification_executed:
+        priced_verified, verification_history = select_verified_top3(ranked, verifier=supplier_verifier)
+        verified = verification_history
+    else:
+        verified = _apply_supplier_verification(supplier_rows, False, supplier_verifier)
+        priced_verified = []
     try:
         quantity = float(item.get("quantity"))
         maximum_unit_price = (precheck.get("maximum_purchase_cost") / quantity
@@ -213,6 +213,7 @@ def build_payload(card: dict[str, Any], analysis: dict[str, Any],
             "purchase_method": enum_values.get("purchase_method"),
             "russian_items_purchase": enum_values.get("russian_items_purchase"),
             "commission_fee": lot.get("commissionFee"),
+            "commission_source": "raw.lot.commissionFee",
             "customer": customer.get("customer_name"),
             "customer_inn": customer.get("customer_inn"),
             "customer_kpp": customer.get("customer_kpp"),
@@ -235,7 +236,7 @@ def build_payload(card: dict[str, Any], analysis: dict[str, Any],
                       "processed": analysis["document_processing"].get("documents_processed"),
                       "read_methods": [doc.get("extraction_method") for doc in doc_results]},
         "audit": {"status": audit.get("audit_status"), "special_conditions": audit.get("special_conditions"),
-                  "contract_analysis": "Документы проанализированы" if audit.get("audit_status") == "analyzed" else "Требуется проверка документов",
+                  "contract_analysis": audit.get("contract_analysis") or "Анализ документов не завершён",
                   "requirements_count": len(audit_item.get("requirements") or []),
                   "customer_check": customer},
         "traceability": trace,
@@ -259,6 +260,9 @@ def build_payload(card: dict[str, Any], analysis: dict[str, Any],
                   "production_status": "Актуальная карточка на официальном сайте производителя; снятие с производства не указано",
                   "russia_availability": "Подтверждена карточкой российского Яндекс Маркета" if verified else "Не подтверждена"},
         "supplier_search": {"target_discount_percent": 15, "target_price": target,
+                            "ranked_offers": ranked,
+                            "price_run_id": prices.get('price_run_id'),
+                            "all_verified_offers": verified,
                             "confirmed_offers": priced_verified[:3],
                             "confirmed_count": len(priced_verified),
                             "exact_pages_confirmed_count": len(verified),
@@ -282,6 +286,7 @@ def build_payload(card: dict[str, Any], analysis: dict[str, Any],
             },
         },
     }
+    attach_business_decision(result, config=config)
     if contains_secrets(result):
         raise ValueError("Production payload содержит имя секретного поля")
     return result

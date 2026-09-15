@@ -1,0 +1,1705 @@
+{
+  "mode": "LIVE-проверка карточек; пример основной строки без записи результатов в Sheets",
+  "schema_audit": {
+    "worksheet": "🟢 Актуальные закупки",
+    "sheet_id": 955424503,
+    "columns_before": 80,
+    "columns_after": 80,
+    "moves": 6,
+    "insertions": 0,
+    "rows_preserved": 139,
+    "nonformula_cells_preserved": 9452,
+    "formulas_preserved": 1668,
+    "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1iMas8iLqWuAECZQ7mQOM-ZDJFWzO0kulevFlEwX9w2w#gid=955424503"
+  },
+  "procurement": {
+    "id": "bc152af1-ef03-4f39-a194-a01b798589e6",
+    "trade_number": "200909955126100205",
+    "url": "https://agregatoreat.ru/purchases/announcement/bc152af1-ef03-4f39-a194-a01b798589e6/info",
+    "subject": "Поставка МФУ лазерное Pantum M6607NW или эквивалент",
+    "nmck": 87390.0,
+    "deadline": null,
+    "delivery_address": null,
+    "delivery_period": null,
+    "delivery_working_days": null,
+    "payment_type": null,
+    "commission_fee": 2665.4,
+    "contact": {
+      "phone": null,
+      "email": null
+    }
+  },
+  "final_offers": [
+    {
+      "exact_product_name": "Pantum M6607NW МФУ лазерное",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": null,
+      "price": 24554.0,
+      "currency": "RUB",
+      "availability": "Под заказ",
+      "seller": "i-teh.com",
+      "url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+      "source": "i-teh.com",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:10.402132+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "i-teh.com",
+      "product_url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+      "public_price": 24554.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "maximum_acceptable_unit_price": 23158.056666666667,
+      "required_discount_percent": 5.6852,
+      "call_candidate": true,
+      "call_candidate_reason": "Для проходной цены нужна скидка 5.69% (не более 20%)",
+      "verification_checks": {
+        "whois_status": "available",
+        "domain_created_at": "2010-05-04T07:55:34Z",
+        "domain_age_days": 5979,
+        "domain_age_years": 16.37,
+        "registrar": [
+          [
+            "version",
+            {},
+            "text",
+            "4.0"
+          ],
+          [
+            "fn",
+            {},
+            "text",
+            "Regional Network Information Center, JSC dba RU-CENTER"
+          ]
+        ],
+        "expiration_date": "2027-05-04T07:55:34Z",
+        "source": "RDAP",
+        "wayback_status": "unavailable",
+        "error": "HTTPError",
+        "domain_source": "RDAP",
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+        "legal_source": [
+          "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/"
+        ],
+        "company": {
+          "inn": null,
+          "active": null
+        },
+        "requisites_consistent": null,
+        "current_seller_determined": false,
+        "company_registry_status": "unavailable"
+      },
+      "domain": "i-teh.com",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет"
+      ],
+      "unavailable_checks": [
+        "company_registry",
+        "wayback",
+        "Картотека арбитражных дел",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Не удалось автоматически проверить изменения руководства; Картотека арбитражных дел; wayback; company_registry",
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "cases_found": null,
+        "bankruptcy_cases_count": null,
+        "defendant_cases_count": null,
+        "recent_cases_count": null,
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "warnings": [
+          "Проверка связанных физических лиц по ИНН не выполнена"
+        ],
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+          "source": "i-teh.com",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 16.37 лет",
+          "source": "RDAP",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": [
+            "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/"
+          ],
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "arbitration_cases",
+          "status": "unavailable",
+          "evidence": [
+            "Проверка связанных физических лиц по ИНН не выполнена"
+          ],
+          "source": null,
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "i-teh.com",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        }
+      ],
+      "legal_pages": [
+        {
+          "url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/",
+          "requisites": {
+            "inn": [],
+            "ogrn": [],
+            "companies": [],
+            "emails": [
+              "iam@gavrish.guru"
+            ],
+            "phones": [
+              "+7 (495) 374-66-60 8 (",
+              "8 0 0 1 0 2",
+              "8 0 0 1 0 9",
+              "8 0 1 1 0-2",
+              "8 0 1 1 0-9",
+              "8 1 269 042",
+              "8 10 10 0 0 0-",
+              "8 28 0 0 0-1",
+              "8 8 0 0 1 20",
+              "800) 500-99-41"
+            ]
+          }
+        }
+      ],
+      "legal_page_errors": [
+        {
+          "url": "https://i-teh.com/contacts",
+          "error": "ConnectionError"
+        },
+        {
+          "url": "https://i-teh.com/requisites",
+          "error": "ConnectionError"
+        }
+      ],
+      "live_checks_performed": [
+        "Страницы продавца и реквизиты",
+        "RDAP/WHOIS",
+        "Wayback CDX"
+      ],
+      "live_checks_missing": [
+        "Статус юрлица в реестре",
+        "КАД",
+        "История тематики сайта",
+        "Получатель будущего счёта"
+      ],
+      "position_number": 1
+    },
+    {
+      "exact_product_name": "МФУ лазерный Pantum M6607NW",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": "305084",
+      "price": 25635.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "micro-line.ru",
+      "url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+      "source": "micro-line.ru",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:08.919407+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "micro-line.ru",
+      "product_url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+      "public_price": 25635.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "maximum_acceptable_unit_price": 23158.056666666667,
+      "required_discount_percent": 9.6623,
+      "call_candidate": true,
+      "call_candidate_reason": "Для проходной цены нужна скидка 9.66% (не более 20%)",
+      "verification_checks": {
+        "whois_status": "unavailable",
+        "error": "TimeoutError",
+        "rdap_error": "HTTPError",
+        "domain_created_at": null,
+        "domain_age_days": null,
+        "registrar": null,
+        "expiration_date": null,
+        "source": "RDAP + WHOIS fallback",
+        "wayback_status": "unavailable",
+        "domain_source": "RDAP + WHOIS fallback",
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+        "legal_source": [
+          "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+        ],
+        "company": {
+          "inn": null,
+          "active": null
+        },
+        "requisites_consistent": null,
+        "current_seller_determined": false,
+        "company_registry_status": "unavailable"
+      },
+      "domain": "micro-line.ru",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "company_registry",
+        "wayback",
+        "whois",
+        "Картотека арбитражных дел",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; Картотека арбитражных дел; whois; wayback; company_registry",
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "cases_found": null,
+        "bankruptcy_cases_count": null,
+        "defendant_cases_count": null,
+        "recent_cases_count": null,
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "warnings": [
+          "Проверка связанных физических лиц по ИНН не выполнена"
+        ],
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+          "source": "micro-line.ru",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": "RDAP + WHOIS fallback",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": [
+            "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+          ],
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "arbitration_cases",
+          "status": "unavailable",
+          "evidence": [
+            "Проверка связанных физических лиц по ИНН не выполнена"
+          ],
+          "source": null,
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "micro-line.ru",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        }
+      ],
+      "legal_pages": [
+        {
+          "url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+          "requisites": {
+            "inn": [],
+            "ogrn": [],
+            "companies": [],
+            "emails": [
+              "e-shop@micro-line.ru"
+            ],
+            "phones": [
+              "+7 (3652) 777-356",
+              "+7 (3652) 777-356 8 80",
+              "+7 (861) 205-14-81",
+              "+7 (863) 303-30-71",
+              "+7 (978) 090-77-86",
+              "+7 (978) 100-02-59",
+              "8 800 775-13-56",
+              "8 800 775-13-56 ("
+            ]
+          }
+        }
+      ],
+      "legal_page_errors": [
+        {
+          "url": "https://micro-line.ru/contacts",
+          "error": "ConnectionError"
+        },
+        {
+          "url": "https://micro-line.ru/requisites",
+          "error": "ConnectionError"
+        }
+      ],
+      "live_checks_performed": [
+        "Страницы продавца и реквизиты",
+        "RDAP/WHOIS",
+        "Wayback CDX"
+      ],
+      "live_checks_missing": [
+        "Статус юрлица в реестре",
+        "КАД",
+        "История тематики сайта",
+        "Получатель будущего счёта"
+      ],
+      "position_number": 1
+    }
+  ],
+  "antifraud_history": [
+    {
+      "exact_product_name": "Pantum M6607NW МФУ лазерное",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": null,
+      "price": 24554.0,
+      "currency": "RUB",
+      "availability": "Под заказ",
+      "seller": "i-teh.com",
+      "url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+      "source": "i-teh.com",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:10.402132+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "i-teh.com",
+      "product_url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+      "public_price": 24554.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "maximum_acceptable_unit_price": 23158.056666666667,
+      "required_discount_percent": 5.6852,
+      "call_candidate": true,
+      "call_candidate_reason": "Для проходной цены нужна скидка 5.69% (не более 20%)",
+      "verification_checks": {
+        "whois_status": "available",
+        "domain_created_at": "2010-05-04T07:55:34Z",
+        "domain_age_days": 5979,
+        "domain_age_years": 16.37,
+        "registrar": [
+          [
+            "version",
+            {},
+            "text",
+            "4.0"
+          ],
+          [
+            "fn",
+            {},
+            "text",
+            "Regional Network Information Center, JSC dba RU-CENTER"
+          ]
+        ],
+        "expiration_date": "2027-05-04T07:55:34Z",
+        "source": "RDAP",
+        "wayback_status": "unavailable",
+        "error": "HTTPError",
+        "domain_source": "RDAP",
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+        "legal_source": [
+          "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/"
+        ],
+        "company": {
+          "inn": null,
+          "active": null
+        },
+        "requisites_consistent": null,
+        "current_seller_determined": false,
+        "company_registry_status": "unavailable"
+      },
+      "domain": "i-teh.com",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет"
+      ],
+      "unavailable_checks": [
+        "company_registry",
+        "wayback",
+        "Картотека арбитражных дел",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Не удалось автоматически проверить изменения руководства; Картотека арбитражных дел; wayback; company_registry",
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "cases_found": null,
+        "bankruptcy_cases_count": null,
+        "defendant_cases_count": null,
+        "recent_cases_count": null,
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "warnings": [
+          "Проверка связанных физических лиц по ИНН не выполнена"
+        ],
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+          "source": "i-teh.com",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 16.37 лет",
+          "source": "RDAP",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": [
+            "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/"
+          ],
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "arbitration_cases",
+          "status": "unavailable",
+          "evidence": [
+            "Проверка связанных физических лиц по ИНН не выполнена"
+          ],
+          "source": null,
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "i-teh.com",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        }
+      ],
+      "legal_pages": [
+        {
+          "url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/",
+          "requisites": {
+            "inn": [],
+            "ogrn": [],
+            "companies": [],
+            "emails": [
+              "iam@gavrish.guru"
+            ],
+            "phones": [
+              "+7 (495) 374-66-60 8 (",
+              "8 0 0 1 0 2",
+              "8 0 0 1 0 9",
+              "8 0 1 1 0-2",
+              "8 0 1 1 0-9",
+              "8 1 269 042",
+              "8 10 10 0 0 0-",
+              "8 28 0 0 0-1",
+              "8 8 0 0 1 20",
+              "800) 500-99-41"
+            ]
+          }
+        }
+      ],
+      "legal_page_errors": [
+        {
+          "url": "https://i-teh.com/contacts",
+          "error": "ConnectionError"
+        },
+        {
+          "url": "https://i-teh.com/requisites",
+          "error": "ConnectionError"
+        }
+      ],
+      "live_checks_performed": [
+        "Страницы продавца и реквизиты",
+        "RDAP/WHOIS",
+        "Wayback CDX"
+      ],
+      "live_checks_missing": [
+        "Статус юрлица в реестре",
+        "КАД",
+        "История тематики сайта",
+        "Получатель будущего счёта"
+      ],
+      "position_number": 1
+    },
+    {
+      "exact_product_name": "МФУ лазерный Pantum M6607NW",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": "305084",
+      "price": 25635.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "micro-line.ru",
+      "url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+      "source": "micro-line.ru",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:08.919407+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "micro-line.ru",
+      "product_url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+      "public_price": 25635.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "maximum_acceptable_unit_price": 23158.056666666667,
+      "required_discount_percent": 9.6623,
+      "call_candidate": true,
+      "call_candidate_reason": "Для проходной цены нужна скидка 9.66% (не более 20%)",
+      "verification_checks": {
+        "whois_status": "unavailable",
+        "error": "TimeoutError",
+        "rdap_error": "HTTPError",
+        "domain_created_at": null,
+        "domain_age_days": null,
+        "registrar": null,
+        "expiration_date": null,
+        "source": "RDAP + WHOIS fallback",
+        "wayback_status": "unavailable",
+        "domain_source": "RDAP + WHOIS fallback",
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+        "legal_source": [
+          "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+        ],
+        "company": {
+          "inn": null,
+          "active": null
+        },
+        "requisites_consistent": null,
+        "current_seller_determined": false,
+        "company_registry_status": "unavailable"
+      },
+      "domain": "micro-line.ru",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "company_registry",
+        "wayback",
+        "whois",
+        "Картотека арбитражных дел",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; Картотека арбитражных дел; whois; wayback; company_registry",
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "cases_found": null,
+        "bankruptcy_cases_count": null,
+        "defendant_cases_count": null,
+        "recent_cases_count": null,
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "warnings": [
+          "Проверка связанных физических лиц по ИНН не выполнена"
+        ],
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+          "source": "micro-line.ru",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": "RDAP + WHOIS fallback",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": [
+            "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+          ],
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "arbitration_cases",
+          "status": "unavailable",
+          "evidence": [
+            "Проверка связанных физических лиц по ИНН не выполнена"
+          ],
+          "source": null,
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "micro-line.ru",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        }
+      ],
+      "legal_pages": [
+        {
+          "url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+          "requisites": {
+            "inn": [],
+            "ogrn": [],
+            "companies": [],
+            "emails": [
+              "e-shop@micro-line.ru"
+            ],
+            "phones": [
+              "+7 (3652) 777-356",
+              "+7 (3652) 777-356 8 80",
+              "+7 (861) 205-14-81",
+              "+7 (863) 303-30-71",
+              "+7 (978) 090-77-86",
+              "+7 (978) 100-02-59",
+              "8 800 775-13-56",
+              "8 800 775-13-56 ("
+            ]
+          }
+        }
+      ],
+      "legal_page_errors": [
+        {
+          "url": "https://micro-line.ru/contacts",
+          "error": "ConnectionError"
+        },
+        {
+          "url": "https://micro-line.ru/requisites",
+          "error": "ConnectionError"
+        }
+      ],
+      "live_checks_performed": [
+        "Страницы продавца и реквизиты",
+        "RDAP/WHOIS",
+        "Wayback CDX"
+      ],
+      "live_checks_missing": [
+        "Статус юрлица в реестре",
+        "КАД",
+        "История тематики сайта",
+        "Получатель будущего счёта"
+      ],
+      "position_number": 1
+    }
+  ],
+  "row": {
+    "Крайний срок подачи заявки": "",
+    "Номер закупки": "200909955126100205",
+    "Ссылка на закупку": "https://agregatoreat.ru/purchases/announcement/bc152af1-ef03-4f39-a194-a01b798589e6/info",
+    "Наименование закупки в извещении": "Поставка МФУ лазерное Pantum M6607NW или эквивалент",
+    "НМЦК, ₽": 87390.0,
+    "Текущий итог просчета и анализа": "Предварительные КП; обязательные расходы не подтверждены; Найдено только 2 актуальных подтверждённых предложения",
+    "Комиссия площадки, ₽": 2665.4,
+    "Место поставки": "",
+    "ВЫБРАННАЯ МОДЕЛЬ": "Pantum M6607NW",
+    "Название позиции (ТЗ)": "МФУ лазерное Pantum M6607NW или эквивалент\n",
+    "Срок поставки": "",
+    "Вид оплаты": "",
+    "Заказчик": "",
+    "ИНН заказчика": "",
+    "Контакты заказчика": "",
+    "№ позиции": 1,
+    "Код ОКПД2": "",
+    "Код ЕАТ": "",
+    "Количество": 3.0,
+    "Единица измерения": "",
+    "Цена заказчика за единицу, ₽": 29130.0,
+    "Сумма позиции, ₽": 87390.0,
+    "ОСОБЫЕ УСЛОВИЯ": "",
+    "ПРОСЛЕЖИВАЕМОСТЬ": "",
+    "Дополнительные расходы, ₽": "",
+    "Средняя цена закупа, ₽": "",
+    "Налоги, ₽": "",
+    "Все итоговые затраты, ₽": "",
+    "Расчётная цена подачи, ₽": "",
+    "Цена подачи, ₽": "",
+    "Чистая прибыль, ₽": "",
+    "Запас на снижение, ₽": "",
+    "Запас на снижение, %": "",
+    "Рентабельность, %": "",
+    "Маржа с закупки, ₽": "",
+    "Максимальная цена закупа, ₽": "",
+    "Поставщик КП 1": "i-teh.com",
+    "Цена КП 1": 24554.0,
+    "Рентабельность КП 1, %": "",
+    "Ссылка на товар КП 1": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+    "Ссылка на счёт КП 1": "",
+    "Проверка поставщика КП 1": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте",
+    "Поставщик КП 2": "micro-line.ru",
+    "Цена КП 2": 25635.0,
+    "Рентабельность КП 2, %": "",
+    "Ссылка на товар КП 2": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+    "Ссылка на счёт КП 2": "",
+    "Проверка поставщика КП 2": "🟡 РУЧНАЯ ПРОВЕРКА — не найден ИНН на сайте",
+    "Поставщик КП 3": "",
+    "Цена КП 3": "",
+    "Рентабельность КП 3, %": "",
+    "Ссылка на товар КП 3": "",
+    "Ссылка на счёт КП 3": "",
+    "Проверка поставщика КП 3": "",
+    "Цена КП 4": "",
+    "Рентабельность КП 4, %": "",
+    "Ссылка на товар КП 4": "",
+    "Ссылка на счёт КП 4": "",
+    "Качество просчёта": "",
+    "Статус закупки": "",
+    "КРАТКИЙ АНАЛИЗ ЗАКУПКИ": "Товарная закупка; документов обработано: 0; требований ТЗ: 0",
+    "РИСКИ": "ТРЕБУЕТСЯ ПОДТВЕРЖДЕНИЕ ЦЕНЫ И РАСХОДОВ",
+    "РЕЗУЛЬТАТ АНАЛИЗА КОНТРАКТА": "Требуется проверка документов",
+    "СТАТУС СООТВЕТСТВИЯ ТЗ": "Требуется подбор модели",
+    "КОММЕНТАРИЙ ПО СООТВЕТСТВИЮ": "Требуется подбор модели",
+    "РИСКИ ПОСТАВЩИКА №1": "На сайте не найден ИНН",
+    "РИСКИ ПОСТАВЩИКА №2": "На сайте не найден ИНН",
+    "РИСКИ ПОСТАВЩИКА №3": "На сайте не найден ИНН",
+    "МИНИМАЛЬНАЯ ПОДТВЕРЖДЁННАЯ ЦЕНА, ₽": 24554.0,
+    "ПОЗВОНИТЬ / ЗАПРОСИТЬ ЦЕНУ": "i-teh.com: https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe; www.nix.ru: https://nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html; micro-line.ru: https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html; www.kns.ru: https://kns.ru/product/mfu-pantum-m6607nw/characteristics",
+    "ПРЕДУПРЕЖДЕНИЯ": "ТРЕБУЕТСЯ ПОДТВЕРЖДЕНИЕ ЦЕНЫ И РАСХОДОВ",
+    "ЛОГИСТИКА (БУДУЩИЙ РАСЧЁТ)": "Не рассчитана",
+    "РЕЖИМ ПОИСКА МОДЕЛИ": "MODEL DISCOVERY",
+    "МОДЕЛЬ ЗАКАЗЧИКА": "Pantum M6607NW",
+    "ЭКВИВАЛЕНТ РАЗРЕШЁН": "Да",
+    "ПОЛНЫЕ АНАЛОГИ ПО ТЗ": "",
+    "НМЦК МИНУС КОМИССИЯ ЕАТ, ₽": 84724.6,
+    "ПРЕДВАРИТЕЛЬНЫЙ ЗАПАС МАРЖИ ДО ЛОГИСТИКИ, ₽": 11062.6,
+    "Источник закупки": "ЕАТ «Берёзка»",
+    "ID закупки": "bc152af1-ef03-4f39-a194-a01b798589e6"
+  },
+  "quote_formulas_row_2": {
+    "Рентабельность КП 1, %": "=IF(NOT(AND(CB2<>\"\";ISNUMBER(E2);ISNUMBER(G2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($AL$2:$AL$10000)))=COUNTIF($CB$2:$CB$10000;CB2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB2)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))*1,10;E2)/((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AL$2:$AL$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))-1))",
+    "Рентабельность КП 2, %": "=IF(NOT(AND(CB2<>\"\";ISNUMBER(E2);ISNUMBER(G2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($AR$2:$AR$10000)))=COUNTIF($CB$2:$CB$10000;CB2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB2)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))*1,10;E2)/((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AR$2:$AR$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))-1))",
+    "Рентабельность КП 3, %": "=IF(NOT(AND(CB2<>\"\";ISNUMBER(E2);ISNUMBER(G2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($AX$2:$AX$10000)))=COUNTIF($CB$2:$CB$10000;CB2);SUMPRODUCT(($CB$2:$CB$10000=CB2)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB2)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))*1,10;E2)/((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E2;((SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E2-(SUMPRODUCT(($CB$2:$CB$10000=CB2)*$S$2:$S$10000*$AX$2:$AX$10000)+G2+SUMIF($CB$2:$CB$10000;CB2;$Y$2:$Y$10000)))*0,15)))-1))"
+  },
+  "final_validation": {
+    "cards_reopened": 8,
+    "confirmed_cards": 8,
+    "errors": [],
+    "sources": [
+      {
+        "exact_product_name": "Pantum M6607NW МФУ лазерное",
+        "model": "Pantum M6607NW",
+        "exact_manufacturer_model": "M6607NW",
+        "exact_model_match": true,
+        "supplier_sku": null,
+        "price": 24554.0,
+        "currency": "RUB",
+        "availability": "Под заказ",
+        "seller": "i-teh.com",
+        "url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+        "source": "i-teh.com",
+        "http_status": 200,
+        "product_page_available": true,
+        "price_confirmed_on_product_page": true,
+        "discovered_by": null,
+        "checked_at": "2026-09-15T08:57:10.402132+00:00",
+        "price_run_id": "2026-09-15T08:52:20.194664+00:00"
+      },
+      {
+        "exact_product_name": "\r\n                                    Принтер с МФУ лазерный монохромный Pantum M6607NW",
+        "model": "Pantum M6607NW",
+        "exact_manufacturer_model": "M6607NW",
+        "exact_model_match": true,
+        "supplier_sku": null,
+        "price": 25267.0,
+        "currency": "RUB",
+        "availability": null,
+        "seller": "www.nix.ru",
+        "url": "https://nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html",
+        "source": "www.nix.ru",
+        "http_status": 200,
+        "product_page_available": true,
+        "price_confirmed_on_product_page": true,
+        "discovered_by": null,
+        "checked_at": "2026-09-15T08:57:09.114325+00:00",
+        "price_run_id": "2026-09-15T08:52:20.194664+00:00"
+      },
+      {
+        "exact_product_name": "МФУ лазерный Pantum M6607NW",
+        "model": "Pantum M6607NW",
+        "exact_manufacturer_model": "M6607NW",
+        "exact_model_match": true,
+        "supplier_sku": "305084",
+        "price": 25635.0,
+        "currency": "RUB",
+        "availability": "В наличии",
+        "seller": "micro-line.ru",
+        "url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+        "source": "micro-line.ru",
+        "http_status": 200,
+        "product_page_available": true,
+        "price_confirmed_on_product_page": true,
+        "discovered_by": null,
+        "checked_at": "2026-09-15T08:57:08.919407+00:00",
+        "price_run_id": "2026-09-15T08:52:20.194664+00:00"
+      },
+      {
+        "exact_product_name": "Характеристики МФУ Pantum M6607NW",
+        "model": "Pantum M6607NW",
+        "exact_manufacturer_model": "M6607NW",
+        "exact_model_match": true,
+        "supplier_sku": null,
+        "price": 28277.0,
+        "currency": "RUB",
+        "availability": null,
+        "seller": "www.kns.ru",
+        "url": "https://kns.ru/product/mfu-pantum-m6607nw/characteristics",
+        "source": "www.kns.ru",
+        "http_status": 200,
+        "product_page_available": true,
+        "price_confirmed_on_product_page": true,
+        "discovered_by": null,
+        "checked_at": "2026-09-15T08:57:09.914901+00:00",
+        "price_run_id": "2026-09-15T08:52:20.194664+00:00"
+      },
+      {
+        "exact_product_name": "\n                    МФУ  Pantum M6607NW                ",
+        "model": "Pantum M6607NW",
+        "exact_manufacturer_model": "M6607NW",
+        "exact_model_match": true,
+        "supplier_sku": "108-240324",
+        "price": 29700.0,
+        "currency": "RUB",
+        "availability": "Под заказ",
+        "seller": "www.foroffice.ru",
+        "url": "https://foroffice.ru/products/description/169964.html",
+        "source": "www.foroffice.ru",
+        "http_status": 200,
+        "product_page_available": true,
+        "price_confirmed_on_product_page": true,
+        "discovered_by": null,
+        "checked_at": "2026-09-15T08:57:11.563981+00:00",
+        "price_run_id": "2026-09-15T08:52:20.194664+00:00"
+      },
+      {
+        "exact_product_name": "МФУ Pantum M6607NW",
+        "model": "Pantum M6607NW",
+        "exact_manufacturer_model": "M6607NW",
+        "exact_model_match": true,
+        "supplier_sku": "212107",
+        "price": 29700.0,
+        "currency": "RUB",
+        "availability": "В наличии",
+        "seller": "www.regard.ru",
+        "url": "https://regard.ru/product/212107/mfu-pantum-m6607nw",
+        "source": "www.regard.ru",
+        "http_status": 200,
+        "product_page_available": true,
+        "price_confirmed_on_product_page": true,
+        "discovered_by": null,
+        "checked_at": "2026-09-15T08:57:10.936911+00:00",
+        "price_run_id": "2026-09-15T08:52:20.194664+00:00"
+      },
+      {
+        "exact_product_name": "МФУ лазерное Pantum M6607NW черно-белая печать, A4, черныйМФУ лазерное Pantum M6607NW черно-белая печать, A4, черныйМФУ лазерное Pantum M6607NW черно-белая печать, A4, черный",
+        "model": "Pantum M6607NW",
+        "exact_manufacturer_model": "M6607NW",
+        "exact_model_match": true,
+        "supplier_sku": "1152245",
+        "price": 30190.0,
+        "currency": "RUB",
+        "availability": "В наличии",
+        "seller": "www.citilink.ru",
+        "url": "https://citilink.ru/product/mfu-lazernyi-pantum-m6607nw-cherno-belaya-pechat-a4-cvet-chernyi-1152245/properties",
+        "source": "www.citilink.ru",
+        "http_status": 200,
+        "product_page_available": true,
+        "price_confirmed_on_product_page": true,
+        "discovered_by": null,
+        "checked_at": "2026-09-15T08:57:11.705894+00:00",
+        "price_run_id": "2026-09-15T08:52:20.194664+00:00"
+      },
+      {
+        "exact_product_name": "МФУ Pantum M6607NW",
+        "model": "Pantum M6607NW",
+        "exact_manufacturer_model": "M6607NW",
+        "exact_model_match": true,
+        "supplier_sku": null,
+        "price": 30840.0,
+        "currency": "RUB",
+        "availability": "Под заказ",
+        "seller": "ink-market.ru",
+        "url": "https://ink-market.ru/product/mfu-pantum-m6607nw-lazernoe-monohromnoe-a4-kopirprinterskaner-22-strmin-1200-x-1200-dpi-256mb-ram-lotok-150-str-usblanwifi-chernyy-korpus-s-avtopodatchikom",
+        "source": "ink-market.ru",
+        "http_status": 200,
+        "product_page_available": true,
+        "price_confirmed_on_product_page": true,
+        "discovered_by": null,
+        "checked_at": "2026-09-15T08:57:11.325813+00:00",
+        "price_run_id": "2026-09-15T08:52:20.194664+00:00"
+      }
+    ]
+  },
+  "rejected_candidates": [
+    {
+      "exact_product_name": "\r\n                                    Принтер с МФУ лазерный монохромный Pantum M6607NW",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": null,
+      "price": 25267.0,
+      "currency": "RUB",
+      "availability": null,
+      "seller": "www.nix.ru",
+      "url": "https://nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html",
+      "source": "www.nix.ru",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:09.114325+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "www.nix.ru",
+      "product_url": "https://nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html",
+      "public_price": 25267.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "final_offer_exclusion_reason": "Наличие не подтверждено; найдены три более надёжные актуальные карточки"
+    },
+    {
+      "exact_product_name": "Характеристики МФУ Pantum M6607NW",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": null,
+      "price": 28277.0,
+      "currency": "RUB",
+      "availability": null,
+      "seller": "www.kns.ru",
+      "url": "https://kns.ru/product/mfu-pantum-m6607nw/characteristics",
+      "source": "www.kns.ru",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:09.914901+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "www.kns.ru",
+      "product_url": "https://kns.ru/product/mfu-pantum-m6607nw/characteristics",
+      "public_price": 28277.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "final_offer_exclusion_reason": "Наличие не подтверждено; найдены три более надёжные актуальные карточки"
+    }
+  ],
+  "original_antifraud_history": [
+    {
+      "exact_product_name": "Pantum M6607NW МФУ лазерное",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": null,
+      "price": 24554.0,
+      "currency": "RUB",
+      "availability": "Под заказ",
+      "seller": "i-teh.com",
+      "url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+      "source": "i-teh.com",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:10.402132+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "i-teh.com",
+      "product_url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe",
+      "public_price": 24554.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "maximum_acceptable_unit_price": 23158.056666666667,
+      "required_discount_percent": 5.6852,
+      "call_candidate": true,
+      "call_candidate_reason": "Для проходной цены нужна скидка 5.69% (не более 20%)",
+      "verification_checks": {
+        "whois_status": "available",
+        "domain_created_at": "2010-05-04T07:55:34Z",
+        "domain_age_days": 5979,
+        "domain_age_years": 16.37,
+        "registrar": [
+          [
+            "version",
+            {},
+            "text",
+            "4.0"
+          ],
+          [
+            "fn",
+            {},
+            "text",
+            "Regional Network Information Center, JSC dba RU-CENTER"
+          ]
+        ],
+        "expiration_date": "2027-05-04T07:55:34Z",
+        "source": "RDAP",
+        "wayback_status": "unavailable",
+        "error": "HTTPError",
+        "domain_source": "RDAP",
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+        "legal_source": [
+          "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/"
+        ],
+        "company": {
+          "inn": null,
+          "active": null
+        },
+        "requisites_consistent": null,
+        "current_seller_determined": false,
+        "company_registry_status": "unavailable"
+      },
+      "domain": "i-teh.com",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами",
+        "Домен старше 3 лет"
+      ],
+      "unavailable_checks": [
+        "company_registry",
+        "wayback",
+        "Картотека арбитражных дел",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; Домен старше 3 лет; Не удалось автоматически проверить изменения руководства; Картотека арбитражных дел; wayback; company_registry",
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "cases_found": null,
+        "bankruptcy_cases_count": null,
+        "defendant_cases_count": null,
+        "recent_cases_count": null,
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "warnings": [
+          "Проверка связанных физических лиц по ИНН не выполнена"
+        ],
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+          "source": "i-teh.com",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "confirmed_positive",
+          "evidence": "Возраст домена: 16.37 лет",
+          "source": "RDAP",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": [
+            "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/"
+          ],
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "arbitration_cases",
+          "status": "unavailable",
+          "evidence": [
+            "Проверка связанных физических лиц по ИНН не выполнена"
+          ],
+          "source": null,
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "i-teh.com",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-15T08:55:18.402104+00:00"
+        }
+      ],
+      "legal_pages": [
+        {
+          "url": "https://i-teh.com/catalog/lazernye_mfu/pantum_m6607nw_mfu_lazernoe/",
+          "requisites": {
+            "inn": [],
+            "ogrn": [],
+            "companies": [],
+            "emails": [
+              "iam@gavrish.guru"
+            ],
+            "phones": [
+              "+7 (495) 374-66-60 8 (",
+              "8 0 0 1 0 2",
+              "8 0 0 1 0 9",
+              "8 0 1 1 0-2",
+              "8 0 1 1 0-9",
+              "8 1 269 042",
+              "8 10 10 0 0 0-",
+              "8 28 0 0 0-1",
+              "8 8 0 0 1 20",
+              "800) 500-99-41"
+            ]
+          }
+        }
+      ],
+      "legal_page_errors": [
+        {
+          "url": "https://i-teh.com/contacts",
+          "error": "ConnectionError"
+        },
+        {
+          "url": "https://i-teh.com/requisites",
+          "error": "ConnectionError"
+        }
+      ],
+      "live_checks_performed": [
+        "Страницы продавца и реквизиты",
+        "RDAP/WHOIS",
+        "Wayback CDX"
+      ],
+      "live_checks_missing": [
+        "Статус юрлица в реестре",
+        "КАД",
+        "История тематики сайта",
+        "Получатель будущего счёта"
+      ],
+      "position_number": 1
+    },
+    {
+      "exact_product_name": "МФУ лазерный Pantum M6607NW",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": "305084",
+      "price": 25635.0,
+      "currency": "RUB",
+      "availability": "В наличии",
+      "seller": "micro-line.ru",
+      "url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+      "source": "micro-line.ru",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:08.919407+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "micro-line.ru",
+      "product_url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+      "public_price": 25635.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "maximum_acceptable_unit_price": 23158.056666666667,
+      "required_discount_percent": 9.6623,
+      "call_candidate": true,
+      "call_candidate_reason": "Для проходной цены нужна скидка 9.66% (не более 20%)",
+      "verification_checks": {
+        "whois_status": "unavailable",
+        "error": "TimeoutError",
+        "rdap_error": "HTTPError",
+        "domain_created_at": null,
+        "domain_age_days": null,
+        "registrar": null,
+        "expiration_date": null,
+        "source": "RDAP + WHOIS fallback",
+        "wayback_status": "unavailable",
+        "domain_source": "RDAP + WHOIS fallback",
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+        "legal_source": [
+          "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+        ],
+        "company": {
+          "inn": null,
+          "active": null
+        },
+        "requisites_consistent": null,
+        "current_seller_determined": false,
+        "company_registry_status": "unavailable"
+      },
+      "domain": "micro-line.ru",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "company_registry",
+        "wayback",
+        "whois",
+        "Картотека арбитражных дел",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; Картотека арбитражных дел; whois; wayback; company_registry",
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "cases_found": null,
+        "bankruptcy_cases_count": null,
+        "defendant_cases_count": null,
+        "recent_cases_count": null,
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "warnings": [
+          "Проверка связанных физических лиц по ИНН не выполнена"
+        ],
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+          "source": "micro-line.ru",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": "RDAP + WHOIS fallback",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": [
+            "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html"
+          ],
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "arbitration_cases",
+          "status": "unavailable",
+          "evidence": [
+            "Проверка связанных физических лиц по ИНН не выполнена"
+          ],
+          "source": null,
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "micro-line.ru",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-15T08:55:53.473801+00:00"
+        }
+      ],
+      "legal_pages": [
+        {
+          "url": "https://micro-line.ru/mfu-lazernyy-pantum-m6607nw.html",
+          "requisites": {
+            "inn": [],
+            "ogrn": [],
+            "companies": [],
+            "emails": [
+              "e-shop@micro-line.ru"
+            ],
+            "phones": [
+              "+7 (3652) 777-356",
+              "+7 (3652) 777-356 8 80",
+              "+7 (861) 205-14-81",
+              "+7 (863) 303-30-71",
+              "+7 (978) 090-77-86",
+              "+7 (978) 100-02-59",
+              "8 800 775-13-56",
+              "8 800 775-13-56 ("
+            ]
+          }
+        }
+      ],
+      "legal_page_errors": [
+        {
+          "url": "https://micro-line.ru/contacts",
+          "error": "ConnectionError"
+        },
+        {
+          "url": "https://micro-line.ru/requisites",
+          "error": "ConnectionError"
+        }
+      ],
+      "live_checks_performed": [
+        "Страницы продавца и реквизиты",
+        "RDAP/WHOIS",
+        "Wayback CDX"
+      ],
+      "live_checks_missing": [
+        "Статус юрлица в реестре",
+        "КАД",
+        "История тематики сайта",
+        "Получатель будущего счёта"
+      ],
+      "position_number": 1
+    },
+    {
+      "exact_product_name": "\r\n                                    Принтер с МФУ лазерный монохромный Pantum M6607NW",
+      "model": "Pantum M6607NW",
+      "exact_manufacturer_model": "M6607NW",
+      "exact_model_match": true,
+      "supplier_sku": null,
+      "price": 25267.0,
+      "currency": "RUB",
+      "availability": null,
+      "seller": "www.nix.ru",
+      "url": "https://nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html",
+      "source": "www.nix.ru",
+      "http_status": 200,
+      "product_page_available": true,
+      "price_confirmed_on_product_page": true,
+      "discovered_by": null,
+      "checked_at": "2026-09-15T08:57:09.114325+00:00",
+      "price_run_id": "2026-09-15T08:52:20.194664+00:00",
+      "supplier_name": "www.nix.ru",
+      "product_url": "https://nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html",
+      "public_price": 25267.0,
+      "purchase_price": null,
+      "exact_model": true,
+      "maximum_acceptable_unit_price": 23158.056666666667,
+      "required_discount_percent": 8.3466,
+      "call_candidate": true,
+      "call_candidate_reason": "Для проходной цены нужна скидка 8.35% (не более 20%)",
+      "verification_checks": {
+        "whois_status": "unavailable",
+        "error": "TimeoutError",
+        "rdap_error": "HTTPError",
+        "domain_created_at": null,
+        "domain_age_days": null,
+        "registrar": null,
+        "expiration_date": null,
+        "source": "RDAP + WHOIS fallback",
+        "wayback_status": "unavailable",
+        "domain_source": "RDAP + WHOIS fallback",
+        "commercial_site_confirmed": true,
+        "commercial_site_evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+        "legal_source": [
+          "https://www.nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html"
+        ],
+        "company": {
+          "inn": null,
+          "active": null
+        },
+        "requisites_consistent": null,
+        "current_seller_determined": false,
+        "company_registry_status": "unavailable"
+      },
+      "domain": "nix.ru",
+      "risk_flags": [
+        "На сайте не найден ИНН"
+      ],
+      "positive_signals": [
+        "Подтверждён действующий профильный сайт с карточкой товара и контактами"
+      ],
+      "unavailable_checks": [
+        "WHOIS/RDAP",
+        "company_registry",
+        "wayback",
+        "whois",
+        "Картотека арбитражных дел",
+        "Не удалось автоматически проверить изменения руководства"
+      ],
+      "verification_status": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+      "verification_comment": "На сайте не найден ИНН; Подтверждён действующий профильный сайт с карточкой товара и контактами; WHOIS/RDAP; Не удалось автоматически проверить изменения руководства; Картотека арбитражных дел; whois; wayback; company_registry",
+      "arbitration_cases": {
+        "checked_in_kad": false,
+        "cases_found": null,
+        "bankruptcy_cases_count": null,
+        "defendant_cases_count": null,
+        "recent_cases_count": null,
+        "user_summary": "Арбитражные дела: требуется ручная проверка",
+        "warnings": [
+          "Проверка связанных физических лиц по ИНН не выполнена"
+        ],
+        "risk_level": "unknown"
+      },
+      "arbitration_cases_display": "Арбитражные дела: требуется ручная проверка",
+      "verification_evidence": [
+        {
+          "check_name": "commercial_site",
+          "status": "confirmed_positive",
+          "evidence": "Прочитана карточка точной модели; публичная цена подтверждена",
+          "source": "nix.ru",
+          "checked_at": "2026-09-15T08:56:27.551851+00:00"
+        },
+        {
+          "check_name": "domain_age",
+          "status": "unavailable",
+          "evidence": "Возраст домена не подтверждён",
+          "source": "RDAP + WHOIS fallback",
+          "checked_at": "2026-09-15T08:56:27.551851+00:00"
+        },
+        {
+          "check_name": "legal_entity",
+          "status": "warning",
+          "evidence": "ИНН на исследованных страницах не найден",
+          "source": [
+            "https://www.nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html"
+          ],
+          "checked_at": "2026-09-15T08:56:27.551851+00:00"
+        },
+        {
+          "check_name": "director_changes",
+          "status": "unavailable",
+          "evidence": "Дата последних изменений руководства неизвестна",
+          "source": null,
+          "checked_at": "2026-09-15T08:56:27.551851+00:00"
+        },
+        {
+          "check_name": "arbitration_cases",
+          "status": "unavailable",
+          "evidence": [
+            "Проверка связанных физических лиц по ИНН не выполнена"
+          ],
+          "source": null,
+          "checked_at": "2026-09-15T08:56:27.551851+00:00"
+        },
+        {
+          "check_name": "cms",
+          "status": "inconclusive",
+          "evidence": "CMS не определена",
+          "source": "nix.ru",
+          "checked_at": "2026-09-15T08:56:27.551851+00:00"
+        },
+        {
+          "check_name": "ip",
+          "status": "unavailable",
+          "evidence": {
+            "addresses": null,
+            "reverse_dns": null,
+            "sites_on_same_ip": null
+          },
+          "source": "DNS",
+          "checked_at": "2026-09-15T08:56:27.551851+00:00"
+        }
+      ],
+      "legal_pages": [
+        {
+          "url": "https://www.nix.ru/autocatalog/printers_mfu_pantum/Pantum-M6607NW-A4-22str-min-256Mb-LCD-lazernoe-MFU-faks-USB20-setevoj-WiFi-ADF_436296.html",
+          "requisites": {
+            "inn": [],
+            "ogrn": [],
+            "companies": [],
+            "emails": [],
+            "phones": [
+              "+7 (495) 974-3333",
+              "+74950090405",
+              "+74951570020",
+              "+78622592772",
+              "+78624440802",
+              "+79000016515",
+              "+79011010970",
+              "+79011033205",
+              "+79024047723",
+              "+79049550738"
+            ]
+          }
+        }
+      ],
+      "legal_page_errors": [
+        {
+          "url": "https://nix.ru/contacts",
+          "error": "ConnectionError"
+        },
+        {
+          "url": "https://nix.ru/requisites",
+          "error": "ConnectionError"
+        }
+      ],
+      "live_checks_performed": [
+        "Страницы продавца и реквизиты",
+        "RDAP/WHOIS",
+        "Wayback CDX"
+      ],
+      "live_checks_missing": [
+        "Статус юрлица в реестре",
+        "КАД",
+        "История тематики сайта",
+        "Получатель будущего счёта"
+      ],
+      "position_number": 1
+    }
+  ],
+  "final_economics": {
+    "status": "needs_lower_price",
+    "passes": false,
+    "supplier_verification_required": false,
+    "reserve_percent_required": 18.0,
+    "purchase_cost_multiplier": 0.82,
+    "commission_rate": 0.030500057214784302,
+    "commission": 2665.4,
+    "available_revenue_after_commission": 84724.6,
+    "maximum_purchase_cost": 69474.17,
+    "minimum_purchase_cost": 73662.0,
+    "preliminary_reserve_rub": 11062.6,
+    "preliminary_reserve_percent": 13.06,
+    "basket": [
+      {
+        "position_number": 1,
+        "quantity": 3.0,
+        "supplier_name": "i-teh.com",
+        "unit_price": 24554.0,
+        "total_cost": 73662.0
+      }
+    ],
+    "missing_data": [],
+    "reason": null
+  }
+}

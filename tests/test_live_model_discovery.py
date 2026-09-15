@@ -72,7 +72,7 @@ class LiveDiscoveryTests(unittest.TestCase):
 class BatchModelTests(unittest.TestCase):
     def fixture(self):
         return {"purchase_id":"p","raw":{"id":"p","tradeNumber":"1","subject":"Кондиционер","price":200000,
-          "lotItems":[{"name":"Кондиционер","description":"Мощность: 2.8 кВт","quantity":1,"unitPrice":200000}],"deliveryInfos":[]},"documents":[]}
+          "lotItems":[{"name":"Кондиционер","description":"","structured_requirements":REQ,"quantity":1,"unitPrice":200000}],"deliveryInfos":[]},"documents":[]}
     def paths(self,d):
         r=Path(d); return {"checkpoint_path":r/"c.json","output_dir":r/"runs","summary_path":r/"s.md","log_path":r/"l.log"}
     @patch("pipeline.batch_orchestrator.discover_models")

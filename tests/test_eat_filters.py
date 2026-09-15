@@ -162,6 +162,62 @@ class EatFiltersTest(unittest.TestCase):
         self.assertEqual(result["filter_result"], "passed")
         self.assertEqual(result["special_conditions"], "СУБСИДИИ")
 
+    def test_startup_adjustment_works_are_rejected(self):
+        name = "Пуско-наладочные работы пресса листогибочного"
+        result = filter_purchase_v2(
+            self.purchase(subject=name, lotItems=[{"name": name, "description": name}]),
+            "Закупка по Закону №44-ФЗ",
+            self.config,
+        )
+        self.assertEqual(result["filter_result"], "rejected")
+        self.assertEqual(result["procurement_kind"], "works")
+        self.assertIn("procurement_kind_works", result["rejection_reasons"])
+
+    def test_testing_is_rejected_as_a_service(self):
+        name = "Тестирование электронной подписи"
+        result = filter_purchase_v2(
+            self.purchase(subject=name, lotItems=[{"name": name, "description": name}]),
+            "Закупка по Закону №44-ФЗ",
+            self.config,
+        )
+        self.assertEqual(result["filter_result"], "rejected")
+        self.assertEqual(result["procurement_kind"], "services")
+        self.assertIn("procurement_kind_services", result["rejection_reasons"])
+        self.assertIn("тестирование", result["matched_bad_words"])
+
+    def test_repair_remains_a_negative_word(self):
+        self.assertIn("ремонт", self.config["bad_words"])
+        self.assertIn("ремонт", self.config["contextual_exclusions"])
+
+    def test_medical_preparations_and_anesthetics_are_hard_exclusions(self):
+        name = (
+            "ПРЕПАРАТЫ ДЛЯ ЛЕЧЕНИЯ ЗАБОЛЕВАНИЙ КОЖИ ПРОЧИЕ, "
+            "РАСТВОРЫ ПЛАЗМОЗАМЕЩАЮЩИЕ И ПЕРФУЗИОННЫЕ, "
+            "ДОБАВКИ МИНЕРАЛЬНЫЕ, АНЕСТЕТИКИ"
+        )
+        result = filter_purchase_v2(
+            self.purchase(subject=name, lotItems=[{"name": name, "description": name}]),
+            "Закупка по Закону №44-ФЗ",
+            self.config,
+        )
+        self.assertEqual(result["filter_result"], "rejected")
+        self.assertIn("hard_exclusion: препараты", result["rejection_reasons"])
+        self.assertIn("hard_exclusion: анестетики", result["rejection_reasons"])
+        self.assertEqual(
+            {m["hard_exclusion"] for m in result["hard_exclusion_matches"]},
+            {"препараты", "анестетики"},
+        )
+
+    def test_work_word_in_product_purpose_is_not_broadly_blocked(self):
+        name = "Набор для ремонтных работ экскаватора"
+        result = filter_purchase_v2(
+            self.purchase(subject=f"Поставка {name}", lotItems=[{"name": name, "description": name}]),
+            "Закупка по Закону №44-ФЗ",
+            self.config,
+        )
+        self.assertEqual(result["filter_result"], "passed")
+        self.assertEqual(result["procurement_kind"], "goods")
+
 
 if __name__ == "__main__":
     unittest.main()

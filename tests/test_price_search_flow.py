@@ -58,9 +58,10 @@ class PriceSearchFlowTests(unittest.TestCase):
         prices={'offers':[offer('two',200),offer('one',100)],
                 'candidate_discovery':{'candidate_count':5}}
         position={'procurement_id':'p','item_number':1,'item_name':'x','quantity':2,
-                  'customer_unit_price':500,'exact_model':'X-1','model_source':'test'}
+                  'customer_unit_price':500,'exact_model':'X-1','model_source':'test',
+                  'commission_fee': 25}
         result=build_price_search_result(position,prices,
-            verifier=lambda row:{**row,'verification_status':PASSED},commission_rate=.03)
+            verifier=lambda row:{**row,'verification_status':PASSED},eat_commission=25)
         self.assertEqual(result['offer_1']['price'],100)
         self.assertEqual(result['actual_prices_confirmed'],2)
         self.assertEqual(result['unique_suppliers_with_confirmed_price'],2)
@@ -69,7 +70,7 @@ class PriceSearchFlowTests(unittest.TestCase):
 
     def test_less_than_three_does_not_fail(self):
         prices={'offers':[offer('one',100)]}
-        result=build_price_search_result({'quantity':1,'customer_unit_price':500},prices,
+        result=build_price_search_result({'quantity':1,'customer_unit_price':500,'commission_fee': 25},prices,
             verifier=lambda row:{**row,'verification_status':PASSED})
         self.assertEqual(result['status'],'ONLY_ONE_VALID_OFFER')
         self.assertIsNone(result['offer_2'])

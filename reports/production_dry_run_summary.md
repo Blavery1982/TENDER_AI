@@ -1,18 +1,92 @@
 # Production dry-run
 
-- Закупок: 2
-- Позиций: 3
-- Документов: 4; обработано: 4; OCR: 2; mixed: 0; failed: 0
-- Позиций с requirements: 3
-- Завершено закупок: 2
+- Закупок: 75
+- Позиций: 266
+- Документов: 137; обработано: 127; OCR: 24; mixed: 0; failed: 5
+- Позиций с requirements: 144
+- Завершено закупок: 72
 - Частично: 0
+- Остановлено для ручной обработки: 3
 - Ошибок закупок: 0
-- Пропущено при resume: 2
+- Пропущено при resume: 0
 - Live ЕАТ: не запускался
-- Live model search: ограниченный контрольный запуск
+- Live model search: не запускался
 - Live supplier search: не запускался
 - Google Sheets: запись не выполнялась
 
 ## По закупкам
-- 100205573126100053: документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
-- 100250237126100180: документов 2, обработано 2, OCR 2, failed 0, audit analyzed, позиций 2, requirements 2, warnings 1
+- 100248699126100196: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 9, requirements 9, warnings 0
+- 100316493126100091: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 0
+- 100869709126100179: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 200909955126100205: статус completed, документов 3, обработано 3, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 0
+- 200909446126100052: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 200908050126100191: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 1
+- 100040732126100133: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 1, requirements 1, warnings 1
+- 200909576126100263: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 0
+- 100292002126100389: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 100920003126100164: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 3, requirements 3, warnings 0
+- 100243602126100525: статус completed, документов 1, обработано 1, OCR 1, failed 0, audit analyzed, позиций 1, requirements 0, warnings 1
+- 200909788126100036: статус completed, документов 0, обработано 0, OCR 0, failed 0, audit no_documents, позиций 1, requirements 1, warnings 0
+- 200909868126100189: статус completed, документов 0, обработано 0, OCR 0, failed 0, audit no_documents, позиций 4, requirements 0, warnings 1
+- 100205573126100053: статус blocked, документов 2, обработано 0, OCR 0, failed 0, audit Нет данных, позиций 0, requirements 0, warnings 0, комментарий: работа с закупкой НЕ автоматизирована - изза НЕЧИТАЕМОСТИ ФАЙЛОВ PDF в закупке - просчет делать в ручную!
+- 100250237126100180: статус blocked, документов 2, обработано 0, OCR 0, failed 0, audit Нет данных, позиций 0, requirements 0, warnings 0, комментарий: работа с закупкой НЕ автоматизирована - изза НЕЧИТАЕМОСТИ ФАЙЛОВ PDF в закупке - просчет делать в ручную!
+- 200908118126100065: статус blocked, документов 1, обработано 0, OCR 0, failed 0, audit Нет данных, позиций 0, requirements 0, warnings 0, комментарий: работа с закупкой НЕ автоматизирована - изза НЕЧИТАЕМОСТИ ФАЙЛОВ PDF в закупке - просчет делать в ручную!
+- 100194346126100180: статус completed, документов 3, обработано 3, OCR 2, failed 0, audit analyzed, позиций 8, requirements 1, warnings 2
+- 100050204126100369: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 8, requirements 0, warnings 2
+- 100110512126100688: статус completed, документов 3, обработано 3, OCR 1, failed 0, audit analyzed, позиций 10, requirements 1, warnings 2
+- 100315534126100159: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 1, requirements 1, warnings 1
+- 200909576126100264: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 6, requirements 0, warnings 1
+- 100134675126100096: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 9, requirements 0, warnings 2
+- 100285984126100084: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 6, requirements 0, warnings 1
+- 200906366126100213: статус completed, документов 3, обработано 2, OCR 0, failed 1, audit partial, позиций 2, requirements 0, warnings 1
+- 200909259126100642: статус completed, документов 1, обработано 1, OCR 1, failed 0, audit analyzed, позиций 1, requirements 1, warnings 1
+- 200909907126100137: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 200909074126100359: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 9, requirements 0, warnings 1
+- 200908944126100428: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 1, requirements 0, warnings 2
+- 100154450126100249: статус completed, документов 4, обработано 4, OCR 1, failed 0, audit analyzed, позиций 2, requirements 1, warnings 2
+- 200909009126100600: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 9, requirements 0, warnings 1
+- 100302815126100080: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 11, requirements 0, warnings 1
+- 100181410126100135: статус completed, документов 3, обработано 1, OCR 0, failed 2, audit partial, позиций 1, requirements 1, warnings 0
+- 200909696126100587: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 1
+- 200910252126100037: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 1
+- 200909601126100137: статус completed, документов 5, обработано 4, OCR 0, failed 1, audit partial, позиций 1, requirements 1, warnings 0
+- 100151893126100168: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 3, requirements 2, warnings 2
+- 200909993126100032: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 1
+- 100287418126100218: статус completed, документов 3, обработано 3, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 200909009126100606: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 4, requirements 0, warnings 1
+- 100032348126100109: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 100032348126100110: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 2, requirements 2, warnings 0
+- 100110512126100716: статус completed, документов 3, обработано 3, OCR 1, failed 0, audit analyzed, позиций 5, requirements 0, warnings 2
+- 200909143126100577: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 8, requirements 0, warnings 1
+- 200908852126100264: статус completed, документов 0, обработано 0, OCR 0, failed 0, audit no_documents, позиций 8, requirements 0, warnings 1
+- 100288731126100261: статус completed, документов 2, обработано 2, OCR 2, failed 0, audit analyzed, позиций 1, requirements 0, warnings 1
+- 100277372126100155: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 0
+- 200909083126100184: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 0
+- 100099468126100096: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 1, requirements 0, warnings 1
+- 200909074126100357: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 200909681126100018: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 2, requirements 0, warnings 2
+- 200909087126100613: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 6, requirements 6, warnings 0
+- 200909074126100367: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 200911029126100073: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 200909761126100059: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 15, requirements 15, warnings 0
+- 100919663126100058: статус completed, документов 3, обработано 2, OCR 0, failed 1, audit partial, позиций 3, requirements 3, warnings 0
+- 200909634126100250: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 6, requirements 6, warnings 1
+- 100006214126100117: статус completed, документов 1, обработано 1, OCR 1, failed 0, audit analyzed, позиций 4, requirements 4, warnings 1
+- 200908967126100136: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 3, requirements 3, warnings 0
+- 100890466126100061: статус completed, документов 2, обработано 2, OCR 2, failed 0, audit analyzed, позиций 2, requirements 2, warnings 1
+- 100427301126100020: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 8, requirements 8, warnings 0
+- 100110512126100730: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 5, requirements 5, warnings 0
+- 100090625126100298: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 100250237126100196: статус completed, документов 2, обработано 2, OCR 2, failed 0, audit analyzed, позиций 13, requirements 13, warnings 1
+- 100032348126100115: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 200909104126100192: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 12, requirements 12, warnings 0
+- 100225637126100127: статус completed, документов 3, обработано 3, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 100100723126100063: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 100146134126100281: статус completed, документов 3, обработано 3, OCR 0, failed 0, audit analyzed, позиций 7, requirements 7, warnings 0
+- 100062152126100144: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 1, requirements 1, warnings 1
+- 100144574126100008: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 4, requirements 4, warnings 0
+- 100062152126100145: статус completed, документов 2, обработано 2, OCR 1, failed 0, audit analyzed, позиций 1, requirements 1, warnings 1
+- 100096067126100079: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 1, requirements 1, warnings 0
+- 100023094126100052: статус completed, документов 1, обработано 1, OCR 0, failed 0, audit analyzed, позиций 8, requirements 8, warnings 0
+- 100297409126100004: статус completed, документов 3, обработано 3, OCR 0, failed 0, audit analyzed, позиций 3, requirements 3, warnings 0
+- 100427301126100019: статус completed, документов 2, обработано 2, OCR 0, failed 0, audit analyzed, позиций 4, requirements 4, warnings 0

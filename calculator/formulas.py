@@ -1,4 +1,9 @@
-"""Чистые и документированные формулы CALCULATOR."""
+"""Legacy-сценарные формулы CALCULATOR.
+
+Они сохранены для независимых контрольных расчётов. Production business
+decision использует ``calculator.business_decision`` и фактическую комиссию
+ЕАТ, поэтому ``platform_commission`` не является runtime fallback.
+"""
 from __future__ import annotations
 
 
@@ -70,4 +75,3 @@ def minimum_submission_for_target_profit(nmck: float, purchase_cost: float,
         denominator = 1 - tax_rate - ratio
         return money(((1 - tax_rate) * base_cost + commission) / denominator) if denominator > 0 else None
     return None
-

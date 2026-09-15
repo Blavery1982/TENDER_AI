@@ -358,7 +358,9 @@
       "document_type": 15,
       "file_id": "6cd50f2f-e25f-4a56-acb3-cb9efbb32526",
       "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/880c9b6e-e4ff-4e10-a831-ecf86e25aa21/15/6cd50f2f-e25f-4a56-acb3-cb9efbb32526",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/880c9b6e-e4ff-4e10-a831-ecf86e25aa21/ГК 4 п. оборудование.docx",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/880c9b6e-e4ff-4e10-a831-ecf86e25aa21/ГК 4 п. оборудование.docx",
+      "sha256": "e9b3e1784360ced2c187f0104791c5d44ec507fb185d8b6f7771d441bc2e1ae0",
+      "size_bytes": 58362,
       "download_status": "downloaded"
     }
   ]

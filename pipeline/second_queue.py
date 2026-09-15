@@ -6,7 +6,6 @@ import statistics
 from pathlib import Path
 from typing import Any, Callable
 
-from filters.eat_filters import load_config
 from model_search.live_discovery import discover_models
 from model_search.live_price_search import search_exact_model_prices
 from model_search.candidate_admission import (CONFIRMED_COMPLIANT, LIKELY_COMPLIANT,
@@ -16,6 +15,7 @@ from model_search.yandex_control import CARD, control_item
 from model_search.yandex_provider import YandexSearchProvider
 from suppliers.price_search_flow import build_price_search_result, confirmed_price_ranking
 from suppliers.verification import verify_supplier
+from calculator.result_decision import attach_business_decision
 
 ROOT=Path(__file__).resolve().parent.parent
 OUTPUT=ROOT/'data/second_queue_control_test.json'
@@ -123,6 +123,15 @@ def run_second_queue_position(item: dict[str,Any], *, procurement_id: str,
     selected_candidate=next((row for row in admitted
                              if selected_model and _model_name(row)==selected_model),None)
     selected_admission=(selected_candidate or {}).get('candidate_admission_status')
+    procurement = item.get('procurement') if isinstance(item.get('procurement'), dict) else {}
+    # После нормализации канонический fee закупки имеет приоритет. Если ключ
+    # присутствует со значением None, это подтверждённое отсутствие данных и
+    # старое поле позиции не должно его заменять.
+    commission = (procurement['commission_fee'] if 'commission_fee' in procurement
+                  else item.get('commission_fee'))
+    commission_source = (procurement.get('commission_source')
+                         if 'commission_fee' in procurement
+                         else item.get('commission_source', 'raw.lot.commissionFee'))
     downstream=None;prices=None;ranked=[]
     if selected_model:
         path=ROOT/'data/second_queue_prices'/(
@@ -142,10 +151,26 @@ def run_second_queue_position(item: dict[str,Any], *, procurement_id: str,
         position={'procurement_id':procurement_id,'item_number':item.get('item_number',1),
                   'item_name':item.get('item_name') or item.get('name'),'quantity':item.get('quantity'),
                   'customer_unit_price':item.get('customer_unit_price'),'exact_model':selected_model,
-                  'model_source':'MODEL_DISCOVERY_FULLY_COMPLIANT'}
-        rate=float((load_config().get('calculator') or {}).get('eat_commission_rate',.03))
+                  'model_source':'MODEL_DISCOVERY_FULLY_COMPLIANT',
+                  'nmck':item.get('nmck') or procurement.get('nmck'),
+                  'commission_fee':commission,
+                  'commission_source':commission_source}
         downstream=build_price_search_result(position,prices,
-                                              verifier=verifier,commission_rate=rate)
+                                              verifier=verifier,
+                                              eat_commission=commission)
+        downstream['procurement'] = {
+            'nmck': position.get('nmck'), 'commission_fee': commission,
+            'commission_source': commission_source}
+        downstream['item'] = {'position_number': position.get('item_number', 1),
+                              'quantity': position.get('quantity')}
+        downstream['supplier_search'] = {
+            'ranked_offers': downstream.get('ranked_offers') or [],
+            'all_verified_offers': downstream.get('antifraud_history') or []}
+        downstream['audit'] = {'additional_expense_state': {
+            'ready': False, 'amount': None,
+            'reason': 'Специальные расходы во второй очереди ещё не подтверждены'}}
+        downstream['calculation_complete'] = False
+        attach_business_decision(downstream)
     manual=bool(item.get('source_conflicts'))
     status=('MANUAL_MODEL_REVIEW_REQUIRED' if manual else
             'MODEL_NOT_CONFIRMED' if not admitted else
@@ -177,6 +202,20 @@ def run_second_queue_position(item: dict[str,Any], *, procurement_id: str,
             'compliance_repeated_during_price_search':False,
             'downstream_price_search_result':downstream,'status':status,
             'ai_provider_used':False,'third_queue_classification_performed':False}
+    result['procurement'] = {
+        'nmck': item.get('nmck') or procurement.get('nmck'),
+        'commission_fee': commission, 'commission_source': commission_source}
+    result['item'] = {'position_number': item.get('item_number', 1),
+                      'quantity': item.get('quantity')}
+    selected_offers = (downstream or {}).get('ranked_offers') if downstream else []
+    verified_offers = (downstream or {}).get('antifraud_history') if downstream else []
+    result['supplier_search'] = {'ranked_offers': selected_offers or [],
+                                 'all_verified_offers': verified_offers or []}
+    result['audit'] = {'additional_expense_state': {
+        'ready': False, 'amount': None,
+        'reason': 'Специальные расходы во второй очереди ещё не подтверждены'}}
+    result['calculation_complete'] = False
+    attach_business_decision(result)
     output_path.parent.mkdir(parents=True,exist_ok=True)
     output_path.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
     return result

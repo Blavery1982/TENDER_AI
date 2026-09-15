@@ -404,11 +404,23 @@
   },
   "documents": [
     {
+      "file_name": "НМЦК.xlsx",
+      "document_type": 14,
+      "file_id": "1226a15f-da99-4130-930a-25327d7f5f9e",
+      "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/918a2826-290c-47c2-ad8f-e54df0422149/14/1226a15f-da99-4130-930a-25327d7f5f9e",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/918a2826-290c-47c2-ad8f-e54df0422149/НМЦК.xlsx",
+      "sha256": "754c433fe1e23c8927a452cae72703f0187f98a33f76f9eda2d663d97d7d6230",
+      "size_bytes": 19195,
+      "download_status": "downloaded"
+    },
+    {
       "file_name": "проект ГК Камера холодильная средне .docx",
       "document_type": 4,
       "file_id": "619b4b45-2b39-44bf-a97c-fa1a57f2f9d0",
       "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/918a2826-290c-47c2-ad8f-e54df0422149/4/619b4b45-2b39-44bf-a97c-fa1a57f2f9d0",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/918a2826-290c-47c2-ad8f-e54df0422149/проект ГК Камера холодильная средне .docx",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/918a2826-290c-47c2-ad8f-e54df0422149/проект ГК Камера холодильная средне .docx",
+      "sha256": "4165a92faca00181c52d0b9f31fcd0e76c41a3659b806f88cf47d4859907d7a6",
+      "size_bytes": 74352,
       "download_status": "downloaded"
     }
   ]

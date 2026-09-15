@@ -14,8 +14,19 @@ def offer(price, availability="in_stock", name="Магазин"):
 
 
 class EconomicPrecheckTests(unittest.TestCase):
-    def test_uses_total_quantity_and_configured_commission(self):
-        result = economic_precheck(200_000, 0.04, [
+    def test_missing_commission_never_uses_rate_or_zero(self):
+        result = economic_precheck(200_000, None, [{"quantity": 1, "offers": [offer(10_000)]}])
+        self.assertIsNone(result["commission"])
+        self.assertFalse(result["passes"])
+        self.assertIn("commissionFee", result["missing_data"])
+
+    def test_explicit_zero_commission_is_preserved(self):
+        result = economic_precheck(200_000, 0, [{"quantity": 1, "offers": [offer(10_000)]}])
+        self.assertEqual(result["commission"], 0)
+        self.assertEqual(result["commission_source"], "raw.lot.commissionFee")
+
+    def test_uses_total_quantity_and_eat_commission(self):
+        result = economic_precheck(200_000, 8_000, [
             {"quantity": 4, "offers": [offer(45_000)]}
         ])
         self.assertEqual(result["commission"], 8_000)
@@ -24,14 +35,14 @@ class EconomicPrecheckTests(unittest.TestCase):
         self.assertFalse(result["passes"])
 
     def test_passing_offer_requires_supplier_verification(self):
-        result = economic_precheck(200_000, 0.03, [
+        result = economic_precheck(200_000, 6_000, [
             {"quantity": 2, "offers": [offer(70_000)]}
         ])
         self.assertTrue(result["passes"])
         self.assertTrue(result["supplier_verification_required"])
 
     def test_unavailable_price_cannot_pass(self):
-        result = economic_precheck(200_000, 0.03, [
+        result = economic_precheck(200_000, 6_000, [
             {"quantity": 2, "offers": [offer(10_000, "out_of_stock")]}
         ])
         self.assertEqual(result["status"], "insufficient_data")
@@ -70,7 +81,7 @@ class EconomicPrecheckTests(unittest.TestCase):
                 self.assertFalse(assessed["call_candidate"])
 
     def test_needs_price_recommendation_contains_full_and_unit_limit(self):
-        check = economic_precheck(200_000, 0.03, [
+        check = economic_precheck(200_000, 6_000, [
             {"quantity": 4, "offers": [offer(50_000, name="KNS")]}
         ])
         text = current_analysis_recommendation(check, [offer(50_000, name="KNS")],

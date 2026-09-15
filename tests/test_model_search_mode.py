@@ -49,7 +49,7 @@ class ModelSearchModeTests(unittest.TestCase):
         self.assertEqual(self.mode("Royal Clima RC-TWN28HN или аналог; замена запрещена"), MODEL_MODE_REVIEW_REQUIRED)
 
     def test_structured_model(self):
-        result = determine_model_search_mode({"requirements": [{"parameter": "Модель", "required_value": "RC-TWN28HN"}]})
+        result = determine_model_search_mode({"name": "Товарная позиция", "requirements": [{"parameter": "Модель", "required_value": "RC-TWN28HN"}]})
         self.assertEqual(result["model_search_mode"], EXACT_MODEL_ONLY)
 
     def test_justification_not_customer_model(self):
@@ -73,7 +73,10 @@ class ModelSearchModeTests(unittest.TestCase):
         discovery.return_value = {"selected_model": None}
         modes = []
         for number, text in enumerate(("Royal Clima RC-TWN28HN", "Royal Clima RC-TWN28HN или эквивалент", "Мощность 2.8 кВт", "Возможно Royal Clima RC-TWN28HN"), 1):
-            result = process_item({"name": "Кондиционер", "description": text}, number, "test", {}, model_live=True)
+            item = {"name": "Кондиционер", "description": text}
+            if number == 3:
+                item.update(description="", structured_requirements=[{"parameter": "Мощность", "value": "2.8 кВт"}])
+            result = process_item(item, number, "test", {}, model_live=True)
             modes.append(result["model_search"]["model_search_mode"])
         self.assertEqual(modes, [EXACT_MODEL_ONLY, EXACT_MODEL_OR_EQUIVALENT, MODEL_DISCOVERY_REQUIRED, MODEL_MODE_REVIEW_REQUIRED])
         # Только позиция без модели идёт в discovery. Точная модель сразу идёт
@@ -84,7 +87,7 @@ class ModelSearchModeTests(unittest.TestCase):
         provider = Mock()
         provider.search.return_value = []
         with tempfile.TemporaryDirectory() as directory, patch("model_search.live_discovery.time.sleep"):
-            result = discover_models({"name": "Royal Clima RC-TWN28HN или аналог"}, provider=provider, cache_dir=Path(directory))
+            result = discover_models({"name": "Кондиционер Royal Clima RC-TWN28HN или аналог"}, provider=provider, cache_dir=Path(directory))
         provider.search.assert_called()
         self.assertEqual(result["original_model"], "Royal Clima RC-TWN28HN")
         self.assertEqual(result["candidates"][0]["candidate_source"], "customer_specification")

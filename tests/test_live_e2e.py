@@ -4,6 +4,7 @@ from google_sheets.production_upsert import EXTRA_HEADERS, _enum_text, _has_manu
 from pipeline.live_e2e import contains_secrets
 from google_sheets.workbook import (ACTIVE_HEADERS, FREE_TEXT_HEADERS,
                                     clear_data_validation_requests)
+from google_sheets.kp_schema import KP_HEADERS
 
 
 class LiveE2ETest(unittest.TestCase):
@@ -30,7 +31,7 @@ class LiveE2ETest(unittest.TestCase):
                    "economics": {"nmck_after_eat_commission": 194000,
                                   "preliminary_margin_before_logistics": 54000},
                    "warnings": ["НАЙДЕНО МЕНЕЕ 3"]}
-        headers = ACTIVE_HEADERS + EXTRA_HEADERS
+        headers = ACTIVE_HEADERS + EXTRA_HEADERS + sorted(KP_HEADERS - set(ACTIVE_HEADERS) - set(EXTRA_HEADERS))
         row = row_values(payload, headers)
         self.assertEqual(row[headers.index("ID закупки")], "uuid")
         self.assertEqual(row[headers.index("№ позиции")], 1)
@@ -46,10 +47,10 @@ class LiveE2ETest(unittest.TestCase):
                    "model": {}, "traceability": {},
                    "supplier_search": {"confirmed_offers": [], "suppliers_for_call": []},
                    "current_analysis_result": "📞 НУЖНА ЦЕНА. Запросить цену.", "warnings": []}
-        headers = ACTIVE_HEADERS + EXTRA_HEADERS
+        headers = ACTIVE_HEADERS + EXTRA_HEADERS + sorted(KP_HEADERS - set(ACTIVE_HEADERS) - set(EXTRA_HEADERS))
         row = row_values(payload, headers)
-        self.assertEqual(row[headers.index("Текущий итог просчета и анализа")],
-                         "📞 НУЖНА ЦЕНА. Запросить цену.")
+        self.assertTrue(row[headers.index("Текущий итог просчета и анализа")].startswith(
+            "📞 НУЖНА ЦЕНА. Запросить цену."))
 
     def test_missing_sheet_fields_are_blank(self):
         payload = {"procurement": {"id": "uuid", "contact": {}},
@@ -58,10 +59,10 @@ class LiveE2ETest(unittest.TestCase):
                    "traceability": {},
                    "supplier_search": {"confirmed_offers": [], "suppliers_for_call": []},
                    "warnings": []}
-        headers = ACTIVE_HEADERS + EXTRA_HEADERS
+        headers = ACTIVE_HEADERS + EXTRA_HEADERS + sorted(KP_HEADERS - set(ACTIVE_HEADERS) - set(EXTRA_HEADERS))
         row = row_values(payload, headers)
         for header in ("Заказчик", "ИНН заказчика", "Контакты заказчика",
-                       "Цена заказчика за единицу, ₽", "ПОСТАВЩИК №1"):
+                       "Цена заказчика за единицу, ₽", "Поставщик КП 1"):
             self.assertEqual(row[headers.index(header)], "")
 
     def test_old_no_data_placeholder_is_not_preserved_as_manual_input(self):

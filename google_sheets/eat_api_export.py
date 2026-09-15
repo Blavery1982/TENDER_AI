@@ -81,6 +81,9 @@ def _purchase_url(raw: dict[str, Any]) -> str:
 
 def _active_row(audited: dict[str, Any]) -> list[Any]:
     raw = audited["raw"]
+    # Комиссия берётся только из нормализованной карточки закупки. Публичная
+    # лента может не содержать вложенный lot — тогда в Sheets остаётся unknown.
+    lot = raw.get("lot") if isinstance(raw.get("lot"), dict) else {}
     items = raw.get("lotItems") or [{}]
     headers = {header: index for index, header in enumerate(ACTIVE_HEADERS)}
     rows: list[list[Any]] = []
@@ -110,7 +113,7 @@ def _active_row(audited: dict[str, Any]) -> list[Any]:
         put("Заказчик", customer_name)
         put("ИНН заказчика", customer_inn)
         put("Контакты заказчика", contacts)
-        put("Комиссия площадки, ₽", round(raw["price"] * 0.03, 2) if isinstance(raw.get("price"), (int, float)) else None)
+        put("Комиссия площадки, ₽", lot.get("commissionFee"))
         put("№ позиции", position)
         put("Название позиции (ТЗ)", item.get("description") or item.get("name"))
         put("Код ОКПД2", item.get("okpd2"))

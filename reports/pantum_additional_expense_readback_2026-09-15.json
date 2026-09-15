@@ -1,0 +1,84 @@
+{
+  "purchase": "200909955126100205",
+  "row": 141,
+  "expense_state": {
+    "known_costs": {
+      "logistics_cost": 0.0,
+      "assembly_cost": 0.0,
+      "installation_cost": 0.0,
+      "packaging_removal_cost": 0.0
+    },
+    "unknown_costs": [
+      "delivery_cost",
+      "unloading_cost",
+      "other_costs"
+    ],
+    "additional_costs_total": 0.0,
+    "all_costs_known": false,
+    "ready": false,
+    "status": "requires_calculation",
+    "amount": null,
+    "reason": "ТРЕБУЕТ РАСЧЁТА: доставка, разгрузка, страхование",
+    "evidence": [
+      {
+        "type": "unloading",
+        "matched_root": "разгруз",
+        "matched_text": "льным видом транспорта, чтобы обеспечить его сохранность при транспортировке, до места назначения и разгрузки, на складе Заказчика. 4.4. Тара и упаковка возврату не подлежат, стоимость залога за упаковочные материалы не взыскиваются и эти материа",
+        "source_document": "Проект контракта на ЕАТ.docx",
+        "confidence": "medium"
+      },
+      {
+        "type": "delivery",
+        "matched_text": "____) рублей _____ копейки (в том числе НДС/ НДС не облагается) и включает в себя стоимость товара, транспортные расходы, расходы на страхование, налогов, сборов и другие обязательные платежи, взимаемые с Поставщика в связи с исполнением обязательств по Контра",
+        "source_document": "Проект контракта на ЕАТ.docx",
+        "confidence": "high"
+      },
+      {
+        "type": "delivery",
+        "matched_text": "елостность и сохранность Товара при перевозке и длительном хранении на складе Грузополучателя. 4.3. Транспортировка Товара должна осуществляться в соответствии с требованиями, правил перевозок грузов автомобильным видом транспорта, чтобы обеспечить его сохранность при",
+        "source_document": "Проект контракта на ЕАТ.docx",
+        "confidence": "high"
+      },
+      {
+        "type": "insurance",
+        "matched_text": "ейки (в том числе НДС/ НДС не облагается) и включает в себя стоимость товара, транспортные расходы, расходы на страхование, налогов, сборов и другие обязательные платежи, взимаемые с Поставщика в связи с исполнением обязательств по Контракту. 3.2. Цена Контракта",
+        "source_document": "Проект контракта на ЕАТ.docx",
+        "confidence": "high"
+      }
+    ],
+    "scope": "procurement"
+  },
+  "native_results": {
+    "КП1": {
+      "price": 24554,
+      "percent": "",
+      "effectiveValue": null,
+      "formula": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AL$2:$AL$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AL$2:$AL$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+    },
+    "КП2": {
+      "price": 25635,
+      "percent": "",
+      "effectiveValue": null,
+      "formula": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AR$2:$AR$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AR$2:$AR$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+    },
+    "КП3": {
+      "price": "",
+      "percent": "",
+      "effectiveValue": null,
+      "formula": "=IF(NOT(AND(CB141<>\"\";ISNUMBER(E141);ISNUMBER(G141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($S$2:$S$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($AX$2:$AX$10000)))=COUNTIF($CB$2:$CB$10000;CB141);SUMPRODUCT(($CB$2:$CB$10000=CB141)*N(ISNUMBER($Y$2:$Y$10000)))=COUNTIF($CB$2:$CB$10000;CB141)));\"\";IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))=0;\"\";MIN(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))*1,1;E141)/((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+IF(((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))+((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835))*1,1<=E141;((SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000))*0,015/0,835);MAX(0;(E141-(SUMPRODUCT(($CB$2:$CB$10000=CB141)*$S$2:$S$10000*$AX$2:$AX$10000)+G141+SUMIF($CB$2:$CB$10000;CB141;$Y$2:$Y$10000)))*0,15)))-1))"
+    }
+  },
+  "mutated_cells": [
+    "F141",
+    "Y141"
+  ],
+  "other_rows_and_headers_unchanged": true,
+  "formulas_unchanged": true,
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1iMas8iLqWuAECZQ7mQOM-ZDJFWzO0kulevFlEwX9w2w#gid=955424503&range=Y141:BB141",
+  "blocking_function": "google_sheets.workbook.quote_formulas.complete(Дополнительные расходы, ₽) → ready → IF(NOT(ready); \"\"; ...)",
+  "tests": {
+    "command": ".venv/bin/python -m unittest tests.test_additional_expense_readiness tests.test_google_sheets_formulas.GoogleSheetsCalculationFormulaTest.test_real_zero_is_not_treated_as_missing tests.test_kp_mapping.KPMappingTests.test_repeat_upsert_updates_complete_blocks_and_preserves_manual_expenses",
+    "count": 19,
+    "result": "OK"
+  }
+}

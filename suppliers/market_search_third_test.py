@@ -156,7 +156,7 @@ def rerank_saved_result() -> dict:
             company = checks.get("current_company") or checks.get("company") or {}
             kad = check_kad(company.get("inn"))
             offer_item["arbitration_cases"] = kad
-            offer_item["arbitration_cases_display"] = kad["user_summary"]
+            offer_item["arbitration_cases_display"] = kad["reason"]
     prepared = prepare_offers(result["offers"], procurement["model"], threshold)
     active = [x for x in prepared if not x.get("stale_or_wrong")]
     result["offers"] = prepared

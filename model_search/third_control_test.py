@@ -12,7 +12,7 @@ from model_search.ranking import procurement_business_status
 ROOT = Path(__file__).resolve().parent.parent
 PURCHASE_ID = "31caee8a-cca2-4e2b-b773-42229d413d03"
 CARD = ROOT / f"data/eat_single_{PURCHASE_ID}.json"
-DOCS = ROOT / f"data/contracts/{PURCHASE_ID}"
+DOCS = ROOT / f"data/tenders/{PURCHASE_ID}"
 OUTPUT = ROOT / "data/procurement_model_search_third_test.json"
 
 ROYAL = "https://royal.com.ru/catalog/nastennye_konditsionery/royal_clima_rc_twn28hn/"

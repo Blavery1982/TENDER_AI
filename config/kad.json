@@ -1,0 +1,49 @@
+{
+  "base_url": "https://kad.arbitr.ru",
+  "search_path": "/Kad/SearchInstances",
+  "participant_placeholder": "название, ИНН или ОГРН",
+  "notification_close_selector": ".js-promo_notification-popup-close",
+  "page_size": 25,
+  "max_search_pages": 20,
+  "cache_max_age_hours": null,
+  "role_labels": {
+    "Истец": [
+      "истец",
+      "истцы",
+      "истцы по делу"
+    ],
+    "Ответчик": [
+      "ответчик",
+      "ответчики",
+      "ответчики по делу"
+    ],
+    "Третье лицо": [
+      "третье лицо",
+      "третьи лица"
+    ],
+    "Иная роль": [
+      "иное лицо",
+      "иные лица",
+      "иные участники"
+    ]
+  },
+  "category_codes": {
+    "B": "Банкротные",
+    "G": "Гражданские",
+    "A": "Административные"
+  },
+  "manual_markers": [
+    "captcha",
+    "recaptcha",
+    "hcaptcha",
+    "smartcaptcha",
+    "подтвердите, что вы",
+    "подтвердите что вы",
+    "вы не робот",
+    "проверка безопасности",
+    "доступ заблокирован",
+    "доступ к сервису ограничен",
+    "verify you are human",
+    "challenge-platform"
+  ]
+}

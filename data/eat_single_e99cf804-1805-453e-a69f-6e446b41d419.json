@@ -453,11 +453,23 @@
   },
   "documents": [
     {
+      "file_name": "НМЦК.xlsx",
+      "document_type": 14,
+      "file_id": "b86cf826-0713-42e9-8983-b9d71347bad2",
+      "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/e99cf804-1805-453e-a69f-6e446b41d419/14/b86cf826-0713-42e9-8983-b9d71347bad2",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/e99cf804-1805-453e-a69f-6e446b41d419/НМЦК.xlsx",
+      "sha256": "3811bf846a5f1a172f9d2461c2e9637a62c1d5f17c2165a669b15952956aaa0b",
+      "size_bytes": 19384,
+      "download_status": "downloaded"
+    },
+    {
       "file_name": "проект ГК.docx",
       "document_type": 4,
       "file_id": "49c00192-569c-4360-b72b-81fd708a01b9",
       "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/e99cf804-1805-453e-a69f-6e446b41d419/4/49c00192-569c-4360-b72b-81fd708a01b9",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/e99cf804-1805-453e-a69f-6e446b41d419/проект ГК.docx",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/e99cf804-1805-453e-a69f-6e446b41d419/проект ГК.docx",
+      "sha256": "f1a39b8bd489b381b3815e4dc85d6071bb7ea4a1ab1ca9b74871608073dc325a",
+      "size_bytes": 75514,
       "download_status": "downloaded"
     }
   ]

@@ -5,9 +5,8 @@ supplier into a final recommendation to bid.
 """
 from __future__ import annotations
 
+import math
 from typing import Any
-
-from calculator.formulas import platform_commission
 
 DEFAULT_RESERVE_PERCENT = 18.0
 MAX_CALL_DISCOUNT_PERCENT = 20.0
@@ -118,23 +117,49 @@ def price_request_candidates(
     return rows
 
 
-def economic_precheck(nmck: float | None, commission_rate: float,
+def economic_precheck(nmck: float | None, commission: float | None,
                       positions: list[dict[str, Any]],
                       reserve_percent: float = DEFAULT_RESERVE_PERCENT) -> dict[str, Any]:
-    """Compare the cheapest complete basket with the 18% preliminary gate."""
+    """Compare a basket using the commission already supplied by EAT.
+
+    ``commission`` is the parsed value of ``raw.lot.commissionFee``.  This
+    function deliberately does not know the EAT rate and never derives a fee.
+    """
     if nmck is None:
         return {"status": "insufficient_data", "passes": False,
-                "supplier_verification_required": False,
+                "supplier_verification_required": False, "commission": None,
+                "commission_source": "raw.lot.commissionFee",
                 "reason": "Не указана НМЦК"}
     try:
         nmck_value = float(nmck)
         margin = float(reserve_percent)
-        commission = platform_commission(nmck_value, float(commission_rate))
     except (TypeError, ValueError):
         return {"status": "insufficient_data", "passes": False,
-                "supplier_verification_required": False,
-                "reason": "НМЦК или ставка комиссии не распознана"}
-    available_revenue = round(nmck_value - commission, 2)
+                "supplier_verification_required": False, "commission": None,
+                "commission_source": "raw.lot.commissionFee",
+                "reason": "НМЦК не распознана"}
+    if not math.isfinite(nmck_value) or not math.isfinite(margin):
+        return {"status": "insufficient_data", "passes": False,
+                "supplier_verification_required": False, "commission": None,
+                "commission_source": "raw.lot.commissionFee",
+                "reason": "НМЦК или предварительный запас не распознаны"}
+    try:
+        commission_value = float(commission) if commission is not None else None
+    except (TypeError, ValueError):
+        commission_value = None
+    if commission_value is None or not math.isfinite(commission_value):
+        return {"status": "insufficient_data", "passes": False,
+                "supplier_verification_required": False, "commission": None,
+                "commission_source": "raw.lot.commissionFee",
+                "reason": "Комиссия ЕАТ не получена из поля commissionFee",
+                "missing_data": ["commissionFee"]}
+    if commission_value < 0:
+        return {"status": "insufficient_data", "passes": False,
+                "supplier_verification_required": False, "commission": None,
+                "commission_source": "raw.lot.commissionFee",
+                "reason": "Комиссия ЕАТ имеет недопустимое значение",
+                "missing_data": ["commissionFee"]}
+    available_revenue = round(nmck_value - commission_value, 2)
     multiplier = 1 - margin / 100
     maximum_purchase_cost = round(available_revenue * multiplier, 2)
     basket = []
@@ -171,7 +196,8 @@ def economic_precheck(nmck: float | None, commission_rate: float,
         "supplier_verification_required": passes,
         "reserve_percent_required": margin,
         "purchase_cost_multiplier": round(multiplier, 4),
-        "commission_rate": float(commission_rate), "commission": commission,
+        "commission": commission_value,
+        "commission_source": "raw.lot.commissionFee",
         "available_revenue_after_commission": available_revenue,
         "maximum_purchase_cost": maximum_purchase_cost,
         "minimum_purchase_cost": minimum_purchase_cost,

@@ -4,9 +4,11 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from documents.pipeline import (audit_from_extraction, document_sha256,
+from documents.pipeline import (PDF_UNREADABLE_COMMENT, audit_from_extraction,
+                                document_processing_stop_reason, document_sha256,
                                 process_procurement_documents)
-from documents.text_extraction import extract_pdf
+from documents.text_extraction import OCR_TIMEOUT_SECONDS, extract_pdf
+from documents import text_extraction
 from pipeline.batch_orchestrator import run_batch
 from tests.test_batch_orchestrator import fixture, paths
 
@@ -20,9 +22,12 @@ def extracted(text="Техническое задание", method="text_layer",
             "doubtful_critical_values":[],"warnings":warnings or []}
 
 
-def doc_fixture(count=2):
+def doc_fixture(count=2, structured=False):
     raw={"id":"p","tradeNumber":"1","subject":"Поставка товаров","price":200000,
          "lotItems":[{"name":f"Товар {i}","description":f"Параметр {i}: значение {i}","quantity":1,"unitPrice":100000,"okeiTitle":"шт."} for i in range(1,count+1)]}
+    if structured:
+        for i, item in enumerate(raw["lotItems"], 1):
+            item["structured_requirements"] = [{"parameter": f"Параметр {i}", "value": f"значение {i}"}]
     return {"purchase_id":"p","raw":raw,"documents":[]}
 
 
@@ -55,12 +60,12 @@ class DocumentPipelineTests(unittest.TestCase):
         f=doc_fixture(1);f["saved_audit"]={"special_conditions":"НЕВЕРНО"};x=self.process([{"local_path":str(self.file())}],lambda p:extracted("Техническое задание"));self.assertNotEqual(audit_from_extraction(f,x)["special_conditions"],"НЕВЕРНО")
     def test_09_missing_document(self): self.assertEqual(self.process([{"local_path":str(self.root/"none.pdf")}])["document_results"][0]["status"],"missing")
     def test_10_all_positions_requirements(self):
-        a=audit_from_extraction(doc_fixture(3),self.process([]));self.assertTrue(all(x["requirements"] for x in a["items"]))
+        a=audit_from_extraction(doc_fixture(3, structured=True),self.process([]));self.assertTrue(all(x["requirements"] for x in a["items"]))
     def test_11_two_positions(self): self.assertEqual(len(audit_from_extraction(doc_fixture(2),self.process([]))["items"]),2)
     def test_12_four_positions(self): self.assertEqual(len(audit_from_extraction(doc_fixture(4),self.process([]))["items"]),4)
     def test_13_requirements_not_mixed(self):
-        items=audit_from_extraction(doc_fixture(2),self.process([]))["items"];self.assertIn("1",items[0]["requirements"][0]["requirement_name"]);self.assertIn("2",items[1]["requirements"][0]["requirement_name"])
-    def test_14_source_evidence(self): self.assertTrue(audit_from_extraction(doc_fixture(1),self.process([]))["items"][0]["requirements"][0]["evidence"])
+        items=audit_from_extraction(doc_fixture(2, structured=True),self.process([]))["items"];self.assertIn("1",items[0]["requirements"][0]["requirement_name"]);self.assertIn("2",items[1]["requirements"][0]["requirement_name"])
+    def test_14_source_evidence(self): self.assertTrue(audit_from_extraction(doc_fixture(1, structured=True),self.process([]))["items"][0]["requirements"][0]["evidence"])
     def test_15_special_conditions(self):
         x=self.process([{"local_path":str(self.file())}],lambda p:extracted("Проект контракта. Поставщик обязан осуществить разгрузку своими силами."));self.assertIn("разгруз",audit_from_extraction(doc_fixture(1),x)["special_conditions"].lower())
     def test_16_subsidy_warning_not_reject(self):
@@ -94,6 +99,19 @@ class DocumentPipelineTests(unittest.TestCase):
     def test_25_ocr_failure_does_not_stop_next_procurement(self):
         with tempfile.TemporaryDirectory() as d:
             x=run_batch([fixture(),fixture("p2","2")],**paths(Path(d)));self.assertEqual(x["summary"]["completed_procurements"],2)
+
+    def test_26_unreadable_document_blocks_only_current_procurement(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d); doc=root/"x.pdf"; doc.write_bytes(b"x")
+            first=fixture(); first["documents"]=[{"local_path":str(doc),"file_name":"x.pdf"}]
+            x=run_batch([first,fixture("p2","2")],**paths(root))
+            self.assertEqual(x["summary"]["blocked_procurements"],1)
+            self.assertEqual(x["summary"]["completed_procurements"],1)
+            self.assertEqual(x["procurements"][0]["manual_stop_reason"],PDF_UNREADABLE_COMMENT)
+
+    def test_27_partial_document_has_explicit_stop_reason(self):
+        value={"document_results":[{"status":"partial"}]}
+        self.assertEqual(document_processing_stop_reason(value),PDF_UNREADABLE_COMMENT)
     def test_26_log_excludes_raw_document(self):
         secret="VERY_LONG_RAW_DOCUMENT_SECRET";p=self.file();self.process([{"local_path":str(p)}],lambda path:extracted(secret));self.assertFalse((self.root/"run.log").exists())
 
@@ -105,6 +123,20 @@ class DocumentPipelineTests(unittest.TestCase):
         with patch("documents.text_extraction.PdfReader",return_value=Reader()),patch("documents.text_extraction.pymupdf.open",return_value=pages),patch("documents.text_extraction._ocr",side_effect=[("one",[]),RuntimeError("bad"),("three",[])]):
             x=extract_pdf(self.file())
         self.assertEqual([p["read_method"] for p in x["pages"]],["ocr","failed","ocr"])
+
+    def test_ocr_subprocess_has_finite_timeout(self):
+        class Pixmap:
+            def save(self, path): Path(path).write_bytes(b"image")
+        class Page:
+            number = 0
+            def get_pixmap(self, **kwargs): return Pixmap()
+        work = self.root / "ocr"
+        work.mkdir()
+        (work / "page_1.txt").write_text("text", encoding="utf-8")
+        (work / "page_1.tsv").write_text("text\n", encoding="utf-8")
+        with patch.object(text_extraction.subprocess, "run") as run:
+            text_extraction._ocr(Page(), work)
+        self.assertEqual(run.call_args.kwargs["timeout"], OCR_TIMEOUT_SECONDS)
 
 
 if __name__=="__main__": unittest.main()

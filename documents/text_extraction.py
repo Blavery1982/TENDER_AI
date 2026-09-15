@@ -14,6 +14,7 @@ import pymupdf
 from pypdf import PdfReader
 
 TESSERACT = Path("/opt/homebrew/bin/tesseract")
+OCR_TIMEOUT_SECONDS = 60
 LOW_CONFIDENCE = 70.0
 AMBIGUOUS = {"0": "O", "O": "0", "1": "Il", "I": "1l", "l": "1I",
              "4": "A", "A": "4", "5": "S", "S": "5", "8": "B", "B": "8"}
@@ -89,7 +90,7 @@ def _ocr(page: pymupdf.Page, work: Path) -> tuple[str, list[dict[str, Any]]]:
     image = work / f"page_{page.number + 1}.png"; base = work / f"page_{page.number + 1}"
     page.get_pixmap(dpi=300, colorspace=pymupdf.csGRAY, alpha=False).save(image)
     subprocess.run([str(TESSERACT), str(image), str(base), "-l", "rus+eng", "--psm", "3", "txt", "tsv"],
-                   check=True, capture_output=True, text=True)
+                   check=True, capture_output=True, text=True, timeout=OCR_TIMEOUT_SECONDS)
     return base.with_suffix(".txt").read_text(encoding="utf-8"), _tsv_words(base.with_suffix(".tsv").read_text(encoding="utf-8"))
 
 

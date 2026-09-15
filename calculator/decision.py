@@ -1,4 +1,8 @@
-"""Решение по реальным данным, отдельно от гипотетических сценариев."""
+"""Legacy/helper для старых контрольных сценариев.
+
+Production pipeline и Google Sheets не вызывают этот модуль: итоговое решение
+формируется только через ``calculator.result_decision.attach_business_decision``.
+"""
 from __future__ import annotations
 
 
@@ -20,4 +24,3 @@ def calculator_decision(model_found: bool, suppliers_found: bool,
     if economics["net_profit"] > minimum_profit_rub:
         return {"status":"ГОТОВО К УЧАСТИЮ","reason":"Подтверждённые данные показывают достаточную прибыль."}
     return {"status":"ЭКОНОМИКА НЕ ПРОХОДИТ","reason":"Подтверждённая чистая прибыль недостаточна."}
-

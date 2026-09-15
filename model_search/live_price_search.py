@@ -52,12 +52,53 @@ def _fetch(url: str, timeout: float=15) -> tuple[str,str,int]:
 
 
 def _availability(page: dict, offer: dict | None) -> str | None:
-    if offer and offer.get('available'): return 'В наличии'
     text=page.get('primary_product_content') or page.get('text','')
-    if re.search(r'(?i)под заказ|доступен к заказу|предзаказ',text): return 'Под заказ'
+    if re.search(r'(?i)архивн\w*\s+товар|(?:товар|карточка).{0,30}в\s+архиве|(?:^|\n)\s*архив\s*(?:$|\n)',text): return 'Архив'
+    if re.search(r'(?i)снят\w*\s+(?:с\s+продажи|с\s+производства)|продажи прекращены|не прода[её]тся',text): return 'Снят с продажи'
     if re.search(r'(?i)нет в наличии|товар закончился|снят с продажи',text): return 'Нет в наличии'
+    structured = str((offer or {}).get('availability_status') or '').rstrip('/').rsplit('/', 1)[-1].casefold()
+    if structured == 'discontinued': return 'Снят с продажи'
+    if structured in {'outofstock','soldout'}: return 'Нет в наличии'
+    if re.search(r'(?i)под заказ|доступен к заказу|предзаказ',text) or structured in {'preorder','backorder'}: return 'Под заказ'
+    if structured == 'instock': return 'В наличии'
+    if offer and offer.get('available'): return 'В наличии'
     if re.search(r'(?i)(?:^|\n)\s*в наличии\s*(?:\n|$)',text): return 'В наличии'
     return None
+
+
+def _availability_raw(page: dict, offer: dict | None) -> str | None:
+    """Сохранить исходное обозначение наличия, не подменяя его нормализацией."""
+    text = page.get('primary_product_content') or page.get('text', '')
+    patterns = (
+        r'(?i)архив\w*\s+товар|(?:товар|карточка).{0,30}в\s+архиве|(?:^|\n)\s*архив\s*(?:$|\n)',
+        r'(?i)снят\w*\s+(?:с\s+продажи|с\s+производства)|продажи прекращены|не прода[её]тся',
+        r'(?i)(?:нет в наличии|товар закончился)',
+        r'(?i)(?:под заказ|доступен к заказу|предзаказ)',
+        r'(?i)(?:наличие\s*[:|]\s*)?в наличии',
+    )
+    for pattern in patterns:
+        match = re.search(pattern, text)
+        if match:
+            return ' '.join(match.group(0).split()).strip(' |:') or None
+    structured = (offer or {}).get('availability_status')
+    return str(structured) if structured is not None else None
+
+
+def normalize_availability(value: str | None) -> str:
+    """Нормализовать наличие для будущей логики сроков без отбраковки order."""
+    text = ' '.join(str(value or '').casefold().replace('_', ' ').split())
+    if not text:
+        return 'unknown'
+    if any(marker in text for marker in ('архив', 'снят с продажи', 'снят с производства',
+                                         'продажи прекращены', 'нет в наличии', 'товар закончился',
+                                         'outofstock', 'soldout', 'discontinued')):
+        return 'out_of_stock'
+    if any(marker in text for marker in ('под заказ', 'доступен к заказу', 'предзаказ',
+                                         'backorder', 'preorder')):
+        return 'order'
+    if any(marker in text for marker in ('в наличии', 'instock', 'in stock')):
+        return 'in_stock'
+    return 'unknown'
 
 
 def _walk(value):
@@ -78,7 +119,8 @@ def _structured_offer(page: dict, sku: str) -> dict | None:
             if not isinstance(offer,dict) or str(offer.get('priceCurrency','')).upper()!='RUB': continue
             try: price=float(str(offer['price']).replace(' ','').replace(',','.'))
             except (KeyError,ValueError,TypeError): continue
-            if price>0: found.append({'price':price,'available':'instock' in str(offer.get('availability','')).lower()})
+            if price>0: found.append({'price':price,'availability_status':offer.get('availability'),
+                                     'available':'instock' in str(offer.get('availability','')).lower()})
     return min(found,key=lambda x:x['price']) if found else None
 
 
@@ -107,10 +149,47 @@ def _visible_offer(page: dict) -> dict | None:
     return {'price':values[0],'available':bool(re.search(r'(?i)в наличии|есть в наличии',text))} if len(values)==1 else None
 
 
+def _json_ld_has_price(page: dict, sku: str, expected: float | None) -> bool:
+    """Проверить, что найденная цена принадлежит Product/Offer в JSON-LD."""
+    if expected is None:
+        return False
+    for product in _walk(page.get('structured_products') or []):
+        if product.get('@type') != 'Product' or not page_matches(
+                {**page, 'heading': product.get('name', ''), 'title': ''}, sku):
+            continue
+        raw = product.get('offers') or []
+        for item in raw if isinstance(raw, list) else [raw]:
+            if not isinstance(item, dict) or str(item.get('priceCurrency', '')).upper() != 'RUB':
+                continue
+            try:
+                price = float(str(item['price']).replace(' ', '').replace(',', '.'))
+            except (KeyError, TypeError, ValueError):
+                continue
+            if price == expected:
+                return True
+    return False
+
+
+def _extract_offer(page: dict, sku: str) -> tuple[dict | None, str | None]:
+    """Вернуть предложение и фактический парсер цены."""
+    offer = public_offer(page, sku)
+    if offer:
+        return offer, 'json_ld' if _json_ld_has_price(page, sku, offer.get('price')) else offer.get('extraction_method','html')
+    offer = _structured_offer(page, sku)
+    if offer:
+        return offer, 'json_ld'
+    offer = _visible_offer(page)
+    return (offer, 'html') if offer else (None, None)
+
+
 def _direct_product_url(url: str) -> bool:
-    path=urllib.parse.urlsplit(url).path.casefold().rstrip('/')
+    parsed=urllib.parse.urlsplit(url)
+    if parsed.scheme not in {'http','https'} or not parsed.hostname: return False
+    if any(parsed.hostname==d or parsed.hostname.endswith('.'+d)
+           for d in ('yandex.ru','ya.ru','google.ru','google.com','bing.com','bing.ru','yahoo.com','duckduckgo.com')) and parsed.hostname!='market.yandex.ru': return False
+    path=parsed.path.casefold().rstrip('/')
     if not path or path in {'','/'}:return False
-    return not any(marker in path for marker in ('/search','/category'))
+    return path not in {'/catalog','/products','/shop'} and not any(marker in path for marker in ('/search','/category','/categories'))
 
 
 def _market_seller(body: str) -> str | None:
@@ -123,18 +202,56 @@ def _market_seller(body: str) -> str | None:
     return values[0] if len(values)==1 else None
 
 
-def inspect_product_url(row: dict[str,Any], model: str, *, fetcher=_fetch) -> dict[str,Any] | None:
+def inspect_product_url(row: dict[str,Any], model: str, *, fetcher=_fetch,
+                        transport: str = 'http', requirements=(), product_name=None) -> dict[str,Any] | None:
+    # Поисковые/каталожные ссылки отбрасываются до сетевого запроса.
+    if not _direct_product_url(row['product_url']):
+        return None
     body,final,status=fetcher(row['product_url']); page=html_page(body,final)
-    sku=_target_sku(model)
-    if not _direct_product_url(final) or not page_matches(page,sku): return None
-    offer=public_offer(page,sku) or _structured_offer(page,sku) or _visible_offer(page)
+    if status < 200 or status >= 400: return None
+    sku=" ".join(str(model).split())
+    if not _direct_product_url(final): return None
+    if not page_matches(page,sku):
+        # Название товара может стоять после модели или иметь другой порядок слов.
+        # Обозначение берётся из уже собранного заказчиком имени, не угадывается.
+        noun=" ".join(str(product_name or '').split())
+        prefix=noun+' '
+        designation=sku[len(prefix):] if noun and sku.casefold().startswith(prefix.casefold()) else None
+        heading=primary_content(page)
+        noun_tokens=re.findall(r'[A-Za-zА-Яа-яЁё0-9]+',noun)
+        type_matches=bool(noun_tokens) and all(re.search(r'(?i)(?<!\w)'+re.escape(t)+r'(?!\w)',heading) for t in noun_tokens)
+        if not designation or not type_matches or not page_matches(page,designation):return None
+        sku=designation
+    identity_text = ' '.join(str(page.get(key) or '') for key in ('heading', 'title'))
+    if re.search(r'(?i)картридж|тонер|запчаст|аксессуар|комплектующ|услуг|аренд|ремонт|\bб/у\b|бывш(?:ий|ая|ее)\s+в\s+употреблении', identity_text):
+        return None
+    from model_search.compliance import assess_model
+    assessment = assess_model(requirements, [page], sku)
+    if assessment['status'] == 'non_compliant':
+        return None
+    offer, parser_method = _extract_offer(page, sku)
+    availability = _availability(page, offer)
+    availability_raw = _availability_raw(page, offer)
+    extraction_method = transport if transport == 'playwright' and offer and offer.get('price') is not None else parser_method
+    domain = urllib.parse.urlsplit(final).hostname
+    confirmed_price = offer.get('price') if offer else None
     market_seller=_market_seller(body) if (urllib.parse.urlsplit(final).hostname or '').endswith('market.yandex.ru') else None
+    if (urllib.parse.urlsplit(final).hostname or '').endswith('market.yandex.ru') and not market_seller:
+        return None
     return {'exact_product_name':page.get('heading') or page.get('title') or row.get('product_name') or model,
             'model':model,'exact_manufacturer_model':sku,'exact_model_match':True,
             'supplier_sku':_supplier_sku(page,sku),
-            'price':offer.get('price') if offer else None,'currency':'RUB' if offer else None,
-            'availability':_availability(page,offer),'seller':market_seller or row.get('supplier_name') or urllib.parse.urlsplit(final).hostname,
-            'url':normalize_product_url(final),'source':urllib.parse.urlsplit(final).hostname,'http_status':status,
+            'price':confirmed_price,'confirmed_price':confirmed_price,
+            'currency':'RUB' if offer else None,
+            'availability':availability,'availability_raw':availability_raw,
+            'availability_normalized':normalize_availability(availability or availability_raw),
+            'seller':market_seller or row.get('supplier_name') or domain,
+            'seller_identity_confirmed': bool(market_seller),
+            'url':normalize_product_url(final),'source':domain,'source_url':final,'domain':domain,
+            'extraction_method':extraction_method,'exact_model_confirmed':True,'http_status':status,
+            'product_page_available':True, 'price_confirmed_on_product_page':offer is not None,
+            'customer_requirements_status':assessment['status'],
+            'customer_requirements_check':assessment.get('requirements_check') or [],
             'discovered_by':row.get('discovered_by') or row.get('source_discovery'),
             'checked_at':_now()}
 
@@ -165,7 +282,9 @@ def search_exact_model_prices(model: str, *, seeds_path: Path=DEFAULT_SEEDS, out
     for row in rows:
         try:
             offer=inspect_product_url(row,model,fetcher=fetcher)
-            if offer: offers.append(offer)
+            if offer:
+                offer['price_run_id']=checked
+                offers.append(offer)
             else: errors.append({'source':row.get('supplier_name'),'url':row['product_url'],'error':'Страница не подтверждает точную модель'})
         except urllib.error.HTTPError as exc:
             errors.append({'source':row.get('supplier_name'),'url':row['product_url'],'error':f'HTTP {exc.code}'})
@@ -175,7 +294,7 @@ def search_exact_model_prices(model: str, *, seeds_path: Path=DEFAULT_SEEDS, out
     unique={x['url']:x for x in offers}; offers=list(unique.values())
     offers.sort(key=lambda x:(x['price'] is None,x['price'] or float('inf'),x['seller'] or ''))
     priced=[x for x in offers if x['price'] is not None]
-    result={'target_model':model,'checked_at':checked,'candidate_discovery':discovery,
+    result={'target_model':model,'checked_at':checked,'price_run_id':checked,'candidate_discovery':discovery,
             'discovery_sources':discovery.get('source_reports',[]),
             'offers':offers,'offers_found':len(offers),'priced_offers_found':len(priced),
             'minimum_price':priced[0]['price'] if priced else None,'minimum_price_seller':priced[0]['seller'] if priced else None,

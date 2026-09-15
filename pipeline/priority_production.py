@@ -2,18 +2,20 @@
 from __future__ import annotations
 
 import json
+import math
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
-from calculator.formulas import platform_commission
-from documents.pipeline import audit_from_extraction, process_procurement_documents
+from documents.pipeline import (audit_from_extraction, document_processing_stop_reason,
+                                process_procurement_documents)
 from filters.eat_filters import load_config
 from google_sheets.production_upsert import upsert_live_payload
 from model_search.live_price_search import search_exact_model_prices
 from model_search.price_readiness import PRICE_SEARCH_READY, classify_price_search_readiness
 from pipeline.live_e2e import build_payload
+from calculator.result_decision import attach_business_decision
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_FIXTURE = ROOT / "data/live_e2e_selected.json"
@@ -40,15 +42,25 @@ def _exact_item(fixture: dict[str, Any], audit: dict[str, Any]) -> tuple[int, di
 
 
 def _economics(payload: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
-    nmck = float(payload["procurement"]["nmck"])
-    rate = float(config.get("calculator", {}).get("eat_commission_rate", 0.03))
-    commission = platform_commission(nmck, rate)
-    after = round(nmck - commission, 2)
+    nmck = payload["procurement"].get("nmck")
+    commission = payload["procurement"].get("commission_fee")
+    try:
+        nmck_value = float(nmck) if nmck is not None else None
+        commission_value = float(commission) if commission is not None else None
+        if (nmck_value is not None and not math.isfinite(nmck_value)) or (
+                commission_value is not None
+                and (not math.isfinite(commission_value) or commission_value < 0)):
+            raise ValueError("Недопустимое значение комиссии или НМЦК")
+    except (TypeError, ValueError):
+        nmck_value = commission_value = None
+    after = (round(nmck_value - commission_value, 2)
+             if nmck_value is not None and commission_value is not None else None)
     price = payload["supplier_search"].get("minimum_confirmed_price")
     quantity = float(payload["item"].get("quantity") or 0)
     purchase_cost = round(float(price) * quantity, 2) if price is not None else None
-    reserve = round(after - purchase_cost, 2) if purchase_cost is not None else None
-    return {"eat_commission_rate": rate, "eat_commission": commission,
+    reserve = round(after - purchase_cost, 2) if after is not None and purchase_cost is not None else None
+    return {"eat_commission": commission_value,
+            "commission_source": "procurement.commission_fee",
             "nmck_after_eat_commission": after,
             "minimum_purchase_cost": purchase_cost,
             "preliminary_margin_before_logistics": reserve,
@@ -61,6 +73,23 @@ def run_exact_fixture(fixture_path: Path = DEFAULT_FIXTURE, *,
     started = time.monotonic()
     fixture = _load(fixture_path)
     extraction = process_procurement_documents(fixture, fixture.get("documents") or [])
+    stop_reason = document_processing_stop_reason(extraction)
+    if stop_reason:
+        # Быстрый production-путь тоже обязан сохранить строку и остановить
+        # расчёт, если PDF нельзя безопасно прочитать.
+        from pipeline.mvp_exact_batch import _blocked_items, _sheet_payload
+        blocked = _blocked_items(fixture, extraction, stop_reason, "card_documents")
+        if len(blocked) != 1:
+            raise RuntimeError("Контрольный быстрый запуск поддерживает одну остановленную позицию")
+        payload = _sheet_payload(blocked[0])
+        receipt = sheet_writer(payload)
+        result = {"run_type": "PRIORITY_1_EXACT_MODEL_PRODUCTION_TEST",
+                  "completed_at": datetime.now(timezone.utc).isoformat(),
+                  "elapsed_seconds": round(time.monotonic() - started, 3),
+                  "payload": payload, "google_sheets": receipt,
+                  "status": "blocked", "manual_stop_reason": stop_reason}
+        OUTPUT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+        return result
     audit = audit_from_extraction(fixture, extraction)
     position, audit_item, readiness = _exact_item(fixture, audit)
     model = readiness["identifier"]
@@ -99,6 +128,8 @@ def run_exact_fixture(fixture_path: Path = DEFAULT_FIXTURE, *,
         "дополнительный поиск аналогов не выполнялся в быстром pipeline"
     )
     payload["economics"] = _economics(payload, config)
+    # После добавления всех входов заново применяем каноническую формулу.
+    attach_business_decision(payload, config=config)
     if payload["supplier_search"]["confirmed_count"] < 3:
         warning = "НАЙДЕНО МЕНЕЕ 3 ПОСТАВЩИКОВ"
         payload["warnings"] = [warning if x == "НАЙДЕНО МЕНЕЕ 3" else x

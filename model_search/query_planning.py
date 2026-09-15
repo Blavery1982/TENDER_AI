@@ -42,7 +42,9 @@ def feature(row):
 
 def generate_queries(item, limit=3):
     decision=determine_model_search_mode(item)
-    original=item.get('customer_required_model') or decision.get('original_model')
+    # Сохраняем полное обозначение заказчика: проекция только в SKU может
+    # потерять бренд, серию или фасовку.
+    original=item.get('customer_model_raw') or item.get('customer_required_model') or decision.get('original_model')
     name=str(item.get('item_name') or item.get('name') or 'товар').splitlines()[0][:100]
     if original:
         name=re.sub(re.escape(original),'',name,flags=re.I)

@@ -3,22 +3,29 @@ from pipeline.priority_production import _economics, _exact_item
 
 
 class PriorityProductionTests(unittest.TestCase):
-    def test_economics_uses_configured_commission(self):
-        payload={"procurement":{"nmck":200000},"item":{"quantity":2},
+    def test_economics_uses_eat_commission(self):
+        payload={"procurement":{"nmck":200000,"commission_fee":2531.5},"item":{"quantity":2},
                  "supplier_search":{"minimum_confirmed_price":70000}}
         result=_economics(payload,{"calculator":{"eat_commission_rate":.03}})
-        self.assertEqual(result["eat_commission"],6000)
-        self.assertEqual(result["nmck_after_eat_commission"],194000)
-        self.assertEqual(result["preliminary_margin_before_logistics"],54000)
+        self.assertEqual(result["eat_commission"],2531.5)
+        self.assertEqual(result["nmck_after_eat_commission"],197468.5)
+        self.assertEqual(result["preliminary_margin_before_logistics"],57468.5)
 
     def test_unknown_supplier_price_keeps_margin_unknown(self):
-        payload={"procurement":{"nmck":200000},"item":{"quantity":2},
+        payload={"procurement":{"nmck":200000,"commission_fee":6000},"item":{"quantity":2},
                  "supplier_search":{"minimum_confirmed_price":None}}
         self.assertIsNone(_economics(payload,{"calculator":{"eat_commission_rate":.03}})
                           ["preliminary_margin_before_logistics"])
 
+    def test_missing_eat_commission_keeps_margin_unknown(self):
+        payload={"procurement":{"nmck":200000},"item":{"quantity":2},
+                 "supplier_search":{"minimum_confirmed_price":70000}}
+        result=_economics(payload,{"calculator":{"eat_commission_rate":.03}})
+        self.assertIsNone(result["eat_commission"])
+        self.assertIsNone(result["nmck_after_eat_commission"])
+
     def test_single_production_entry_uses_global_price_readiness(self):
-        fixture={"raw":{"lotItems":[{"model":"4303dw"}]}}
+        fixture={"raw":{"lotItems":[{"name":"Принтер","model":"4303dw"}]}}
         position,item,readiness=_exact_item(fixture,{"items":[{"requirements":[]}]})
         self.assertEqual((position,readiness["classification"]),(1,"PRICE_SEARCH_READY"))
         self.assertEqual(readiness["identifier"],"4303dw")

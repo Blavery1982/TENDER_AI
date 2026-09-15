@@ -1,20 +1,6 @@
 {
-  "updated_at": "2026-09-12T07:47:11.982471+00:00",
-  "completed_supplier_searches": {
-    "00000000-0000-0000-0000-000000000000:1": {
-      "summary": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
-      "error": "ValueError: Не удалось однозначно выделить exact SKU",
-      "top_offers": [],
-      "all_verified_offers": [],
-      "verification_counts": {}
-    },
-    "00000000-0000-0000-0000-000000000000:2": {
-      "summary": "ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА",
-      "error": "ValueError: Не удалось однозначно выделить exact SKU",
-      "top_offers": [],
-      "all_verified_offers": [],
-      "verification_counts": {}
-    }
-  },
-  "supplier_search_cap": 10
+  "updated_at": "2026-09-15T17:35:48.960696+00:00",
+  "business_order_version": 1,
+  "last_purchase_id": "124b42c7-d6e0-49ac-8553-d90f5dd78658",
+  "local_result_status": "MODEL_NOT_RESOLVED"
 }

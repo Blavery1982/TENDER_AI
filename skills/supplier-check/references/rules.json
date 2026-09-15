@@ -1,0 +1,269 @@
+{
+  "version": "2026-09-15.3",
+  "updated_at": "2026-09-15",
+  "scope": "Навык проверки отдельного поставщика; исходный каталог текущего runtime TENDER_AI",
+  "runtime_sync": {
+    "state": "minimal_defendant_count_profile_tests_live_unconfirmed",
+    "note": "Production-КАД хранит только ИНН, дату, технический статус, количество дел ответчика, KAD-цвет и краткую причину. Подробная диагностика — только инструмент разработки. LIVE после прежнего 451 не выполнялся и не подтверждён."
+  },
+  "statuses": {
+    "passed": "✅ ПОСТАВЩИК ПРОШЁЛ ПРОВЕРКУ",
+    "manual": "🟡 ТРЕБУЕТСЯ РУЧНАЯ ПРОВЕРКА ПЕРЕД ОПЛАТОЙ",
+    "high_risk": "🔴 ПРИЗНАКИ ВЫСОКОГО РИСКА — НЕ ОПЛАЧИВАТЬ",
+    "insufficient": "⚪ НЕДОСТАТОЧНО ДАННЫХ"
+  },
+  "trusted_domains": [
+    "citilink.ru",
+    "komus.ru",
+    "market.yandex.ru",
+    "ozon.ru",
+    "vseinstrumenti.ru",
+    "wildberries.ru",
+    "xcom-shop.ru"
+  ],
+  "thresholds": {
+    "domain_established_years": 3,
+    "domain_very_young_years": 1,
+    "wayback_theme_min_matching_snapshots": 2,
+    "director_change_months": 6,
+    "recent_company_registration_days": null,
+    "strong_risk_min_total_flags": 2,
+    "live_max_legal_pages": 3
+  },
+  "procurement_defaults": {
+    "reserve_percent": 18.0,
+    "max_call_discount_percent": 20.0,
+    "commission_rate_fallback": 0.03,
+    "top_offer_limit": 3
+  },
+  "rules": [
+    {
+      "id": "SUP-001",
+      "title": "Доверенный домен",
+      "acceptance": "user_approved_2026-09-15",
+      "source": "suppliers/verification.py: TRUSTED_DOMAINS, verify_supplier",
+      "condition": "Нормализованный домен точно входит в trusted_domains.",
+      "required_evidence": "Прямая ссылка и фактический домен; www. удаляется, остальные поддомены не обобщаются.",
+      "effect": "Исходный зелёный по доверенному домену. Для установленного текущего продавца непроверенный КАД или хотя бы одно дело ответчика дают YELLOW; подробный анализ дел и банкротство из КАД не используются.",
+      "implementation": "live_and_runtime",
+      "note": "В LIVE всегда передаются результат установления продавца и kad_check. Старый вызов verify_supplier без этих сведений сохраняет прежний доверенный shortcut."
+    },
+    {
+      "id": "SUP-002",
+      "title": "Профильный коммерческий сайт",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: commercial_site_confirmed",
+      "condition": "Подтверждены карточка товара, профильная деятельность и контакты.",
+      "required_evidence": "Прочитанные страницы продавца со ссылками и датой.",
+      "effect": "Положительный признак; сам по себе не даёт зелёный статус.",
+      "implementation": "live_limited_heuristic",
+      "note": "LIVE выставляет флаг по факту хотя бы одной успешно прочитанной страницы."
+    },
+    {
+      "id": "SUP-003",
+      "title": "Возраст домена",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: domain_age_years; external_checks.py: rdap_check",
+      "condition": "Возраст >= domain_established_years — положительный; от domain_very_young_years до domain_established_years — предупреждение; ниже domain_very_young_years — предупреждение.",
+      "required_evidence": "Дата регистрации RDAP/WHOIS и дата проверки.",
+      "effect": "Молодой домен сам по себе не даёт красный; неизвестный возраст — непроверенность.",
+      "implementation": "live_and_runtime",
+      "note": ""
+    },
+    {
+      "id": "SUP-004",
+      "title": "История и тематика сайта",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: wayback_available, same_business_history, abrupt_profile_change",
+      "condition": "Стабильная тематика — положительный признак; доказанная резкая смена — сильный риск.",
+      "required_evidence": "Конкретные архивные снимки и фрагменты; список снимков сам по себе не доказывает тематику.",
+      "effect": "Нет истории или снимки не изучены — непроверенность; смена тематики участвует в общем алгоритме сильных рисков.",
+      "implementation": "runtime_supported_live_captures_only",
+      "note": "wayback_theme_check отдельно считает историю стабильной при числе снимков с тематическими словами >= wayback_theme_min_matching_snapshots; LIVE эту функцию не вызывает."
+    },
+    {
+      "id": "SUP-005",
+      "title": "Текущая компания и ИНН",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: current_company, company, active",
+      "condition": "Нет ИНН — предупреждение; active=True — положительный признак; active=False — сильный риск.",
+      "required_evidence": "Реквизиты продавца и сведения реестра по этому же ИНН.",
+      "effect": "Недействующая текущая компания участвует в сильных рисках; неизвестный статус не приравнивается к ликвидации.",
+      "implementation": "live_current_inn_company_registry_adapter_only",
+      "note": "LIVE устанавливает ИНН по текущим юридическим страницам. Штатный сбор реестра пока не подключён; company_checker — адаптер, без него active остаётся неизвестным."
+    },
+    {
+      "id": "SUP-006",
+      "title": "Согласованность реквизитов и исторические ИНН",
+      "acceptance": "user_approved_2026-09-15",
+      "source": "suppliers/verification.py: requisites_consistent, current_seller_determined, historical_companies",
+      "condition": "Одинаковые реквизиты — положительный; несколько ИНН при подтверждённом текущем продавце сохраняются как история.",
+      "required_evidence": "Оферта, реквизиты, страницы оплаты с привязкой к текущему продавцу.",
+      "effect": "Если актуальный продавец не установлен однозначно, жёлтый статус и КАД не запускается. Архивные ИНН автоматически не перебираются; отдельная проверка истории нужна при конкретном расхождении/подозрении.",
+      "implementation": "live_current_seller_resolution",
+      "note": "Не выбирать актуального продавца по первому ИНН. Python default текущего продавца не является доказательством."
+    },
+    {
+      "id": "SUP-007",
+      "title": "Оплата разным юрлицам",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: simultaneous_payment_entities",
+      "condition": "Одновременно предлагается оплата разным юрлицам без объяснения.",
+      "required_evidence": "Действующие платёжные условия/счета с разными получателями и отсутствие объяснения на исследованных страницах.",
+      "effect": "Сильный риск; красный при достижении общего порога риска.",
+      "implementation": "runtime_supported_not_live",
+      "note": ""
+    },
+    {
+      "id": "SUP-008",
+      "title": "Давность регистрации текущего юрлица/ИП",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: registered_recently, registered_at",
+      "condition": "registered_recently=True — предупреждение; числовой порог программой не определён.",
+      "required_evidence": "Дата регистрации текущего юрлица/ИП и основание для флага недавней регистрации.",
+      "effect": "Дополнительная ручная проверка перед оплатой; возраст домена не заменяет возраст компании.",
+      "implementation": "runtime_supported_not_live",
+      "note": "Не назначать новый числовой порог без принятого пользователем правила."
+    },
+    {
+      "id": "SUP-009",
+      "title": "Участие в государственных закупках",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: government_procurement",
+      "condition": "Подтверждено участие проверяемой компании в государственных закупках.",
+      "required_evidence": "Запись о закупке/контракте с совпадающим ИНН.",
+      "effect": "Положительный признак; отсутствие сведений не даёт самостоятельного риска.",
+      "implementation": "runtime_supported_not_live",
+      "note": ""
+    },
+    {
+      "id": "SUP-010",
+      "title": "Смена руководителя",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: director_changed_within_6_months",
+      "condition": "Руководитель сменился менее director_change_months месяцев назад.",
+      "required_evidence": "Дата изменения руководителя по текущему ИНН.",
+      "effect": "Флаг red_flag в свидетельствах; сам по себе обычно жёлтый, не входит в множество сильных рисков итогового статуса.",
+      "implementation": "runtime_supported_not_live",
+      "note": "Неизвестная дата изменений — непроверенность."
+    },
+    {
+      "id": "SUP-011",
+      "title": "Несовпадение реквизитов сайта и компании",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: site_company_mismatch",
+      "condition": "Подтверждено несовпадение текущего продавца сайта и проверенной компании.",
+      "required_evidence": "Сопоставление реквизитов сайта и реестровой записи; исторические ИНН отделены.",
+      "effect": "Красный статус даже без второго риска, кроме пропуска проверок на доверенных доменах.",
+      "implementation": "runtime_supported_not_live",
+      "note": "Если текущий продавец явно не установлен, итог жёлтый; противоречия сохраняются в свидетельствах."
+    },
+    {
+      "id": "SUP-012",
+      "title": "Арбитраж: прежний анализ банкротства отключён",
+      "acceptance": "withdrawn_by_user_2026-09-15",
+      "source": "Историческое правило КАД, отключено по решению пользователя",
+      "condition": "Правило больше не применяется в production-КАД.",
+      "required_evidence": "Не собирается.",
+      "effect": "Не влияет на antifraud. Категории, банкротство и решения КАД не анализируются.",
+      "implementation": "retired_by_user",
+      "note": "ID сохранён для истории; прежний RED по банкротным делам КАД отменён."
+    },
+    {
+      "id": "SUP-013",
+      "title": "КАД: количество дел ответчика",
+      "acceptance": "user_approved_2026-09-15",
+      "source": "suppliers/arbitration.py: defendant_kad_result; suppliers/kad_client.py: parse_defendant_search_page",
+      "condition": "Успешная проверка по актуальному ИНН: defendant_cases_count == 0 либо > 0.",
+      "required_evidence": "Наш ИНН в обозначенной роли участника строки выдачи; полный счётчик, дата и технический статус. Дела в других ролях не учитываются.",
+      "effect": "0 не создаёт предупреждения КАД; любое N > 0 даёт YELLOW: требуется вручную проверить судебные иски и добросовестность поставщика.",
+      "implementation": "minimal_count_runtime_live_unconfirmed",
+      "note": "Не используются пороги 3/2/730, свежесть, категории, решения или значимость исков. Номера, ссылки и списки дел не сохраняются в production."
+    },
+    {
+      "id": "SUP-014",
+      "title": "Недоступные источники",
+      "acceptance": "user_approved_2026-09-15",
+      "source": "suppliers/verification.py: unavailable_checks; arbitration.py: check_kad",
+      "condition": "КАД недоступен (CAPTCHA/challenge/451/timeout/другая ошибка), неполон или нельзя сопоставить ИНН с ролью.",
+      "required_evidence": "Статус обращения и причина непроверенности.",
+      "effect": "KAD_REQUIRES_MANUAL_CHECK → YELLOW, счётчик неизвестен (null), причина сохраняется; нет повторного поиска/fallback после ошибки.",
+      "implementation": "live_and_runtime",
+      "note": "Другие подтверждённые RED-сигналы поставщика сохраняются; КАД не создаёт RED."
+    },
+    {
+      "id": "SUP-015",
+      "title": "CMS и IP",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/external_checks.py: cms_check, ip_check; verification.py: cms, addresses",
+      "condition": "Определены CMS, адреса DNS и reverse DNS.",
+      "required_evidence": "Технические результаты обращения с датой.",
+      "effect": "Справочные свидетельства, не самостоятельные риски и не самостоятельный допуск.",
+      "implementation": "helpers_not_called_in_main_live",
+      "note": "Количество соседних сайтов на IP не определяется; CMS не доказывает благонадёжность."
+    },
+    {
+      "id": "SUP-016",
+      "title": "Получатель счёта",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/verification.py: verify_invoice_recipient",
+      "condition": "ИНН счёта совпадает с ИНН текущей проверенной компании.",
+      "required_evidence": "Реально предоставленный счёт и подтверждённый текущий ИНН.",
+      "effect": "Другой ИНН — отдельный запрет оплаты; функция также блокирует отсутствующий ИНН. Название не сравнивается.",
+      "implementation": "separate_interface_not_called_in_live",
+      "note": "В автономном отчёте отсутствие счёта показывать отдельно от установленного несовпадения."
+    },
+    {
+      "id": "SUP-017",
+      "title": "Итоговый статус",
+      "acceptance": "user_approved_2026-09-15",
+      "source": "suppliers/verification.py: verify_supplier",
+      "condition": "Последовательность правил принятия решения описана в assessment.md.",
+      "required_evidence": "Подтверждённые риски, положительные признаки и непроверенные пункты.",
+      "effect": "Один из четырёх статусов; нет произвольного балльного рейтинга.",
+      "implementation": "live_and_runtime",
+      "note": "Итоговый допуск дополнен обязательной проверкой текущего ИНН и полноты КАД; четыре текста статуса сохранены."
+    },
+    {
+      "id": "SUP-018",
+      "title": "Экономический допуск перед antifraud",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/exact_model_flow.py; economic_precheck.py",
+      "condition": "Для закупочного EXACT_MODEL проверяется предварительная экономика и возможность запроса цены в пределах max_call_discount_percent.",
+      "required_evidence": "Точные модели, цены со страниц, количество, НМЦК и комиссия; дополнительные расходы сохраняются.",
+      "effect": "Ограничивает закупочных кандидатов, не используется для независимой проверки одного поставщика.",
+      "implementation": "procurement_only",
+      "note": "reserve_percent — предварительный запас, а не окончательная рентабельность."
+    },
+    {
+      "id": "SUP-019",
+      "title": "Допуск в КП и TOP-3",
+      "acceptance": "existing_runtime_rule",
+      "source": "suppliers/price_search_flow.py: select_verified_top3; ranking.py: select_quotes",
+      "condition": "Новый TOP-3 берёт до top_offer_limit некрасных; старый select_quotes — только зелёных в пределах ценового порога.",
+      "required_evidence": "Товарная карточка, цена, точная модель, наличие и статус antifraud.",
+      "effect": "Красного заменяют следующим; жёлтый/белый возможен в новом TOP-3; неизвестное наличие — резерв.",
+      "implementation": "procurement_only",
+      "note": "Попадание в КП не является разрешением оплаты; публичная цена не становится purchase_price."
+    },
+    {
+      "id": "SUP-020",
+      "title": "Обязательный допуск КАД по текущему продавцу",
+      "acceptance": "user_approved_2026-09-15",
+      "source": "suppliers/verification.py; suppliers/live_verification.py; suppliers/kad_client.py",
+      "condition": "Текущий продавец и ИНН установлены; проверка КАД выполнена именно по нему и количество дел ответчика подтверждено.",
+      "required_evidence": "Текущие юридические страницы плюс минимальный КАД-результат: searched_inn, checked_at, technical_status, defendant_cases_count, kad_status, reason.",
+      "effect": "Неустановленный продавец → YELLOW без поиска; непроверенность → YELLOW с причиной; любое число дел ответчика > 0 → YELLOW; 0 не создаёт предупреждения КАД.",
+      "implementation": "minimal_count_runtime_live_unconfirmed",
+      "note": "Номера, ссылки, карточки, категории, документы, решения и список судебных дел не хранятся. Старый подробный кэш schema_version=1 не используется; срок нового кэша между запусками не утверждён."
+    }
+  ],
+  "cache_policy": {
+    "runtime_config": "config/kad.json",
+    "cache_key": "ИНН + дата и время проверки",
+    "default": "Повторное использование внутри текущего запуска",
+    "accepted_cross_run_hours": null,
+    "proposed_cross_run_hours": 24,
+    "note": "24 часа предложены пользователю; пока не утверждены и не установлены в runtime. Переданный параметр cache_max_age_hours разрешает повторное использование успешной проверки между запусками."
+  }
+}

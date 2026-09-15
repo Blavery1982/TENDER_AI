@@ -256,8 +256,8 @@
       "isRostechRequirementsConfirmation": false,
       "signedByCurrentUserPrivacyAgreementType": null,
       "isUseOf11DecimalPlacesInUnitPrice": false,
-      "favoriteTagsAmount": 0,
-      "unFavoriteTagsAmount": 0,
+      "favoriteTagsAmount": 1,
+      "unFavoriteTagsAmount": 1,
       "currentOrganizationFavoriteTagValue": null,
       "customerAcceptanceServiceDeadlineInfo": "В течение 20 рабочих дней с момента предоставления документа о приемке Исполнителем",
       "supplierFulfillmentDocumentsProvisionInfo": "Срок предоставления поставщиком документов, подтверждающих выполнение обязательств по контракту: \nв течение 5 рабочих дней\n",
@@ -360,7 +360,9 @@
       "document_type": 4,
       "file_id": "83f3845e-77f6-4b70-abfc-2f4180372e3f",
       "download_url": "https://agregatoreat.ru/integration/ecom/rest/api/file/1/300916501/fd71642c-1c03-4739-a487-f1e8fa2722a6/4/83f3845e-77f6-4b70-abfc-2f4180372e3f",
-      "local_path": "/Users/lubov/Documents/TENDER_AI/data/contracts/fd71642c-1c03-4739-a487-f1e8fa2722a6/ТЗ ИБП.docx",
+      "local_path": "/Users/lubov/Documents/TENDER_AI/data/tenders/fd71642c-1c03-4739-a487-f1e8fa2722a6/ТЗ ИБП.docx",
+      "sha256": "a7b2d3086032670a5ba74f41e252f638058460dfdedde93ab21467c8bad5e24d",
+      "size_bytes": 23378,
       "download_status": "downloaded"
     }
   ]

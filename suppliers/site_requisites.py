@@ -21,13 +21,24 @@ LEGAL_WORDS = ("контакт", "реквиз", "компан", "о нас", "�
 class PageParser(HTMLParser):
     def __init__(self):
         super().__init__(); self.text=[]; self.links=[]; self.title=""; self._title=False
+        self._ignored = 0
     def handle_starttag(self, tag, attrs):
+        if tag in {"script", "style", "noscript"}:
+            self._ignored += 1
+            return
+        if self._ignored:
+            return
         attrs=dict(attrs)
         if tag == "a" and attrs.get("href"): self.links.append(attrs["href"])
         if tag == "title": self._title=True
     def handle_endtag(self, tag):
+        if tag in {"script", "style", "noscript"} and self._ignored:
+            self._ignored -= 1
+            return
         if tag == "title": self._title=False
     def handle_data(self, data):
+        if self._ignored:
+            return
         self.text.append(data)
         if self._title: self.title += data
 
@@ -50,6 +61,17 @@ def extract_requisites(text: str) -> dict:
     phones=sorted(set(re.findall(r"(?:\+7|8)[\s()\-\d]{9,20}",normalized)))
     return {"inn":clean(inns,{10,12}),"ogrn":clean(ogrns,{13,15}),
             "companies":companies[:10],"emails":emails[:10],"phones":[x.strip() for x in phones[:10]]}
+
+
+def determine_current_seller(pages: list[dict]) -> dict:
+    """Устанавливает продавца по текущим страницам, без обращения к архивным ИНН."""
+    inns = sorted({inn for page in pages for inn in page["requisites"]["inn"]})
+    legal_pages = [page for page in pages if page.get("is_legal_page")
+                   and page["requisites"]["inn"]]
+    determined = len(inns) == 1 and bool(legal_pages)
+    return {"determined": determined, "inn": inns[0] if determined else None,
+            "found_inns": inns, "sources": [page["url"] for page in legal_pages],
+            "reason": None if determined else "Актуальный продавец не установлен однозначно по текущим юридическим страницам"}
 
 
 def crawl_legal_pages(base_url: str, max_pages: int = 24) -> dict:

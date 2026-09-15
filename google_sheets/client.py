@@ -28,9 +28,19 @@ from google.oauth2.service_account import Credentials
 
 from google_sheets.workbook import ACTIVE, ACTIVE_HEADERS, LOCKED, LOCKED_HEADERS, MANUAL, MANUAL_HEADERS, REPORT, REPORT_HEADERS, _column_letter, build as build_workbook, clear_data_validation_requests, formulas, NO
 from gspread.utils import ValidationConditionType, rowcol_to_a1
+from google_sheets.kp_schema import KP_HEADERS
 
 ROOT = Path(__file__).resolve().parent.parent
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
+GOOGLE_REQUEST_TIMEOUT_SECONDS = 15
+
+
+class _TimeoutGoogleRequest(Request):
+    """Google auth transport с ограничением ожидания token endpoint."""
+    def __call__(self, url, method="GET", body=None, headers=None,
+                 timeout=GOOGLE_REQUEST_TIMEOUT_SECONDS, **kwargs):
+        return super().__call__(url, method=method, body=body, headers=headers,
+                                timeout=timeout, **kwargs)
 
 
 def _env(name: str, default: str | None = None) -> str | None:
@@ -46,13 +56,33 @@ def _env(name: str, default: str | None = None) -> str | None:
     return default
 
 
+def _install_request_timeout(client) -> None:
+    """Ограничить сетевые запросы gspread, включая явно переданный None."""
+    session = getattr(getattr(client, "http_client", None), "session", None)
+    if session is None or getattr(session, "_tender_ai_timeout_wrapped", False):
+        return
+    request = session.request
+
+    def request_with_timeout(method, url, **kwargs):
+        if kwargs.get("timeout") is None:
+            kwargs["timeout"] = GOOGLE_REQUEST_TIMEOUT_SECONDS
+        return request(method, url, **kwargs)
+
+    session.request = request_with_timeout
+    session._tender_ai_timeout_wrapped = True
+
+
 def authorize_service_account() -> tuple[gspread.Client, str]:
     key_path = ROOT / str(_env("GOOGLE_SERVICE_ACCOUNT_FILE", "secrets/gcloud_key.json"))
     if not key_path.is_file():
         raise FileNotFoundError(f"Не найден ключ Service Account: {key_path}")
     credentials = Credentials.from_service_account_file(key_path, scopes=SCOPES)
-    credentials.refresh(Request())  # Проверяет Google-авторизацию, не открывая таблицы.
-    return gspread.authorize(credentials), credentials.service_account_email
+    credentials.refresh(_TimeoutGoogleRequest())  # Проверяет Google-авторизацию, не открывая таблицы.
+    client = gspread.authorize(credentials)
+    # gspread не задаёт timeout для обычных values/batch запросов. Без него
+    # недоступный Google API блокирует весь production batch навсегда.
+    _install_request_timeout(client)
+    return client, credentials.service_account_email
 
 
 def sync() -> str:
@@ -124,13 +154,16 @@ def setup_structure() -> tuple[str, dict[str, int]]:
 
 
 PRESERVED_ACTIVE_HEADERS = {
+    "Текущий итог просчета и анализа",
+    "Категория закупки",
     "Дополнительные расходы, ₽", "Цена КП 1", "Ссылка на товар КП 1",
     "Ссылка на счёт КП 1", "Цена КП 2", "Ссылка на товар КП 2",
     "Ссылка на счёт КП 2", "Цена КП 3", "Ссылка на товар КП 3",
     "Ссылка на счёт КП 3", "Цена КП 4", "Ссылка на товар КП 4",
     "Ссылка на счёт КП 4", "Статус закупки",
 }
-MANUAL_COLUMNS = {ACTIVE_HEADERS.index(name) for name in PRESERVED_ACTIVE_HEADERS}
+PRESERVED_ACTIVE_HEADERS |= KP_HEADERS
+MANUAL_COLUMNS = {ACTIVE_HEADERS.index(name) for name in PRESERVED_ACTIVE_HEADERS if name in ACTIVE_HEADERS}
 TEXT_HEADERS = {
     ACTIVE: {
         "Номер закупки", "ID закупки", "Ссылка на закупку", "Источник закупки",
@@ -140,6 +173,7 @@ TEXT_HEADERS = {
         "ОСОБЫЕ УСЛОВИЯ", "ПРОСЛЕЖИВАЕМОСТЬ", "Ссылка на товар КП 1",
         "Текущий итог просчета и анализа",
         "ВЫБРАННАЯ МОДЕЛЬ",
+        "Категория закупки",
         "Ссылка на счёт КП 1", "Ссылка на товар КП 2", "Ссылка на счёт КП 2",
         "Ссылка на товар КП 3", "Ссылка на счёт КП 3", "Ссылка на товар КП 4",
         "Ссылка на счёт КП 4", "Качество просчёта", "Статус закупки",
@@ -147,6 +181,7 @@ TEXT_HEADERS = {
     LOCKED: {"Осталось времени", "ID закупки", "Ссылка на закупку", "Источник закупки", "Статус"},
     MANUAL: {"Номер закупки", "ID закупки", "Ссылка на закупку", "Наименование закупки", "Регион", "Причина ручной проверки"},
 }
+TEXT_HEADERS[ACTIVE] |= {name for name in KP_HEADERS if not name.startswith(('Цена', 'Рентабельность'))}
 
 # Только автоматически формируемые текстовые поля. Пользовательские поля КП
 # форматируются как текст, но их содержимое здесь никогда не перезаписывается.
@@ -167,6 +202,14 @@ def apply_text_formats(book) -> None:
 def _key_part(value) -> str:
     text=str(value).strip()
     return text[:-2] if text.endswith('.0') and text[:-2].isdigit() else text
+
+def active_row_updates(row: int, headers: list[str], values: list) -> list[dict]:
+    """Запись строки пропускает расходы; production отдельно инициализирует пустоту нулём."""
+    manual = headers.index('Дополнительные расходы, ₽') if 'Дополнительные расходы, ₽' in headers else -1
+    segments = [(0, manual), (manual + 1, len(values))] if manual >= 0 else [(0, len(values))]
+    return [{'range': f'{rowcol_to_a1(row, start + 1)}:{rowcol_to_a1(row, end)}',
+             'values': [values[start:end]]} for start, end in segments if start < end]
+
 
 def _upsert(ws, incoming: list[list], key_headers: tuple[str, ...], preserve: set[str] | None = None) -> None:
     preserve = preserve or set()
@@ -201,7 +244,10 @@ def _upsert(ws, incoming: list[list], key_headers: tuple[str, ...], preserve: se
                 if index < len(old) and old[index] not in ("", NO): source[index] = old[index]
         if ws.title == ACTIVE:
             for index, formula in formulas(target, sheet_headers).items(): source[index] = formula
-        updates.append({"range": f"A{target}", "values": [source]})
+        if ws.title == ACTIVE:
+            updates.extend(active_row_updates(target, sheet_headers, source))
+        else:
+            updates.append({"range": f"A{target}", "values": [source]})
     if updates: ws.batch_update(updates, value_input_option="USER_ENTERED")
 
 
@@ -228,6 +274,9 @@ def _rewrite_text_as_raw(ws, incoming: list[list], key_headers: tuple[str, ...])
                 continue
             column = sheet_headers.index(header)
             value = source[column] if column < len(source) else ""
+            if ws.title == ACTIVE and header in PRESERVED_ACTIVE_HEADERS:
+                actual = current[target - 1]
+                value = actual[column] if column < len(actual) else ''
             updates.append({
                 "range": rowcol_to_a1(target, column + 1),
                 "values": [[str(value) if value is not None else ""]],
@@ -282,7 +331,7 @@ def deduplicate_active(ws) -> int:
                 col=headers.index(header)
                 value=row[col] if col<len(row) else ''
                 if value not in ('',NO,'Новая — нужен просчёт') or not merged[col]: merged[col]=value
-        updates.append({'range':f'A{winner}','values':[merged[:len(headers)]]}); delete.extend(number for number,_ in entries[1:])
+        updates.extend(active_row_updates(winner, headers, merged[:len(headers)])); delete.extend(number for number,_ in entries[1:])
     if updates: ws.batch_update(updates,value_input_option='USER_ENTERED')
     if delete:
         ws.client.batch_update(ws.spreadsheet_id,{'requests':[{'deleteDimension':{'range':{'sheetId':ws.id,'dimension':'ROWS','startIndex':row-1,'endIndex':row}}} for row in sorted(delete,reverse=True)]})
@@ -311,10 +360,12 @@ def test_export() -> dict[str, object]:
     _upsert(locked,payload[LOCKED],("ID закупки",)); _upsert(manual,payload[MANUAL],("ID закупки",))
     test_row=2; sheet_headers=active.row_values(1)
     def address(header):return rowcol_to_a1(test_row,sheet_headers.index(header)+1)
-    active.update([[1234.56]],address("Дополнительные расходы, ₽"),value_input_option="USER_ENTERED"); active.update([[111111.11]],address("Цена КП 1"),value_input_option="USER_ENTERED"); active.update([["Просчёт в работе"]],address("Статус закупки"),value_input_option="USER_ENTERED")
+    existing_expense = active.acell(address("Дополнительные расходы, ₽"), value_render_option="UNFORMATTED_VALUE").value
+    active.update([[111111.11]],address("Цена КП 1"),value_input_option="USER_ENTERED"); active.update([["Просчёт в работе"]],address("Статус закупки"),value_input_option="USER_ENTERED")
     _upsert(active,payload[ACTIVE],("ID закупки","№ позиции"),PRESERVED_ACTIVE_HEADERS)
     preserved=active.row_values(test_row,value_render_option="UNFORMATTED_VALUE")
-    manual_ok=(preserved[sheet_headers.index("Дополнительные расходы, ₽")]==1234.56 and preserved[sheet_headers.index("Цена КП 1")]==111111.11 and preserved[sheet_headers.index("Статус закупки")]=="Просчёт в работе")
+    actual_expense = active.acell(address("Дополнительные расходы, ₽"), value_render_option="UNFORMATTED_VALUE").value
+    manual_ok=(actual_expense==existing_expense and preserved[sheet_headers.index("Цена КП 1")]==111111.11 and preserved[sheet_headers.index("Статус закупки")]=="Просчёт в работе")
     _upsert(active,payload[ACTIVE],("ID закупки","№ позиции"),PRESERVED_ACTIVE_HEADERS)
     rows=active.get_all_values(); sheet_headers=rows[0]; id_col=sheet_headers.index("ID закупки"); item_col=sheet_headers.index("№ позиции"); keys=[(r[id_col],r[item_col]) for r in rows[1:] if len(r)>max(id_col,item_col) and r[id_col] and r[item_col]]
     no_duplicates=len(keys)==len(set(keys))==len(payload[ACTIVE])-1

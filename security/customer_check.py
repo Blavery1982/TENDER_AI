@@ -84,50 +84,36 @@ def extract_customer(card: dict, documents: list[dict] | None = None) -> dict:
 
 
 def build_customer_check(card: dict, documents: list[dict] | None = None,
-                         kad_fetcher: Callable[[str], list[dict]] | None = None) -> dict:
+                         kad_fetcher: Callable[[str], dict] | None = None) -> dict:
     identity = extract_customer(card, documents)
     inn = identity["customer_inn"]
     kad = check_kad(inn, kad_fetcher)
-    warnings = list(kad.get("warnings") or [])
+    warnings = [] if kad["technical_status"] == "KAD_CHECKED" else [kad["reason"]]
     manual_actions = []
     if not inn:
         arbitration_status = STATUS_MANUAL
         payment_risk = "Недостаточно данных для оценки риска оплаты"
         warnings.append("ИНН заказчика не определён")
         manual_actions.append({"action": "Уточнить ИНН заказчика", "customer_inn": "Нет данных"})
-    elif not kad.get("checked_in_kad"):
+    elif kad["technical_status"] != "KAD_CHECKED":
         arbitration_status = STATUS_MANUAL
         payment_risk = "Риск оплаты не оценён автоматически — требуется ручная проверка КАД"
         manual_actions.append({"action": "Проверить КАД вручную", "customer_name": identity["customer_name"] or "Нет данных",
                                "customer_inn": inn, "url": "https://kad.arbitr.ru",
-                               "reason": "Автоматический результат КАД недоступен или неоднозначен"})
-    elif kad.get("bankruptcy_cases_count", 0):
-        arbitration_status = STATUS_SERIOUS
-        payment_risk = "Серьёзный юридический риск — требуется ручная проверка"
-        warnings.append("Обнаружено дело о банкротстве / серьёзный юридический риск")
-        manual_actions.append({"action": "Проверить банкротное дело и платёжный риск вручную",
-                               "customer_inn": inn, "url": "https://kad.arbitr.ru"})
-    elif kad.get("cases_found"):
+                               "reason": kad["reason"]})
+    elif kad["defendant_cases_count"] > 0:
         arbitration_status = STATUS_CASES
-        if kad.get("defendant_cases_count", 0):
-            payment_risk = "Есть судебные споры — требуется учитывать риск оплаты"
-            warnings.append("Проверить характер свежих дел, где заказчик является ответчиком")
-        else:
-            payment_risk = "Обычные дела в роли истца сами по себе не указывают на риск оплаты"
+        payment_risk = "Есть судебные споры в роли ответчика — риск оплаты требует ручной проверки"
+        warnings.append("Требуется вручную проверить судебные иски и добросовестность заказчика")
     else:
         arbitration_status = STATUS_CLEAR
-        payment_risk = "Явных судебных рисков по доступной проверке не обнаружено"
-    summary = kad.get("user_summary", "Арбитражные дела заказчика: требуется ручная проверка")
-    summary = summary.replace("Арбитражные дела:", "Арбитражные дела заказчика:")
+        payment_risk = "Дел заказчика в роли ответчика не найдено; остальные риски оплаты не оценены"
+    summary = kad["reason"].replace("поставщика", "заказчика")
     return {**identity, "arbitration_status": arbitration_status,
             "arbitration_summary": summary,
-            "cases_count": kad.get("cases_count"),
-            "plaintiff_cases_count": kad.get("plaintiff_cases_count"),
-            "defendant_cases_count": kad.get("defendant_cases_count"),
-            "bankruptcy_cases_count": kad.get("bankruptcy_cases_count"),
-            "recent_cases_count": kad.get("recent_cases_count"),
-            "case_numbers": kad.get("case_numbers") or [], "case_roles": kad.get("case_roles") or [],
-            "case_dates": kad.get("case_dates") or [], "case_categories": kad.get("case_categories") or [],
+            "cases_count": None, "plaintiff_cases_count": None,
+            "defendant_cases_count": kad["defendant_cases_count"],
+            "bankruptcy_cases_count": None, "recent_cases_count": None,
             "payment_risk_status": payment_risk, "warnings": list(dict.fromkeys(warnings)),
             "manual_actions_required": manual_actions,
             "checked_at": kad.get("checked_at") or datetime.now(timezone.utc).isoformat(),
