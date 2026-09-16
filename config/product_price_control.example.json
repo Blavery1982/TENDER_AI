@@ -1,0 +1,29 @@
+{
+  "jobs": [
+    {
+      "id": "gonsin_delegate",
+      "item": {"name": "Пульт делегата Gonsin TL-VDC4200", "position_kind": "goods"},
+      "documents": []
+    },
+    {
+      "id": "gonsin_chairman",
+      "item": {"name": "Пульт председателя Gonsin TL-VXC4200", "position_kind": "goods"},
+      "documents": []
+    },
+    {
+      "id": "gonsin_cable",
+      "item": {"name": "Коммутационный кабель микрофонных консолей 13Р-Т3 (DIN 13-PIN) Gonsin", "position_kind": "goods"},
+      "documents": []
+    },
+    {
+      "id": "pantum",
+      "item": {"name": "МФУ Pantum M6607NW", "position_kind": "goods"},
+      "documents": []
+    },
+    {
+      "id": "bb_battery",
+      "item": {"name": "Батарея BB Battery BP 5-12", "position_kind": "goods"},
+      "documents": []
+    }
+  ]
+}

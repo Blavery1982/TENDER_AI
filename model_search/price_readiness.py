@@ -92,6 +92,8 @@ def identifier_is_ambiguous(identifier: str, evidence_text: str = "") -> tuple[b
     value = _clean(identifier) or ""
     if not value:
         return True, "Идентификатор отсутствует"
+    if re.match(r'(?i)^(?:DIN|ГОСТ|ISO)\b', value):
+        return True, "Обозначение является стандартом или характеристикой товара"
     if GENERIC_IDENTIFIER.fullmatch(value):
         return True, "Обозначение является типом, стандартом или характеристикой товара"
     if re.match(r"(?i)^(?:ИКЗ|ОКПД2?|КТРУ|ИНН|КПП|ОКОПФ|ОКТМО|ОКПО|ОКВЭД|БИК|ОГРН)\b", value):
@@ -283,6 +285,15 @@ def classify_price_search_readiness(item: dict[str, Any],
                 "identifier_source_field": "resolved_customer_model",
                 "reason": resolved["model_mode_reason"], "evidence": resolved["model_evidence"],
                 "compliance_before_price_search": False}
+    # Разобранная позиция является единственным источником решения.
+    # Повторное извлечение не вправе отменять ручную проверку основного этапа.
+    if resolved.get('source_resolution_version'):
+        return {"price_readiness_version": PRICE_READINESS_VERSION,
+                "classification": MODEL_IDENTIFIER_REVIEW_REQUIRED,
+                "price_search_ready": False, "identifier": None,
+                "model_value": None, "customer_required_model": None,
+                "reason": resolved.get('model_mode_reason') or 'Модель не установлена',
+                "evidence": [], "compliance_before_price_search": True}
     direct = extract_direct_identifier(item)
     if direct:
         direct_evidence = [{"source_document": "Спецификация ЕАТ", "source_page": None,

@@ -555,6 +555,15 @@ def _blocked_items(card: dict[str, Any], extraction: dict[str, Any], reason: str
 def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
     """Адаптировать результат MVP к общему production-upsert payload."""
     model = item.get("model") or {}
+    # Сохранённый результат основного обработчика приоритетен и при sync.
+    # Старый вспомогательный классификатор не может оживить DIN/разъём.
+    position = next((p for p in (item.get('business_order_result') or {}).get('positions', [])
+                     if p.get('position_number') == item.get('item_number')), None)
+    if position is not None:
+        chosen = position.get('selected_model')
+        model = {**model, 'model': chosen, 'route': 'exact' if chosen else 'manual_review',
+                 'mode': 'SELECTED_MODEL' if chosen else 'MODEL_MODE_REVIEW_REQUIRED',
+                 'status_ru': 'Выбранная модель' if chosen else 'Модель не установлена; ручная проверка'}
     search = item.get("supplier_search") or {}
     offers = [offer for offer in (search.get("top_offers") or [])
               if offer.get("public_price") is not None][:3]
@@ -600,7 +609,7 @@ def _sheet_payload(item: dict[str, Any]) -> dict[str, Any]:
         },
         "item": {
             "position_number": item.get("item_number"),
-            "display_name": item.get("item_name"),
+            "display_name": item.get("name") or item.get("item_name"),
             "okpd2_code": item.get("okpd2_code"),
             "eat_code": item.get("eat_code"),
             "quantity": item.get("quantity"),
@@ -826,7 +835,7 @@ def run(*, resume: bool = False, limit: int | None = None,
                         mode="LIVE — batch", model_discovery=lambda item: discover_models(
                             item, provider=provider, query_limit=2, use_cache=False),
                         exact_price_search=lambda model, output_path, **kwargs: research.prices_exact(
-                            model, provider, output_path, price_gate_source_limit=3, **kwargs),
+                            model, provider, output_path, **kwargs),
                         exact_supplier_verifier=lambda row: verify_live_supplier(row, reader=research.read),
                         document_loader=lambda card, purpose: download_purchase_documents(
                             session.context, card, purpose=purpose))

@@ -23,3 +23,6 @@ data/eat_single_*.json
 data/cache/kad/
 data/suppliers/_kad/
 data/kad_diagnostics/
+
+# Рабочие источники, ответы Codex и результаты контрольного поиска.
+data/product_price_control/

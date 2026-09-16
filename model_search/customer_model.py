@@ -5,7 +5,7 @@ from pathlib import Path
 
 from model_search.product_evidence import BRANDS, normalized_identifier_phrase
 
-CONTEXT = json.loads((Path(__file__).resolve().parent.parent / 'config/customer_product_context.json').read_text())
+CONTEXT = json.loads((Path(__file__).resolve().parent.parent / 'config/customer_product_context.json').read_text(encoding='utf-8'))
 BRAND_NAMES = (*BRANDS, *CONTEXT['commercial_names'])
 MODEL_FIELD = re.compile(r'^(?:\d+[.)]\s*)?(?:модель|марка|бренд|артикул(?: товара)?|товарный знак|коммерческое обозначение)\s*[:|\t—-]?\s*(.+)$', re.I)
 REFERENCE = re.compile(r'(?i)^(?:характеристики\s+)?(?:в соответствии\s+со?|в соответствие\s+со?|согласно|см\.?\s+приложение|см\.?\s+тз)\b|^[-—.]$')
@@ -39,7 +39,8 @@ def commercial_name(noun, designation):
     value = clean_designation(designation)
     if not value:
         return None
-    if has_brand(value) or normalized_identifier_phrase(value).startswith(normalized_identifier_phrase(noun)):
+    if (has_brand(value) or normalized_identifier_phrase(value).startswith(normalized_identifier_phrase(noun))
+            or re.search(r'(?i)(?<!\w)' + re.escape(noun) + r'(?!\w)', value)):
         return value
     return f'{noun} {value}'.strip()
 
@@ -52,6 +53,19 @@ def named_designation(text, noun, *, field='name'):
     labelled = MODEL_FIELD.match(line)
     if labelled:
         return clean_designation(labelled.group(1))
+    # В наименовании сохраняем весь товар, включая бренд после артикула.
+    # Обозначения стандартов/разъёмов сами по себе не являются моделью.
+    if field in {'name', 'item_name', 'eatTitle', 'popup', 'document_name'}:
+        from model_search.product_evidence import extract_skus
+        identity = re.sub(r'\([^)]*\)', ' ', line)
+        skus = extract_skus(identity)
+        # Российское обозначение может начинаться с цифр: 13Р-Т3.
+        skus += re.findall(r'(?<!\w)\d+[А-ЯЁ]+-[А-ЯЁ]+\d+(?!\w)', identity)
+        skus += re.findall(r'(?<!\w)[A-Z]{2,8}-[A-Z]{1,8}\d{2,}[A-Z0-9/-]*(?!\w)', identity)
+        if (skus and not re.search(r'[:|\t]', line)
+                and re.search(r'(?i)(?<!\w)' + re.escape(noun) + r'(?!\w)', line)
+                and not re.search(r'(?i)\b(?:для|совместим\w*)\b', line)):
+            return line.lstrip('. ')
     if field=='popup' and (re.match(r'^\d+[.)]',line) or re.search(r'[:|\t≥≤<>]',line)):
         return None
     if has_brand(line):
