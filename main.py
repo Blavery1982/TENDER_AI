@@ -252,7 +252,7 @@ def main() -> int:
     parser.add_argument("--eat-save-session", action="store_true", help="вручную подтвердить и безопасно сохранить сессию ЕАТ")
     parser.add_argument("--single-purchase-test", metavar="PURCHASE_ID", help="контроль одной закупки с результатом каждого этапа в Google Sheets")
     parser.add_argument("--tests-google-sheets", action="store_true", help="устаревшее имя: полный unittest только по прямому указанию владельца, отчёт локально без UNIT в Google Sheets")
-    parser.add_argument('--product-price-control', metavar='JSON', help='контроль 1–5 товаров через Codex CLI и Google, без записи в Sheets')
+    parser.add_argument('--product-price-control', metavar='JSON', help='контроль 1–5 товаров через Codex CLI и Yandex Search API (до 30 платных запросов), без записи в Sheets')
     args = parser.parse_args()
     if args.product_price_control:
         from pipeline.product_price_control import run

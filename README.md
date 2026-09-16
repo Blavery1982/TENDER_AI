@@ -7,11 +7,12 @@
 ## Контрольный просчёт и локальные проверки
 
 Новый изолированный контроль (Codex CLI с сохранённым входом, кандидат
-`gpt-5.6-luna`, Google/Playwright, без записи в Sheets):
+`gpt-5.6-luna`, Yandex Search API → HTTP/Playwright, без записи в Sheets):
 
 Для запуска на другом компьютере: [инструкция](docs/PRODUCT_PRICE_CONTROL_HANDOFF.md).
 Готовые пять товаров: `config/product_price_control.example.json`.
-Для этого режима `.env` не требуется.
+Для этого режима `.env` не требуется. Нужны credentials Yandex Search API в macOS Keychain;
+на других ОС этот способ хранения пока недоступен. Максимум 30 платных запросов на запуск.
 
 ```powershell
 .venv\Scripts\python main.py --product-price-control jobs.json

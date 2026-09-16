@@ -19,7 +19,14 @@ from model_search.live_discovery import WebProvider
 ENDPOINT='https://searchapi.api.cloud.yandex.net/v2/web/search'
 
 
-class SearchAPIError(RuntimeError):pass
+class SearchAPIError(RuntimeError):
+    def __init__(self, message, *, reason_code='api_search_failed', http_status=None):
+        super().__init__(message)
+        self.reason_code = reason_code
+        self.diagnostic = {'stage': 'yandex_search_api', 'classification': reason_code,
+                           'reason': reason_code, 'http_status': http_status,
+                           'primary': True}
+
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -36,7 +43,8 @@ def post_json(payload,api_key):
             return json.loads(raw)
     except HTTPError as exc:
         code=exc.code;exc.close()
-        raise SearchAPIError(f'Yandex Search API: HTTP {code}; повторы отключены') from None
+        raise SearchAPIError(f'Yandex Search API: HTTP {code}; повторы отключены',
+                             reason_code=f'api_http_{code}', http_status=code) from None
     except Exception:
         raise SearchAPIError('Yandex Search API: запрос не выполнен или ответ некорректен; повторы отключены') from None
     finally:request=None;api_key=None
@@ -66,6 +74,7 @@ def parse_response(envelope,limit):
 
 
 class YandexSearchProvider:
+    name = 'yandex_search_api'
     def __init__(self,*,allow_paid=False,credentials_provider=None,sender=None,fetcher=None,
                  max_requests=3,clock=time.monotonic,sleep=time.sleep):
         if not 1<=max_requests<=100:raise ValueError('Лимит запросов: 1–100')
@@ -80,7 +89,7 @@ class YandexSearchProvider:
     def _search(self,query,limit):
         if not self.allow_paid:raise SearchAPIError('Платные запросы не разрешены')
         if self.failed:raise SearchAPIError('Провайдер остановлен после ошибки; повторов нет')
-        if self.api_calls>=self.max_requests:raise SearchAPIError('Лимит запросов исчерпан')
+        if self.api_calls>=self.max_requests:raise SearchAPIError('Лимит запросов исчерпан', reason_code='api_request_limit')
         if not isinstance(query,str) or not query.strip() or len(query)>400 or len(query.split())>40:
             raise SearchAPIError('Запрос должен содержать не более 400 символов и 40 слов')
         limit=max(1,min(int(limit),100))
@@ -103,9 +112,14 @@ class YandexSearchProvider:
             results=parse_response(response,limit)
             entry.update(status='completed',results_count=len(results),results=results)
             return results
-        except Exception:
+        except Exception as exc:
             self.failed=True;entry['status']='failed'
-            raise SearchAPIError('Yandex Search API: поиск не выполнен; провайдер остановлен без повторов') from None
+            error = SearchAPIError('Yandex Search API: поиск не выполнен; провайдер остановлен без повторов')
+            if isinstance(exc, SearchAPIError):
+                error.reason_code = exc.reason_code
+                error.diagnostic = exc.diagnostic
+            entry['diagnostic'] = error.diagnostic
+            raise error from None
         finally:credentials=None;payload=None
 
     def fetch(self,url):

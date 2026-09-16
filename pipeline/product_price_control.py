@@ -1,4 +1,4 @@
-"""Изолированный контроль Codex → Google → шесть карточек, без записи в Sheets."""
+"""Изолированный контроль Codex → Yandex Search API → карточки, без записи в Sheets."""
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -6,8 +6,9 @@ from pathlib import Path
 from ai.codex_intake import extract_product
 from documents.item_sources import resolve_item_sources, parse_requirements
 from documents.tender_archive import write_json
-from model_search.deferred_search import run_deferred, retry_deferred
-from model_search.google_provider import GoogleBrowserSearch
+from model_search.deferred_search import run_deferred
+from model_search.yandex_provider import YandexSearchProvider, SearchAPIError
+from security.yandex_credentials import get_yandex_credentials
 from model_search.live_discovery import discover_models, select_cheapest_compliant_model
 from model_search.playwright_provider import PlaywrightResearch
 
@@ -50,16 +51,26 @@ def run(input_path):
         raise ValueError('Контроль ограничен 1–5 товарными позициями')
     root = Path('data/product_price_control') / datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     root.mkdir(parents=True, exist_ok=False)
+    credentials = get_yandex_credentials()
+    if credentials.status != 'ready' or credentials.credentials is None:
+        result = {'search_provider': 'yandex_search_api', 'api_calls': 0,
+                  'status': 'SEARCH_API_NOT_CONFIGURED',
+                  'reason': 'Нужны folder_id и API-ключ в macOS Keychain TENDER_AI_YANDEX_SEARCH',
+                  'credentials_status': credentials.status, 'jobs': []}
+        write_json(root / 'result.json', result)
+        return {'path': str(root / 'result.json'), **result}
+    credentials = None
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=False)
         context = browser.new_context(locale='ru-RU')
         diagnostics_dir = root / 'diagnostics'
         research = PlaywrightResearch(context, diagnostic_dir=diagnostics_dir)
-        provider = GoogleBrowserSearch(research, max_requests=30,
-                                       diagnostic_dir=diagnostics_dir)
+        provider = YandexSearchProvider(allow_paid=True, fetcher=research, max_requests=30)
         prepared = {}
 
         def search(job):
+            if provider.failed:
+                raise SearchAPIError('Провайдер API остановлен', reason_code='api_provider_stopped')
             key = str(job['id'])
             if key not in prepared:
                 prepared[key] = prepare_product(job)
@@ -73,7 +84,7 @@ def run(input_path):
                 if selected:
                     model = selected.get('exact_model') or selected.get('model_name')
                 if provider.failed:
-                    raise PermissionError('Поисковик ожидает ручного подтверждения')
+                    raise SearchAPIError('Поиск API не выполнен', reason_code='api_search_failed')
             if not model:
                 return {'search_status': 'MODEL_NOT_RESOLVED', 'offers': [],
                         'intake': resolved}
@@ -81,38 +92,18 @@ def run(input_path):
                                            requirements=resolved.get('requirements', []),
                                            product_name=resolved.get('product_name'), target_offers=6,
                                            require_complete_offers=True)
+            if provider.failed and result.get('search_status') != 'completed':
+                result['search_status'] = 'SEARCH_API_FAILED'
             return {**result, 'intake': resolved, 'selected_model': model}
 
         try:
             result = run_deferred(jobs, search, root / 'result.json')
-            continuation = {'status': 'not_applicable', 'retried_jobs': []}
-            if provider.manual_captcha_available:
-                print('Google показал CAPTCHA. Пройдите её вручную в открытом Chromium; '
-                      'автоматический обход не выполняется.', flush=True)
-                try:
-                    answer = input('После успешного прохождения введите CONTINUE: ').strip().upper()
-                except (EOFError, KeyboardInterrupt):
-                    answer = ''
-                if answer in {'CONTINUE', 'ПРОДОЛЖИТЬ', 'YES', 'Y'}:
-                    try:
-                        cleared = provider.continue_after_manual_check()
-                        retried = retry_deferred(
-                            result, search, root / 'result.json',
-                            predicate=lambda row: row.get('primary_google_block')
-                            or row.get('search_deferred_due_to_primary_block'))
-                        continuation = {'status': 'continued', 'retried_jobs': retried,
-                                        'diagnostic': cleared}
-                    except Exception as exc:
-                        continuation = {'status': 'continuation_failed',
-                                        'reason': getattr(exc, 'reason_code', None)
-                                        or getattr(exc, 'diagnostic', {}).get('reason', type(exc).__name__)}
-                else:
-                    continuation = {'status': 'not_confirmed', 'retried_jobs': []}
-            result['manual_continuation'] = continuation
+            result.update(search_provider=provider.name, api_calls=provider.api_calls,
+                          max_api_requests=provider.max_requests, search_log=provider.search_log)
             write_json(root / 'result.json', result)
             return {'path': str(root / 'result.json'),
                     'jobs': [{'id': r['id'], 'status': r['status']} for r in result['jobs']],
-                    'manual_continuation': continuation}
+                    'search_provider': provider.name, 'api_calls': provider.api_calls}
         finally:
             context.close()
             browser.close()
