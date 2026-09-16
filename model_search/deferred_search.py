@@ -39,7 +39,11 @@ def run_deferred(jobs, search, output_path, *, pause_seconds=10, sleep=time.slee
             has_block = any(d.get('classification') in {
                 'captcha_or_robot_check', 'http_403', 'http_429',
                 'deferred_due_to_primary_block'} for d in diagnostics)
-            if has_block or any('PermissionError' in e or 'BlockedSourceError' in e for e in errors):
+            if result.get('search_status') == 'completed':
+                # Блокировка лишнего источника не отменяет уже собранный
+                # проверяемый TOP-3 из других доступных карточек.
+                row['status'] = 'completed'
+            elif has_block or any('PermissionError' in e or 'BlockedSourceError' in e for e in errors):
                 row['status'] = 'requires_manual_check'
             elif any(any(t in e for t in ('Timeout', 'Connection', 'URLError')) for e in errors):
                 row['status'] = 'retry_pending'

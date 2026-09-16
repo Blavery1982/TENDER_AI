@@ -46,6 +46,7 @@ def parameter_key(value):
     if 'инвертор' in p or p=='тип компрессора':return 'inverter'
     if p in ('цвет корпуса','цвет внутреннего блока'):return 'цвет'
     if p=='вид товара':return 'product_type'
+    if p in ('разъем', 'разъемы', 'тип разъема'):return 'connector'
     # Electrical input power is not delivered cooling/heating capacity.
     if 'потребляем' in p and 'мощност' in p:return 'input_power'
     if 'энергоэффектив' in p:

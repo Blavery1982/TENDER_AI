@@ -185,7 +185,9 @@ class PlaywrightResearch:
                      target_max_unit_price=None,
                      price_gate_source_limit=None, requirements=(), product_name=None,
                      stop_after_top3=True, max_queries=3, target_offers=6, max_seconds=180,
-                     require_complete_offers=False):
+                     require_complete_offers=False, query_variants=None,
+                     prior_result=None, page_match_model=None,
+                     candidate_urls=(), retry_transient_errors=True):
         """Настойчивый поиск трёх минимальных цен точной модели.
 
         Минимум определяется по прочитанным страницам, а не по сниппетам.
@@ -201,12 +203,26 @@ class PlaywrightResearch:
                 ranked = [o for o in ranked if is_confirmed_available(o)
                           and (not requirements or o.get('customer_requirements_status') == 'fully_compliant')]
             return ranked
-        queries = [template.format(model=model) for template in DEFAULT_EXACT_QUERIES[:max_queries]]
+        if query_variants is None:
+            queries = [template.format(model=model) for template in DEFAULT_EXACT_QUERIES[:max_queries]]
+        else:
+            queries = [' '.join(str(query).split()) for query in query_variants if str(query).strip()]
+            if len(queries) > 3 or len(set(queries)) != len(queries):
+                raise ValueError('Нужно передать не более трёх разных поисковых запросов')
+            if not queries and not candidate_urls and not prior_result:
+                raise ValueError('Нужен поисковый запрос, сохранённый результат или список URL')
         price_run_id = datetime.now(timezone.utc).isoformat()
         # Кэши живут только в текущем поиске: повторный запуск читает страницы заново.
         self.cache.clear()
         self.http_cache.clear()
-        rows, errors, query_log = {}, [], []
+        prior_result = prior_result if isinstance(prior_result, dict) else {}
+        prior_offers = [dict(row) for row in prior_result.get('offers', []) if isinstance(row, dict)]
+        prior_errors = [dict(row) for row in prior_result.get('source_errors', []) if isinstance(row, dict)]
+        rows = {normalize_product_url(url): {'url': url, 'direct_continuation': True}
+                for url in candidate_urls if str(url).strip()}
+        explicit_urls = set(rows)
+        errors = list(prior_errors)
+        query_log = list(prior_result.get('query_log', []))
         research_diagnostics_start = len(self.diagnostics)
         provider_diagnostics_start = len(getattr(provider, 'diagnostics', []))
         for query in queries:
@@ -224,16 +240,40 @@ class PlaywrightResearch:
                 if getattr(exc, "diagnostic", None):
                     entry["diagnostic"] = exc.diagnostic
                 query_log.append(entry)
-        offers = []
+        offers = list(prior_offers)
         # price_gate_source_limit — отдельная жёсткая граница карточек,
         # читаемых для текущего ценового gate; max_sources ограничивает общий
         # пул кандидатов и остаётся параметром глубокого поиска.
         effective_source_limit = (min(max_sources, price_gate_source_limit)
                                   if price_gate_source_limit and stop_after_top3
                                   else max_sources)
-        selected = list(rows.items())[:effective_source_limit]
-        http_pages_read = playwright_pages_read = product_cards_confirmed = 0
-        pages_without_price = 0
+        terminal_urls = {
+            normalize_product_url(row.get('url')) for row in prior_offers if row.get('url')
+        }
+        for row in prior_errors:
+            error = str(row.get('error') or '')
+            if row.get('url') and not any(marker in error for marker in (
+                    'Timeout', 'Connection', 'URLError', 'HTTPError')):
+                terminal_urls.add(normalize_product_url(row['url']))
+        # Временные ошибки первого прохода повторяются один раз после новых
+        # кандидатов; успешные и окончательно отклонённые карточки не читаются.
+        transient_urls = []
+        if retry_transient_errors:
+            for row in prior_errors:
+                error = str(row.get('error') or '')
+                if row.get('url') and any(marker in error for marker in (
+                        'Timeout', 'Connection', 'URLError', 'HTTPError')):
+                    normalized = normalize_product_url(row['url'])
+                    if normalized not in rows and normalized not in terminal_urls:
+                        transient_urls.append((normalized, {'url': row['url'], 'deferred_retry': True}))
+        selected = [(url, row) for url, row in rows.items()
+                    if url not in terminal_urls or url in explicit_urls]
+        selected.extend(row for row in transient_urls if row[0] not in {url for url, _ in selected})
+        selected = selected[:effective_source_limit]
+        http_pages_read = int(prior_result.get('http_pages_read') or 0)
+        playwright_pages_read = int(prior_result.get('playwright_pages_read') or 0)
+        product_cards_confirmed = int(prior_result.get('product_cards_confirmed') or 0)
+        pages_without_price = int(prior_result.get('pages_without_price') or 0)
         top3 = []
         last_improvement = 0
         for index, (url, row) in enumerate(selected, 1):
@@ -244,7 +284,8 @@ class PlaywrightResearch:
             try:
                 offer = http_offer = None
                 try:
-                    http_offer = inspect_product_url({"product_url": url}, model,
+                    identity_model = page_match_model or model
+                    http_offer = inspect_product_url({"product_url": url}, identity_model,
                                                      fetcher=self.read_http, transport="http",
                                                      requirements=requirements, product_name=product_name)
                     http_pages_read += 1
@@ -257,7 +298,7 @@ class PlaywrightResearch:
                 if (offer is None or offer.get("price") is None or requirements
                         and offer.get('customer_requirements_status') != 'fully_compliant'):
                     try:
-                        browser_offer = inspect_product_url({"product_url": url}, model,
+                        browser_offer = inspect_product_url({"product_url": url}, identity_model,
                                                            fetcher=self.read, transport="playwright",
                                                            requirements=requirements, product_name=product_name)
                         playwright_pages_read += 1
@@ -272,7 +313,7 @@ class PlaywrightResearch:
                             entry["diagnostic"] = exc.diagnostic
                         errors.append(entry)
                 # Полная марка дополнительно защищает от совпавших SKU других производителей.
-                brand = model.split()[0] if len(model.split()) > 1 else None
+                brand = identity_model.split()[0] if len(identity_model.split()) > 1 else None
                 if offer and brand and brand.casefold() not in str(offer.get("exact_product_name") or "").casefold():
                     offer = None
                 if offer:
@@ -311,15 +352,28 @@ class PlaywrightResearch:
                   f"{sum(o.get('price') is not None for o in offers)}", flush=True)
         offers = sorted({o["url"]: o for o in offers}.values(),
                         key=lambda o: (o["price"] is None, o["price"] or float("inf")))
+        offer_urls = {normalize_product_url(row['url']) for row in offers if row.get('url')}
+        resolved_errors = []
+        active_errors = []
+        for row in errors:
+            if (row.get('url') and normalize_product_url(row['url']) in offer_urls
+                    and row.get('error') == 'Страница не подтверждает точную модель и марку'):
+                resolved_errors.append(row)
+            else:
+                active_errors.append(row)
+        errors = active_errors
         priced = [o for o in offers if o["price"] is not None]
         confirmed = rank(offers)
         unique_domains = {urlsplit(url).hostname for url, _ in selected if urlsplit(url).hostname}
         unique_product_pages = {(urlsplit(x.get("url") or "").hostname or "", urlsplit(x.get("url") or "").path.rstrip("/")) for x in offers}
         result = {"target_model": model, "model_search_mode": "EXACT_MODEL",
                   "price_run_id": price_run_id,
-                  "checked_at": datetime.now(timezone.utc).isoformat(), "queries_used": queries,
-                  "query_log": query_log, "candidate_urls_found": len(rows),
-                  "unique_urls": len(selected), "unique_product_pages": len(unique_product_pages),
+                  "checked_at": datetime.now(timezone.utc).isoformat(),
+                  "queries_used": list(prior_result.get('queries_used', [])) + queries,
+                  "query_log": query_log,
+                  "candidate_urls_found": int(prior_result.get('candidate_urls_found') or 0) + len(rows),
+                  "unique_urls": int(prior_result.get('unique_urls') or 0) + len(selected),
+                  "unique_product_pages": len(unique_product_pages),
                   "unique_domains": len(unique_domains), "sources_checked": len(selected), "source_limit": max_sources,
                   "search_truncated": len(rows) > len(selected), "offers": offers,
                   "price_candidates": priced,
@@ -329,13 +383,19 @@ class PlaywrightResearch:
                   "offers_found": len(offers), "minimum_price": priced[0]["price"] if priced else None,
                   "top3_confirmed_prices": confirmed[:3],
                   "eligible_offers": confirmed,
-                  "source_errors": errors, "diagnostics": self.diagnostics[research_diagnostics_start:] + list(getattr(provider, 'diagnostics', []))[provider_diagnostics_start:],
+                  "source_errors": errors, "resolved_source_errors": resolved_errors,
+                  "diagnostics": self.diagnostics[research_diagnostics_start:] + list(getattr(provider, 'diagnostics', []))[provider_diagnostics_start:],
                   "discovery_provider": provider.name if isinstance(getattr(provider,'name',None),str) else 'yandex_search_api',
                   "search_status": 'completed' if len(confirmed) >= 3 and not timed_out else 'incomplete',
                   "page_verification": "playwright",
+                  "page_match_model": page_match_model or model,
                   "target_max_unit_price": target_max_unit_price,
                   "target_offers": target_offers,
                   "effective_source_limit": effective_source_limit,
+                  "continuation": {"reused_offers": len(prior_offers),
+                                   "new_queries": queries,
+                                   "new_sources_checked": len(selected),
+                                   "deferred_urls_retried": sum(1 for _, row in selected if row.get('deferred_retry'))},
                   "stop_reason": ("Достигнут лимит времени" if timed_out
                                   else f"Собраны {target_offers} подтверждённых предложений разных продавцов" if stop_after_top3 and len(confirmed)>=target_offers
                                   else "Достигнут лимит уникальных кандидатов" if len(rows) > effective_source_limit and len(selected) >= effective_source_limit
